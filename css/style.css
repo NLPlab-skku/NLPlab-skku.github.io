@@ -829,7 +829,7 @@ HEADER STYLING
             font-size: 100%; /* bg edit */
             padding-left: 0.1em; /*bg edit */
             padding-top: 0.15em; /*bg edit */ }
-         .header h1 img {
+         .header img {
             max-width: 100%;
             height: auto;
             }
@@ -1080,9 +1080,9 @@ HEADER STYLING
       line-height: 1;
       letter-spacing: -3px;
       padding-left: 0; }
-      .header h1 img {
-        max-width: 100%;
-        height: auto;}
+   .header img {
+      max-width: 100%;
+      height: auto;}
     .header nav {
       float: left;
       clear: left; }
