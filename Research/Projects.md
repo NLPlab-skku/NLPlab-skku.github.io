@@ -389,7 +389,6 @@ title: Projects
 			<small>(NLP lab. Sogang University)</small>
 		</li>
 	</ul>
-</div>
 <p><small><a href="#top">Back to Top</a></small></p>
 </blockquote>
 <blockquote>
