@@ -126,7 +126,7 @@ title: Patents
 		</li>
 	</ul>
 	<p><small><a href="#top">Back to Top</a></small></p>
-	</blockquote>
+
 	<blockquote>
 	<p class="jg"><a name="2"><font style = "color:#0000A5;">#Patent Application</font></a></p>
 	<ul class="jg">
@@ -207,6 +207,6 @@ title: Patents
 			<small>공표일: 2017.01.25 (C-2017-003030)</small>
 		</li>
 	</ul>
-</div>
+
 <p><small><a href="#top">Back to Top</a></small></p>
 </blockquote>
