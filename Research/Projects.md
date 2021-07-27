@@ -70,13 +70,6 @@ title: Projects
 		</li>
 		<br>
 		<li>
-			<small>July 2020 ~ June 2021. </small><br>
-			Principal Investigator (PI) involved in <b><font color = "#000063">"사전기반의 한자어 그래프 구축 및 구축된 그래프를 이용한 Query Reformulation 연구."</font></b><br>
-			<small>Supported by 네이버 (Naver Corp.).</small><br>
-			<small>(NLP lab. SKK University)</small>
-		</li>
-		<br>
-		<li>
 			<small>April 2020 ~ February 2029. </small><br>
 			Co-Principal Investigator (Co-PI) involved in <b><font color = "#000063">"인공지능 대학원 (Graduate School of Artificial Intelligence)."</font></b><br>
 			<small>Supported by 정보통신기획평가원 (IITP, 정보통신/방송 기술개발사업), 과학기술정보통신부 (Ministry of Science and ICT).</small><br>
@@ -91,10 +84,17 @@ title: Projects
 		</li>
 	</ul>
 	<p><small><a href="#top">Back to Top</a></small></p>
-	</blockquote>
+
 	<blockquote>
 	<p class="jg"><a name="2"><font style = "color:#0000A5;">#Past Projects</font></a></p>
 	<ul class="jg">
+		<li>
+			<small>July 2020 ~ June 2021. </small><br>
+			Principal Investigator (PI) involved in <b><font color = "#000063">"사전기반의 한자어 그래프 구축 및 구축된 그래프를 이용한 Query Reformulation 연구."</font></b><br>
+			<small>Supported by 네이버 (Naver Corp.).</small><br>
+			<small>(NLP lab. SKK University)</small>
+		</li>
+		<br>
 		<li>
 			<small>September 2020 ~ March 2021. </small><br>
 			Co-Principal Investigator (Co-PI) involved in <b><font color = "#000063">"인공지능(AI) 학습용 데이터 구축 (자연어/자유대화 분야)."</font></b><br>
