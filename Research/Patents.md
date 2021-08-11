@@ -132,6 +132,12 @@ title: Patents
 	<ul class="jg">
 		<li>
 			Patent Application.<br>
+			Youngjoong Ko et al. <b><font color = "#000063">Apparatus and Method for Analyzing Sentiment based on Artificial Neural Network and Learning Method Thereof. (인공 신경망 기반의 감성 분석 장치, 방법 및 이의 학습 방법)</font></b><br>
+			<small>출원일: 2021.04.09 (출원번호 제 10-2021-0046536호)</small>
+		</li>
+		<br>
+		<li>
+			Patent Application.<br>
 			Youngjoong Ko et al. <b><font color = "#000063">The Fake News Video Detection System and Method. (가짜 뉴스 동영상 탐지 시스템 및 그의 방법)</font></b><br>
 			<small>출원일: 2021.02.19 (출원번호 제 10-2021-0022638호)</small>
 		</li>
