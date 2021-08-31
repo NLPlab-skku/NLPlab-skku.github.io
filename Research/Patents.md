@@ -35,42 +35,6 @@ title: Patents
 <div class="post jg">
 	<ul>
 		<li>
-			Patent Application.<br>
-			Youngjoong Ko et al. <b><font color = "#000063">Data Learning Method using Sentiment Analysis System (감성 분석 시스템을 이용한 데이터 학습 방법) </font></b><br>
-			<small>출원일: 2021.08.26 (출원번호 제 10-2021-0113440 호)</small><br>
-		</li>
-		<br>
-		<li>
-			Patent Application.<br>
-			Youngjoong Ko et al. <b><font color = "#000063">Apparatus and Method for Fake Video Detection (가짜 동영상 탐지를 수행하는 방법 및 이를 위한 장치) </font></b><br>
-			<small>출원일: 2021.08.18 (출원번호 제 10-2021-0108936 호)</small><br>
-		</li>
-		<br>
-		<li>
-			Patent Application.<br>
-			Youngjoong Ko et al. <b><font color = "#000063">Apparatus and Method for Analyzing Sentiment based on Artificial Neural Network and Learning Method Thereof (인공 신경망 기반의 감성 분석 장치, 방법 및 이의 학습 방법) </font></b><br>
-			<small>출원일: 2021.04.09 (출원번호 제 10-2021-0046536 호)</small><br>
-		</li>
-		<br>
-		<li>
-			Patent Application.<br>
-			Youngjoong Ko et al. <b><font color = "#000063">The Fake News Video Detection System and Method (가짜 뉴스 동영상 탐지 시스템 및 그의 방법) </font></b><br>
-			<small>출원일: 2021.02.19 (출원번호 제 10-2021-0022638 호)</small><br>
-		</li>
-		<br>
-		<li>
-			Patent Application.<br>
-			Youngjoong Ko et al. <b><font color = "#000063">Method and Apparatus for Summarizing Documents using Keyword Clustering (키워드 클러스터링을 이용한 문서 요약 방법 및 장치) </font></b><br>
-			<small>출원일: 2020.08.24 (출원번호 제 10-2020-0106414 호)</small><br>
-		</li>
-		<br>
-		<li>
-			Patent Application.<br>
-			Youngjoong Ko et al. <b><font color = "#000063">Device and Method for Analyzing Speech-act. (화행 분석 장치 및 방법)</font></b><br>
-			<small>출원일: 2018.11.26 (출원번호 제 10-2018-0147852호)</small><br>
-		</li>
-		<br>
-		<li>
 			Patent Registration.<br>
 			Youngjoong Ko et al. <b><font color = "#000063">System and Method for Expansion Chatting Corpus Based on Similarity Measure Using Utterance Embedding by CNN. (합성곱 신경망에 의한 발화 임베딩을 사용한 유사도측정 기반의 채팅 말뭉치 확장을 위한 장치 및 방법)</font></b><br>
 			<small>출원일: 2018.10.05 (출원번호 제 10-2018-0119113호)</small><br>
@@ -166,6 +130,12 @@ title: Patents
 	<blockquote>
 	<p class="jg"><a name="2"><font style = "color:#0000A5;">#Patent Application</font></a></p>
 	<ul class="jg">
+		<li>
+			Patent Application.<br>
+			Youngjoong Ko et al. <b><font color = "#000063">Data Learning Method using Sentiment Analysis System (감성 분석 시스템을 이용한 데이터 학습 방법) </font></b><br>
+			<small>출원일: 2021.08.26 (출원번호 제 10-2021-0113440 호)</small><br>
+		</li>
+		<br>
 		<li>
 			Patent Application.<br>
 			Youngjoong Ko et al. <b><font color = "#000063">Apparatus and Method for Fake Video Detection. (가짜 동영상 탐지를 수행하는 방법 및 이를 위한 장치)</font></b><br>
