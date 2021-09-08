@@ -132,6 +132,11 @@ title: Patents
 	<ul class="jg">
 		<li>
 			Patent Application.<br>
+			Youngjoong Ko et al. <b><font color = "#000063"> Learning Method of Document Retrieval Model and Apparatus Supporting the Same. (문서 검색 모델의 학습 방법 및 이를 지원하는 장치) </font></b><br>
+			<small>출원일: 2021.09.06 (출원번호 제 10-2021-0118685 호)</small><br>
+		</li>
+		<li>
+			Patent Application.<br>
 			Youngjoong Ko et al. <b><font color = "#000063">Data Learning Method using Sentiment Analysis System (감성 분석 시스템을 이용한 데이터 학습 방법) </font></b><br>
 			<small>출원일: 2021.08.26 (출원번호 제 10-2021-0113440 호)</small><br>
 		</li>
