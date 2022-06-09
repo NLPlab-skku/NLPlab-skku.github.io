@@ -40,7 +40,13 @@ title: Photos
   <p class="meta">사진</p>
   
   <br><br>
-  
+	
+  <h4 class = "center">#2021</h4>
+  <div class="slider">
+	<div><img src = "/assets/img/photos/0098.jpg" title = "22년 6월:LG AI Research 견학"/></div>
+	<div><img src = "/assets/img/photos/0097.jpg" title = "22년 6월:LG AI Research 견학"/></div>
+  </div>
+	
   <h4 class = "center">#2021</h4>
   <div class="slider">
 	<div><img src = "/assets/img/photos/0096.jpg" title = "21년 5월:스승의 날 기념 케이크 전달"/></div>
