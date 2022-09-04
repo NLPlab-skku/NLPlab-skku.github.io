@@ -36,6 +36,27 @@ title: Patents
 	<ul>
 		<li>
 			Patent Registration.<br>
+			Youngjoong Ko et al. <b><font color = "#000063">The Fake News Video Detection System and Method (가짜 뉴스 동영상 탐지 시스템 및 그의 방법)</b><br>
+			<small>출원일: 2021.02.19 (출원번호 제 10-2021-0022638 호)</small><br>
+			<small>등록일: 2022.08.17 (제 10-2435035호)</small>
+		</li>
+		<br>
+		<li>
+			Patent Registration.<br>
+			Youngjoong Ko et al. <b><font color = "#000063">Method and Apparatus for Summarizing Documents using Keyword Clustering (키워드 클러스터링을 이용한 문서 요약 방법 및 장치)</font></b><br>
+			<small>출원일: 2020.08.24 (출원번호 제 10-2020-0106414 호)</small><br>
+			<small>등록일: 2022.05.23 (제 10-2402466호)</small>
+		</li>
+		<br>
+		<li>
+			Patent Registration.<br>
+			Youngjoong Ko et al. <b><font color = "#000063">Device and Method for Analyzing Speech-act. (화행 분석 장치 및 방법)</font></b><br>
+			<small>출원일: 2018.11.26 (출원번호 제 10-2018-0147852 호)</small><br>
+			<small>등록일: 2019.09.18 (제 10-2024845호)</small>
+		</li>
+		<br>
+		<li>
+			Patent Registration.<br>
 			Youngjoong Ko et al. <b><font color = "#000063">System and Method for Expansion Chatting Corpus Based on Similarity Measure Using Utterance Embedding by CNN. (합성곱 신경망에 의한 발화 임베딩을 사용한 유사도측정 기반의 채팅 말뭉치 확장을 위한 장치 및 방법)</font></b><br>
 			<small>출원일: 2018.10.05 (출원번호 제 10-2018-0119113호)</small><br>
 			<small>등록일: 2020.05.06 (제 10-2109866호)</small>
