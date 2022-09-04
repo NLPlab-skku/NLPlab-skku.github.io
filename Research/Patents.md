@@ -36,7 +36,7 @@ title: Patents
 	<ul>
 		<li>
 			Patent Registration.<br>
-			Youngjoong Ko et al. <b><font color = "#000063">The Fake News Video Detection System and Method (가짜 뉴스 동영상 탐지 시스템 및 그의 방법)</b><br>
+			Youngjoong Ko et al. <b><font color = "#000063">The Fake News Video Detection System and Method (가짜 뉴스 동영상 탐지 시스템 및 그의 방법)</font></b><br>
 			<small>출원일: 2021.02.19 (출원번호 제 10-2021-0022638 호)</small><br>
 			<small>등록일: 2022.08.17 (제 10-2435035호)</small>
 		</li>
