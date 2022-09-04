@@ -36,8 +36,8 @@ title: Projects
 	<ul>
 		<li>
 			<small>July 2021 ~ December 2021. </small><br>
-			Principal Investigator (PI) involved in <b><font color = "#000063">"Dialogue System based on Large-scaled Pretrained Models."</font></b><br>
-			<small>Supported by LG Electronics.</small><br>
+			Co-Investigator involved in <b><font color = "#000063">"전문지식 대상 판단결과의 이유/근거를 설명가능한 전문가 의사결정 지원 인공지능 기술개발."</font></b><br>
+			<small>Supported by 정보통신기획평가원 (IITP), 과학기술정보통신부 (Ministry of Science and ICT).</small><br>
 			<small>(NLP lab. SKK University)</small>
 		</li>
 		<br>
@@ -88,6 +88,13 @@ title: Projects
 	<blockquote>
 	<p class="jg"><a name="2"><font style = "color:#0000A5;">#Past Projects</font></a></p>
 	<ul class="jg">
+		<li>
+			<small>July 2021 ~ December 2021. </small><br>
+			Principal Investigator (PI) involved in <b><font color = "#000063">"Dialogue System based on Large-scaled Pretrained Models."</font></b><br>
+			<small>Supported by LG Electronics.</small><br>
+			<small>(NLP lab. SKK University)</small>
+		</li>
+		<br>
 		<li>
 			<small>July 2020 ~ June 2021. </small><br>
 			Principal Investigator (PI) involved in <b><font color = "#000063">"사전기반의 한자어 그래프 구축 및 구축된 그래프를 이용한 Query Reformulation 연구."</font></b><br>
