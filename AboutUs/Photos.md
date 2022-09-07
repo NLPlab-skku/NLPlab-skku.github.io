@@ -43,6 +43,8 @@ title: Photos
 	
   <h4 class = "center">#2022</h4>
   <div class="slider">
+	<div><img src = "/assets/img/photos/0101.jpg" title = "22년 9월"/></div>
+	<div><img src = "/assets/img/photos/0100.jpg" title = "22년 9월"/></div>
 	<div><img src = "/assets/img/photos/0099.jpg" title = "22년 8월:인공지능대학원 발표"/></div>
 	<div><img src = "/assets/img/photos/0098.jpg" title = "22년 6월:LG AI Research 견학"/></div>
 	<div><img src = "/assets/img/photos/0097.jpg" title = "22년 6월:LG AI Research 견학"/></div>
