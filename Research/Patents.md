@@ -210,7 +210,7 @@ title: Patents
 
 <blockquote>
 <p class="jg"><a name="3">#Program Copyright Registration</a></p>
-	<ul class="jg">
+	<ul class="post jg">
 		<li>
 			Program Copyright Registration<br>
 			Youngjoong Ko et al. 원격 지도(Distant Supervision) 기법을 이용한 개체명 인식 프로그램.<br>
