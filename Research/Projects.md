@@ -84,7 +84,7 @@ title: Projects
 	</li>
 </ul>
 <p><small><a href="#top">Back to Top</a></small></p>
-
+</blockquote>
 
 <blockquote>
 <p class="jg"><a name="2">#Past Projects</a></p>
@@ -398,7 +398,8 @@ title: Projects
 	</li>
 </ul>
 <p><small><a href="#top">Back to Top</a></small></p>
-
+</blockquote>
+<blockquote>
 <p class="jg"><a name="3">#Transfer of Technical Know-how</a></p>
 <ul class="post jg">
 <li>
@@ -409,4 +410,4 @@ title: Projects
 </li>
 </ul>
 <p><small><a href="#top">Back to Top</a></small></p>
-
+</blockquote>
