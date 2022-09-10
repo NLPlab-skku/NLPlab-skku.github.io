@@ -32,8 +32,8 @@ title: Patents
 </div>
 <blockquote>
 <p class="jg"><a name="1"><font style = "color:#0000A5;">#Patent Registration</font></a></p>
-<div class="post jg">
-	<ul>
+<!--<div class="post jg">-->
+	<ul class="post jg">
 		<li>
 			Patent Registration.<br>
 			Youngjoong Ko et al. <b><font color = "#000063">The Fake News Video Detection System and Method (가짜 뉴스 동영상 탐지 시스템 및 그의 방법)</font></b><br>
