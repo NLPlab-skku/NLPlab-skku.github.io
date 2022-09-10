@@ -120,7 +120,7 @@ title: Patents
 		<br>
 		<li>
 			Patent Registration.<br>
-			Youngjoong Ko et al. <b>Feature Weighting Apparatus for User Utterance Information Classification in Dialogue System and Method of the Same. (대화시스템에서 사용자 발화의 정보 분류를 위한 자질 가중치 산출 장치 및 방법)</b><br>
+			Youngjoong Ko et al. Feature Weighting Apparatus for User Utterance Information Classification in Dialogue System and Method of the Same. (대화시스템에서 사용자 발화의 정보 분류를 위한 자질 가중치 산출 장치 및 방법)<br>
 			<small>출원일: 2014.06.30 (출원번호 제 10-2014-0080978호) </small><br>
 			<small>등록일: 2015.10.27 (제 10-1565143호)</small>
 		</li>
