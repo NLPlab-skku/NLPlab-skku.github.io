@@ -150,7 +150,7 @@ title: Patents
 
 <blockquote>
 <p class="jg"><a name="2">#Patent Application</a></p>
-<ul class="jg">
+	<ul class="jg">
 		<li>
 			Patent Application.<br>
 			Youngjoong Ko et al. Learning Method of Document Retrieval Model and Apparatus Supporting the Same. (문서 검색 모델의 학습 방법 및 이를 지원하는 장치)<br>
@@ -204,12 +204,13 @@ title: Patents
 			Youngjoong Ko et al. User Terminal and Method for Providing Summary of Web Page. (웹 문서 요약 제공을 위한 사용자 단말 장치 및 웹 문서 제공 방법)<br>
 			<small>출원일: 2008.01.30 (출원번호 제 10-2008-0009731호)</small>
 		</li>
-</ul>
+	</ul>
 	<p><small><a href="#top">Back to Top</a></small></p>
-	</blockquote>
+</blockquote>
+
 <blockquote>
 <p class="jg"><a name="3">#Program Copyright Registration</a></p>
-<ul class="jg">
+	<ul class="jg">
 		<li>
 			Program Copyright Registration<br>
 			Youngjoong Ko et al. 원격 지도(Distant Supervision) 기법을 이용한 개체명 인식 프로그램.<br>
@@ -251,7 +252,7 @@ title: Patents
 			<small>창작일: 2017.01.23</small><br>
 			<small>공표일: 2017.01.25 (C-2017-003030)</small>
 		</li>
-</ul>
+	</ul>
 
 <p><small><a href="#top">Back to Top</a></small></p>
 </blockquote>
