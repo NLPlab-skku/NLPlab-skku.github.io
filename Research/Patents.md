@@ -146,7 +146,8 @@ title: Patents
 			<small>등록일: 2004.02.12 (제 10-0420096호)</small>
 		</li>
 	</ul>
-	<p><small><a href="#top">Back to Top</a></small></p>
+<p><small><a href="#top">Back to Top</a></small></p>
+</blockquote>
 
 <blockquote>
 <p class="jg"><a name="2">#Patent Application</a></p>
@@ -205,7 +206,7 @@ title: Patents
 			<small>출원일: 2008.01.30 (출원번호 제 10-2008-0009731호)</small>
 		</li>
 	</ul>
-	<p><small><a href="#top">Back to Top</a></small></p>
+<p><small><a href="#top">Back to Top</a></small></p>
 </blockquote>
 
 <blockquote>
