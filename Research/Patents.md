@@ -150,7 +150,7 @@ title: Patents
 
 <blockquote>
 <p class="jg"><a name="2">#Patent Application</a></p>
-	<ul class="jg">
+	<ul class="post jg">
 		<li>
 			Patent Application.<br>
 			Youngjoong Ko et al. Learning Method of Document Retrieval Model and Apparatus Supporting the Same. (문서 검색 모델의 학습 방법 및 이를 지원하는 장치)<br>
