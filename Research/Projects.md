@@ -32,8 +32,8 @@ title: Projects
 </div>
 <blockquote>
 <p class="jg"><a name="1">#Current Projects</a></p>
-<div class="post jg">
-<ul class="jg">
+
+<ul class="post jg">
 	<li>
 		<small>April 2022 ~ December 2026. </small><br>
 		Co-Investigator involved in "전문지식 대상 판단결과의 이유/근거를 설명가능한 전문가 의사결정 지원 인공지능 기술개발."<br>
@@ -86,9 +86,9 @@ title: Projects
 <p><small><a href="#top">Back to Top</a></small></p>
 
 
-
+<blockquote>
 <p class="jg"><a name="2">#Past Projects</a></p>
-<ul class="jg">
+<ul class="post jg">
 	<li>
 		<small>July 2021 ~ December 2021. </small><br>
 		Principal Investigator (PI) involved in "Dialogue System based on Large-scaled Pretrained Models."<br>
@@ -400,7 +400,7 @@ title: Projects
 <p><small><a href="#top">Back to Top</a></small></p>
 
 <p class="jg"><a name="3">#Transfer of Technical Know-how</a></p>
-<ul class="jg">
+<ul class="post jg">
 <li>
 	<small>September 2014 ~ December 2019. </small><br>
 	Principal Investigator (PI) involved in "AAC용 문장생성기술 (Sentence Generation Techniques for Augmentative and Alternative Communication (AAC))."<br>
@@ -409,5 +409,4 @@ title: Projects
 </li>
 </ul>
 <p><small><a href="#top">Back to Top</a></small></p>
-</blockquote>
 
