@@ -149,7 +149,7 @@ title: Patents
 	<p><small><a href="#top">Back to Top</a></small></p>
 
 	<blockquote>
-	<p class="jg"><a name="2">#Patent Application</a></p>
+<p class="jg"><a name="2">#Patent Application</a></p>
 	<ul class="jg">
 		<li>
 			Patent Application.<br>
@@ -208,7 +208,7 @@ title: Patents
 	<p><small><a href="#top">Back to Top</a></small></p>
 	</blockquote>
 	<blockquote>
-	<p class="jg"><a name="3">#Program Copyright Registration</a></p>
+<p class="jg"><a name="3">#Program Copyright Registration</a></p>
 	<ul class="jg">
 		<li>
 			Program Copyright Registration<br>
