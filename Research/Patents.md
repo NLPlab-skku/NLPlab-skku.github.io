@@ -31,7 +31,7 @@ title: Patents
 	<br>
 </div>
 <blockquote>
-<p class="jg"><a name="1"><font style = "color:#0000A5;">#Patent Registration</font></a></p>
+<p class="jg"><a name="1">#Patent Registration</a></p>
 <!--<div class="post jg">-->
 	<ul class="post jg">
 		<li>
@@ -149,7 +149,7 @@ title: Patents
 	<p><small><a href="#top">Back to Top</a></small></p>
 
 	<blockquote>
-	<p class="jg"><a name="2"><font style = "color:#0000A5;">#Patent Application</font></a></p>
+	<p class="jg"><a name="2">#Patent Application</a></p>
 	<ul class="jg">
 		<li>
 			Patent Application.<br>
@@ -208,7 +208,7 @@ title: Patents
 	<p><small><a href="#top">Back to Top</a></small></p>
 	</blockquote>
 	<blockquote>
-	<p class="jg"><a name="3"><font style = "color:#0000A5;">#Program Copyright Registration</font></a></p>
+	<p class="jg"><a name="3">#Program Copyright Registration</a></p>
 	<ul class="jg">
 		<li>
 			Program Copyright Registration<br>
