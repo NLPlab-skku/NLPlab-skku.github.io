@@ -1,0 +1,40 @@
+title: NLPLAB
+description: SKK Univ. NLP LAB.
+
+url: "https://nlplab-skku.github.io/"
+baseurl: ""
+paginate_path: "blog/page:num/"
+permalink: blog/:title/
+
+markdown: kramdown
+highlighter: rouge
+gems: [jekyll-paginate]
+paginate: 5
+
+navigation:
+ - title: Home
+   url: /index.html
+ - title: About Us
+   url: /AboutUs/Introduction/
+ - title: Research
+   url: /Research/Fields/
+ - title: Publications
+   url: /Publications/JournalPapers/
+ - title: Members
+   url: /Members/
+ - title: GitHub
+   url: "https://github.com/NLPlab-skku"
+ #- title: Boards
+ #  url: /Boards/notice/
+ #- title: Courses
+ #  url: /Courses/openingcourses 
+ #- title: Software
+ #  url: /Software/languageanalysissoftware/ --> 
+
+social:
+   github: "https://github.com/NLPlab-skku"
+   #twitter: brianmaierjr
+   #facebook: brianmaierjr
+   email: nlplab.skku@gmail.com
+
+google_analytics: "UA-58263416-1"
