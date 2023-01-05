@@ -214,6 +214,34 @@ title: Patents
 	<ul class="post jg">
 		<li>
 			Program Copyright Registration<br>
+			Youngjoong Ko et al. 프롬프트 기반 개체명 단서 사전을 활용한 개체명 인식.<br>
+			<small>창작일: 2022.10.28</small><br>
+			<small>공표일: 2022.11.07 (C-2022-044022)</small>
+		</li>
+		<br>
+		<li>
+			Program Copyright Registration<br>
+			Youngjoong Ko et al. Pretrained Language Model(사전학습언어모델)과 Graph Attention Network(그래프어텐션네트워크)를 이용한 화행분석.<br>
+			<small>창작일: 2022.10.24</small><br>
+			<small>공표일: 2022.11.07 (C-2022-043884)</small>
+		</li>
+		<br>
+		<li>
+			Program Copyright Registration<br>
+			Youngjoong Ko et al. BERT(버트)를 이용한 Wordpiece(워드피스) token(토큰) 기반의 의존 구문 분석.<br>
+			<small>창작일: 2022.10.28</small><br>
+			<small>공표일: 2022.11.07 (C-2022-044112)</small>
+		</li>
+		<br>
+		<li>
+			Program Copyright Registration<br>
+			Youngjoong Ko et al. 의미역 분석기.<br>
+			<small>창작일: 2022.10.24</small><br>
+			<small>공표일: 2022.11.14 (C-2022-044862)</small>
+		</li>
+		<br>
+		<li>
+			Program Copyright Registration<br>
 			Youngjoong Ko et al. 원격 지도(Distant Supervision) 기법을 이용한 개체명 인식 프로그램.<br>
 			<small>창작일: 2019.12.16</small><br>
 			<small>공표일: 2019.12.30 (C-2019-043819)</small>
