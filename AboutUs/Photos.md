@@ -44,8 +44,8 @@ title: Photos
   <h4 class = "center">#2022</h4>
   <div class="slider">
 	<div><img src = "/assets/img/photos/0105.jpg" title = "22년 12월:한국정보과학회 KSC2022"/></div>
-	<div><img src = "/assets/img/photos/0104.jpg" title = "22년 12월:한국정보과학회 KSC2022"/></div>
-	<div><img src = "/assets/img/photos/0103.jpg" title = "22년 12월:한국정보과학회 KSC2022 제주도에서🍊"/></div>
+	<div><img src = "/assets/img/photos/0104.jpg" title = "22년 12월:한국정보과학회 KSC2022 발표"/></div>
+	<div><img src = "/assets/img/photos/0103.jpg" title = "22년 12월:제주도에서🍊"/></div>
 	<div><img src = "/assets/img/photos/0102.png" title = "22년 7월:SIGIR 학회 발표"/></div>
 	<div><img src = "/assets/img/photos/0100.jpg" title = "22년 9월"/></div>
 	<div><img src = "/assets/img/photos/0101.jpg" title = "22년 9월"/></div>
