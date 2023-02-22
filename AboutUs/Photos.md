@@ -41,6 +41,12 @@ title: Photos
   
   <br><br>
 	
+  <h4 class = "center">#2023</h4>
+  <div class="slider">
+	<div><img src = "/assets/img/photos/0107.jpg" title = "23년 2월:학위수여식"/></div>
+	<div><img src = "/assets/img/photos/0106.jpg" title = "23년 2월:학위수여식"/></div>
+  </div>
+	
   <h4 class = "center">#2022</h4>
   <div class="slider">
 	<div><img src = "/assets/img/photos/0105.jpg" title = "22년 12월:한국정보과학회 KSC2022"/></div>
