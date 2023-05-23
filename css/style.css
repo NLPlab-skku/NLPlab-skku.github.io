@@ -1185,7 +1185,9 @@ CONTACT PAGE STYLING
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-weight: 300; }
 
-a.publisher-link {
+.publisher-link {
   color: lightblue;
-  text-decoration: none;
-}
+  text-decoration: none; }
+
+.publisher-link:hover, .publisher-link:focus {
+  text-decoration: underline; }
