@@ -1184,3 +1184,8 @@ CONTACT PAGE STYLING
   color: gray;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-weight: 300; }
+
+a.publisher-link {
+  color: lightblue;
+  text-decoration: none;
+}
