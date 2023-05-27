@@ -43,6 +43,8 @@ title: Photos
 	
   <h4 class = "center">#2023</h4>
   <div class="slider">
+	<div><img src = "/assets/img/photos/0112.jpg" title = "23년 5월:스승의 날 기념 케이크 전달"/></div>
+	<div><img src = "/assets/img/photos/0111.jpg" title = "23년 5월:스승의 날 기념 케이크 전달"/></div>
 	<div><img src = "/assets/img/photos/0110.jpg" title = "23년 4월:성균관대학교의 봄🌸"/></div>
 	<div><img src = "/assets/img/photos/0109.jpg" title = "23년 4월:성균관대학교의 봄🌸"/></div>
 	<div><img src = "/assets/img/photos/0108.jpg" title = "23년 3월:연구실 회식"/></div>
