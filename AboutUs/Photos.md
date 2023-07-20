@@ -94,7 +94,7 @@ title: Photos
 	<div><img src = "/assets/img/photos/0085.jpg" title = "19년 5월:홈커밍데이"/></div>
   </div>
   
-  <h4 class = "center">#2018</h4>
+  <!-- <h4 class = "center">#2018</h4>
   <div class="slider">
 	<div><img src = "/assets/img/photos/0079.jpg" title = "18년 11월:4차 산업혁명 디지털 포렌식 아이디어 공모전 우수상 수상"/></div>
 	<div><img src = "/assets/img/photos/0078.jpg" title = "18년 5월:홈커밍데이"/></div>
@@ -219,4 +219,4 @@ title: Photos
 	<div><image class = "entirecenter" src = "/assets/img/photos/0003.jpg" title = ""/></div>
 	<div><image class = "entirecenter" src = "/assets/img/photos/0002.jpg" title = ""/></div>
 	<div><image class = "entirecenter" src = "/assets/img/photos/0001.jpg" title = ""/></div>
-  </div>
+  </div> -->
