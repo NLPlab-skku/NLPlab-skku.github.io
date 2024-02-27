@@ -41,8 +41,15 @@ title: Photos
   
   <br><br>
 	
+  <h4 class = "center">#2024</h4>
+  <div class="slider">
+	<div><img src = "/assets/img/photos/0118.jpg" title = "24년 2월:학위수여식"/></div>
+	<div><img src = "/assets/img/photos/0117.jpg" title = "24년 2월:학위수여식"/></div>
+  </div>
+	
   <h4 class = "center">#2023</h4>
   <div class="slider">
+	<div><img src = "/assets/img/photos/0116.jpg" title = "23년 11월:11월 생일파티"/></div>
 	<div><img src = "/assets/img/photos/0115.jpg" title = "23년 10월:연구실 회식"/></div>
 	<div><img src = "/assets/img/photos/0114.jpg" title = "23년 7월:교수님 생신 케이크 전달"/></div>
 	<div><img src = "/assets/img/photos/0113.jpg" title = "23년 5월:4,5월 생일파티"/></div>
