@@ -35,15 +35,22 @@ title: Projects
 
 <ul class="post jg">
 	<li>
-		<small>October 2022 ~ December 2026. </small><br>
-		Principal-Investigator involved in "멀티모달 DST (DSTC11) 기술 확보."<br>
-		<small>Supported by LG Electronics.</small><br>
+		<small>April 2024 ~ December 2027. </small><br>
+		Co-Investigator (Co-PI) involved in "산업융합형 멀티모달 생성 인공지능 인재양성."<br>
+		<small>Supported by 생성AI 선도인재양성, 정보통신기획평가원 (IITP), 과학기술정보통신부 (Ministry of Science and ICT).</small><br>
+		<small>(NLP lab. SKK University)</small>
+	</li>
+	<br>
+	<li>
+		<small>April 2024 ~ December 2026. </small><br>
+		Principal-Investigator (PI) involved in "사회적, 윤리적 학습을 위한 데이터 특성 및 생성 AI 모델의 윤리성 향상 연구."<br>
+		<small>Supported by 정보통신기획평가원 (IITP), 과학기술정보통신부 (Ministry of Science and ICT).</small><br>
 		<small>(NLP lab. SKK University)</small>
 	</li>
 	<br>
 	<li>
 		<small>April 2022 ~ December 2026. </small><br>
-		Co-Investigator involved in "전문지식 대상 판단결과의 이유/근거를 설명가능한 전문가 의사결정 지원 인공지능 기술개발."<br>
+		Principal-Investigator (PI) involved in "전문지식 대상 판단결과의 이유/근거를 설명가능한 전문가 의사결정 지원 인공지능 기술개발."<br>
 		<small>Supported by 정보통신기획평가원 (IITP), 과학기술정보통신부 (Ministry of Science and ICT).</small><br>
 		<small>(NLP lab. SKK University)</small>
 	</li>
@@ -52,20 +59,6 @@ title: Projects
 		<small>April 2021 ~ December 2024. </small><br>
 		Co-Principal Investigator (Co-PI) involved in "소프트웨어 중심대학 사업."<br>
 		<small>Supported by 정보통신기획평가원 (IITP), 과학기술정보통신부 (Ministry of Science and ICT).</small><br>
-		<small>(NLP lab. SKK University)</small>
-	</li>
-	<br>
-	<li>
-		<small>March 2021 ~ November 2021. </small><br>
-		Principal Investigator (PI) involved in "휴먼 지식증강 서비스를 위한 지능진화형 WiseQA 플랫폼 기술 개발."<br>
-		<small>Supported by 정보통신기획평가원 (IITP), 과학기술정보통신부 (Ministry of Science and ICT).</small><br>
-		<small>(NLP lab. SKK University)</small>
-	</li>
-	<br>
-	<li>
-		<small>September 2020 ~ February 2024. </small><br>
-		Principal Investigator (PI) involved in "이종 지식그래프를 이용한 융합 학습 기반의 대화시스템 개발 (Integrated Learning based Dialogue Systems Using Heterogeneous Knowledge Graphs)."<br>
-		<small>Supported by 한국연구재단 (NRF, 중견과제), 과학기술정보통신부 (Ministry of Science and ICT).</small><br>
 		<small>(NLP lab. SKK University)</small>
 	</li>
 	<br>
@@ -82,13 +75,6 @@ title: Projects
 		<small>Supported by 정보통신기획평가원 (IITP, 정보통신/방송 기술개발사업), 과학기술정보통신부 (Ministry of Science and ICT).</small><br>
 		<small>(NLP lab. SKK University)</small>
 	</li>
-	<br>
-	<li>
-		<small>April 2020 ~ December 2023. </small><br>
-		Principal Investigator (PI) involved in "뉴럴-심볼릭 모델의 지식 학습 및 추론 기술 개발 (A Neural-Symbolic Model for Knowledge Acquisition and Inference Techniques)."<br>
-		<small>Supported by 정보통신기획평가원 (IITP, 정보통신/방송 기술개발사업), 과학기술정보통신부 (Ministry of Science and ICT).</small><br>
-		<small>(NLP lab. SKK University)</small>
-	</li>
 </ul>
 <p><small><a href="#top">Back to Top</a></small></p>
 </blockquote>
@@ -97,8 +83,50 @@ title: Projects
 <p class="jg"><a name="2">#Past Projects</a></p>
 <ul class="post jg">
 	<li>
+		<small>March 2023 ~ March 2024. </small><br>
+		Principal Investigator (PI) involved in "QA 생성을 활용한 지식스니펫 커버리지 확장 연구."<br>
+		<small>Supported by 네이버 (Naver Corp.).</small><br>
+		<small>(NLP lab. SKK University)</small>
+	</li>
+	<br>
+	<li>
+		<small>September 2020 ~ February 2024. </small><br>
+		Principal Investigator (PI) involved in "이종 지식그래프를 이용한 융합 학습 기반의 대화시스템 개발 (Integrated Learning based Dialogue Systems Using Heterogeneous Knowledge Graphs)."<br>
+		<small>Supported by 한국연구재단 (NRF, 중견과제), 과학기술정보통신부 (Ministry of Science and ICT).</small><br>
+		<small>(NLP lab. SKK University)</small>
+	</li>
+	<br>
+	<li>
+		<small>July 2023 ~ December 2023. </small><br>
+		Principal Investigator (PI) involved in "사용자 중심 질의 재작성을 위한 사용자 피드백 유도형 질문 생성 연구."<br>
+		<small>Supported by NCSOFT (NCSOFT Corp.).</small><br>
+		<small>(NLP lab. SKK University)</small>
+	</li>
+	<br>
+	<li>
+		<small>April 2020 ~ December 2023. </small><br>
+		Principal Investigator (PI) involved in "뉴럴-심볼릭 모델의 지식 학습 및 추론 기술 개발 (A Neural-Symbolic Model for Knowledge Acquisition and Inference Techniques)."<br>
+		<small>Supported by 정보통신기획평가원 (IITP, 정보통신/방송 기술개발사업), 과학기술정보통신부 (Ministry of Science and ICT).</small><br>
+		<small>(NLP lab. SKK University)</small>
+	</li>
+	<br>
+	<li>
+		<small>March 2021 ~ January 2023. </small><br>
+		Principal Investigator (PI) involved in "휴먼 지식증강 서비스를 위한 지능진화형 WiseQA 플랫폼 기술 개발."<br>
+		<small>Supported by 정보통신기획평가원 (IITP), 과학기술정보통신부 (Ministry of Science and ICT).</small><br>
+		<small>(NLP lab. SKK University)</small>
+	</li>
+	<br>
+	<li>
+		<small>October 2022 ~ December 2022. </small><br>
+		Principal-Investigator involved in "멀티모달 DST (DSTC11) 기술 확보."<br>
+		<small>Supported by LG Electronics.</small><br>
+		<small>(NLP lab. SKK University)</small>
+	</li>
+	<br>
+	<li>
 		<small>July 2021 ~ December 2021. </small><br>
-		Principal Investigator (PI) involved in "Dialogue System based on Large-scaled Pretrained Models."<br>
+		Principal Investigator (PI) involved in "Dialogue Systems with Large-scaled Pretrained Models."<br>
 		<small>Supported by LG Electronics.</small><br>
 		<small>(NLP lab. SKK University)</small>
 	</li>
