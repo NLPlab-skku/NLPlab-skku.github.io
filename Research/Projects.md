@@ -437,18 +437,26 @@ title: Projects
 <blockquote>
 <p class="jg"><a name="3">#Transfer of Technical Know-how</a></p>
 <ul class="post jg">
-<li>
-	<small>February 2022. </small><br>
-	"그래프 랭킹 알고리즘과 변형된 C-value 수식을 이용한 과학 문서의 핵심어 추출기"<br>
-	<small>Voicware Co., LTD.</small><br>
-	<small>(IS lab. Dong-A University)</small>
-</li>
-<li>
-	<small>September 2014 ~ December 2019. </small><br>
-	Principal Investigator (PI) involved in "AAC용 문장생성기술 (Sentence Generation Techniques for Augmentative and Alternative Communication (AAC))."<br>
-	<small>(주)위인터렉트.</small><br>
-	<small>(NLP lab. Sungkyunkwan University)</small>
-</li>
+	<li>
+		<small>March 2023. </small><br>
+		"문장 임베딩 및 유사 질문 검색을 위한 장치 및 방법"<br>
+		<small>(주)웨이브릿지.</small><br>
+		<small>(NLP lab. Sungkyunkwan University)</small>
+	</li>
+	<br>
+	<li>
+		<small>February 2022. </small><br>
+		"그래프 랭킹 알고리즘과 변형된 C-value 수식을 이용한 과학 문서의 핵심어 추출기"<br>
+		<small>(주)위인터렉트.</small><br>
+		<small>(NLP lab. Sungkyunkwan University)</small>
+	</li>
+	<br>
+	<li>
+		<small>September 2014 ~ December 2019. </small><br>
+		"AAC용 문장생성기술 (Sentence Generation Techniques for Augmentative and Alternative Communication (AAC))"<br>
+		<small>Voicware Co., LTD.</small><br>
+		<small>(IS lab. Dong-A University)</small>
+	</li>
 </ul>
 <p><small><a href="#top">Back to Top</a></small></p>
 </blockquote>
