@@ -154,6 +154,84 @@ title: Patents
 	<ul class="post jg">
 		<li>
 			Patent Application.<br>
+			Youngjoong Ko et al. Metod and Device for Learning of Neural Network Model. (신경망모델의 학습방법 및 장치)<br>
+			<small>출원일: 2024.01.19 (출원번호 제 10-2024-0008658 호)</small><br>
+		</li>
+		<br>
+		<li>
+			Patent Application.<br>
+			Youngjoong Ko et al. Apparatus and Method for Generating Multiple Conversation in Conversasion Systems. (다자 대화 시스템을 위한 대화 인코딩 및 생성 방법 및 장치)<br>
+			<small>출원일: 2023.12.01 (출원번호 제 10-2023-0172179 호)</small><br>
+		</li>
+		<br>
+		<li>
+			Patent Application.<br>
+			Youngjoong Ko et al. Apparatus and Method for Providing Dialogue Response of Persona based Dialogue System, Learning Method for Providing Dialogue Response in Persona based Dialogue System. (페르소나 기반 대화 시스템의 대화 응답 제공 장치 및 방법, 페르소나 기반 대화 시스템의 대화 응답 제공을 위한 학습 방법)<br>
+			<small>출원일: 2023.11.23 (출원번호 제 10-2023-0162473 호)</small><br>
+		</li>
+		<br>
+		<li>
+			Patent Application.<br>
+			Youngjoong Ko et al. Conversation Summary Apparatus and Method and Learning Method Thereof (대화 요약 장치와 방법 및 그 학습 방법)<br>
+			<small>출원일: 2023.11.07 (출원번호 제 10-2023-0152700 호)</small><br>
+		</li>
+		<br>
+		<li>
+			Patent Application.<br>
+			Youngjoong Ko et al. Language Model Learning Method, Language Model Learning Apparatus and Emotion Prediction Apparatus using the Same. (언어 모델 학습 방법, 언어 모델 학습 장치 및 이를 이용한 감정 예측 장치)<br>
+			<small>출원일: 2023.11.03 (출원번호 제 10-2023-0150819 호)</small><br>
+		</li>
+		<br>
+		<li>
+			Patent Application.<br>
+			Youngjoong Ko et al. Method for Learning of Document Summarization Model, Method and Device for Summarizing Document using Learned Summarization Model (문서 요약모델의 학습방법, 학습된 문서 요약모델을 이용한 문서 요약방법 및 장치)<br>
+			<small>출원일: 2023.07.07 (출원번호 제 10-2023-0088351 호)</small><br>
+		</li>
+		<br>
+		<li>
+			Patent Application.<br>
+			Youngjoong Ko et al. Apparatus and Method for Expanding Knowledge Graph (지식그래프 확장 장치 및 방법)<br>
+			<small>출원일: 2023.03.27 (출원번호 제 10-2023-0040045 호)</small><br>
+		</li>
+		<br>
+		<li>
+			Patent Application.<br>
+			Youngjoong Ko et al. Method and Device for Pre-training of Language Model. (언어모델의 사전학습방법 및 장치)<br>
+			<small>출원일: 2023.03.13 (출원번호 제 10-2023-0032434 호)</small><br>
+		</li>
+		<br>
+		<li>
+			Patent Application.<br>
+			Youngjoong Ko et al. Apparatus, Method, Computer-readable Storage Medium and Computer Program for Detecting Zero-shot Stance based on Adversarial Learning and Meta-learning. (적대적 학습 및 메타 학습 기반의 제로샷 자세 탐지 장치, 방법, 컴퓨터 판독 가능한 기록 매체 및 컴퓨터 프로그램)<br>
+			<small>출원일: 2023.02.22 (출원번호 제 10-2023-0023577 호)</small><br>
+		</li>
+		<br>
+		<li>
+			Patent Application.<br>
+			Youngjoong Ko et al. Apparatus, Method, Computer-readable Storage Medium and Computer Program for Summarizing Document based on Query Attention (질의 중심 기반의 문서 요약 장치, 방법, 컴퓨터 판독 가능한 기록 매체 및 컴퓨터 프로그램)<br>
+			<small>출원일: 2023.02.22 (출원번호 제 10-2023-0023537 호)</small><br>
+		</li>
+		<br>
+		<li>
+			Patent Application.<br>
+			Youngjoong Ko et al. Method and Device for Generating Answer to Conversation with User using a Contrast Learning Technique. (대조 학습 기법을 이용하여 사용자와의 대화에 대한 응답을 생성하는 방법 및 장치)<br>
+			<small>출원일: 2023.03.22 (출원번호 제 10-2023-0023608 호)</small><br>
+		</li>
+		<br>
+		<li>
+			Patent Application.<br>
+			Youngjoong Ko et al. Apparatus and Method for Tracking Conversation State. (대화 상태 추적 장치 및 방법)<br>
+			<small>출원일: 2023.03.21 (출원번호 제 10-2023-0023050 호)</small><br>
+		</li>
+		<br>
+		<li>
+			Patent Application.<br>
+			Youngjoong Ko et al. Apparatus and Method for Learning Deep Learning Model, and Apparatus and Method for Searching Video based on the Deep Learning Model. (딥러닝 모델을 학습시키는 장치 및 방법, 상기 딥러닝 모델을 기반으로 동영상을 검색하는 장치 및 방법)<br>
+			<small>출원일: 2023.02.21 (출원번호 제 10-2023-0023010 호)</small><br>
+		</li>
+		<br>
+		<li>
+			Patent Application.<br>
 			Youngjoong Ko et al. Learning Method of Document Retrieval Model and Apparatus Supporting the Same. (문서 검색 모델의 학습 방법 및 이를 지원하는 장치)<br>
 			<small>출원일: 2021.09.06 (출원번호 제 10-2021-0118685 호)</small><br>
 		</li>
@@ -167,43 +245,43 @@ title: Patents
 		<li>
 			Patent Application.<br>
 			Youngjoong Ko et al. Apparatus and Method for Fake Video Detection. (가짜 동영상 탐지를 수행하는 방법 및 이를 위한 장치)<br>
-			<small>출원일: 2021.08.18 (출원번호 제 10-2021-0108936호)</small>
+			<small>출원일: 2021.08.18 (출원번호 제 10-2021-0108936 호)</small>
 		</li>
 		<br>
 		<li>
 			Patent Application.<br>
 			Youngjoong Ko et al. Apparatus and Method for Analyzing Sentiment based on Artificial Neural Network and Learning Method Thereof. (인공 신경망 기반의 감성 분석 장치, 방법 및 이의 학습 방법)<br>
-			<small>출원일: 2021.04.09 (출원번호 제 10-2021-0046536호)</small>
+			<small>출원일: 2021.04.09 (출원번호 제 10-2021-0046536 호)</small>
 		</li>
 		<br>
 		<li>
 			Patent Application.<br>
 			Youngjoong Ko et al. The Fake News Video Detection System and Method. (가짜 뉴스 동영상 탐지 시스템 및 그의 방법)<br>
-			<small>출원일: 2021.02.19 (출원번호 제 10-2021-0022638호)</small>
+			<small>출원일: 2021.02.19 (출원번호 제 10-2021-0022638 호)</small>
 		</li>
 		<br>
 		<li>
 			Patent Application.<br>
 			Youngjoong Ko et al. Method and Apparatus for Summarizing Documents using Keyword Clustering. (키워드 클러스터링을 이용한 문서 요약 방법 및 장치)<br>
-			<small>출원일: 2020.08.24 (출원번호 제 10-2020-0106414호)</small>
+			<small>출원일: 2020.08.24 (출원번호 제 10-2020-0106414 호)</small>
 		</li>
 		<br>
 		<li>
 			Patent Application.<br>
 			Youngjoong Ko et al. Device and Method for Analyzing Speech-act. (화행 분석 장치 및 방법)<br>
-			<small>출원일: 2018.11.26 (출원번호 제 10-2018-0147852호)</small>
+			<small>출원일: 2018.11.26 (출원번호 제 10-2018-0147852 호)</small>
 		</li>
 		<br>
 		<li>
 			Patent Application.<br>
 			Youngjoong Ko et al. Method for Improvement of Efficiency of Biology Medical Terminology Named Entity Recognition Apparatus Using Automatic Labeling Data Based on Bootstrapping Technique. (부트스트래핑 기법으로 자동 레이블링한 학습데이터를 사용한 생물의학용어 개체명 인식기의 성능 향상 방법)<br>
-			<small>출원일: 2017.02.14 (출원번호 제 10-2017-0020231호)</small>
+			<small>출원일: 2017.02.14 (출원번호 제 10-2017-0020231 호)</small>
 		</li>
 		<br>
 		<li>
 			Patent Application.<br>
 			Youngjoong Ko et al. User Terminal and Method for Providing Summary of Web Page. (웹 문서 요약 제공을 위한 사용자 단말 장치 및 웹 문서 제공 방법)<br>
-			<small>출원일: 2008.01.30 (출원번호 제 10-2008-0009731호)</small>
+			<small>출원일: 2008.01.30 (출원번호 제 10-2008-0009731 호)</small>
 		</li>
 	</ul>
 <p><small><a href="#top">Back to Top</a></small></p>
@@ -212,6 +290,34 @@ title: Patents
 <blockquote>
 <p class="jg"><a name="3">#Program Copyright Registration</a></p>
 	<ul class="post jg">
+		<li>
+			Program Copyright Registration<br>
+			Youngjoong Ko et al. BERT(버트) 기반 WordNet(워드넷) 활용을 위한 라이브러리.<br>
+			<small>창작일: 2023.09.10</small><br>
+			<small>공표일: 2023.11.13 (C-2023-051073)</small>
+		</li>
+		<br>
+		<li>
+			Program Copyright Registration<br>
+			Youngjoong Ko et al. 자연어 코퍼스의 관계 파악을 위한 co-occurrence matrix(동시 발생 행렬) 생성 프로그램.<br>
+			<small>창작일: 2023.11.06</small><br>
+			<small>공표일: 2023.11.20 (C-2023-052697)</small>
+		</li>
+		<br>
+		<li>
+			Program Copyright Registration<br>
+			Youngjoong Ko et al. 사전학습모델 임베딩과 그래프 임베딩을 통한 키워드 추출.<br>
+			<small>창작일: 2023.08.21</small><br>
+			<small>공표일: 2023.11.16 (C-2023-052182)</small>
+		</li>
+		<br>
+		<li>
+			Program Copyright Registration<br>
+			Youngjoong Ko et al. Pseudo Relevance Feedback(의사 관련 피드백).<br>
+			<small>창작일: 2023.08.22</small><br>
+			<small>공표일: 2023.11.15 (C-2023-051890)</small>
+		</li>
+		<br>
 		<li>
 			Program Copyright Registration<br>
 			Youngjoong Ko et al. 프롬프트 기반 개체명 단서 사전을 활용한 개체명 인식.<br>
