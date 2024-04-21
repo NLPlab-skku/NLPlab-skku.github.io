@@ -34,7 +34,7 @@ title: Projects
 <p class="jg"><a name="1">#Current Projects</a></p>
 
 <ul class="post jg">
-	<li>
+	<!-- <li>
 		<small>April 2024 ~ December 2027. </small><br>
 		Co-Investigator (Co-PI) involved in "산업융합형 멀티모달 생성 인공지능 인재양성."<br>
 		<small>Supported by 생성AI 선도인재양성, 정보통신기획평가원 (IITP), 과학기술정보통신부 (Ministry of Science and ICT).</small><br>
@@ -47,7 +47,7 @@ title: Projects
 		<small>Supported by 정보통신기획평가원 (IITP), 과학기술정보통신부 (Ministry of Science and ICT).</small><br>
 		<small>(NLP lab. SKK University)</small>
 	</li>
-	<br>
+	<br> -->
 	<li>
 		<small>April 2022 ~ December 2026. </small><br>
 		Principal-Investigator (PI) involved in "전문지식 대상 판단결과의 이유/근거를 설명가능한 전문가 의사결정 지원 인공지능 기술개발."<br>
