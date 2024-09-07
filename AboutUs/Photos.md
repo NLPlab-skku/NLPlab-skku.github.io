@@ -43,6 +43,8 @@ title: Photos
 	
   <h4 class = "center">#2024</h4>
   <div class="slider">
+  	<div><img src = "/assets/img/photos/0123.jpg" title = "24년 8월:애슐리데이🍴"/></div>
+  	<div><img src = "/assets/img/photos/0122.jpg" title = "24년 8월:학위수여식"/></div>
   	<div><img src = "/assets/img/photos/0121.jpg" title = "24년 7월:교수님 생신 케이크 전달"/></div>
   	<div><img src = "/assets/img/photos/0120.jpg" title = "24년 5월:스승의날"/></div>
 	<div><img src = "/assets/img/photos/0119.jpg" title = "24년 5월:스승의날"/></div>
