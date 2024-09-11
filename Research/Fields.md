@@ -24,6 +24,23 @@ title: Fields
 <div class="post jg">
   <h1 class="pageTitle">Fields</h1>	
   <p class="meta">분야</p>
+
+  <h2>1. 대화 시스템 (Dialogue System)</h2>
+  <p>대화 시스템(Dialogue System)은 인간과 컴퓨터 간의 상호작용을 가능하게 하는 기술이다.<p>
+  <img src="/assets/img/research/Dialogue_System_v2.png">
+  <p>일반적 대화는 문서와는 달리 구어체 표현을 사용하고, 생략 및 대용어 표현이 빈번히 나타나며, 표정이나 손짓 등 언어 이외의 다양한 수단을 통해 의사를 전달한다. 지능형 대화 시스템 개발은 유비쿼터스 환경에서 가장 유용한 <font color="seagreen" font-weight= "bold">HCI (Human Computer Interaction)</font> 기술이며, 지능형 로봇 개발 등에 사용되는 핵심 기술이다. 일반적으로 다음과 같이 구성된다.</p>
+  <img src="/assets/img/research/Dialogue_System_v2_2.png">
+  <p>최근 대화 시스템이 발전하고 다양한 형태의 대화 데이터가 많아지면서 대화 시스템에 기대하는 사용자의 요구 또한 다양해졌다. 현재는 다음과 같은 다양한 대화 시스템의 소분야에 대한 연구를 진행하고 있다.<p>
+  <ul>
+	    <li>특정 도메인에 한정되지 않고 일반적인 상식을 가지고 다양한 도메인에 대해 사람과 대화하는 오픈 도메인 대화(Open-Domain Dialogue) 모델</li>
+      <li>사용자의 특정 요구사항을 해결하고, 이와 관련된 답변을 제공하는 작업 지향 대화(Task-Oriented Dialogue) 모델</li>
+      <li>사용자의 페르소나를 추출 및 분석하고, 이에 맞는 대화를 제공하는 페르소나 대화(Persona-based Dialogue) 모델</li>
+      <li>다자 간의 대화 상황(토론, 토의 등)에서 대화를 분석하고, 해당 상황에서의 최선의 답변을 생성하는 다자간 대화(Multi-Party Dialogue) 모델</li>
+  </ul>
+  <br>
+
+
+
   <h2>1. 자연어 처리 기반 기술</h2>
   <p> 자연어 이해 그룹에서는 자연어 문장의 구조를 인식하고 이를 의미구조로 변환해 주는 자연어 이해 시스템을 개발하는 것을 목표로 하고 있다. 현재 다음과 같은 언어 처리 모델들이 자연어처리에 필요한 기반 기술들이다.</p>
   <ul>
