@@ -61,7 +61,7 @@ title: Fields
 <p>정보검색 시스템의 주요 구성 요소 및 핵심 기술</p>
   <ul>
 	    <li><font color="seagreen" font-weight= "bold">문서 컬렉션(Document Collection):</font> 검색 대상이 되는 모든 문서나 데이터의 집합이다. 문단 혹은 3~5개의 문장단위로 구성하여 사용하기도 한다. </li>
-      <li><font color="seagreen" font-weight= "bold">색인(Indexing):</font> 문서에서 중요한 키워드나 특징을 추출해 색인을 생성하는 과정이다. 이를 통해 문서 검색이 빠르고 정확하게 이루어질 수 있다. 대표적인 방법으로 T<font color="seagreen" font-weight= "bold">F-IDF(Term Frequency-Inverse Document Frequency), DPR(Dense passage retrieval)</font> 등이 사용된다.</li>
+      <li><font color="seagreen" font-weight= "bold">색인(Indexing):</font> 문서에서 중요한 키워드나 특징을 추출해 색인을 생성하는 과정이다. 이를 통해 문서 검색이 빠르고 정확하게 이루어질 수 있다. 대표적인 방법으로 <font color="seagreen" font-weight= "bold">TF-IDF(Term Frequency-Inverse Document Frequency), DPR(Dense passage retrieval)</font> 등이 사용된다.</li>
       <li><font color="seagreen" font-weight= "bold">질의 처리(Query Processing):</font> 사용자가 입력한 질의를 이해하고, 시스템이 처리할 수 있는 형태로 변환한다. 자연어 질의의 경우, 형태소 분석과 같은 기술을 통해 핵심 키워드를 추출하고 검색 가능한 형태로 만든다.</li>
       <li><font color="seagreen" font-weight= "bold">검색 및 매칭(Search and Matching):</font> 색인된 문서와 사용자의 질의를 비교해 관련성 있는 문서를 찾아내는 과정이다. 문서와 질의 간의 유사도를 계산하여 가장 적합한 결과를 제공한다.</li>
       <li><font color="seagreen" font-weight= "bold">랭킹(Ranking):</font> 검색된 문서를 관련성이나 중요도에 따라 정렬하는 과정이다. <font color="seagreen" font-weight= "bold">랭킹 알고리즘</font>을 사용해 사용자가 찾고자 하는 정보의 우선순위를 결정하게 된다.</li>
@@ -83,11 +83,9 @@ title: Fields
   <h2>5. 텍스트 마이닝</h2>
   <p>텍스트 마이닝(Text Mining)은 대량의 텍스트 데이터에서 유용한 정보를 추출하고 패턴을 발견하는 과정이다. 주로 다음과 같은 주요 작업들이 포함된다<p>
   <ul>
-	    <li><font color="seagreen" font-weight= "bold">텍스트 분류:</font> 텍스트를 사전에 정의된 카테고리 중 하나로 분류한다.
-</li>
+	    <li><font color="seagreen" font-weight= "bold">텍스트 분류:</font> 텍스트를 사전에 정의된 카테고리 중 하나로 분류한다.</li>
       <li><font color="seagreen" font-weight= "bold">텍스트 요약:</font> 긴 텍스트에서 핵심 내용을 생략하지 않으면서  짧고 간결하게 요약하여 제공한다.</li>
-  </ul>
-        <li><font color="seagreen" font-weight= "bold">감성 분석:</font> 텍스트에서 감정이나 의견을 추출하여 긍정적, 부정적 또는 중립적인 감정을 분석한다.</li>
+      <li><font color="seagreen" font-weight= "bold">감성 분석:</font> 텍스트에서 감정이나 의견을 추출하여 긍정적, 부정적 또는 중립적인 감정을 분석한다.</li>
   </ul>
   <p>이러한 작업들은 자연어 처리 기술을 활용하여 이루어지며, 텍스트 데이터를 더 잘 이해하고 유용한 정보를 얻을 수 있다.<p>
   <br>
