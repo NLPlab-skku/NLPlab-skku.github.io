@@ -46,20 +46,43 @@ title: Demos
 	</div> -->
 	<!-- <br> -->
 
-	<blockquote>
-	<ul class="jg">
-		<li>
-			질의 집중 의미 그래프를 활용한 질의 기반 문서 요약
-			<br><small>Text Summarization with the Query Attentive Graph-Attention Network</small>
-			<!-- <br><small>Choongwon Park, Youngjoong Ko.</small> -->
-			<div><video controls >
-				<source src="/assets/video/demo_query_based_summarization.mp4" type="video/mp4">
-				Your browser does not support the video tag.
-			</video></div>
+	<blockquote style="text-align: center;">
+		<ul class="jg" style="list-style: none; padding: 0;"></ul>
+		<li style="text-align: center;">
+			<button onclick="toggleContent1()" class="w-btn-outline w-btn-green-outline" type="button" 
+				style="display: inline-block; vertical-align: middle; font-size: 19px; width: 90%;">
+				질의 집중 의미 그래프를 활용한 질의 기반 문서 요약</button>
+				<div id="toggleContent1" style="display: none; text-align: left;">
+					<ul class="jg">
+						<br>
+						<li>Title: <small>Text Summarization with the Query Attentive Graph-Attention Network</small></li>
+						<li>System Overview Image: <small>TBD</small></li>
+						<li>Summary: <small>TBD</small></li>
+						<li>Github Link: <small>TBD</small></li>
+						<li>Paper Link: <small>TBD</small></li>
+						<li>Demo Video</li>
+						<div>
+							<video controls style="display: block; margin: 0 auto;">
+								<source src="/assets/video/demo_query_based_summarization.mp4" type="video/mp4">
+								Your browser does not support the video tag.
+							</video>
+						</div>
+					</ul>
+				</div>
 		</li>
 		<br>
-	</ul>
-	<br>
+
 	<p><small><a href="#top">Back to Top</a></small></p><br>
 	</blockquote>
 </div>
+
+<script>
+	function toggleContent1() {
+		var content = document.getElementById("toggleContent1");
+		if (content.style.display === "none") {
+			content.style.display = "block";
+		} else {
+			content.style.display = "none";
+		}
+	}
+</script>
