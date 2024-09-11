@@ -122,4 +122,3 @@ title: Fields
       <li><a href="https://github.com/NLPlab-skku/RoSeLLa" target="_blank">한국어 기반 소형 언어 모델(sLM) RoSeLLa</a></li>
   </ul>
   <br>
-</div>
