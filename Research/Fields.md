@@ -32,10 +32,10 @@ title: Fields
   <img src="/assets/img/research/Dialogue_System_v2_2.png">
   <p>최근 대화 시스템이 발전하고 다양한 형태의 대화 데이터가 많아지면서 대화 시스템에 기대하는 사용자의 요구 또한 다양해졌다. 현재는 다음과 같은 다양한 대화 시스템의 소분야에 대한 연구를 진행하고 있다.<p>
   <ul>
-	    <li>특정 도메인에 한정되지 않고 일반적인 상식을 가지고 다양한 도메인에 대해 사람과 대화하는 <span color="seagreen" style="font-weight: bold;">오픈 도메인 대화(Open-Domain Dialogue) 모델</span></li>
-      <li>사용자의 특정 요구사항을 해결하고, 이와 관련된 답변을 제공하는 <span color="seagreen" style="font-weight: bold;">작업 지향 대화(Task-Oriented Dialogue) 모델</span></li>
-      <li>사용자의 페르소나를 추출 및 분석하고, 이에 맞는 대화를 제공하는 <span color="seagreen" style="font-weight: bold;">페르소나 대화(Persona-based Dialogue) 모델</span></li>
-      <li>다자 간의 대화 상황(토론, 토의 등)에서 대화를 분석하고, 해당 상황에서의 최선의 답변을 생성하는 <span color="seagreen" style="font-weight: bold;">다자간 대화(Multi-Party Dialogue) 모델</span></li>
+	    <li>특정 도메인에 한정되지 않고 일반적인 상식을 가지고 다양한 도메인에 대해 사람과 대화하는 <span style="color=seagreen; font-weight: bold;">오픈 도메인 대화(Open-Domain Dialogue) 모델</span></li>
+      <li>사용자의 특정 요구사항을 해결하고, 이와 관련된 답변을 제공하는 <span style="color=seagreen; font-weight: bold;">작업 지향 대화(Task-Oriented Dialogue) 모델</span></li>
+      <li>사용자의 페르소나를 추출 및 분석하고, 이에 맞는 대화를 제공하는 <span style="color=seagreen; font-weight: bold;">페르소나 대화(Persona-based Dialogue) 모델</span></li>
+      <li>다자 간의 대화 상황(토론, 토의 등)에서 대화를 분석하고, 해당 상황에서의 최선의 답변을 생성하는 <span style="color=seagreen; font-weight: bold;">다자간 대화(Multi-Party Dialogue) 모델</span></li>
   </ul>
   <br>
 
@@ -47,6 +47,18 @@ title: Fields
 <p>아래 그림은 질의응답의 일반적인 구성을 보여주는 예시이다.</p>
   <img src="/assets/img/research/Open_domain_QA_2.png">
   <p>Open-Domain QA의 주요 구성 요소 및 핵심 기술은 다음과 같다.<p>
+  <ul>
+	    <li><span style="color=seagreen; font-weight: bold;">문서 검색(Document Retrieval):</span> 사용자의 질문과 관련된 문서를 대규모의 데이터베이스에서 찾아내는 단계이다. 이 단계에서는 전통적인 검색 엔진 기술이나 BM25, TF-IDF와 같은 정보 검색 기법이 사용된다.</li>
+      <li><span style="color=seagreen; font-weight: bold;">질의 이해(Query Understanding):</span> 사용자가 입력한 질문의 의미를 이해하고, 질문에서 중요한 개체나 키워드를 추출하는 과정이다. 자연어 처리(NLP) 기술을 이용해 질문의 의도를 파악하고 필요한 정보를 찾아내기 위한 준비를 한다.</li>
+      <li><span style="color=seagreen; font-weight: bold;">다정답 추출 및 생성(Answer Extraction and Generation):</span> 질문과 관련된 문서나 데이터에서 정답을 추출하거나 생성하는 과정이다. 기계 독해(Machine Reading Comprehension, MRC) 기술을 사용해 문서 내에서 질문에 가장 적합한 텍스트를 찾아 정답을 추출하거나, 검색된 문서의 정보를 입력받아 생성 모델을 통해 정답을 생성한다. 대표적인 모델로는 BERT, RoBERTa, T5 등이 있다.</li>
+  </ul>
+  <br>
+
+  <h2>3. 정보 검색 (Information Retrieval System)</h2>
+  <p>정보검색 시스템(Information Retrieval System)은 대량의 데이터나 문서에서 사용자가 필요한 정보를 효과적으로 찾아주는 시스템이다.<p>
+  <img src="/assets/img/research/Information_Retrieval.png">
+  <p>인터넷 검색 엔진, 디지털 도서관, 기업 데이터베이스 등 다양한 분야에서 활용되며, 사용자의 질의에 따라 관련된 문서나 데이터를 검색해 제공한다. 오픈 도메인 질의응답 시스템에서 문서를 검색하는 과정과 일치하지만 답변 생성이 목적이 아닌 정확한 문서를 가져오는 것이 목적인 부분에서 차이가 존재한다. </p>
+<p>정보검색 시스템의 주요 구성 요소 및 핵심 기술</p>
   <ul>
 	    <li><span color="seagreen" style="font-weight: bold;">문서 검색(Document Retrieval):</span> 사용자의 질문과 관련된 문서를 대규모의 데이터베이스에서 찾아내는 단계이다. 이 단계에서는 전통적인 검색 엔진 기술이나 BM25, TF-IDF와 같은 정보 검색 기법이 사용된다.</li>
       <li><span color="seagreen" style="font-weight: bold;">질의 이해(Query Understanding):</span> 사용자가 입력한 질문의 의미를 이해하고, 질문에서 중요한 개체나 키워드를 추출하는 과정이다. 자연어 처리(NLP) 기술을 이용해 질문의 의도를 파악하고 필요한 정보를 찾아내기 위한 준비를 한다.</li>
