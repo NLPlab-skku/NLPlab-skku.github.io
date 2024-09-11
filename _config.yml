@@ -23,7 +23,7 @@ navigation:
  - title: Members
    url: /Members/
  - title: Demos
-   url: /Demos/Nlp/
+   url: /Demos/Natural_Language_Processing/
  - title: GitHub
    url: "https://github.com/NLPlab-skku"
  #- title: Boards
