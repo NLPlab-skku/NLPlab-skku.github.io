@@ -85,6 +85,7 @@ title: Fields
   </ul>
   <p>이 기술을 통해 사용자 맞춤형 텍스트 생성을 더 효율적으로 할 수 있어, 다양한 AI 응용 분야에서 활용되고 있다.<p>
   <br>
+  <br>
 
   <h2>5. 텍스트 마이닝</h2>
   <p>텍스트 마이닝(Text Mining)은 대량의 텍스트 데이터에서 유용한 정보를 추출하고 패턴을 발견하는 과정이다. 주로 다음과 같은 주요 작업들이 포함된다<p>
@@ -94,6 +95,11 @@ title: Fields
       <li><font color="seagreen" font-weight= "bold">감성 분석:</font> 텍스트에서 감정이나 의견을 추출하여 긍정적, 부정적 또는 중립적인 감정을 분석한다.</li>
   </ul>
   <p>이러한 작업들은 자연어 처리 기술을 활용하여 이루어지며, 텍스트 데이터를 더 잘 이해하고 유용한 정보를 얻을 수 있다.<p>
+  <p>NLPLAB에서 진행된 텍스트 마이닝 관련 Github Repository</p>
+  <ul>
+      <li><a href="https://github.com/NLPlab-skku/SummaryXAI-QA" target="_blank">설명가능한 오픈도메인 질의응답 시스템 구축을 위한 질의 기반의 문서 요약 기술</a></li>
+      <li><a href="https://github.com/NLPlab-skku/MTL-KGC" target="_blank">Multi-Task Learning for Knowledge Graph Completion with Pre-trained Language Models</a></li>
+  </ul>
   <br>
 
   <h2>6. 자연어 처리 기반 기술</h2>
@@ -111,5 +117,9 @@ title: Fields
   <p>아래의 예시는 본 연구실이 소장하고 있는 언어분석기(DANCHU)의 전체 구성도이다.</p>
   <img src="/assets/img/research/danchu_system.png">
   <p>또한 이와 더불어 소형 언어모델 (sLM), RAG (Retrieval-augmented Generation) 등의 최신 자연어처리 기반 기술 역시 보유중이다.</p>
+    <p>NLPLAB에서 진행된 자연어 처리 기반 기술 관련 Github Repository</p>
+  <ul>
+      <li><a href="https://github.com/NLPlab-skku/RoSeLLa" target="_blank">한국어 기반 소형 언어 모델(sLM) RoSeLLa</a></li>
+  </ul>
   <br>
 </div>
