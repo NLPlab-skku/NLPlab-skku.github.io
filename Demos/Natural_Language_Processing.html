@@ -4,22 +4,71 @@ title: Demos
 ---
 <a name="top"></a>
 <style>
-.center{
-	display: block;
-	margin-left: 100px;
-	margin-right: auto;
-	margin-top: auto;
-	margin-bottom: auto;
-	height: 60%;
-	width: 70%;
-  }
-@import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
-.jg{font-family: 'Jeju Gothic', sans-serif;}
-@import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
-.nm{font-family: 'Jeju Gothic', sans-serif;}
-.publisher-link {color: darkcyan; text-decoration: none;}
-.publisher-link:hover, .publisher-link:focus {text-decoration: underline;}
-</style>
+	.center{
+			display: block;
+			margin-left: 100px;
+			margin-right: auto;
+			margin-top: auto;
+			margin-bottom: auto;
+			height: 60%;
+			width: 70%;
+		  }
+	@import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
+	.jg{font-family: 'Jeju Gothic', sans-serif;}
+	@import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
+	.nm{font-family: 'Jeju Gothic', sans-serif;}
+	.publisher-link {color: darkcyan; text-decoration: none;}
+	.publisher-link:hover, .publisher-link:focus {text-decoration: underline;}
+	.w-btn {
+		position: relative;
+		border: none;
+		display: inline-block;
+		padding: 15px 30px;
+		border-radius: 15px;
+		font-family: "paybooc-Light", sans-serif;
+		box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+		text-decoration: none;
+		font-weight: 600;
+		transition: 0.5s;
+	}
+	
+	.w-btn-outline {
+		position: relative;
+		padding: 15px 30px;
+		border-radius: 15px;
+		font-family: "paybooc-Light", sans-serif;
+		box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+		text-decoration: none;
+		font-weight: 600;
+		transition: 0.35s;
+	}
+	
+	.w-btn-green-outline {
+		border: 3px solid #77af9c;
+		color: black;
+	}
+	
+	.w-btn-green-outline:hover {
+		background-color: #77af9c;
+		color: #d7fff1;
+	}
+	
+	.w-btn:hover {
+		letter-spacing: 2px;
+		transform: scale(1.2);
+		cursor: pointer;
+	}
+	
+	.w-btn-outline:hover {
+		letter-spacing: 2px;
+		transform: scale(1.2);
+		cursor: pointer;
+	}
+	
+	.w-btn-outline:active {
+		transform: scale(1.5);
+	}
+	</style>
 
 <a name="top"></a>
 <h4>Demos</h4>
@@ -41,80 +90,232 @@ title: Demos
 <div class="post jg">
 	<h1 class="pageTitle">NLP</h1>
 	<p class="meta">데모 동영상</p>
-	<!-- <div class="linklink" style = "text-align:center;">
-		<a href="#1"></a> | <a href="#2"></a>
-	</div> -->
-	<!-- <br> -->
 
-	<blockquote>
-	<ul class="jg">
-		<li>
-			외부 지식 기반 대화 시스템
-			<br><small>External Knowledge based Dialogue System</small>
-			<div><video controls >
-				<source src="/assets/video/demo_external_knowledge_based_dialogue_system.mp4" type="video/mp4">
-				Your browser does not support the video tag.
-			</video></div>
+	<blockquote style="text-align: center;">
+		<ul class="jg" style="list-style: none; padding: 0;">
+
+		<li style="text-align: center;">
+			<button onclick="toggleContent1()" class="w-btn-outline w-btn-green-outline" type="button" 
+				style="display: inline-block; vertical-align: middle; font-size: 19px; width: 90%;">
+				외부 지식 기반 대화 시스템</button>
+				<div id="toggleContent1" style="display: none; text-align: left;">
+					<ul class="jg">
+						<br>
+						<li>Title: <small>External Knowledge based Dialogue System</small></li>
+						<li>System Overview Image: <small>TBD</small></li>
+						<li>Summary: <small>TBD</small></li>
+						<li>Github Link: <small>TBD</small></li>
+						<li>Paper Link: <small>TBD</small></li>
+						<li>Demo Video</li>
+						<div>
+							<video controls style="display: block; margin: 0 auto;">
+								<source src="/assets/video/demo_external_knowledge_based_dialogue_system.mp4" type="video/mp4">
+								Your browser does not support the video tag.
+							</video>
+						</div>
+					</ul>
+				</div>
 		</li>
 		<br>
-		<li>
-			설명 가능한 질의 응답 시스템
-			<br><small>Explainable Question Answering System</small>
-			<div><video controls >
-				<source src="/assets/video/demo_explainable_question_answering_system.mp4" type="video/mp4">
-				Your browser does not support the video tag.
-			</video></div>
+		<li style="text-align: center;">
+			<button onclick="toggleContent2()" class="w-btn-outline w-btn-green-outline" type="button" 
+				style="display: inline-block; vertical-align: middle; font-size: 19px; width: 90%;">
+				설명 가능한 질의 응답 시스템</button>
+				<div id="toggleContent2" style="display: none; text-align: left;">
+					<ul class="jg">
+						<br>
+						<li>Title: <small>Explainable Question Answering System</small></li>
+						<li>System Overview Image: <small>TBD</small></li>
+						<li>Summary: <small>TBD</small></li>
+						<li>Github Link: <small>TBD</small></li>
+						<li>Paper Link: <small>TBD</small></li>
+						<li>Demo Video</li>
+						<div>
+							<video controls style="display: block; margin: 0 auto;">
+								<source src="/assets/video/demo_explainable_question_answering_system.mp4" type="video/mp4">
+								Your browser does not support the video tag.
+							</video>
+						</div>
+					</ul>
+				</div>
 		</li>
 		<br>
-		<li>
-			유사 발의를 활용한 초점 기반 다자대화 대화시스템
-			<br><small>SoPI: Soft Engagement with Pseudo Initatives for Multi-Party Conversations</small>
-			<div><video controls >
-				<source src="/assets/video/demo_multi-party_conversations.mp4" type="video/mp4">
-				Your browser does not support the video tag.
-			</video></div>
+		<li style="text-align: center;">
+			<button onclick="toggleContent3()" class="w-btn-outline w-btn-green-outline" type="button" 
+				style="display: inline-block; vertical-align: middle; font-size: 19px; width: 90%;">
+				유사 발의를 활용한 초점 기반 다자대화 대화시스템</button>
+				<div id="toggleContent3" style="display: none; text-align: left;">
+					<ul class="jg">
+						<br>
+						<li>Title: <small>SoPI: Soft Engagement with Pseudo Initatives for Multi-Party Conversations</small></li>
+						<li>System Overview Image: <small>TBD</small></li>
+						<li>Summary: <small>TBD</small></li>
+						<li>Github Link: <small>TBD</small></li>
+						<li>Paper Link: <small>TBD</small></li>
+						<li>Demo Video</li>
+						<div>
+							<video controls style="display: block; margin: 0 auto;">
+								<source src="/assets/video/demo_multi-party_conversations.mp4" type="video/mp4">
+								Your browser does not support the video tag.
+							</video>
+						</div>
+					</ul>
+				</div>
 		</li>
 		<br>
-		<li>
-			대화 내 상식 추론을 이용한 동적 페르소나 기반 대화 시스템
-			<br><small>Dynamic Persona Generation through Commonsense Inference in Dialogues</small>
-			<div><video controls >
-				<source src="/assets/video/demo_dialogue_based_dynamic_persona.mp4" type="video/mp4">
-				Your browser does not support the video tag.
-			</video></div>
+		<li style="text-align: center;">
+			<button onclick="toggleContent4()" class="w-btn-outline w-btn-green-outline" type="button" 
+				style="display: inline-block; vertical-align: middle; font-size: 19px; width: 90%;">
+				대화 내 상식 추론을 이용한 동적 페르소나 기반 대화 시스템</button>
+				<div id="toggleContent4" style="display: none; text-align: left;">
+					<ul class="jg">
+						<br>
+						<li>Title: <small>Dynamic Persona Generation through Commonsense Inference in Dialogues</small></li>
+						<li>System Overview Image: <small>TBD</small></li>
+						<li>Summary: <small>TBD</small></li>
+						<li>Github Link: <small>TBD</small></li>
+						<li>Paper Link: <small>TBD</small></li>
+						<li>Demo Video</li>
+						<div>
+							<video controls style="display: block; margin: 0 auto;">
+								<source src="/assets/video/demo_dialogue_based_dynamic_persona.mp4" type="video/mp4">
+								Your browser does not support the video tag.
+							</video>
+						</div>
+					</ul>
+				</div>
 		</li>
 		<br>
-		<li>
-			지식 기반 응답 생성 모델을 이용한 대화 시스템
-			<br><small>Knowledge-based Response Generation for Dialogue Systems</small>
-			<!-- <br><small>Junhee Cho, Youngjoong Ko.</small> -->
-			<div><video controls >
-				<source src="/assets/video/demo_knowledge_based_response_selection.mp4" type="video/mp4">
-				Your browser does not support the video tag.
-			</video></div>
+		<li style="text-align: center;">
+			<button onclick="toggleContent5()" class="w-btn-outline w-btn-green-outline" type="button" 
+				style="display: inline-block; vertical-align: middle; font-size: 19px; width: 90%;">
+				지식 기반 응답 생성 모델을 이용한 대화 시스템</button>
+				<div id="toggleContent5" style="display: none; text-align: left;">
+					<ul class="jg">
+						<br>
+						<li>Title: <small>Knowledge-based Response Generation for Dialogue Systems</small></li>
+						<li>System Overview Image: <small>TBD</small></li>
+						<li>Summary: <small>TBD</small></li>
+						<li>Github Link: <small>TBD</small></li>
+						<li>Paper Link: <small>TBD</small></li>
+						<li>Demo Video</li>
+						<div>
+							<video controls style="display: block; margin: 0 auto;">
+								<source src="/assets/video/demo_knowledge_based_response_selection.mp4" type="video/mp4">
+								Your browser does not support the video tag.
+							</video>
+						</div>
+					</ul>
+				</div>
 		</li>
 		<br>
-		<li>
-			통사적 담화 그래프를 이용한 대화 상태 추적 모델
-			<br><small>Dialogue State Tracking Model with a Syntactic Discourse Graph</small>
-			<!-- <br><small>Haeun Yu, Youngjoong Ko.</small> -->
-			<div><video controls >
-				<source src="/assets/video/demo_dialogue_state_tracking.mp4" type="video/mp4">
-				Your browser does not support the video tag.
-			</video></div>
+		<li style="text-align: center;">
+			<button onclick="toggleContent6()" class="w-btn-outline w-btn-green-outline" type="button" 
+				style="display: inline-block; vertical-align: middle; font-size: 19px; width: 90%;">
+				통사적 담화 그래프를 이용한 대화 상태 추적 모델</button>
+				<div id="toggleContent6" style="display: none; text-align: left;">
+					<ul class="jg">
+						<br>
+						<li>Title: <small>Dialogue State Tracking Model with a Syntactic Discourse Graph</small></li>
+						<li>System Overview Image: <small>TBD</small></li>
+						<li>Summary: <small>TBD</small></li>
+						<li>Github Link: <small>TBD</small></li>
+						<li>Paper Link: <small>TBD</small></li>
+						<li>Demo Video</li>
+						<div>
+							<video controls style="display: block; margin: 0 auto;">
+								<source src="/assets/video/demo_dialogue_state_tracking.mp4" type="video/mp4">
+								Your browser does not support the video tag.
+							</video>
+						</div>
+					</ul>
+				</div>
 		</li>
 		<br>
-		<li>
-			가상환경 쇼핑 보조를 위한 대화형 인공지능 에이전트
-			<br><small>Multi-moidal Dialogue System (DSTC11, SIMMC)</small>
-			<!-- <br><small>Dooyoung Kim, Youngjae Chang, Youngjoong Ko.</small> -->
-			<div><video controls>
-				<source src="/assets/video/demo_DSTC_SIMMC.mp4" type="video/mp4">
-				Your browser does not support the video tag.
-			</video></div>
+		<li style="text-align: center;">
+			<button onclick="toggleContent7()" class="w-btn-outline w-btn-green-outline" type="button" 
+				style="display: inline-block; vertical-align: middle; font-size: 19px; width: 90%;">
+				가상환경 쇼핑 보조를 위한 대화형 인공지능 에이전트</button>
+				<div id="toggleContent7" style="display: none; text-align: left;">
+					<ul class="jg">
+						<br>
+						<li>Title: <small>Multi-moidal Dialogue System (DSTC11, SIMMC)</small></li>
+						<li>System Overview Image: <small>TBD</small></li>
+						<li>Summary: <small>TBD</small></li>
+						<li>Github Link: <small>TBD</small></li>
+						<li>Paper Link: <small>TBD</small></li>
+						<li>Demo Video</li>
+						<div>
+							<video controls style="display: block; margin: 0 auto;">
+								<source src="/assets/video/demo_DSTC_SIMMC.mp4" type="video/mp4">
+								Your browser does not support the video tag.
+							</video>
+						</div>
+					</ul>
+				</div>
 		</li>
+		<br>
 	</ul>
 	<br>
 	<p><small><a href="#top">Back to Top</a></small></p><br>
 	</blockquote>
 </div>
+
+<script>
+	function toggleContent1() {
+		var content = document.getElementById("toggleContent1");
+		if (content.style.display === "none") {
+			content.style.display = "block";
+		} else {
+			content.style.display = "none";
+		}
+	}
+	function toggleContent2() {
+		var content = document.getElementById("toggleContent2");
+		if (content.style.display === "none") {
+			content.style.display = "block";
+		} else {
+			content.style.display = "none";
+		}
+	}
+	function toggleContent3() {
+		var content = document.getElementById("toggleContent2");
+		if (content.style.display === "none") {
+			content.style.display = "block";
+		} else {
+			content.style.display = "none";
+		}
+	}
+	function toggleContent4() {
+		var content = document.getElementById("toggleContent2");
+		if (content.style.display === "none") {
+			content.style.display = "block";
+		} else {
+			content.style.display = "none";
+		}
+	}
+	function toggleContent5() {
+		var content = document.getElementById("toggleContent2");
+		if (content.style.display === "none") {
+			content.style.display = "block";
+		} else {
+			content.style.display = "none";
+		}
+	}
+	function toggleContent6() {
+		var content = document.getElementById("toggleContent2");
+		if (content.style.display === "none") {
+			content.style.display = "block";
+		} else {
+			content.style.display = "none";
+		}
+	}
+	function toggleContent7() {
+		var content = document.getElementById("toggleContent2");
+		if (content.style.display === "none") {
+			content.style.display = "block";
+		} else {
+			content.style.display = "none";
+		}
+	}
+	</script>
