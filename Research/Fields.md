@@ -60,9 +60,11 @@ title: Fields
   <p>인터넷 검색 엔진, 디지털 도서관, 기업 데이터베이스 등 다양한 분야에서 활용되며, 사용자의 질의에 따라 관련된 문서나 데이터를 검색해 제공한다. 오픈 도메인 질의응답 시스템에서 문서를 검색하는 과정과 일치하지만 답변 생성이 목적이 아닌 정확한 문서를 가져오는 것이 목적인 부분에서 차이가 존재한다. </p>
 <p>정보검색 시스템의 주요 구성 요소 및 핵심 기술</p>
   <ul>
-	    <li><span color="seagreen" style="font-weight: bold;">문서 검색(Document Retrieval):</span> 사용자의 질문과 관련된 문서를 대규모의 데이터베이스에서 찾아내는 단계이다. 이 단계에서는 전통적인 검색 엔진 기술이나 BM25, TF-IDF와 같은 정보 검색 기법이 사용된다.</li>
-      <li><span color="seagreen" style="font-weight: bold;">질의 이해(Query Understanding):</span> 사용자가 입력한 질문의 의미를 이해하고, 질문에서 중요한 개체나 키워드를 추출하는 과정이다. 자연어 처리(NLP) 기술을 이용해 질문의 의도를 파악하고 필요한 정보를 찾아내기 위한 준비를 한다.</li>
-      <li><span color="seagreen" style="font-weight: bold;">다정답 추출 및 생성(Answer Extraction and Generation):</span> 질문과 관련된 문서나 데이터에서 정답을 추출하거나 생성하는 과정이다. 기계 독해(Machine Reading Comprehension, MRC) 기술을 사용해 문서 내에서 질문에 가장 적합한 텍스트를 찾아 정답을 추출하거나, 검색된 문서의 정보를 입력받아 생성 모델을 통해 정답을 생성한다. 대표적인 모델로는 BERT, RoBERTa, T5 등이 있다.</li>
+	    <li><span style="color=seagreen; font-weight: bold;">문서 컬렉션(Document Collection):</span> 검색 대상이 되는 모든 문서나 데이터의 집합이다. 문단 혹은 3~5개의 문장단위로 구성하여 사용하기도 한다. </li>
+      <li><span style="color=seagreen; font-weight: bold;">색인(Indexing):</span> 문서에서 중요한 키워드나 특징을 추출해 색인을 생성하는 과정이다. 이를 통해 문서 검색이 빠르고 정확하게 이루어질 수 있다. 대표적인 방법으로 T<span style="color=seagreen; font-weight: bold;">F-IDF(Term Frequency-Inverse Document Frequency), DPR(Dense passage retrieval)</span> 등이 사용된다.</li>
+      <li><span style="color=seagreen; font-weight: bold;">질의 처리(Query Processing):</span> 사용자가 입력한 질의를 이해하고, 시스템이 처리할 수 있는 형태로 변환한다. 자연어 질의의 경우, 형태소 분석과 같은 기술을 통해 핵심 키워드를 추출하고 검색 가능한 형태로 만든다.</li>
+      <li><span style="color=seagreen; font-weight: bold;">검색 및 매칭(Search and Matching):</span> 색인된 문서와 사용자의 질의를 비교해 관련성 있는 문서를 찾아내는 과정이다. 문서와 질의 간의 유사도를 계산하여 가장 적합한 결과를 제공한다.</li>
+      <li><span style="color=seagreen; font-weight: bold;">랭킹(Ranking):</span> 검색된 문서를 관련성이나 중요도에 따라 정렬하는 과정이다. <span style="color=seagreen; font-weight: bold;">랭킹 알고리즘</span>을 사용해 사용자가 찾고자 하는 정보의 우선순위를 결정하게 된다.</li>
   </ul>
   <br>
 
