@@ -74,7 +74,7 @@ button {
 
 	<blockquote style="text-align: center;">
 		<ul class="jg" style="list-style: none; padding: 0;">
-			<button onclick="toggleContent()" class="w-btn w-btn-indigo" type="button" 
+			<button onclick="toggleContent1()" class="w-btn w-btn-indigo" type="button" 
 			style="display: inline-block; vertical-align: middle; font-size: 18px;">
 			저자원 환경에서 도메인 과적합 문제를 방지하기 위한 문서분류 기법</button>
 				<div id="toggleContent" style="display: none;">
@@ -93,16 +93,26 @@ button {
 						</div>
 					</ul>
 				</div>
-
 		<br>
-		<li>
-			사전학습을 이용한 정보검색 시스템
-			<br><small>Information Retrieval with REAP (Retrieval-adaptive Pretraining)</small>
-			<div><video controls >
-				<source src="/assets/video/demo_information_retriever.mp4" type="video/mp4">
-				Your browser does not support the video tag.
-			</video></div>
-		</li>
+		<button onclick="toggleContent2()" class="w-btn w-btn-indigo" type="button" 
+		style="display: inline-block; vertical-align: middle; font-size: 18px;">
+		사전학습을 이용한 정보검색 시스템</button>
+			<div id="toggleContent" style="display: none;">
+				<ul class="jg">
+					<li>Title: <small>Information Retrieval with REAP (Retrieval-adaptive Pretraining)</small></li>
+					<li>Github Link: <small>TBD</small></li>
+					<li>Paper Link: <small>TBD</small></li>
+					<li>Summary: <small>TBD</small></li>
+					<li>System Overview Image: <small>TBD</small></li>
+					<li>System Overview Image:</li>
+					<div>
+						<video controls>
+							<source src="/assets/video/demo_information_retriever.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+					</div>
+				</ul>
+			</div>
 		<br>
 	</ul>
 	<br>
@@ -111,7 +121,7 @@ button {
 </div>
 
 <script>
-function toggleContent() {
+function toggleContent1() {
 	var content = document.getElementById("toggleContent");
 	if (content.style.display === "none") {
 		content.style.display = "block";
