@@ -12,10 +12,9 @@ title: Demos
 	margin-bottom: auto;
 	height: 60%;
 	width: 70%;
-  }
+}
 @import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
 .jg{font-family: 'Jeju Gothic', sans-serif;}
-@import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
 .nm{font-family: 'Jeju Gothic', sans-serif;}
 .publisher-link {color: darkcyan; text-decoration: none;}
 .publisher-link:hover, .publisher-link:focus {text-decoration: underline;}
@@ -41,22 +40,19 @@ title: Demos
 <div class="post jg">
 	<h1 class="pageTitle">Information Retrieval</h1>
 	<p class="meta">데모 동영상</p>
-	<!-- <div class="linklink" style = "text-align:center;">
-		<a href="#1"></a> | <a href="#2"></a>
-	</div> -->
-	<!-- <br> -->
 
 	<blockquote>
 	<ul class="jg">
-		
-		
 		<li>
 			저자원 환경에서 도메인 과적합 문제를 방지하기 위한 문서분류 기법<br>
-			<small>Low-resource Text Classification Method that Mitigates Overfitting on Domain-specific Features</small><br>
-			<small>Github Link: TBD</small><br>
-			<small>Paper Link: TBD</small><br>
-			<small>Summary: TBD</small><br>
-			<small>System Overview Image: TBD</small><br>
+			<button onclick="toggleContent()">Toggle Details</button>
+			<div id="toggleContent" style="display: none;">
+				<small>Low-resource Text Classification Method that Mitigates Overfitting on Domain-specific Features</small><br>
+				<small>Github Link: TBD</small><br>
+				<small>Paper Link: TBD</small><br>
+				<small>Summary: TBD</small><br>
+				<small>System Overview Image: TBD</small><br>
+			</div>
 			<div><video controls >
 				<source src="/assets/video/demo_low-resource_text_classification.mp4" type="video/mp4">
 				Your browser does not support the video tag.
@@ -66,7 +62,6 @@ title: Demos
 		<li>
 			사전학습을 이용한 정보검색 시스템
 			<br><small>Information Retrieval with REAP (Retrieval-adaptive Pretraining)</small>
-			<!-- <br><small>Sunyoung Park, Youngjoong Ko.</small> -->
 			<div><video controls >
 				<source src="/assets/video/demo_information_retriever.mp4" type="video/mp4">
 				Your browser does not support the video tag.
@@ -78,3 +73,14 @@ title: Demos
 	<p><small><a href="#top">Back to Top</a></small></p><br>
 	</blockquote>
 </div>
+
+<script>
+function toggleContent() {
+	var content = document.getElementById("toggleContent");
+	if (content.style.display === "none") {
+		content.style.display = "block";
+	} else {
+		content.style.display = "none";
+	}
+}
+</script>
