@@ -5,23 +5,20 @@ title: Demos
 <a name="top"></a>
 <style>
 .center{
-	display: block;
-	margin-left: 100px;
-	margin-right: auto;
-	margin-top: auto;
-	margin-bottom: auto;
-	height: 60%;
-	width: 70%;
-}
+		display: block;
+		margin-left: 100px;
+		margin-right: auto;
+		margin-top: auto;
+		margin-bottom: auto;
+		height: 60%;
+		width: 70%;
+	  }
 @import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
 .jg{font-family: 'Jeju Gothic', sans-serif;}
+@import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
 .nm{font-family: 'Jeju Gothic', sans-serif;}
 .publisher-link {color: darkcyan; text-decoration: none;}
 .publisher-link:hover, .publisher-link:focus {text-decoration: underline;}
-button {
-    margin: 20px;
-}
-
 .w-btn {
     position: relative;
     border: none;
@@ -35,9 +32,25 @@ button {
     transition: 0.25s;
 }
 
-.w-btn-indigo {
-    background-color: aliceblue;
-    color: #1e6b7b;
+.w-btn-outline {
+    position: relative;
+    padding: 15px 30px;
+    border-radius: 15px;
+    font-family: "paybooc-Light", sans-serif;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.25s;
+}
+
+.w-btn-green-outline {
+    border: 3px solid #77af9c;
+    color: darkgray;
+}
+
+.w-btn-green-outline:hover {
+    background-color: #77af9c;
+    color: #d7fff1;
 }
 
 .w-btn:hover {
@@ -46,7 +59,13 @@ button {
     cursor: pointer;
 }
 
-.w-btn:active {
+.w-btn-outline:hover {
+    letter-spacing: 2px;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.w-btn-outline:active {
     transform: scale(1.5);
 }
 </style>
@@ -85,7 +104,7 @@ button {
 						<li>Paper Link: <small>TBD</small></li>
 						<li>Summary: <small>TBD</small></li>
 						<li>System Overview Image: <small>TBD</small></li>
-						<li>System Overview Image:</li>
+						<li>Demo Video:</li>
 						<div>
 							<video controls>
 								<source src="/assets/video/demo_low-resource_text_classification.mp4" type="video/mp4">
@@ -107,7 +126,7 @@ button {
 					<li>Paper Link: <small>TBD</small></li>
 					<li>Summary: <small>TBD</small></li>
 					<li>System Overview Image: <small>TBD</small></li>
-					<li>System Overview Image:</li>
+					<li>Demo Video:</li>
 					<div>
 						<video controls>
 							<source src="/assets/video/demo_information_retriever.mp4" type="video/mp4">
