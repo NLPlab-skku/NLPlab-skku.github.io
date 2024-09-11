@@ -32,6 +32,22 @@ title: Fields
   <img src="/assets/img/research/Dialogue_System_v2_2.png">
   <p>최근 대화 시스템이 발전하고 다양한 형태의 대화 데이터가 많아지면서 대화 시스템에 기대하는 사용자의 요구 또한 다양해졌다. 현재는 다음과 같은 다양한 대화 시스템의 소분야에 대한 연구를 진행하고 있다.<p>
   <ul>
+	    <li>특정 도메인에 한정되지 않고 일반적인 상식을 가지고 다양한 도메인에 대해 사람과 대화하는 <span style="font-weight: bold;">오픈 도메인 대화(Open-Domain Dialogue) 모델</span></li>
+      <li>사용자의 특정 요구사항을 해결하고, 이와 관련된 답변을 제공하는 <span style="font-weight: bold;">작업 지향 대화(Task-Oriented Dialogue) 모델</span></li>
+      <li>사용자의 페르소나를 추출 및 분석하고, 이에 맞는 대화를 제공하는 <span style="font-weight: bold;">페르소나 대화(Persona-based Dialogue) 모델</span></li>
+      <li>다자 간의 대화 상황(토론, 토의 등)에서 대화를 분석하고, 해당 상황에서의 최선의 답변을 생성하는 <span style="font-weight: bold;">다자간 대화(Multi-Party Dialogue) 모델</span></li>
+  </ul>
+  <br>
+
+  <h2>2. 오픈 도메인 질의응답 시스템 (Open-Domain QA System)</h2>
+  <p>Open-Domain QA(Open-Domain Question Answering)는 사용자가 제시한 질문에 대해 대규모의 비구조화된 데이터나 문서로부터 적절한 답변을 찾아 제공하는 시스템이다.<p>
+  <img src="/assets/img/research/Open_domain_QA.png">
+  <p>주로 인터넷이나 대규모 텍스트 데이터베이스에서 정보를 검색해 사용자가 원하는 답을 제공하는 방식으로 동작한다. 이러한 시스템은 검색 엔진, AI 기반 비서 등 여러 응용 분야에서 활용된다.
+</p>
+<p>아래 그림은 질의응답의 일반적인 구성을 보여주는 예시이다.</p>
+  <img src="/assets/img/research/Open_domain_QA_2.png">
+  <p>Open-Domain QA의 주요 구성 요소 및 핵심 기술은 다음과 같다.<p>
+  <ul>
 	    <li>특정 도메인에 한정되지 않고 일반적인 상식을 가지고 다양한 도메인에 대해 사람과 대화하는 <font font-weight= "bold">오픈 도메인 대화(Open-Domain Dialogue) 모델</font></li>
       <li>사용자의 특정 요구사항을 해결하고, 이와 관련된 답변을 제공하는 <font font-weight= "bold">작업 지향 대화(Task-Oriented Dialogue) 모델</font></li>
       <li>사용자의 페르소나를 추출 및 분석하고, 이에 맞는 대화를 제공하는 <font font-weight= "bold">페르소나 대화(Persona-based Dialogue) 모델</font></li>
