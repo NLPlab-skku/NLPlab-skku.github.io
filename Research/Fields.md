@@ -13,7 +13,7 @@ title: Fields
       font-weight: bold;
       color: #333;
       transition: color 0.3s ease, transform 0.3s ease;
-      padding-left: 40px; /* 첫 문단과 줄맞춤을 맞추기 위해 추가 */
+      padding-left: 140px; /* 첫 문단과 줄맞춤을 맞추기 위해 추가 */
     }
 
     /* 마우스를 올렸을 때 색과 크기 변화 */
@@ -75,7 +75,6 @@ title: Fields
       <li>사용자의 페르소나를 추출 및 분석하고, 이에 맞는 대화를 제공하는 <font color="seagreen" font-weight= "bold">페르소나 대화(Persona-based Dialogue) 모델</font></li>
       <li>다자 간의 대화 상황(토론, 토의 등)에서 대화를 분석하고, 해당 상황에서의 최선의 답변을 생성하는 <font color="seagreen" font-weight= "bold">다자간 대화(Multi-Party Dialogue) 모델</font></li>
       
-  <br>
   </ul>
 
   <div class="toggle-container" onclick="toggleList_github1()">> Related Github</div>
