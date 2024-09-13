@@ -58,8 +58,8 @@ title: Fields
       <li>사용자의 페르소나를 추출 및 분석하고, 이에 맞는 대화를 제공하는 <font color="seagreen" font-weight= "bold">페르소나 대화(Persona-based Dialogue) 모델</font></li>
       <li>다자 간의 대화 상황(토론, 토의 등)에서 대화를 분석하고, 해당 상황에서의 최선의 답변을 생성하는 <font color="seagreen" font-weight= "bold">다자간 대화(Multi-Party Dialogue) 모델</font></li>
       
-        <div class="toggle-container" onclick="toggleList()">Related Github</div>
-
+  <br>
+  <div class="toggle-container" onclick="toggleList()">> Related Github</div>
   <ul class="toggle-list" id="github-list">
       <li><a href="https://github.com/NLPlab-skku/HG-TODS" target="_blank">이종 그래프 융합 목적 지향 대화 시스템</a></li>
       <li><a href="https://github.com/NLPlab-skku/DSTC11_SIMMC2.1" target="_blank">가상환경 쇼핑 보조를 위한 대화형 인공지능 에이전트</a></li>
