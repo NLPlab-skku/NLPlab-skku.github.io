@@ -13,7 +13,7 @@ title: Fields
       font-weight: bold;
       color: #333;
       transition: color 0.3s ease, transform 0.3s ease;
-      margin-left: 20%
+      margin-left: 13%
     }
 
     /* 마우스를 올렸을 때 색과 크기 변화 */
@@ -84,37 +84,37 @@ title: Fields
   </ul>
 
   <div class="toggle-container" onclick="toggleList_demo1()">> Related Demo</div>
-  <ul class="toggle-list" id="demo-list1">
+      <ul class="toggle-list" id="demo-list1">
       <li>외부 지식 기반 대화 시스템</li>
       <video controls style="display: block; margin: 0 auto;">
 								<source src="/assets/video/demo_external_knowledge_based_dialogue_system.mp4" type="video/mp4">
 								Your browser does not support the video tag.
 			</video>
-
+      <br>
       <li>대화 내 상식 추론을 이용한 동적 페르소나 기반 대화 시스템</li>
       <video controls style="display: block; margin: 0 auto;">
 								<source src="/assets/video/demo_dialogue_based_dynamic_persona.mp4" type="video/mp4">
 								Your browser does not support the video tag.
 			</video>
-
+      <br>
       <li>유사 발의를 활용한 초점 기반 다자대화 대화시스템</li>
       <video controls style="display: block; margin: 0 auto;">
 								<source src="/assets/video/demo_multi-party_conversations.mp4" type="video/mp4">
 								Your browser does not support the video tag.
 			</video>
-
+      <br>
       <li>지식 기반 응답 생성 모델을 이용한 대화 시스템</li>
       <video controls style="display: block; margin: 0 auto;">
 								<source src="/assets/video/demo_knowledge_based_response_selection.mp4" type="video/mp4">
 								Your browser does not support the video tag.
 			</video>
-
+      <br>
       <li>통사적 담화 그래프를 이용한 대화 상태 추적 모델</li>
       <video controls style="display: block; margin: 0 auto;">
 								<source src="/assets/video/demo_dialogue_state_tracking.mp4" type="video/mp4">
 								Your browser does not support the video tag.
 			</video>
-
+      <br>
       <li>가상환경 쇼핑 보조를 위한 대화형 인공지능 에이전트</li>
       <video controls style="display: block; margin: 0 auto;">
 								<source src="/assets/video/demo_DSTC_SIMMC.mp4" type="video/mp4">
@@ -136,21 +136,14 @@ title: Fields
       <li><font color="seagreen" font-weight= "bold">다정답 추출 및 생성(Answer Extraction and Generation):</font> 질문과 관련된 문서나 데이터에서 정답을 추출하거나 생성하는 과정이다. 기계 독해(Machine Reading Comprehension, MRC) 기술을 사용해 문서 내에서 질문에 가장 적합한 텍스트를 찾아 정답을 추출하거나, 검색된 문서의 정보를 입력받아 생성 모델을 통해 정답을 생성한다. 대표적인 모델로는 BERT, RoBERTa, T5 등이 있다.</li>
   </ul>
 
-  <div class="toggle-container" onclick="toggleList_github1()">> Related Github</div>
-  <ul class="toggle-list" id="github-list1">
-      <li><a href="https://github.com/NLPlab-skku/HG-TODS" target="_blank">이종 그래프 융합 목적 지향 대화 시스템</a></li>
-      <li><a href="https://github.com/NLPlab-skku/DSTC11_SIMMC2.1" target="_blank">가상환경 쇼핑 보조를 위한 대화형 인공지능 에이전트</a></li>
-      <li><a href="https://github.com/NLPlab-skku/BERT-ASE" target="_blank">Gender bias 완화 모델 BERT-ASE</a></li>
+  <div class="toggle-container" onclick="toggleList_github2()">> Related Github</div>
+  <ul class="toggle-list" id="github-list2">
+      <li><a href="https://github.com/NLPlab-skku/SummaryXAI-QA" target="_blank">설명가능한 오픈도메인 질의응답 시스템</a></li>
+      <li><a href="https://github.com/NLPlab-skku/NLPLAB_KoDPR" target="_blank">한국어 검색 데이터셋 DPR</a></li>
   </ul>
 
-  <div class="toggle-container" onclick="toggleList_demo1()">> Related Demo</div>
-  <ul class="toggle-list" id="demo-list1">
-      <li>외부 지식 기반 대화 시스템</li>
-      <video controls style="display: block; margin: 0 auto;">
-								<source src="/assets/video/demo_external_knowledge_based_dialogue_system.mp4" type="video/mp4">
-								Your browser does not support the video tag.
-			</video>
-
+  <div class="toggle-container" onclick="toggleList_demo2()">> Related Demo</div>
+  <ul class="toggle-list" id="demo-list2">
       <li>설명 가능한 질의 응답 시스템</li>
       <video controls style="display: block; margin: 0 auto;">
 								<source src="/assets/video/demo_explainable_question_answering_system.mp4" type="video/mp4">
@@ -172,6 +165,27 @@ title: Fields
       <li><font color="seagreen" font-weight= "bold">검색 및 매칭(Search and Matching):</font> 색인된 문서와 사용자의 질의를 비교해 관련성 있는 문서를 찾아내는 과정이다. 문서와 질의 간의 유사도를 계산하여 가장 적합한 결과를 제공한다.</li>
       <li><font color="seagreen" font-weight= "bold">랭킹(Ranking):</font> 검색된 문서를 관련성이나 중요도에 따라 정렬하는 과정이다. <font color="seagreen" font-weight= "bold">랭킹 알고리즘</font>을 사용해 사용자가 찾고자 하는 정보의 우선순위를 결정하게 된다.</li>
   </ul>
+
+  <div class="toggle-container" onclick="toggleList_github3()">> Related Github</div>
+  <ul class="toggle-list" id="github-list3">
+      <li>TBD</li>
+  </ul>
+
+  <div class="toggle-container" onclick="toggleList_demo3()">> Related Demo</div>
+  <ul class="toggle-list" id="demo-list3">
+      <li>저자원 환경에서 도메인 과적합 문제를 방지하기 위한 문서분류 기법</li>
+      <video controls style="display: block; margin: 0 auto;">
+								<source src="/assets/video/demo_low-resource_text_classification.mp4" type="video/mp4">
+								Your browser does not support the video tag.
+			</video>
+      <br>
+      <li>사전학습을 이용한 정보검색 시스템</li>
+      <video controls style="display: block; margin: 0 auto;">
+								<source src="/assets/video/demo_information_retriever.mp4" type="video/mp4">
+								Your browser does not support the video tag.
+			</video>
+  </ul>
+
   <br>
 
   <h2>4. 생성형 인공지능</h2>
@@ -183,7 +197,16 @@ title: Fields
       <li><font color="seagreen" font-weight= "bold">조건부 생성:</font> 주어진 조건에 따라 텍스트를 생성한다. 예를 들어, 대화 시스템에서는 사용자 질문에 따라 적절한 답변을 생성할 수 있다.</li>
   </ul>
   <p>이 기술을 통해 사용자 맞춤형 텍스트 생성을 더 효율적으로 할 수 있어, 다양한 AI 응용 분야에서 활용되고 있다.<p>
-  <br>
+
+  <div class="toggle-container" onclick="toggleList_github4()">> Related Github</div>
+  <ul class="toggle-list" id="github-list4">
+      <li>TBD</li>
+  </ul>
+
+  <div class="toggle-container" onclick="toggleList_demo4()">> Related Demo</div>
+  <ul class="toggle-list" id="demo-list4">
+      <li>TBD</li>
+  </ul>
   <br>
 
   <h2>5. 텍스트 마이닝</h2>
@@ -194,10 +217,19 @@ title: Fields
       <li><font color="seagreen" font-weight= "bold">감성 분석:</font> 텍스트에서 감정이나 의견을 추출하여 긍정적, 부정적 또는 중립적인 감정을 분석한다.</li>
   </ul>
   <p>이러한 작업들은 자연어 처리 기술을 활용하여 이루어지며, 텍스트 데이터를 더 잘 이해하고 유용한 정보를 얻을 수 있다.<p>
-  <p>NLPLAB에서 진행된 텍스트 마이닝 관련 Github Repository</p>
-  <ul>
-      <li><a href="https://github.com/NLPlab-skku/SummaryXAI-QA" target="_blank">설명가능한 오픈도메인 질의응답 시스템 구축을 위한 질의 기반의 문서 요약 기술</a></li>
-      <li><a href="https://github.com/NLPlab-skku/MTL-KGC" target="_blank">Multi-Task Learning for Knowledge Graph Completion with Pre-trained Language Models</a></li>
+
+  <div class="toggle-container" onclick="toggleList_github5()">> Related Github</div>
+  <ul class="toggle-list" id="github-list5">
+      <li><a href="https://github.com/NLPlab-skku/SummaryXAI-QA" target="_blank">Multi-Task Learning for Knowledge Graph Completion with Pre-trained Language Models</a></li>
+  </ul>
+
+  <div class="toggle-container" onclick="toggleList_demo5()">> Related Demo</div>
+  <ul class="toggle-list" id="demo-list5">
+      <li>질의 집중 의미 그래프를 활용한 질의 기반 문서 요약</li>
+      <video controls style="display: block; margin: 0 auto;">
+								<source src="/assets/video/demo_query_based_summarization.mp4" type="video/mp4">
+								Your browser does not support the video tag.
+			</video>
   </ul>
   <br>
 
@@ -216,9 +248,15 @@ title: Fields
   <p>아래의 예시는 본 연구실이 소장하고 있는 언어분석기(DANCHU)의 전체 구성도이다.</p>
   <img src="/assets/img/research/danchu_system.png">
   <p>또한 이와 더불어 소형 언어모델 (sLM), RAG (Retrieval-augmented Generation) 등의 최신 자연어처리 기반 기술 역시 보유중이다.</p>
-    <p>NLPLAB에서 진행된 자연어 처리 기반 기술 관련 Github Repository</p>
-  <ul>
+
+  <div class="toggle-container" onclick="toggleList_github6()">> Related Github</div>
+  <ul class="toggle-list" id="github-list6">
       <li><a href="https://github.com/NLPlab-skku/RoSeLLa" target="_blank">한국어 기반 소형 언어 모델(sLM) RoSeLLa</a></li>
+  </ul>
+
+  <div class="toggle-container" onclick="toggleList_demo6()">> Related Demo</div>
+  <ul class="toggle-list" id="demo-list6">
+      <li>TBD</li>
   </ul>
   <br>
 
@@ -235,6 +273,96 @@ title: Fields
 
     function toggleList_demo1() {
       const list = document.getElementById('demo-list1');
+      if (list.style.display === 'none' || list.style.display === '') {
+        list.style.display = 'block';
+      } else {
+        list.style.display = 'none';
+      }
+    }
+
+    function toggleList_github2() {
+      const list = document.getElementById('github-list2');
+      if (list.style.display === 'none' || list.style.display === '') {
+        list.style.display = 'block';
+      } else {
+        list.style.display = 'none';
+      }
+    }
+
+    function toggleList_demo2() {
+      const list = document.getElementById('demo-list2');
+      if (list.style.display === 'none' || list.style.display === '') {
+        list.style.display = 'block';
+      } else {
+        list.style.display = 'none';
+      }
+    }
+
+    function toggleList_github3() {
+      const list = document.getElementById('github-list3');
+      if (list.style.display === 'none' || list.style.display === '') {
+        list.style.display = 'block';
+      } else {
+        list.style.display = 'none';
+      }
+    }
+
+    function toggleList_demo3() {
+      const list = document.getElementById('demo-list3');
+      if (list.style.display === 'none' || list.style.display === '') {
+        list.style.display = 'block';
+      } else {
+        list.style.display = 'none';
+      }
+    }
+
+    function toggleList_github4() {
+      const list = document.getElementById('github-list4');
+      if (list.style.display === 'none' || list.style.display === '') {
+        list.style.display = 'block';
+      } else {
+        list.style.display = 'none';
+      }
+    }
+
+    function toggleList_demo4() {
+      const list = document.getElementById('demo-list4');
+      if (list.style.display === 'none' || list.style.display === '') {
+        list.style.display = 'block';
+      } else {
+        list.style.display = 'none';
+      }
+    }
+
+    function toggleList_github5() {
+      const list = document.getElementById('github-list5');
+      if (list.style.display === 'none' || list.style.display === '') {
+        list.style.display = 'block';
+      } else {
+        list.style.display = 'none';
+      }
+    }
+
+    function toggleList_demo5() {
+      const list = document.getElementById('demo-list5');
+      if (list.style.display === 'none' || list.style.display === '') {
+        list.style.display = 'block';
+      } else {
+        list.style.display = 'none';
+      }
+    }
+
+        function toggleList_github6() {
+      const list = document.getElementById('github-list6');
+      if (list.style.display === 'none' || list.style.display === '') {
+        list.style.display = 'block';
+      } else {
+        list.style.display = 'none';
+      }
+    }
+
+    function toggleList_demo6() {
+      const list = document.getElementById('demo-list6');
       if (list.style.display === 'none' || list.style.display === '') {
         list.style.display = 'block';
       } else {
