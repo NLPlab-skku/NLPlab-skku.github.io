@@ -13,7 +13,6 @@ title: Fields
       font-weight: bold;
       color: #333;
       transition: color 0.3s ease, transform 0.3s ease;
-      
     }
 
     /* 마우스를 올렸을 때 색과 크기 변화 */
@@ -64,7 +63,6 @@ title: Fields
 <div class="post jg">
   <h1 class="pageTitle">Fields</h1>	
   <p class="meta">분야</p>
-
   <h2>1. 대화 시스템</h2>
   <p>대화 시스템(Dialogue System)은 인간과 컴퓨터 간의 상호작용을 가능하게 하는 기술이다.<p>
   <img src="/assets/img/research/Dialogue_System_v2.png">
@@ -92,9 +90,33 @@ title: Fields
 								Your browser does not support the video tag.
 			</video>
 
-      <li>설명 가능한 질의 응답 시스템</li>
+      <li>대화 내 상식 추론을 이용한 동적 페르소나 기반 대화 시스템</li>
       <video controls style="display: block; margin: 0 auto;">
-								<source src="/assets/video/demo_explainable_question_answering_system.mp4" type="video/mp4">
+								<source src="/assets/video/demo_dialogue_based_dynamic_persona.mp4" type="video/mp4">
+								Your browser does not support the video tag.
+			</video>
+
+      <li>유사 발의를 활용한 초점 기반 다자대화 대화시스템</li>
+      <video controls style="display: block; margin: 0 auto;">
+								<source src="/assets/video/demo_multi-party_conversations.mp4" type="video/mp4">
+								Your browser does not support the video tag.
+			</video>
+
+      <li>지식 기반 응답 생성 모델을 이용한 대화 시스템</li>
+      <video controls style="display: block; margin: 0 auto;">
+								<source src="/assets/video/demo_knowledge_based_response_selection.mp4" type="video/mp4">
+								Your browser does not support the video tag.
+			</video>
+
+      <li>통사적 담화 그래프를 이용한 대화 상태 추적 모델</li>
+      <video controls style="display: block; margin: 0 auto;">
+								<source src="/assets/video/demo_dialogue_state_tracking.mp4" type="video/mp4">
+								Your browser does not support the video tag.
+			</video>
+
+      <li>가상환경 쇼핑 보조를 위한 대화형 인공지능 에이전트</li>
+      <video controls style="display: block; margin: 0 auto;">
+								<source src="/assets/video/demo_DSTC_SIMMC.mp4" type="video/mp4">
 								Your browser does not support the video tag.
 			</video>
   </ul>
@@ -198,7 +220,6 @@ title: Fields
       <li><a href="https://github.com/NLPlab-skku/RoSeLLa" target="_blank">한국어 기반 소형 언어 모델(sLM) RoSeLLa</a></li>
   </ul>
   <br>
-</div>
 
 
 <script>
