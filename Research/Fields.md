@@ -5,7 +5,30 @@ title: Fields
 <style>
 @import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
 .jg{font-family: 'Jeju Gothic', sans-serif;}
+
+/* 박성완 추가 CSS */
+.toggle-container {
+  cursor: pointer;
+  font-weight: bold;
+  color: #333;
+}
+.toggle-list {
+  display: none;
+  list-style-type: none;
+  padding-left: 20px;
+}
+.toggle-list li {
+  margin: 5px 0;
+}
+.toggle-list a {
+  text-decoration: none;
+  color: #1a73e8;
+}
+.toggle-list a:hover {
+  text-decoration: underline;
+}
 </style>
+
 <h4>Research</h4>
  <div class="linklink jg" style = "background-color:#ffffff;border-radius:0 15px;align:right;">
           <ul class="posts-list">
@@ -28,17 +51,16 @@ title: Fields
   <h2>1. 대화 시스템</h2>
   <p>대화 시스템(Dialogue System)은 인간과 컴퓨터 간의 상호작용을 가능하게 하는 기술이다.<p>
   <img src="/assets/img/research/Dialogue_System_v2.png">
-  <p>일반적 대화는 문서와는 달리 구어체 표현을 사용하고, 생략 및 대용어 표현이 빈번히 나타나며, 표정이나 손짓 등 언어 이외의 다양한 수단을 통해 의사를 전달한다. 지능형 대화 시스템 개발은 유비쿼터스 환경에서 가장 유용한 <font color="seagreen" font-weight= "bold">HCI (Human Computer Interaction)</font> 기술이며, 지능형 로봇 개발 등에 사용되는 핵심 기술이다. 일반적으로 다음과 같이 구성된다.</p>
-  <img src="/assets/img/research/Dialogue_System_v2_2.png">
-  <p>최근 대화 시스템이 발전하고 다양한 형태의 대화 데이터가 많아지면서 대화 시스템에 기대하는 사용자의 요구 또한 다양해졌다. 현재는 다음과 같은 다양한 대화 시스템의 소분야에 대한 연구를 진행하고 있다.<p>
+  <p>일반적 대화는 문서와는 달리 구어체 표현을 사용하고, 생략 및 대용어 표현이 빈번히 나타나며, 표정이나 손짓 등 언어 이외의 다양한 수단을 통해 의사를 전달한다. 지능형 대화 시스템 개발은 유비쿼터스 환경에서 가장 유용한 <font color="seagreen" font-weight= "bold">HCI (Human Computer Interaction)</font> 기술이며, 지능형 로봇 개발 등에 사용되는 핵심 기술이다. 최근 대화 시스템이 발전하고 다양한 형태의 대화 데이터가 많아지면서 대화 시스템에 기대하는 사용자의 요구 또한 다양해졌다. 현재는 다음과 같은 다양한 대화 시스템의 소분야에 대한 연구를 진행하고 있다.<p>
   <ul>
 	    <li>특정 도메인에 한정되지 않고 일반적인 상식을 가지고 다양한 도메인에 대해 사람과 대화하는 <font color="seagreen" font-weight= "bold">오픈 도메인 대화(Open-Domain Dialogue) 모델</font></li>
       <li>사용자의 특정 요구사항을 해결하고, 이와 관련된 답변을 제공하는 <font color="seagreen" font-weight= "bold">작업 지향 대화(Task-Oriented Dialogue) 모델</font></li>
       <li>사용자의 페르소나를 추출 및 분석하고, 이에 맞는 대화를 제공하는 <font color="seagreen" font-weight= "bold">페르소나 대화(Persona-based Dialogue) 모델</font></li>
       <li>다자 간의 대화 상황(토론, 토의 등)에서 대화를 분석하고, 해당 상황에서의 최선의 답변을 생성하는 <font color="seagreen" font-weight= "bold">다자간 대화(Multi-Party Dialogue) 모델</font></li>
   </ul>
-  <p>NLPLAB에서 진행된 대화 시스템 관련 Github Repository</p>
-  <ul>
+  <div class="toggle-container" onclick="toggleList()">Related Github</div>
+  <!-- 토글 리스트 -->
+  <ul class="toggle-list" id="github-list">
       <li><a href="https://github.com/NLPlab-skku/HG-TODS" target="_blank">이종 그래프 융합 목적 지향 대화 시스템</a></li>
       <li><a href="https://github.com/NLPlab-skku/DSTC11_SIMMC2.1" target="_blank">가상환경 쇼핑 보조를 위한 대화형 인공지능 에이전트</a></li>
       <li><a href="https://github.com/NLPlab-skku/BERT-ASE" target="_blank">Gender bias 완화 모델 BERT-ASE</a></li>
@@ -122,3 +144,14 @@ title: Fields
       <li><a href="https://github.com/NLPlab-skku/RoSeLLa" target="_blank">한국어 기반 소형 언어 모델(sLM) RoSeLLa</a></li>
   </ul>
   <br>
+
+<script>
+  function toggleList() {
+    const list = document.getElementById('github-list');
+    if (list.style.display === 'none' || list.style.display === '') {
+      list.style.display = 'block';
+    } else {
+      list.style.display = 'none';
+    }
+  }
+</script>
