@@ -13,7 +13,7 @@ title: Fields
       font-weight: bold;
       color: #333;
       transition: color 0.3s ease, transform 0.3s ease;
-      padding-left: 140px; /* 첫 문단과 줄맞춤을 맞추기 위해 추가 */
+      
     }
 
     /* 마우스를 올렸을 때 색과 크기 변화 */
