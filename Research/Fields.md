@@ -220,7 +220,7 @@ title: Fields
 
   <div class="toggle-container" onclick="toggleList_github5()">> Related Github</div>
   <ul class="toggle-list" id="github-list5">
-      <li><a href="https://github.com/NLPlab-skku/SummaryXAI-QA" target="_blank">Multi-Task Learning for Knowledge Graph Completion with Pre-trained Language Models</a></li>
+      <li><a href="https://github.com/NLPlab-skku/SummaryXAI-QA/tree/main/QSG-Transformer" target="_blank">QSG Transformer</a></li>
   </ul>
 
   <div class="toggle-container" onclick="toggleList_demo5()">> Related Demo</div>
