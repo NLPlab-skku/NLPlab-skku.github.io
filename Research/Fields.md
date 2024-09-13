@@ -75,8 +75,15 @@ title: Fields
       <li>다자 간의 대화 상황(토론, 토의 등)에서 대화를 분석하고, 해당 상황에서의 최선의 답변을 생성하는 <font color="seagreen" font-weight= "bold">다자간 대화(Multi-Party Dialogue) 모델</font></li>
       
   <br>
-  <div class="toggle-container" onclick="toggleList()">> Related Github</div>
-  <ul class="toggle-list" id="github-list">
+  <div class="toggle-container" onclick="toggleList_github1()">> Related Github</div>
+  <ul class="toggle-list" id="github-list1">
+      <li><a href="https://github.com/NLPlab-skku/HG-TODS" target="_blank">이종 그래프 융합 목적 지향 대화 시스템</a></li>
+      <li><a href="https://github.com/NLPlab-skku/DSTC11_SIMMC2.1" target="_blank">가상환경 쇼핑 보조를 위한 대화형 인공지능 에이전트</a></li>
+      <li><a href="https://github.com/NLPlab-skku/BERT-ASE" target="_blank">Gender bias 완화 모델 BERT-ASE</a></li>
+  </ul>
+
+  <div class="toggle-container" onclick="toggleList_demo1()">> Related Demo</div>
+  <ul class="toggle-list" id="demo-list1">
       <li><a href="https://github.com/NLPlab-skku/HG-TODS" target="_blank">이종 그래프 융합 목적 지향 대화 시스템</a></li>
       <li><a href="https://github.com/NLPlab-skku/DSTC11_SIMMC2.1" target="_blank">가상환경 쇼핑 보조를 위한 대화형 인공지능 에이전트</a></li>
       <li><a href="https://github.com/NLPlab-skku/BERT-ASE" target="_blank">Gender bias 완화 모델 BERT-ASE</a></li>
@@ -165,8 +172,8 @@ title: Fields
   <br>
 
 <script>
-    function toggleList() {
-      const list = document.getElementById('github-list');
+    function toggleList_github1() {
+      const list = document.getElementById('github-list1');
       if (list.style.display === 'none' || list.style.display === '') {
         list.style.display = 'block';
       } else {
