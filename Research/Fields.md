@@ -7,26 +7,42 @@ title: Fields
 .jg{font-family: 'Jeju Gothic', sans-serif;}
 
 /* 박성완 추가 CSS */
-.toggle-container {
-  cursor: pointer;
-  font-weight: bold;
-  color: #333;
-}
-.toggle-list {
-  display: none;
-  list-style-type: none;
-  padding-left: 20px;
-}
-.toggle-list li {
-  margin: 5px 0;
-}
-.toggle-list a {
-  text-decoration: none;
-  color: #1a73e8;
-}
-.toggle-list a:hover {
-  text-decoration: underline;
-}
+/* 기본 스타일 */
+    .toggle-container {
+      cursor: pointer;
+      font-weight: bold;
+      color: #333;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    /* 마우스를 올렸을 때 색과 크기 변화 */
+    .toggle-container:hover {
+      color: #28a745; /* 녹색 계열 */
+      transform: scale(1.1); /* 글씨 커짐 */
+    }
+
+    /* 토글 리스트 스타일 */
+    .toggle-list {
+      display: none;
+      list-style-type: none;
+      padding-left: 20px;
+    }
+
+    .toggle-list li {
+      margin: 5px 0;
+    }
+
+    .toggle-list a {
+      text-decoration: none;
+      color: #1a73e8;
+      transition: color 0.3s ease;
+    }
+
+    /* 링크에 마우스를 올렸을 때 색 변화 */
+    .toggle-list a:hover {
+      text-decoration: underline;
+      color: #28a745; /* 녹색 계열 */
+    }
 </style>
 
 <h4>Research</h4>
@@ -149,12 +165,12 @@ title: Fields
   <br>
 
 <script>
-  function toggleList() {
-    const list = document.getElementById('github-list');
-    if (list.style.display === 'none' || list.style.display === '') {
-      list.style.display = 'block';
-    } else {
-      list.style.display = 'none';
+    function toggleList() {
+      const list = document.getElementById('github-list');
+      if (list.style.display === 'none' || list.style.display === '') {
+        list.style.display = 'block';
+      } else {
+        list.style.display = 'none';
+      }
     }
-  }
 </script>
