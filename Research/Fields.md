@@ -84,9 +84,17 @@ title: Fields
 
   <div class="toggle-container" onclick="toggleList_demo1()">> Related Demo</div>
   <ul class="toggle-list" id="demo-list1">
-      <li><a href="https://github.com/NLPlab-skku/HG-TODS" target="_blank">이종 그래프 융합 목적 지향 대화 시스템</a></li>
-      <li><a href="https://github.com/NLPlab-skku/DSTC11_SIMMC2.1" target="_blank">가상환경 쇼핑 보조를 위한 대화형 인공지능 에이전트</a></li>
-      <li><a href="https://github.com/NLPlab-skku/BERT-ASE" target="_blank">Gender bias 완화 모델 BERT-ASE</a></li>
+      <li>외부 지식 기반 대화 시스템</li>
+      <video controls style="display: block; margin: 0 auto;">
+								<source src="/assets/video/demo_external_knowledge_based_dialogue_system.mp4" type="video/mp4">
+								Your browser does not support the video tag.
+			</video>
+
+      <li>외부 지식 기반 대화 시스템</li>
+      <video controls style="display: block; margin: 0 auto;">
+								<source src="/assets/video/demo_external_knowledge_based_dialogue_system.mp4" type="video/mp4">
+								Your browser does not support the video tag.
+			</video>
   </ul>
 
 
@@ -174,6 +182,15 @@ title: Fields
 <script>
     function toggleList_github1() {
       const list = document.getElementById('github-list1');
+      if (list.style.display === 'none' || list.style.display === '') {
+        list.style.display = 'block';
+      } else {
+        list.style.display = 'none';
+      }
+    }
+
+    function toggleList_demo1() {
+      const list = document.getElementById('demo-list1');
       if (list.style.display === 'none' || list.style.display === '') {
         list.style.display = 'block';
       } else {
