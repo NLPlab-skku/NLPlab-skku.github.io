@@ -13,6 +13,7 @@ title: Fields
       font-weight: bold;
       color: #333;
       transition: color 0.3s ease, transform 0.3s ease;
+      margin-left: 20%
     }
 
     /* 마우스를 올렸을 때 색과 크기 변화 */
@@ -43,16 +44,6 @@ title: Fields
       text-decoration: underline;
       color: #28a745; /* 녹색 계열 */
     }
-    .content-container {
-  display: flex;
-  align-items: center; /* 세로 정렬을 맞춤 */
-  margin-bottom: 10px; /* 아래 요소와의 간격 조절 */
-}
-
-.content-container p {
-  margin: 0;
-  margin-right: 10px; /* 두 요소 사이의 간격 */
-}
 </style>
 
 <h4>Research</h4>
@@ -70,7 +61,7 @@ title: Fields
   </div>
 
 
-<div class="content-container">
+<div class="post jg">
   <h1 class="pageTitle">Fields</h1>	
   <p class="meta">분야</p>
   <h2>1. 대화 시스템</h2>
@@ -230,7 +221,7 @@ title: Fields
       <li><a href="https://github.com/NLPlab-skku/RoSeLLa" target="_blank">한국어 기반 소형 언어 모델(sLM) RoSeLLa</a></li>
   </ul>
   <br>
-</div>
+
 
 <script>
     function toggleList_github1() {
