@@ -113,6 +113,29 @@ title: Fields
       <li><font color="seagreen" font-weight= "bold">질의 이해(Query Understanding):</font> 사용자가 입력한 질문의 의미를 이해하고, 질문에서 중요한 개체나 키워드를 추출하는 과정이다. 자연어 처리(NLP) 기술을 이용해 질문의 의도를 파악하고 필요한 정보를 찾아내기 위한 준비를 한다.</li>
       <li><font color="seagreen" font-weight= "bold">다정답 추출 및 생성(Answer Extraction and Generation):</font> 질문과 관련된 문서나 데이터에서 정답을 추출하거나 생성하는 과정이다. 기계 독해(Machine Reading Comprehension, MRC) 기술을 사용해 문서 내에서 질문에 가장 적합한 텍스트를 찾아 정답을 추출하거나, 검색된 문서의 정보를 입력받아 생성 모델을 통해 정답을 생성한다. 대표적인 모델로는 BERT, RoBERTa, T5 등이 있다.</li>
   </ul>
+
+  <div class="toggle-container" onclick="toggleList_github1()">> Related Github</div>
+  <ul class="toggle-list" id="github-list1">
+      <li><a href="https://github.com/NLPlab-skku/HG-TODS" target="_blank">이종 그래프 융합 목적 지향 대화 시스템</a></li>
+      <li><a href="https://github.com/NLPlab-skku/DSTC11_SIMMC2.1" target="_blank">가상환경 쇼핑 보조를 위한 대화형 인공지능 에이전트</a></li>
+      <li><a href="https://github.com/NLPlab-skku/BERT-ASE" target="_blank">Gender bias 완화 모델 BERT-ASE</a></li>
+  </ul>
+
+  <div class="toggle-container" onclick="toggleList_demo1()">> Related Demo</div>
+  <ul class="toggle-list" id="demo-list1">
+      <li>외부 지식 기반 대화 시스템</li>
+      <video controls style="display: block; margin: 0 auto;">
+								<source src="/assets/video/demo_external_knowledge_based_dialogue_system.mp4" type="video/mp4">
+								Your browser does not support the video tag.
+			</video>
+
+      <li>설명 가능한 질의 응답 시스템</li>
+      <video controls style="display: block; margin: 0 auto;">
+								<source src="/assets/video/demo_explainable_question_answering_system.mp4" type="video/mp4">
+								Your browser does not support the video tag.
+			</video>
+  </ul>
+
   <br>
 
   <h2>3. 정보 검색</h2>
@@ -177,6 +200,8 @@ title: Fields
       <li><a href="https://github.com/NLPlab-skku/RoSeLLa" target="_blank">한국어 기반 소형 언어 모델(sLM) RoSeLLa</a></li>
   </ul>
   <br>
+</div>
+
 
 <script>
     function toggleList_github1() {
