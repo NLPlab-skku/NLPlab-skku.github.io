@@ -13,7 +13,7 @@ title: Fields
       font-weight: bold;
       color: #333;
       transition: color 0.3s ease, transform 0.3s ease;
-      padding-left: 20px; /* 첫 문단과 줄맞춤을 맞추기 위해 추가 */
+      padding-left: 40px; /* 첫 문단과 줄맞춤을 맞추기 위해 추가 */
     }
 
     /* 마우스를 올렸을 때 색과 크기 변화 */
@@ -76,6 +76,8 @@ title: Fields
       <li>다자 간의 대화 상황(토론, 토의 등)에서 대화를 분석하고, 해당 상황에서의 최선의 답변을 생성하는 <font color="seagreen" font-weight= "bold">다자간 대화(Multi-Party Dialogue) 모델</font></li>
       
   <br>
+  </ul>
+
   <div class="toggle-container" onclick="toggleList_github1()">> Related Github</div>
   <ul class="toggle-list" id="github-list1">
       <li><a href="https://github.com/NLPlab-skku/HG-TODS" target="_blank">이종 그래프 융합 목적 지향 대화 시스템</a></li>
@@ -91,14 +93,11 @@ title: Fields
 								Your browser does not support the video tag.
 			</video>
 
-      <li>외부 지식 기반 대화 시스템</li>
+      <li>설명 가능한 질의 응답 시스템</li>
       <video controls style="display: block; margin: 0 auto;">
-								<source src="/assets/video/demo_external_knowledge_based_dialogue_system.mp4" type="video/mp4">
+								<source src="/assets/video/demo_explainable_question_answering_system.mp4" type="video/mp4">
 								Your browser does not support the video tag.
 			</video>
-  </ul>
-
-
   </ul>
   <br>
 
