@@ -103,9 +103,8 @@ title: Fields
   <h2>2. 오픈 도메인 질의응답 시스템</h2>
   <p>Open-Domain QA(Open-Domain Question Answering)는 사용자가 제시한 질문에 대해 대규모의 비구조화된 데이터나 문서로부터 적절한 답변을 찾아 제공하는 시스템이다.<p>
   <img src="/assets/img/research/Open_domain_QA.png">
-  <p>주로 인터넷이나 대규모 텍스트 데이터베이스에서 정보를 검색해 사용자가 원하는 답을 제공하는 방식으로 동작한다. 이러한 시스템은 검색 엔진, AI 기반 비서 등 여러 응용 분야에서 활용된다.
-</p>
-<p>아래 그림은 질의응답의 일반적인 구성을 보여주는 예시이다.</p>
+  <p>주로 인터넷이나 대규모 텍스트 데이터베이스에서 정보를 검색해 사용자가 원하는 답을 제공하는 방식으로 동작한다. 이러한 시스템은 검색 엔진, AI 기반 비서 등 여러 응용 분야에서 활용된다.</p>
+  <p>아래 그림은 질의응답의 일반적인 구성을 보여주는 예시이다.</p>
   <img src="/assets/img/research/Open_domain_QA_2.png">
   <p>Open-Domain QA의 주요 구성 요소 및 핵심 기술은 다음과 같다.<p>
   <ul>
@@ -141,8 +140,8 @@ title: Fields
   <h2>3. 정보 검색</h2>
   <p>정보검색 시스템(Information Retrieval System)은 대량의 데이터나 문서에서 사용자가 필요한 정보를 효과적으로 찾아주는 시스템이다.<p>
   <img src="/assets/img/research/Information_Retrieval.png">
-  <p>인터넷 검색 엔진, 디지털 도서관, 기업 데이터베이스 등 다양한 분야에서 활용되며, 사용자의 질의에 따라 관련된 문서나 데이터를 검색해 제공한다. 오픈 도메인 질의응답 시스템에서 문서를 검색하는 과정과 일치하지만 답변 생성이 목적이 아닌 정확한 문서를 가져오는 것이 목적인 부분에서 차이가 존재한다. </p>
-<p>정보검색 시스템의 주요 구성 요소 및 핵심 기술</p>
+  <p>인터넷 검색 엔진, 디지털 도서관, 기업 데이터베이스 등 다양한 분야에서 활용되며, 사용자의 질의에 따라 관련된 문서나 데이터를 검색해 제공한다. 오픈 도메인 질의응답 시스템에서 문서를 검색하는 과정과 일치하지만 답변 생성이 목적이 아닌 정확한 문서를 가져오는 것이 목적인 부분에서 차이가 존재한다.</p>
+  <p>정보검색 시스템의 주요 구성 요소 및 핵심 기술</p>
   <ul>
 	    <li><font color="seagreen" font-weight= "bold">문서 컬렉션(Document Collection):</font> 검색 대상이 되는 모든 문서나 데이터의 집합이다. 문단 혹은 3~5개의 문장단위로 구성하여 사용하기도 한다. </li>
       <li><font color="seagreen" font-weight= "bold">색인(Indexing):</font> 문서에서 중요한 키워드나 특징을 추출해 색인을 생성하는 과정이다. 이를 통해 문서 검색이 빠르고 정확하게 이루어질 수 있다. 대표적인 방법으로 <font color="seagreen" font-weight= "bold">TF-IDF(Term Frequency-Inverse Document Frequency), DPR(Dense passage retrieval)</font> 등이 사용된다.</li>
@@ -157,8 +156,7 @@ title: Fields
   
   <p>주요 개념</p>
   <ul>
-	    <li><font color="seagreen" font-weight= "bold">속성 제어:</font> 텍스트의 특정 속성(예: 주제, 감정, 스타일 등)을 사용자가 설정한 대로 제어한다. 최근에는 단일 속성뿐만 아니라 다양한 속성을 제어하는 연구들이 활발하게 이루어지고 있다.
-</li>
+	    <li><font color="seagreen" font-weight= "bold">속성 제어:</font> 텍스트의 특정 속성(예: 주제, 감정, 스타일 등)을 사용자가 설정한 대로 제어한다. 최근에는 단일 속성뿐만 아니라 다양한 속성을 제어하는 연구들이 활발하게 이루어지고 있다.</li>
       <li><font color="seagreen" font-weight= "bold">조건부 생성:</font> 주어진 조건에 따라 텍스트를 생성한다. 예를 들어, 대화 시스템에서는 사용자 질문에 따라 적절한 답변을 생성할 수 있다.</li>
   </ul>
   <p>이 기술을 통해 사용자 맞춤형 텍스트 생성을 더 효율적으로 할 수 있어, 다양한 AI 응용 분야에서 활용되고 있다.<p>
