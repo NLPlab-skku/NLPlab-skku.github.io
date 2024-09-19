@@ -35,10 +35,10 @@ title: Patents
 <!--<div class="post jg">-->
 	<ul class="post jg">
 		<li>
-			Patent Application.<br>
+			Patent Registration.<br>
 			Apparatus and Method for Fake Video Detection. (가짜 동영상 탐지를 수행하는 방법 및 이를 위한 장치)<br>
-			<small>출원일: 2021.08.18 (출원번호 제 10-2021-0108936 호)</small>
-			<small>출원일: 2024.08.19 (제 10-2697679호)</small>
+			<small>출원일: 2021.08.18 (출원번호 제 10-2021-0108936 호)</small><br>
+			<small>등록일: 2024.08.19 (제 10-2697679호)</small>
 		</li>
 		<br>
 		<li>
