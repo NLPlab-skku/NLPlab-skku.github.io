@@ -251,11 +251,30 @@ title: Fields
 
   <div class="toggle-container" onclick="toggleList_github6()">> Related Github</div>
   <ul class="toggle-list" id="github-list6">
-      <li><a href="https://github.com/NLPlab-skku/RoSeLLa" target="_blank">한국어 기반 소형 언어 모델(sLM) RoSeLLa</a></li>
+    <li>TBD</li>
   </ul>
 
   <div class="toggle-container" onclick="toggleList_demo6()">> Related Demo</div>
   <ul class="toggle-list" id="demo-list6">
+      <li>TBD</li>
+  </ul>
+  <br>
+
+  <h2>7. 언어 모델 기반 딥러닝 기술</h2>
+  <p> 대규모 언어 모델(LLM)의 등장 이후 이를 기반으로 한 다양한 혁신적 기술들이 등장하였다. 특히 작은 언어 모델(sLM)과 검색 기반 생성(RAG, Retrieval-Augmented Generation) 기술들이 중점적으로 연구되고 있으며, 이러한 기술들은 대규모 언어 모델의 한계를 보완하면서도 높은 성능을 유지하는 것을 목표로 한다.</p>
+  <ul>
+	  <li><font color="seagreen" font-weight= "bold">sLM:</font> LLM의 성능을 유지하면서도 더욱 경량화된 모델을 구축하는 데 초점을 맞추고 있으며, 이를 통해 자원 효율성과 실시간 처리 성능을 극대화하는 연구를 진행하고 있다.</li>
+  	<li><font color="seagreen" font-weight= "bold">RAG:</font> 대규모 데이터베이스에서 유용한 정보를 검색하고 이를 기반으로 응답을 생성하는 방식으로, 단순한 생성형 모델보다 더 신뢰성 있고 구체적인 정보를 제공하는 것을 목표로 한다.</li>
+  </ul>
+  <p>이와 같은 기술들은 다양한 응용 분야에 적용 가능하며, 연구실은 이를 통해 자연어 처리 기술의 새로운 가능성을 탐구하고 있다.</p>
+
+  <div class="toggle-container" onclick="toggleList_github7()">> Related Github</div>
+  <ul class="toggle-list" id="github-list7">
+      <li><a href="https://github.com/NLPlab-skku/RoSeLLa" target="_blank">한국어 기반 소형 언어 모델(sLM) RoSeLLa</a></li>
+  </ul>
+
+  <div class="toggle-container" onclick="toggleList_demo7()">> Related Demo</div>
+  <ul class="toggle-list" id="demo-list7">
       <li>TBD</li>
   </ul>
   <br>
@@ -352,7 +371,7 @@ title: Fields
       }
     }
 
-        function toggleList_github6() {
+    function toggleList_github6() {
       const list = document.getElementById('github-list6');
       if (list.style.display === 'none' || list.style.display === '') {
         list.style.display = 'block';
@@ -363,6 +382,24 @@ title: Fields
 
     function toggleList_demo6() {
       const list = document.getElementById('demo-list6');
+      if (list.style.display === 'none' || list.style.display === '') {
+        list.style.display = 'block';
+      } else {
+        list.style.display = 'none';
+      }
+    }
+
+        function toggleList_github7() {
+      const list = document.getElementById('github-list7');
+      if (list.style.display === 'none' || list.style.display === '') {
+        list.style.display = 'block';
+      } else {
+        list.style.display = 'none';
+      }
+    }
+
+    function toggleList_demo7() {
+      const list = document.getElementById('demo-list7');
       if (list.style.display === 'none' || list.style.display === '') {
         list.style.display = 'block';
       } else {
