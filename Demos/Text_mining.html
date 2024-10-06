@@ -119,6 +119,29 @@ title: Demos
 					</ul>
 				</div>
 		</li>
+		<br>
+		<li style="text-align: center;">
+			<button onclick="toggleContent2()" class="w-btn-outline w-btn-green-outline" type="button" 
+				style="display: inline-block; vertical-align: middle; font-size: 19px; width: 90%;">
+				SPACE: 감정 분석용 임베딩 분류 프롬프트 모델</button>
+				<div id="toggleContent2" style="display: none; text-align: left;">
+					<ul class="jg">
+						<br>
+						<li>Title: <small>SPACE: Senti-Prompt As Classifying Embedding for sentiment analysis</small></li>
+						<li>System Overview Image: <small>TBD</small></li>
+						<li>Summary: <small>TBD</small></li>
+						<li>Github Link: <small>TBD</small></li>
+						<li>Paper Link: <small><a href="https://www.sciencedirect.com/science/article/pii/S0167865524000552">Publisher Link</a></small></li>
+						<li>Demo Video</li>
+						<div>
+							<video controls style="display: block; margin: 0 auto;">
+								<source src="/assets/video/demo_SPACE.mp4" type="video/mp4">
+								Your browser does not support the video tag.
+							</video>
+						</div>
+					</ul>
+				</div>
+		</li>
 	</ul>
 		<br>
 	<p><small><a href="#top">Back to Top</a></small></p><br>
@@ -128,6 +151,14 @@ title: Demos
 <script>
 	function toggleContent1() {
 		var content = document.getElementById("toggleContent1");
+		if (content.style.display === "none") {
+			content.style.display = "block";
+		} else {
+			content.style.display = "none";
+		}
+	}
+	function toggleContent2() {
+		var content = document.getElementById("toggleContent2");
 		if (content.style.display === "none") {
 			content.style.display = "block";
 		} else {
