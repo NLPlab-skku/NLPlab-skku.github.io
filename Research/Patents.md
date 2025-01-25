@@ -168,6 +168,30 @@ title: Patents
 	<ul class="post jg">
 		<li>
 			Patent Application.<br>
+			Device and Method for Multi-party Conversation. (다자간 대화 장치 및 방법)<br>
+			<small>출원일: 2024.12.12 (출원번호 제 10-2024-0185151 호)</small><br>
+		</li>
+		<br>
+		<li>
+			Patent Application.<br>
+			Question Answering Device and Method (질의 응답 장치 및 방법)<br>
+			<small>출원일: 2024.12.12 (출원번호 제 10-2024-01844732 호)</small><br>
+		</li>
+		<br>
+		<li>
+			Patent Application.<br>
+			Method and Apparatus for Training Multi-modal Artificial Intelligence Model for Query-video Retrieval.(질의-동영상 검색을 위해 멀티 모달 인공지능 모델을 학습 시키는 방법 및 장치)<br>
+			<small>출원일: 2024.11.29 (출원번호 제 10-2024-0175491 호)</small><br>
+		</li>
+		<br>
+		<li>
+			Patent Application.<br>
+			Learning Method for Dependency Parsing and Dependency Parsing Method, and Computing Apparatus for Performing the Same. (의존 구문분석을 위한 학습 방법과 의존 구문분석 방법 및 이를 수행하기 위한 컴퓨팅 장치)<br>
+			<small>출원일: 2024.11.29 (출원번호 제 10-2024-0175602 호)</small><br>
+		</li>
+		<br>
+		<li>
+			Patent Application.<br>
 			Metod and Device for Learning of Neural Network Model. (신경망모델의 학습방법 및 장치)<br>
 			<small>출원일: 2024.01.19 (출원번호 제 10-2024-0008658 호)</small><br>
 		</li>
