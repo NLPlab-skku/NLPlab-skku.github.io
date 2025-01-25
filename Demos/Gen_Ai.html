@@ -5,20 +5,69 @@ title: Demos
 <a name="top"></a>
 <style>
 .center{
-	display: block;
-	margin-left: 100px;
-	margin-right: auto;
-	margin-top: auto;
-	margin-bottom: auto;
-	height: 60%;
-	width: 70%;
-  }
+		display: block;
+		margin-left: 100px;
+		margin-right: auto;
+		margin-top: auto;
+		margin-bottom: auto;
+		height: 60%;
+		width: 70%;
+	  }
 @import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
 .jg{font-family: 'Jeju Gothic', sans-serif;}
 @import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
 .nm{font-family: 'Jeju Gothic', sans-serif;}
 .publisher-link {color: darkcyan; text-decoration: none;}
 .publisher-link:hover, .publisher-link:focus {text-decoration: underline;}
+.w-btn {
+    position: relative;
+    border: none;
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 15px;
+    font-family: "paybooc-Light", sans-serif;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+.w-btn-outline {
+    position: relative;
+    padding: 15px 30px;
+    border-radius: 15px;
+    font-family: "paybooc-Light", sans-serif;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.35s;
+}
+
+.w-btn-green-outline {
+    border: 3px solid #77af9c;
+    color: black;
+}
+
+.w-btn-green-outline:hover {
+    background-color: #77af9c;
+    color: #d7fff1;
+}
+
+.w-btn:hover {
+    letter-spacing: 2px;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.w-btn-outline:hover {
+    letter-spacing: 2px;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.w-btn-outline:active {
+    transform: scale(1.5);
+}
 </style>
 
 <a name="top"></a>
@@ -41,8 +90,10 @@ title: Demos
 <div class="post jg">
 	<h1 class="pageTitle">Generative AI</h1>
 	<p class="meta">데모 동영상</p>
+
 	<blockquote style="text-align: center;">
 		<ul class="jg" style="list-style: none; padding: 0;">
+			
 		<li style="text-align: center;">
 			<button onclick="toggleContent1()" class="w-btn-outline w-btn-green-outline" type="button" 
 				style="display: inline-block; vertical-align: middle; font-size: 19px; width: 90%;">
