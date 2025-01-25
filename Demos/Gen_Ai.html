@@ -41,18 +41,42 @@ title: Demos
 <div class="post jg">
 	<h1 class="pageTitle">Generative AI</h1>
 	<p class="meta">데모 동영상</p>
-	<!-- <div class="linklink" style = "text-align:center;">
-		<a href="#1"></a> | <a href="#2"></a>
-	</div> -->
-	<!-- <br> -->
-
-	<blockquote>
-	<ul class="jg">
-		<li>
-			TBD
+	<blockquote style="text-align: center;">
+		<ul class="jg" style="list-style: none; padding: 0;">
+		<li style="text-align: center;">
+			<button onclick="toggleContent1()" class="w-btn-outline w-btn-green-outline" type="button" 
+				style="display: inline-block; vertical-align: middle; font-size: 19px; width: 90%;">
+				지식 그래프의 링크 예측을 위한 거대 언어 모델 기반 관계 설명문 생성 방법</button>
+				<div id="toggleContent1" style="display: none; text-align: left;">
+					<ul class="jg">
+						<br>
+						<li>Title: <small>Generating Relation Descriptions with Large Language Mode for Link Prediction</small></li>
+						<li>System Overview Image: <small>TBD</small></li>
+						<li>Summary: <small>TBD</small></li>
+						<li>Github Link: <small>TBD</small></li>
+						<li>Paper Link: <small><a href="https://www.dbpia.co.kr/pdf/pdfView.do?nodeId=NODE11943975">Publisher Link</a></small></li>
+						<li>Demo Video</li>
+						<div>
+							<video controls style="display: block; margin: 0 auto;">
+								<source src="/assets/video/demo_generation_relation_descriptions.mp4" type="video/mp4">
+								Your browser does not support the video tag.
+							</video>
+						</div>
+					</ul>
+				</div>
 		</li>
-	</ul>
-	<br>
+		<br>
 	<p><small><a href="#top">Back to Top</a></small></p><br>
 	</blockquote>
 </div>
+
+<script>
+	function toggleContent1() {
+		var content = document.getElementById("toggleContent1");
+		if (content.style.display === "none") {
+			content.style.display = "block";
+		} else {
+			content.style.display = "none";
+		}
+	}
+</script>
