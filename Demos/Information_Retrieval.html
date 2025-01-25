@@ -116,7 +116,6 @@ title: Demos
 					</ul>
 				</div>
 		</li>
-
 		<br>
 		<li style="text-align: center;">
 			<button onclick="toggleContent2()" class="w-btn-outline w-btn-green-outline" type="button" 
@@ -141,6 +140,30 @@ title: Demos
 				</div>
 		</li>
 		<br>
+
+		<li style="text-align: center;">
+			<button onclick="toggleContent3()" class="w-btn-outline w-btn-green-outline" type="button" 
+			style="display: inline-block; vertical-align: middle; font-size: 19px; width: 90%;">
+			설명가능성을 위한 토큰 임베딩 기반 동영상 검색</button>
+			<div id="toggleContent3" style="display: none; text-align: left;">
+					<ul class="jg">
+						<br>
+						<li>Title: <small>Explainable Video Search System using Token Space-based Representation</small></li>
+						<li>System Overview Image: <small>TBD</small></li>
+						<li>Summary: <small>TBD</small></li>
+						<li>Github Link: <small>TBD</small></li>
+						<li>Paper Link: <small><a href="https://www.dbpia.co.kr/pdf/pdfView.do?nodeId=NODE12007528&googleIPSandBox=false&mark=0&minRead=10&ipRange=false&b2cLoginYN=false&icstClss=010000&isPDFSizeAllowed=true&accessgl=Y&language=ko_KR&hasTopBanner=true">Publisher Link</a></small></li>
+						<li>Demo Video</li>
+						<div>
+							<video controls style="display: block; margin: 0 auto;">
+								<source src="/assets/video/demo_explainable_question_answering_system.mp4" type="video/mp4">
+								Your browser does not support the video tag.
+							</video>
+						</div>
+					</ul>
+				</div>
+		</li>
+		<br>
 	</ul>
 	<p><small><a href="#top">Back to Top</a></small></p><br>
 	</blockquote>
@@ -157,6 +180,14 @@ function toggleContent1() {
 }
 function toggleContent2() {
 	var content = document.getElementById("toggleContent2");
+	if (content.style.display === "none") {
+		content.style.display = "block";
+	} else {
+		content.style.display = "none";
+	}
+}
+function toggleContent3() {
+	var content = document.getElementById("toggleContent3");
 	if (content.style.display === "none") {
 		content.style.display = "block";
 	} else {
