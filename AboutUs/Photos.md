@@ -40,6 +40,11 @@ title: Photos
   <p class="meta">사진</p>
   
   <br><br>
+
+  <h4 class = "center">#2025</h4>
+  <div class="slider">
+  	<div><img src = "/assets/img/photos/0126.jpg" title = "25년 3월:개강 기념 탁구🏓"/></div>
+  </div>
 	
   <h4 class = "center">#2024</h4>
   <div class="slider">
