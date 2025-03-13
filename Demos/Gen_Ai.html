@@ -117,10 +117,10 @@ title: Demos
 			</li>
 		<br>
 			<li style="text-align: center;">
-				<button onclick="toggleContent1()" class="w-btn-outline w-btn-green-outline" type="button" 
+				<button onclick="toggleContent2()" class="w-btn-outline w-btn-green-outline" type="button" 
 					style="display: inline-block; vertical-align: middle; font-size: 19px; width: 90%;">
 					지식 그래프의 링크 예측을 위한 거대 언어 모델 기반 관계 설명문 생성 방법</button>
-				<div id="toggleContent1" style="display: none; text-align: left;">
+				<div id="toggleContent2" style="display: none; text-align: left;">
 					<ul class="jg">
 						<br>
 						<li>Title: <small>Generating Relation Descriptions with Large Language Mode for Link Prediction</small></li>
@@ -140,10 +140,10 @@ title: Demos
 			</li>
 		<br>
 			<li style="text-align: center;">
-				<button onclick="toggleContent2()" class="w-btn-outline w-btn-green-outline" type="button" 
+				<button onclick="toggleContent3()" class="w-btn-outline w-btn-green-outline" type="button" 
 					style="display: inline-block; vertical-align: middle; font-size: 19px; width: 90%;">
 					질의 집중 의미 그래프를 활용한 질의 기반 문서 요약</button>
-				<div id="toggleContent2" style="display: none; text-align: left;">
+				<div id="toggleContent3" style="display: none; text-align: left;">
 					<ul class="jg">
 						<br>
 						<li>Title: <small>Text Summarization with the Query Attentive Graph-Attention Network</small></li>
@@ -163,10 +163,10 @@ title: Demos
 			</li>
 		<br>
 			<li style="text-align: center;">
-				<button onclick="toggleContent3()" class="w-btn-outline w-btn-green-outline" type="button" 
+				<button onclick="toggleContent4()" class="w-btn-outline w-btn-green-outline" type="button" 
 					style="display: inline-block; vertical-align: middle; font-size: 19px; width: 90%;">
 					주제 분포를 반영한 교차 주의 기반 대화 요약 시스템</button>
-				<div id="toggleContent3" style="display: none; text-align: left;">
+				<div id="toggleContent4" style="display: none; text-align: left;">
 					<ul class="jg">
 						<br>
 						<li>Title: <small>Dialogue Summarization using Topic distribution-Aware Cross-Attention</small></li>
@@ -209,6 +209,14 @@ title: Demos
 	}
 	function toggleContent3() {
 		var content = document.getElementById("toggleContent3");
+		if (content.style.display === "none") {
+			content.style.display = "block";
+		} else {
+			content.style.display = "none";
+		}
+	}
+	function toggleContent4() {
+		var content = document.getElementById("toggleContent4");
 		if (content.style.display === "none") {
 			content.style.display = "block";
 		} else {
