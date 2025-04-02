@@ -43,7 +43,8 @@ title: Photos
 
   <h4 class = "center">#2025</h4>
   <div class="slider">
-  	<div><img src = "/assets/img/photos/0126.jpg" title = "25년 3월:개강 기념 탁구🏓"/></div>
+  	<div><img src = "/assets/img/photos/0127.jpg" title = "25년 4월:봄 맞이 족구 ⚽️"/></div>
+  	<div><img src = "/assets/img/photos/0126.jpg" title = "25년 3월:개강 기념 탁구 🏓"/></div>
   </div>
 	
   <h4 class = "center">#2024</h4>
