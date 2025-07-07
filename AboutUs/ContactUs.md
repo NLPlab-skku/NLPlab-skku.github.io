@@ -24,6 +24,12 @@ title: ContactUs
 
 <div class="post">
 	<h1 class="pageTitle">Contact Us</h1>
+	<div>
+	<a href="https://forms.gle/bdW4K2uYqvteRWfX7" target="_blank">
+		<img class="center" src="/assets/img/nlplab_slide4.png">
+	</a>
+	</div>
+	<br>
 	<p class="meta">찾아오시는 길</p>
 	<p class="jg">
 	(16419) 경기도 수원시 장안구 서부로 2066,<br>
@@ -45,8 +51,4 @@ title: ContactUs
 		"mapHeight" : "450"
 	}).render();
 </script>
-<br>
-<div>
-	<img class="center" src="/assets/img/nlplab_slide4.png">
-</div>
 </center>
