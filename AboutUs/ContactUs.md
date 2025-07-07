@@ -45,4 +45,6 @@ title: ContactUs
 		"mapHeight" : "450"
 	}).render();
 </script>
+<br>
+<div><a href = "https://forms.gle/bdW4K2uYqvteRWfX7" target = "_blank"><img class = "center" src="assets/img/nlplab_slide4.png"/></a></div>
 </center>
