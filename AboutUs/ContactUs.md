@@ -47,6 +47,6 @@ title: ContactUs
 </script>
 <br>
 <div>
-	<img class="center" src="./../assets/img/nlplab_slide4.png">
+	<img class="center" src="/assets/img/nlplab_slide4.png">
 </div>
 </center>
