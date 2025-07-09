@@ -26,7 +26,7 @@ title: ContactUs
 	<h1 class="pageTitle">Contact Us</h1>
 	<div>
 	<a href="https://forms.gle/bdW4K2uYqvteRWfX7" target="_blank">
-		<img class="center" src="/assets/img/nlplab_slide4.png">
+		<img class="center" src="/assets/img/notice/contact.png">
 	</a>
 	</div>
 	<br>
