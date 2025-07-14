@@ -97,7 +97,6 @@ title: Photos
   <div class="slider">
 	<div><img src = "/assets/img/2021/05_teacher's day.jpg" title = "21년 5월: 스승의 날 기념 케이크 전달"/></div>
 	<div><img src = "/assets/img/2020/12_NHN_seminar.jpg" title = "20년 12월: NHN Diquest 세미나"/></div>
-	<div><img class = "center" src = "/assets/img/2020/10_award_2.jpg" title = "20년 10월: 2020년 국어 정보 처리 시스템 경진 대회 동상 수상"/></div>
 	<div><img src = "/assets/img/2020/07_prof_birthday.jpg" title = "20년 7월: 교수님 생신 기념 케이크 전달"/></div>
 	<div><img src = "/assets/img/2020/07_summer_internship.jpg" title = "20년 7월: 연구실 여름 인턴십"/></div>
   </div>
