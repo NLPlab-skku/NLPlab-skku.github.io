@@ -1,6 +1,6 @@
 - JPGandPNGs에 jpg 혹은 png 파일 저장하기
-- member_template를 사용해서 만들기
+- member_template 사용해서 만들기
 - font는 jeju gothic 사용하기
-- linux에서는 ppt 잘 안되니까 다른 기기로 하던가 하기
+- linux에서는 ppt 잘 안되니까 작업하고 옮기기
 - current folder = 지금 연구실 구성원
 - old = 졸업생 혹은 과거 구성원
