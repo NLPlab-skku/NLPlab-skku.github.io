@@ -44,59 +44,62 @@ title: Photos
 
   <h4 class = "center">#2025</h4>
   <div class="slider">
-  	<div><img src = "/assets/img/photos/0127.jpg" title = "25년 4월:봄 맞이 족구 ⚽️"/></div>
-  	<div><img src = "/assets/img/photos/0126.jpg" title = "25년 3월:개강 기념 탁구 🏓"/></div>
+  	<div><img src = "/assets/img/2025/07_professor_award.jpg" title = "25년 7월: 고영중 교수님 한국정보과학회 학술상 수상"/></div>
+	<div><img src = "/assets/img/2025/07_award_celeb.jpg" title = "25년 7월: 학술상 수상 축하 케이크 전달"/></div>
+	<div><img src = "/assets/img/2025/07_ashley.jpg" title = "25년 7월: 애슐리데이🍴"/></div>
+  	<div><img src = "/assets/img/2025/04_workout.jpg" title = "25년 4월: 봄 맞이 족구 ⚽️"/></div>
+  	<div><img src = "/assets/img/2025/03_pingpong.jpg" title = "25년 3월: 개강 기념 탁구 🏓"/></div>
+	<div><img src = "/assets/img/2025/02_graduation.png" title = "25년 2월: 학위수여식"/></div>
+	<div><img src = "/assets/img/2025/02_graduation_2.png" title = "25년 2월: 학위수여식2"/></div>
   </div>
 	
   <h4 class = "center">#2024</h4>
   <div class="slider">
-  	<div><img src = "/assets/img/photos/0125.jpg" title = "24년 10월:EMNLP 학회 발표2"/></div>
-	<div><img src = "/assets/img/photos/0124.jpg" title = "24년 10월:EMNLP 학회 발표1"/></div>
-	<div><img src = "/assets/img/photos/0123.jpg" title = "24년 8월:애슐리데이🍴"/></div>
-  	<div><img src = "/assets/img/photos/0122.jpg" title = "24년 8월:학위수여식"/></div>
-  	<div><img src = "/assets/img/photos/0121.jpg" title = "24년 7월:교수님 생신 케이크 전달"/></div>
-  	<div><img src = "/assets/img/photos/0120.jpg" title = "24년 5월:스승의날"/></div>
-	<div><img src = "/assets/img/photos/0119.jpg" title = "24년 5월:스승의날"/></div>
-	<div><img src = "/assets/img/photos/0118.jpg" title = "24년 2월:학위수여식"/></div>
-	<div><img src = "/assets/img/photos/0117.jpg" title = "24년 2월:학위수여식"/></div>
+  	<div><img src = "/assets/img/2024/12_ksc.png" title = "24년 12월: 한국정보과학회 KSC2024"/></div>
+	<div><img src = "/assets/img/2024/10_emnlp_2.jpg" title = "24년 10월: EMNLP 학회 발표"/></div>
+	<div><img src = "/assets/img/2024/08_ashley.jpg" title = "24년 8월: 애슐리데이🍴"/></div>
+  	<div><img src = "/assets/img/2024/08_graduation.jpg" title = "24년 8월: 학위수여식"/></div>
+  	<div><img src = "/assets/img/2024/07_prof_birthday.jpg" title = "24년 7월: 교수님 생신 케이크 전달"/></div>
+  	<div><img src = "/assets/img/2024/05_teacher'sday.jpg" title = "24년 5월: 스승의날"/></div>
+	<div><img src = "/assets/img/2024/05_teacher'sday_2.jpg" title = "24년 5월: 스승의날"/></div>
+	<div><img src = "/assets/img/2024/02_graduation.jpg" title = "24년 2월: 학위수여식"/></div>
+	<div><img src = "/assets/img/2024/02_graduation_2.jpg" title = "24년 2월: 학위수여식2"/></div>
   </div>
 	
   <h4 class = "center">#2023</h4>
   <div class="slider">
-	<div><img src = "/assets/img/photos/0116.jpg" title = "23년 11월:11월 생일파티"/></div>
-	<div><img src = "/assets/img/photos/0115.jpg" title = "23년 10월:연구실 회식"/></div>
-	<div><img src = "/assets/img/photos/0114.jpg" title = "23년 7월:교수님 생신 케이크 전달"/></div>
-	<div><img src = "/assets/img/photos/0113.jpg" title = "23년 5월:4,5월 생일파티"/></div>
-	<div><img src = "/assets/img/photos/0112.jpg" title = "23년 5월:스승의 날 기념 케이크 전달"/></div>
-	<div><img src = "/assets/img/photos/0111.jpg" title = "23년 5월:스승의 날 기념 케이크 전달"/></div>
-	<div><img src = "/assets/img/photos/0110.jpg" title = "23년 4월:성균관대학교의 봄🌸"/></div>
-	<div><img src = "/assets/img/photos/0109.jpg" title = "23년 4월:성균관대학교의 봄🌸"/></div>
-	<div><img src = "/assets/img/photos/0108.jpg" title = "23년 3월:연구실 회식"/></div>
-	<div><img src = "/assets/img/photos/0107.jpg" title = "23년 2월:학위수여식"/></div>
-	<div><img src = "/assets/img/photos/0106.jpg" title = "23년 2월:학위수여식"/></div>
+	<div><img src = "/assets/img/2023/11_birthday.jpg" title = "23년 11월: 11월 생일파티"/></div>
+	<div><img src = "/assets/img/2023/10_eatout.jpg" title = "23년 10월: 연구실 회식"/></div>
+	<div><img src = "/assets/img/2023/07_prof_birthday.jpg" title = "23년 7월: 교수님 생신 케이크 전달"/></div>
+	<div><img src = "/assets/img/2023/05_teacher'sday.jpg" title = "23년 5월: 스승의 날 기념 케이크 전달"/></div>
+	<div><img src = "/assets/img/2023/05_birthday.jpg" title = "23년 5월: 5월 생일파티"/></div>
+	<div><img src = "/assets/img/2023/04_spring.jpg" title = "23년 4월: 성균관대학교의 봄🌸"/></div>
+	<div><img src = "/assets/img/2023/03_eatout.jpg" title = "23년 3월: 연구실 회식"/></div>
+	<div><img src = "/assets/img/2023/02_graduation.jpg" title = "23년 2월: 학위수여식"/></div>
+	<div><img src = "/assets/img/2023/02_graduation_2.jpg" title = "23년 2월: 학위수여식"/></div>
+	<div><img src = "/assets/img/2023/01_emnlp.png" title = "23년 1월: EMNLP 학회 발표"/></div>
   </div>
 	
   <h4 class = "center">#2022</h4>
   <div class="slider">
-	<div><img src = "/assets/img/2022/12_ksc2022.jpg" title = "22년 12월:한국정보과학회 KSC2022"/></div>
-	<div><img src = "/assets/img/2022/12_ksc2022_presentation.jpg" title = "22년 12월:한국정보과학회 KSC2022 발표"/></div>
-	<div><img src = "/assets/img/2022/12_jeju.jpg" title = "22년 12월:제주도에서🍊"/></div>
-	<div><img src = "/assets/img/2022/11_birthday.jpg" title = "22년 11월:11월 생일파티"/></div>
+	<div><img src = "/assets/img/2022/12_ksc2022.jpg" title = "22년 12월: 한국정보과학회 KSC2022"/></div>
+	<div><img src = "/assets/img/2022/12_ksc2022_presentation.jpg" title = "22년 12월: 한국정보과학회 KSC2022 발표"/></div>
+	<div><img src = "/assets/img/2022/12_jeju.jpg" title = "22년 12월: 제주도에서🍊"/></div>
+	<div><img src = "/assets/img/2022/11_birthday.jpg" title = "22년 11월: 11월 생일파티"/></div>
 	<div><img src = "/assets/img/2022/09_members_ncenter.jpg" title = "22년 9월: 연구실 단체 사진"/></div>
-	<div><img src = "/assets/img/2022/08_gradschool presentation.jpg" title = "22년 8월:인공지능대학원 발표"/></div>
-	<div><img src = "/assets/img/2022/07_sigir.png" title = "22년 7월:SIGIR 학회 발표"/></div>
-	<div><img src = "/assets/img/2022/06_lgai.jpg" title = "22년 6월:LG AI Research 견학"/></div>
-	<div><img src = "/assets/img/2022/06_lgai_2.jpg" title = "22년 6월:LG AI Research 견학"/></div>
+	<div><img src = "/assets/img/2022/08_gradschool presentation.jpg" title = "22년 8월: 인공지능대학원 발표"/></div>
+	<div><img src = "/assets/img/2022/07_sigir.png" title = "22년 7월: SIGIR 학회 발표"/></div>
+	<div><img src = "/assets/img/2022/06_lgai.jpg" title = "22년 6월: LG AI Research 견학"/></div>
+	<div><img src = "/assets/img/2022/06_lgai_2.jpg" title = "22년 6월: LG AI Research 견학"/></div>
   </div>
 	
   <h4 class = "center">#Prev</h4>
   <div class="slider">
 	<div><img src = "/assets/img/2021/05_teacher's day.jpg" title = "21년 5월: 스승의 날 기념 케이크 전달"/></div>
 	<div><img src = "/assets/img/2020/12_NHN_seminar.jpg" title = "20년 12월: NHN Diquest 세미나"/></div>
-	<div><img src = "/assets/img/2020/10_award.jpg" title = "20년 10월: 2020년 국어 정보 처리 시스템 경진 대회 동상 수상"/></div>
 	<div><img class = "center" src = "/assets/img/2020/10_award_2.jpg" title = "20년 10월: 2020년 국어 정보 처리 시스템 경진 대회 동상 수상"/></div>
-	<div><img src = "/assets/img/2020/07_prof_birthday.jpg" title = "20년 7월:교수님 생신 기념 케이크 전달"/></div>
-	<div><img src = "/assets/img/2020/07_summer_internship.jpg" title = "20년 7월:연구실 여름 인턴십"/></div>
+	<div><img src = "/assets/img/2020/07_prof_birthday.jpg" title = "20년 7월: 교수님 생신 기념 케이크 전달"/></div>
+	<div><img src = "/assets/img/2020/07_summer_internship.jpg" title = "20년 7월: 연구실 여름 인턴십"/></div>
   </div>
   
   <!-- <h4 class = "center">#2019</h4>
