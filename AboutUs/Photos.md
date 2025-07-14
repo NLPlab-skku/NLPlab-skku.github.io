@@ -28,7 +28,7 @@ title: Photos
 		<li class="post-link">
 			<a class="post-title" href="https://nlplab-skku.github.io/AboutUs/Introduction/">Introduction </a>
         </li>
-        <li>Photos(here)
+        <li>Photos(here)</li>
         <li class="post-link">
             <a class="post-title" href="https://nlplab-skku.github.io/AboutUs/ContactUs/">Contact Us</a>
         </li>
