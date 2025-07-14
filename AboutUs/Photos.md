@@ -18,21 +18,22 @@ title: Photos
 	height: 50%;
 	width: 50%;
 	}
+	@import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
+	.jg{font-family: 'Jeju Gothic', sans-serif;}
 </style>
 
 <h4>About Us</h4>
- <div class="linklink" style = "background-color:#ffffff;border-radius:0 15px">
-          <ul class="posts-list">
-            <li class="post-link">
-                <a class="post-title" href="https://nlplab-skku.github.io/AboutUs/Introduction/">Introduction </a>
-            </li>
-            <li>Photos(here)
-            </li>
-            <li class="post-link">
-                <a class="post-title" href="https://nlplab-skku.github.io/AboutUs/ContactUs/">Contact Us</a>
-            </li>
-          </ul>
-  </div>
+<div class="linklink jg" style = "background-color:#ffffff;border-radius:0 15px">
+	<ul class="posts-list">
+		<li class="post-link">
+			<a class="post-title" href="https://nlplab-skku.github.io/AboutUs/Introduction/">Introduction </a>
+        </li>
+        <li>Photos(here)
+        <li class="post-link">
+            <a class="post-title" href="https://nlplab-skku.github.io/AboutUs/ContactUs/">Contact Us</a>
+        </li>
+    </ul>
+</div>
 
 
 <div class="post">
@@ -77,33 +78,25 @@ title: Photos
 	
   <h4 class = "center">#2022</h4>
   <div class="slider">
-	<div><img src = "/assets/img/photos/0105.jpg" title = "22년 12월:한국정보과학회 KSC2022"/></div>
-	<div><img src = "/assets/img/photos/0104.jpg" title = "22년 12월:한국정보과학회 KSC2022 발표"/></div>
-	<div><img src = "/assets/img/photos/0103.jpg" title = "22년 12월:제주도에서🍊"/></div>
-	<div><img src = "/assets/img/photos/0102-1.jpg" title = "22년 11월:11월 생일파티"/></div>
-	<div><img src = "/assets/img/photos/0102.png" title = "22년 7월:SIGIR 학회 발표"/></div>
-	<div><img src = "/assets/img/photos/0100.jpg" title = "22년 9월"/></div>
-	<div><img src = "/assets/img/photos/0101.jpg" title = "22년 9월"/></div>
-	<div><img src = "/assets/img/photos/0099.jpg" title = "22년 8월:인공지능대학원 발표"/></div>
-	<div><img src = "/assets/img/photos/0098.jpg" title = "22년 6월:LG AI Research 견학"/></div>
-	<div><img src = "/assets/img/photos/0097.jpg" title = "22년 6월:LG AI Research 견학"/></div>
+	<div><img src = "/assets/img/2022/12_ksc2022.jpg" title = "22년 12월:한국정보과학회 KSC2022"/></div>
+	<div><img src = "/assets/img/2022/12_ksc2022_presentation.jpg" title = "22년 12월:한국정보과학회 KSC2022 발표"/></div>
+	<div><img src = "/assets/img/2022/12_jeju.jpg" title = "22년 12월:제주도에서🍊"/></div>
+	<div><img src = "/assets/img/2022/11_birthday.jpg" title = "22년 11월:11월 생일파티"/></div>
+	<div><img src = "/assets/img/2022/09_members_ncenter.jpg" title = "22년 9월: 연구실 단체 사진"/></div>
+	<div><img src = "/assets/img/2022/08_gradschool presentation.jpg" title = "22년 8월:인공지능대학원 발표"/></div>
+	<div><img src = "/assets/img/2022/07_sigir.png" title = "22년 7월:SIGIR 학회 발표"/></div>
+	<div><img src = "/assets/img/2022/06_lgai.jpg" title = "22년 6월:LG AI Research 견학"/></div>
+	<div><img src = "/assets/img/2022/06_lgai_2.jpg" title = "22년 6월:LG AI Research 견학"/></div>
   </div>
 	
-  <h4 class = "center">#2021</h4>
+  <h4 class = "center">#Prev</h4>
   <div class="slider">
-	<div><img src = "/assets/img/photos/0096.jpg" title = "21년 5월:스승의 날 기념 케이크 전달"/></div>
-	<div><img src = "/assets/img/photos/0095.jpg" title = "21년 5월:스승의 날 기념 케이크 전달"/></div>
-  </div>
-	
-  <h4 class = "center">#2020</h4>
-  <div class="slider">
-	<div><img src = "/assets/img/photos/0094.jpg" title = "20년 12월:NHN Diquest 세미나"/></div>
-	<div><img src = "/assets/img/photos/0093.jpg" title = "20년 12월:NHN Diquest 세미나"/></div>
-	<div><img src = "/assets/img/photos/0092.jpg" title = "20년 10월:2020년 국어 정보 처리 시스템 경진 대회 동상 수상"/></div>
-	<div><img class = "center" src = "/assets/img/photos/0091.jpg" title = "20년 10월:2020년 국어 정보 처리 시스템 경진 대회 동상 수상"/></div>
-	<div><img src = "/assets/img/photos/0090.jpg" title = "20년 7월:교수님 생신 기념 케이크 전달"/></div>
-	<div><img src = "/assets/img/photos/0089.jpg" title = "20년 7월:연구실 여름 인턴십"/></div>
-	<div><img src = "/assets/img/photos/0088.jpg" title = "20년 7월:연구실 여름 인턴십"/></div>
+	<div><img src = "/assets/img/2021/05_teacher's day.jpg" title = "21년 5월: 스승의 날 기념 케이크 전달"/></div>
+	<div><img src = "/assets/img/2020/12_NHN_seminar.jpg" title = "20년 12월: NHN Diquest 세미나"/></div>
+	<div><img src = "/assets/img/2020/10_award.jpg" title = "20년 10월: 2020년 국어 정보 처리 시스템 경진 대회 동상 수상"/></div>
+	<div><img class = "center" src = "/assets/img/2020/10_award_2.jpg" title = "20년 10월: 2020년 국어 정보 처리 시스템 경진 대회 동상 수상"/></div>
+	<div><img src = "/assets/img/2020/07_prof_birthday.jpg" title = "20년 7월:교수님 생신 기념 케이크 전달"/></div>
+	<div><img src = "/assets/img/2020/07_summer_internship.jpg" title = "20년 7월:연구실 여름 인턴십"/></div>
   </div>
   
   <!-- <h4 class = "center">#2019</h4>
