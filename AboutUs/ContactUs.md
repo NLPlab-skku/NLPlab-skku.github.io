@@ -8,18 +8,18 @@ title: ContactUs
 </style>
 
 <h4>About Us</h4>
- <div class="linklink jg" style = "background-color:#ffffff;border-radius:0 15px">
-          <ul class="posts-list">
-            <li class="post-link">
-                <a class="post-title" href="https://nlplab-skku.github.io/AboutUs/Introduction/">Introduction </a>
-            </li>
-            <li class="post-link">
-                <a class="post-title" href="https://nlplab-skku.github.io/AboutUs/Photos/">Photos</a>
-            </li>
-            <li>Contact Us(here)
-            </li>
-          </ul>
-  </div>
+<div class="linklink jg" style = "background-color:#ffffff;border-radius:0 15px">
+    <ul class="posts-list">
+        <li class="post-link">
+            <a class="post-title" href="https://nlplab-skku.github.io/AboutUs/Introduction/">Introduction </a>
+        </li>
+        <li class="post-link">
+            <a class="post-title" href="https://nlplab-skku.github.io/AboutUs/Photos/">Photos</a>
+        </li>
+        <li>Contact Us(here)
+        </li>
+    </ul>
+</div>
 
 
 <div class="post">

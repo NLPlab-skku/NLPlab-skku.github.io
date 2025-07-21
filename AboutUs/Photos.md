@@ -44,6 +44,7 @@ title: Photos
 
   <h4 class = "center">#2025</h4>
   <div class="slider">
+	<div><img src = "/assets/img/2025/07_prof_birthday.jpg" title = "25년 7월: 교수님 생신 케이크 전달"/></div>
   	<div><img src = "/assets/img/2025/07_professor_award.jpg" title = "25년 7월: 고영중 교수님 한국정보과학회 학술상 수상"/></div>
 	<div><img src = "/assets/img/2025/07_award_celeb.jpg" title = "25년 7월: 학술상 수상 축하 케이크 전달"/></div>
 	<div><img src = "/assets/img/2025/07_ashley.jpg" title = "25년 7월: 애슐리데이🍴"/></div>
