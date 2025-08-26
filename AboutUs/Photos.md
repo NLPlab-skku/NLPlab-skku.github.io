@@ -54,7 +54,6 @@ title: Photos
 	<div><img src = "/assets/img/2025/07_award_celeb.jpg" title = "25년 7월: 학술상 수상 축하 케이크 전달"/></div>
 	<div><img src = "/assets/img/2025/07_ashley.jpg" title = "25년 7월: 애슐리데이🍴"/></div>
   	<div><img src = "/assets/img/2025/04_workout.jpg" title = "25년 4월: 봄 맞이 족구 ⚽️"/></div>
-  	<div><img src = "/assets/img/2025/03_pingpong.jpg" title = "25년 3월: 개강 기념 탁구 🏓"/></div>
 	<div><img src = "/assets/img/2025/02_graduation.png" title = "25년 2월: 학위수여식"/></div>
 	<div><img src = "/assets/img/2025/02_graduation_2.png" title = "25년 2월: 학위수여식2"/></div>
   </div>
