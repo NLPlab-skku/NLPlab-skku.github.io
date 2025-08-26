@@ -44,7 +44,10 @@ title: Photos
 
   <h4 class = "center">#2025</h4>
   <div class="slider">
-  	<div><img src = "/assets/img/2025/08_aiassociation.jpg" title = "25년 8월: 평창 한국인공지능학회 참석"/></div>
+  	<div><img src = "/assets/img/2025/08_birth.jpg" title = "25년 8월: 8월 생일파티"/></div>
+	<div><img src = "/assets/img/2025/08_grad.jpg" title = "25년 8월: 학위수여식"/></div>
+	<div><img src = "/assets/img/2025/08_eatout.jpg" title = "25년 8월: 애슐리데이🍴"/></div>
+	<div><img src = "/assets/img/2025/08_aiassociation.jpg" title = "25년 8월: 평창 한국인공지능학회 참석"/></div>
 	<div><img src = "/assets/img/2025/07_acl_chs.jpg" title = "25년 7월: ACL 학회 발표"/></div>
 	<div><img src = "/assets/img/2025/07_prof_birthday.jpg" title = "25년 7월: 교수님 생신 케이크 전달"/></div>
   	<div><img src = "/assets/img/2025/07_professor_award.jpg" title = "25년 7월: 고영중 교수님 한국정보과학회 학술상 수상"/></div>
