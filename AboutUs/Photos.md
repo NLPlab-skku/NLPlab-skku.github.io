@@ -62,8 +62,8 @@ title: Photos
   <div class="slider">
   	<div><img src = "/assets/img/2024/12_ksc.png" title = "24년 12월: 한국정보과학회 KSC2024"/></div>
 	<div><img src = "/assets/img/2024/10_emnlp_2.jpg" title = "24년 10월: EMNLP 학회 발표"/></div>
-	<div><img src = "/assets/img/2024/08_ashley.jpg" title = "24년 8월: 애슐리데이🍴"/></div>
-  	<div><img src = "/assets/img/2024/08_graduation.jpg" title = "24년 8월: 학위수여식"/></div>
+	<div><img src = "/assets/img/2024/08_ashley.png" title = "24년 8월: 애슐리데이🍴"/></div>
+  	<div><img src = "/assets/img/2024/08_graduation.png" title = "24년 8월: 학위수여식"/></div>
   	<div><img src = "/assets/img/2024/07_prof_birthday.jpg" title = "24년 7월: 교수님 생신 케이크 전달"/></div>
   	<div><img src = "/assets/img/2024/05_teacher'sday.jpg" title = "24년 5월: 스승의날"/></div>
 	<div><img src = "/assets/img/2024/05_teacher'sday_2.jpg" title = "24년 5월: 스승의날"/></div>
