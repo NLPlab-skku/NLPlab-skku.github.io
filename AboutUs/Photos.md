@@ -44,6 +44,7 @@ title: Photos
 
   <h4 class = "center">#2025</h4>
   <div class="slider">
+  	<div><img src = "/assets/img/2025/09_birth.jpg" title = "25년 9월: 9월 생일파티"/></div>
   	<div><img src = "/assets/img/2025/08_birth.jpg" title = "25년 8월: 8월 생일파티"/></div>
 	<div><img src = "/assets/img/2025/08_grad.jpg" title = "25년 8월: 학위수여식"/></div>
 	<div><img src = "/assets/img/2025/08_eatout.jpg" title = "25년 8월: 애슐리데이🍴"/></div>
