@@ -1364,3 +1364,9 @@ dd {
         display: none;
     }
 }
+
+@media only screen and (min-width: 800px) {
+    li.mobile-only-link {
+        display: none !important;
+    }
+}
