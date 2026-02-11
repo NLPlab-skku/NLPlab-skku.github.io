@@ -829,7 +829,8 @@ dd {
 }
 
 .header .container {
-    padding: 0;
+    padding: 20px;
+    margin: 0 auto;
     max-width: 100%
 }
 
