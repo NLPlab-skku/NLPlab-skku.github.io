@@ -1321,18 +1321,19 @@ dd {
 }
 
 .header .container.top-nav {
+    display: none; /* 모바일에서는 겹치니까 아예 숨김 */
     position: absolute;
     top: 10px;
     left: 0;
     right: 0;
     height: auto;
-    transform: none;      /* 중앙 정렬 해제 */
-    text-align: right;    /* 오른쪽 정렬 */
+    transform: none;
+    text-align: right;
     z-index: 100;
 }
 
 .header .container.top-nav a {
-    color: rgba(255, 255, 255, 0.8); /* 약간 투명한 흰색 */
+    color: rgba(255, 255, 255, 0.8);
     margin-left: 15px;
     font-size: 0.85rem;
     text-decoration: none;
@@ -1341,13 +1342,25 @@ dd {
 }
 
 .header .container.top-nav a:hover {
-    color: #fff;          /* 마우스 올리면 완전 흰색 */
+    color: #fff;
     text-decoration: underline;
 }
 
+/* 모바일 전용 링크 스타일 (기존 메뉴 스타일을 따름) */
+.mobile-only-link {
+    display: block; /* 모바일에서는 메뉴 리스트에 보이게 함 */
+    /* 필요하다면 배경색 등을 여기서 조정 */
+}
 /* 모바일 화면(800px 이하)에서는 글씨가 너무 크면 겹치니까 조금 조정 */
-@media only screen and (max-width: 800px) {
+@media only screen and (min-width: 800px) {
+    
+    /* 상단 링크 컨테이너를 다시 보이게 함 */
     .header .container.top-nav {
-        padding-right: 20px; /* 오른쪽 여백 확보 */
+        display: block; 
+    }
+
+    /* 메뉴바 안쪽에 추가한 링크는 숨김 (중복 방지) */
+    .mobile-only-link {
+        display: none;
     }
 }
