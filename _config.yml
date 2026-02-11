@@ -40,6 +40,7 @@ navigation:
 social:
    github: "https://github.com/NLPlab-skku"
    linkedin: "https://www.linkedin.com/company/skku-nlplab/posts/?feedView=all"  # <--- 이 줄을 추가!
+   apply: "https://forms.gle/bdW4K2uYqvteRWfX7"
    #twitter: brianmaierjr
    #facebook: brianmaierjr
    email: nlplab.skku@gmail.com
