@@ -24,10 +24,10 @@ navigation:
    url: /Members/
  - title: Demos
    url: /Demos/Natural_Language_Processing/
- - title: GitHub
-   url: "https://github.com/NLPlab-skku"
- - title: LinkedIn
-   url: "https://www.linkedin.com/company/skku-nlplab/posts/?feedView=all"
+#  - title: GitHub
+#    url: "https://github.com/NLPlab-skku"
+#  - title: LinkedIn
+#    url: "https://www.linkedin.com/company/skku-nlplab/posts/?feedView=all"
  - title: Apply
    url: "https://forms.gle/bdW4K2uYqvteRWfX7"
  #- title: Boards
