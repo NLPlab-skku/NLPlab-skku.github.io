@@ -725,43 +725,7 @@ a:hover {
     z-index: 1
 } */
 
-.nav-collapse {
-    display: flex;
-    justify-content: space-between; /* 메뉴와 소셜 링크를 양 끝으로 */
-    align-items: center;
-    width: 100%;
-}
 
-.main-menu, .social-links {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
-/* 모바일 메뉴 안에 소셜 링크도 자연스럽게 녹아들도록 */
-.social-links li a {
-    color: #fff;
-    text-decoration: none;
-    display: block;
-    padding: 10px 2rem; /* 기존 메뉴 패딩과 맞춤 */
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-}
-/* 소셜 링크 스타일 */
-.social-links {
-    margin-left: auto; /* 왼쪽 메뉴와 간격 확보 */
-}
-
-.social-links .element {
-    margin-left: 15px;
-}
-
-.social-links a {
-    color: white; /* 헤더 배경색에 맞춰 조정 */
-    font-size: 0.9em;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-}
 
 .nav-collapse ul {
     margin: 0;
@@ -1347,55 +1311,6 @@ dd {
         width: 48%;
         float: right;
         margin-right: 0
-    }
-
-    .nav-collapse {
-        display: flex !important; /* 기존 스타일 덮어쓰기 위해 important 사용 */
-        justify-content: space-between;
-        align-items: center;
-        max-height: none !important; /* 모바일 숨김 해제 */
-        overflow: visible !important;
-    }
-
-    /* 메인 메뉴(왼쪽) 가로 정렬 */
-    .main-menu {
-        display: flex;
-        align-items: center;
-    }
-
-    /* 소셜 링크(오른쪽) 가로 정렬 및 디자인 */
-    .social-links {
-        display: flex;
-        align-items: center;
-        margin-left: auto; /* 우측 끝으로 밀기 */
-    }
-
-    /* 소셜 아이콘 간격 및 스타일 */
-    .social-links li {
-        display: inline-block; /* 기존 테마 간섭 방지 */
-        border: none !important; /* 기존 테마의 밑줄 제거 */
-        margin-left: 15px;
-    }
-
-    .social-links li a {
-        display: flex;
-        align-items: center;
-        padding: 5px 10px;
-        font-size: 0.9em;
-        background: rgba(255, 255, 255, 0.15); /* 살짝 배경색 */
-        border-radius: 5px;
-        transition: background 0.3s;
-    }
-
-    .social-links li a:hover {
-        background: rgba(255, 255, 255, 0.3);
-        color: #fff;
-    }
-
-    /* 텍스트와 아이콘 사이 간격 */
-    .social-links .social-text {
-        margin-left: 6px;
-        font-weight: 600;
     }
 }
 
