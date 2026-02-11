@@ -1152,7 +1152,7 @@ dd {
         top: 50%;
         -webkit-transform: translateY(-50%);
         transform: translateY(-50%);
-        max-width: 1100px;
+        max-width: 900px;
         overflow: hidden
     }
 
