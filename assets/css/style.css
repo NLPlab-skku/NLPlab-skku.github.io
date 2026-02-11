@@ -1165,7 +1165,7 @@ dd {
     }
 
     .header nav {
-        float: left;
+        float: none;
         clear: left
     }
 
