@@ -1363,10 +1363,7 @@ dd {
     .mobile-only-link {
         display: none;
     }
-}
-
-@media only screen and (min-width: 800px) {
-    li.mobile-only-link {
-        display: none !important;
+    .header nav ul li.mobile-only-link {
+        display: none;
     }
 }
