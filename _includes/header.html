@@ -1,39 +1,32 @@
 <div class="header">
-    <div class="container" style="display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto;">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; height: 100%;">
         
         <div class="header-left" style="display: flex; align-items: center;">
             
-            <h1 class="logo" style="float: none; margin: 0 30px 0 0; line-height: 1;">
-             <img data-action="zoom" src='{{ "/assets/img/연구실 로고/nlp_logo5_white.png" }}' style="height: 1em; vertical-align: middle;"/>
-             <a href="{{ site.baseurl }}/" style="vertical-align: middle;">{{ site.title }}</a>
+            <h1 class="logo" style="margin: 0 40px 0 0; line-height: 1; padding: 0;">
+                <a href="{{ site.baseurl }}/" style="text-decoration: none; display: flex; align-items: center;">
+                    <img data-action="zoom" src='{{ "/assets/img/연구실 로고/nlp_logo5_white.png" }}' style="height: 1.5em; margin-right: 10px; vertical-align: middle;"/>
+                    <span style="font-size: 1rem; color: #fff; font-weight: bold;">{{ site.title }}</span>
+                </a>
             </h1>
             
-            <nav class="nav-collapse" style="float: none;">
-                <ul class="noList" style="margin: 0; padding: 0;">
+            <nav>
+                <ul class="noList" style="display: flex; flex-direction: row; margin: 0; padding: 0; list-style: none;">
                     {% for link in site.navigation %}
-                        {% assign current = nil %}
-                        {% if page.url contains link.url or forloop.first and page.url == '/' or page.url == 'index.html' %}
-                            {% assign current = 'current' %}
-                        {% endif %}
-                    
-                    <li class="element {% if forloop.first %}first{% endif %} {{ current }} {% if forloop.last %}last{% endif %}" style="display: inline-block; margin-right: 15px;">
-                        <a href="{{ link.url | prepend: site.baseurl }}">{{ link.title }}</a>
-                    </li> 
+                        <li style="display: inline-block; width: auto; margin: 0; border: none;">
+                            <a href="{{ link.url | prepend: site.baseurl }}" style="color: #fff; text-decoration: none; padding: 0 15px; font-weight: normal; font-size: 0.9em; display: block;">
+                                {{ link.title }}
+                            </a>
+                        </li> 
                     {% endfor %}
                 </ul>
             </nav>
         </div>
 
-        <div class="header-right" style="font-size: 0.75em; white-space: nowrap;">
-            
-            <a href="{{ site.social.github }}" target="_blank" style="color: #fff; text-decoration: none; margin-left: 15px; opacity: 0.9;">
-                GitHub
-            </a>
-            
-            <a href="https://www.linkedin.com/company/skku-nlplab/posts/?feedView=all" target="_blank" style="color: #fff; text-decoration: none; margin-left: 15px; opacity: 0.9;">
-                LinkedIn
-            </a>
+        <div class="header-right" style="font-size: 0.8em; display: flex; align-items: center; gap: 15px;">
+            <a href="{{ site.social.github }}" target="_blank" style="color: #fff; text-decoration: none; opacity: 0.8;">GitHub</a>
+            <a href="https://www.linkedin.com/company/skku-nlplab/posts/?feedView=all" target="_blank" style="color: #fff; text-decoration: none; opacity: 0.8;">LinkedIn</a>
         </div>
 
     </div>
-</div><!-- end .header -->
+</div>
