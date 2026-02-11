@@ -26,6 +26,8 @@ navigation:
    url: /Demos/Natural_Language_Processing/
  - title: GitHub
    url: "https://github.com/NLPlab-skku"
+ - title: LinkedIn
+   url: "https://www.linkedin.com/company/skku-nlplab/posts/?feedView=all"
  #- title: Boards
  #  url: /Boards/notice/
  #- title: Courses
