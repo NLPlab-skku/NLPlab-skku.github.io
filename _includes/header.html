@@ -1,5 +1,13 @@
  <div class="header">
-    
+   <div class="container top-nav">
+        {% if site.social.github %}
+        <a href="{{ site.social.github }}" target="_blank">GitHub</a>
+        {% endif %}
+        
+        {% if site.social.linkedin %}
+        <a href="{{ site.social.linkedin }}" target="_blank">LinkedIn</a>
+        {% endif %}
+    </div>
     <div class="container">
         <h1 class="logo">
         <img data-action="zoom" src='{{ "/assets/img/연구실 로고/nlp_logo5_white.png" }}' style="height: 1em;"/></img>

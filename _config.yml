@@ -28,8 +28,8 @@ navigation:
 #    url: "https://github.com/NLPlab-skku"
 #  - title: LinkedIn
 #    url: "https://www.linkedin.com/company/skku-nlplab/posts/?feedView=all"
- - title: Apply
-   url: "https://forms.gle/bdW4K2uYqvteRWfX7"
+#  - title: Apply
+#    url: "https://forms.gle/bdW4K2uYqvteRWfX7"
  #- title: Boards
  #  url: /Boards/notice/
  #- title: Courses
@@ -39,6 +39,7 @@ navigation:
 
 social:
    github: "https://github.com/NLPlab-skku"
+   linkedin: "https://www.linkedin.com/company/skku-nlplab/posts/?feedView=all"  # <--- 이 줄을 추가!
    #twitter: brianmaierjr
    #facebook: brianmaierjr
    email: nlplab.skku@gmail.com
