@@ -28,6 +28,8 @@ navigation:
    url: "https://github.com/NLPlab-skku"
  - title: LinkedIn
    url: "https://www.linkedin.com/company/skku-nlplab/posts/?feedView=all"
+ - title: Contact
+   url: "https://forms.gle/bdW4K2uYqvteRWfX7"
  #- title: Boards
  #  url: /Boards/notice/
  #- title: Courses
