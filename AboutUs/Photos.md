@@ -50,6 +50,7 @@ title: Photos
 
   <h4 class = "center">#2025</h4>
   <div class="slider">
+  	<div><img src = "/assets/img/2025/12_birthday.jpg" title = "25년 12월: 12월 생일파티"/></div>
 	<div><img src = "/assets/img/2025/11_emnlp.jpg" title = "25년 11월: EMNLP 학회 발표"/></div>
   	<div><img src = "/assets/img/2025/09_birth.jpg" title = "25년 9월: 9월 생일파티"/></div>
   	<div><img src = "/assets/img/2025/08_birth.jpg" title = "25년 8월: 8월 생일파티"/></div>
