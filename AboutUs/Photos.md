@@ -42,6 +42,12 @@ title: Photos
   
   <br><br>
 
+  <h4 class = "center">#2026</h4>
+  <div class="slider">
+	<div><img src = "/assets/img/2026/02_graduation.jpg" title = "26년 2월: 학위수여식"/></div>
+	<div><img src = "/assets/img/2026/01_eatout.jpg" title = "26년 1월: 신년 회식"/></div>
+  </div>
+
   <h4 class = "center">#2025</h4>
   <div class="slider">
 	<div><img src = "/assets/img/2025/11_emnlp.jpg" title = "25년 11월: EMNLP 학회 발표"/></div>
