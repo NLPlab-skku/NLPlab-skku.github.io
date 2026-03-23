@@ -1,6 +1,7 @@
 ---
 layout: default
 title: openingcourses
+permalink: /Courses/openingcourses/
 ---
 <h4>Courses</h4>
  <div class="linklink" style = "background-color:#ffffff;border-radius:0 15px;align:right;">

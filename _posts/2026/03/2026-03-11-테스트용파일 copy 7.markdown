@@ -1,0 +1,26 @@
+---
+layout: post
+title:  "테스트용 파일"
+date:   2026-03-11
+description: 서버 테스트.
+author: "박진석"
+category: 공지
+---
+
+통신보안 지원2중대 운전병 일병 박진석입니다
+
+통신보안 지원2중대 정비병 일병 박진석입니다
+
+통신보안 지원2중대 5분대기조 수색조장 일병 박진석입니다
+
+통신보안 지원2중대 이발병 상병 박진석입니다
+
+통신보안 지원2중대 PX관리병 상병 박진석입니다
+
+통신보안 주파령 레이더 병장 박진석입니다
+
+
+<figure>
+	<img src="{{ '/assets/img/members/current/park_jin_seok.png' | prepend: site.baseurl }}" alt=""> 
+	<figcaption>테스트용 파일입니다</figcaption>
+</figure>

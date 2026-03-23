@@ -1,6 +1,7 @@
 ---
 layout: default
 title: ContactUs
+permalink: /AboutUs/ContactUs/
 ---
 <style>
 @import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);

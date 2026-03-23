@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Projects
+permalink: /Research/Projects/
 ---
 <style>
 @import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);

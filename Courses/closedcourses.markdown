@@ -1,6 +1,7 @@
 ---
 layout: post
 title: closedcourses
+permalink: /Courses/closedcourses/
 ---
 <h4>Courses</h4>
  <p class="linklink" style = "background-color:#ffffff;border-radius:0 15px;align:right;">

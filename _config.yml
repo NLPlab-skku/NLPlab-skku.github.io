@@ -1,48 +1,49 @@
 title: NLPLAB
 description: SKK Univ. NLP LAB.
-
 url: "https://nlplab-skku.github.io/"
 baseurl: ""
-paginate_path: "blog/page:num/"
-permalink: blog/:title/
 
 markdown: kramdown
 highlighter: rouge
-gems: [jekyll-paginate]
-paginate: 5
+
+# [수정] 다시 기본 jekyll-paginate로 변경
+plugins:
+  - jekyll-paginate
+
+# [수정] v2 방식이 아닌 v1 방식으로 설정
+paginate: 10
+paginate_path: "Boards/page:num/"
 
 navigation:
- - title: Home
-   url: /index.html
- - title: About Us
-   url: /AboutUs/Introduction/
- - title: Research
-   url: /Research/Fields/
- - title: Publications
-   url: /Publications/JournalPapers/
- - title: Members
-   url: /Members/
- - title: Demos
-   url: /Demos/Natural_Language_Processing/
-#  - title: GitHub
-#    url: "https://github.com/NLPlab-skku"
-#  - title: LinkedIn
-#    url: "https://www.linkedin.com/company/skku-nlplab/posts/?feedView=all"
-#  - title: Apply
-#    url: "https://forms.gle/bdW4K2uYqvteRWfX7"
- #- title: Boards
- #  url: /Boards/notice/
- #- title: Courses
- #  url: /Courses/openingcourses 
- #- title: Software
- #  url: /Software/languageanalysissoftware/ --> 
+  - title: Home
+    url: /index.html
+  - title: About Us
+    url: /AboutUs/Introduction/
+  - title: Research
+    url: /Research/Fields/
+  - title: Publications
+    url: /Publications/JournalPapers/
+  - title: Members
+    url: /Members/
+  - title: Demos
+    url: /Demos/Natural_Language_Processing/
+  - title: Boards
+    url: /Boards/
+#  - title: Links
+#    url: /Boards/link/
 
 social:
-   github: "https://github.com/NLPlab-skku"
-   linkedin: "https://www.linkedin.com/company/skku-nlplab/posts/?feedView=all"  # <--- 이 줄을 추가!
-   apply: "https://forms.gle/bdW4K2uYqvteRWfX7"
-   #twitter: brianmaierjr
-   #facebook: brianmaierjr
-   email: nlplab.skku@gmail.com
+  github: "https://github.com/NLPlab-skku"
+  linkedin: "https://www.linkedin.com/company/skku-nlplab/posts/?feedView=all"
+  apply: "https://forms.gle/bdW4K2uYqvteRWfX7"
+  email: nlplab.skku@gmail.com
 
 google_analytics: "UA-58263416-1"
+
+# 빌드 시 불필요한 파일 제외 (속도 향상)
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .jekyll-cache

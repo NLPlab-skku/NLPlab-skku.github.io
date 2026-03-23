@@ -1,6 +1,10 @@
 ---
 layout: default
 title: Photos
+<<<<<<< HEAD
+=======
+permalink: /AboutUs/Photos/
+>>>>>>> remake
 ---
 <style>
 	.center{
@@ -30,7 +34,11 @@ title: Photos
         </li>
         <li>Photos(here)</li>
         <li class="post-link">
+<<<<<<< HEAD
             <a class="post-title" href="https://nlplab-skku.github.io/AboutUs/ContactUs/">Contact Us</a>
+=======
+            <a class="post-title" href="https://nlplab-skku-.github.io/AboutUs/ContactUs/">Contact Us</a>
+>>>>>>> remake
         </li>
     </ul>
 </div>

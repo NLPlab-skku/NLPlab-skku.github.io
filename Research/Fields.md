@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Fields
+permalink: /Research/Fields/
 ---
 <style>
 @import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);

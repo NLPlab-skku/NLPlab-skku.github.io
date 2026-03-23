@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Patents
+permalink: /Research/Patents/
 ---
 <style>
 @import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
