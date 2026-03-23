@@ -1,0 +1,224 @@
+---
+layout: default
+title: Demos
+permalink: /Demos/Information_Retrieval/
+---
+<a name="top"></a>
+<style>
+.center{
+		display: block;
+		margin-left: 100px;
+		margin-right: auto;
+		margin-top: auto;
+		margin-bottom: auto;
+		height: 60%;
+		width: 70%;
+	  }
+@import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
+.jg{font-family: 'Jeju Gothic', sans-serif;}
+@import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
+.nm{font-family: 'Jeju Gothic', sans-serif;}
+.publisher-link {color: darkcyan; text-decoration: none;}
+.publisher-link:hover, .publisher-link:focus {text-decoration: underline;}
+.w-btn {
+    position: relative;
+    border: none;
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 15px;
+    font-family: "paybooc-Light", sans-serif;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+.w-btn-outline {
+    position: relative;
+    padding: 15px 30px;
+    border-radius: 15px;
+    font-family: "paybooc-Light", sans-serif;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.35s;
+}
+
+.w-btn-green-outline {
+    border: 3px solid #77af9c;
+    color: black;
+}
+
+.w-btn-green-outline:hover {
+    background-color: #77af9c;
+    color: #d7fff1;
+}
+
+.w-btn:hover {
+    letter-spacing: 2px;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.w-btn-outline:hover {
+    letter-spacing: 2px;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.w-btn-outline:active {
+    transform: scale(1.5);
+}
+</style>
+
+<a name="top"></a>
+<h4>Demos</h4>
+<div class="linklink nm" style = "background-color:#ffffff;border-radius:0 13px">
+	<ul class="posts-list">
+        <li class="post-link">
+			<a class="post-title" href="https://nlplab-skku.github.io/Demos/Natural_Language_Processing/">NLP (dialogue system, question/answering system, etc.)</a>
+		</li>
+		<li>IR (Dense retrieval, genrative IR, etc.)</li>
+		<li class="post-link">
+			<a class="post-title" href="https://nlplab-skku.github.io/Demos/Text_mining/">Text mining (text classification, sentiment classification, etc.)</a>
+		</li>
+		<li class="post-link">
+			<a class="post-title" href="https://nlplab-skku.github.io/Demos/Gen_Ai/">Generative AI(controllable text generation, etc.)</a>
+		</li>
+	</ul>
+</div>
+
+<div class="post jg">
+	<h1 class="pageTitle">Information Retrieval</h1>
+	<p class="meta">데모 동영상</p>
+
+	<blockquote style="text-align: center;">
+		<ul class="jg" style="list-style: none; padding: 0;">
+
+		<li style="text-align: center;">
+			<button onclick="toggleContent3()" class="w-btn-outline w-btn-green-outline" type="button" 
+				style="display: inline-block; vertical-align: middle; font-size: 19px; width: 90%;">
+				해석 가능하고 효율적인 정보 검색을 위한 희소 오토인코더 잠재 표현</button>
+			<div id="toggleContent3" style="display: none; text-align: left;">
+				<ul class="jg">
+					<br>
+					<li>Title: <small>Decoding Dense Embeddings: Sparse Autoencoders for Interpreting and Discretizing Dense Retrieval</small></li>
+					<li>System Overview Image: <small>TBD</small></li>
+					<li>Summary: <small>TBD</small></li>
+					<li>Github Link: <small><a href="https://github.com/Tro-fish/Decoding-Dense-Embeddings">Github Link</a></small></li>
+					<li>Paper Link: <small><a href="https://arxiv.org/abs/2506.00041">Publisher Link</a></small></li>
+					<li>Demo Video</li>
+					<div>
+						<video controls style="display: block; margin: 0 auto;">
+							<source src="/assets/video/demo_decoding_dense_embeddings.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+					</div>
+				</ul>
+			</div>
+		</li>
+		<br>
+
+		<li style="text-align: center;">
+			<button onclick="toggleContent1()" class="w-btn-outline w-btn-green-outline" type="button" 
+				style="display: inline-block; vertical-align: middle; font-size: 19px; width: 90%;">
+				저자원 환경에서 도메인 과적합 문제를 방지하기 위한 문서분류 기법</button>
+			<div id="toggleContent1" style="display: none; text-align: left;">
+				<ul class="jg">
+					<br>
+					<li>Title: <small>Low-resource Text Classification Method that Mitigates Overfitting on Domain-specific Features</small></li>
+					<li>System Overview Image: <small>TBD</small></li>
+					<li>Summary: <small>TBD</small></li>
+					<li>Github Link: <small>TBD</small></li>
+					<li>Paper Link: <small>TBD</small></li>
+					<li>Demo Video</li>
+					<div>
+						<video controls style="display: block; margin: 0 auto;">
+							<source src="/assets/video/demo_low-resource_text_classification.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+					</div>
+				</ul>
+			</div>
+		</li>
+		<br>
+
+		<li style="text-align: center;">
+			<button onclick="toggleContent2()" class="w-btn-outline w-btn-green-outline" type="button" 
+			style="display: inline-block; vertical-align: middle; font-size: 19px; width: 90%;">
+			사전학습을 이용한 정보검색 시스템</button>
+			<div id="toggleContent2" style="display: none; text-align: left;">
+				<ul class="jg">
+					<br>
+					<li>Title: <small>Information Retrieval with REAP (Retrieval-adaptive Pretraining)</small></li>
+					<li>System Overview Image: <small>TBD</small></li>
+					<li>Summary: <small>TBD</small></li>
+					<li>Github Link: <small>TBD</small></li>
+					<li>Paper Link: <small>TBD</small></li>
+					<li>Demo Video</li>
+					<div>
+						<video controls style="display: block; margin: 0 auto;">
+							<source src="/assets/video/demo_information_retriever.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+					</div>
+				</ul>
+			</div>
+		</li>
+		<br>
+
+		<li style="text-align: center;">
+			<button onclick="toggleContent3()" class="w-btn-outline w-btn-green-outline" type="button" 
+			style="display: inline-block; vertical-align: middle; font-size: 19px; width: 90%;">
+			설명가능성을 위한 토큰 임베딩 기반 동영상 검색</button>
+			<div id="toggleContent3" style="display: none; text-align: left;">
+				<ul class="jg">
+					<br>
+					<li>Title: <small>Explainable Video Search System using Token Space-based Representation</small></li>
+					<li>System Overview Image: <small>TBD</small></li>
+					<li>Summary: <small>TBD</small></li>
+					<li>Github Link: <small>TBD</small></li>
+					<li>Paper Link: <small><a href="https://www.dbpia.co.kr/pdf/pdfView.do?nodeId=NODE12007528&googleIPSandBox=false&mark=0&minRead=10&ipRange=false&b2cLoginYN=false&icstClss=010000&isPDFSizeAllowed=true&accessgl=Y&language=ko_KR&hasTopBanner=true">Publisher Link</a></small></li>
+					<li>Demo Video</li>
+					<div>
+						<video controls style="display: block; margin: 0 auto;">
+							<source src="/assets/video/demo_explainable_question_answering_system.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+					</div>
+				</ul>
+			</div>
+		</li>
+		<br>
+
+	</ul>
+	<p><small><a href="#top">Back to Top</a></small></p><br>
+	</blockquote>
+</div>
+
+<script>
+function toggleContent1() {
+	var content = document.getElementById("toggleContent1");
+	if (content.style.display === "none") {
+		content.style.display = "block";
+	} else {
+		content.style.display = "none";
+	}
+}
+function toggleContent2() {
+	var content = document.getElementById("toggleContent2");
+	if (content.style.display === "none") {
+		content.style.display = "block";
+	} else {
+		content.style.display = "none";
+	}
+}
+function toggleContent3() {
+	var content = document.getElementById("toggleContent3");
+	if (content.style.display === "none") {
+		content.style.display = "block";
+	} else {
+		content.style.display = "none";
+	}
+}
+</script>

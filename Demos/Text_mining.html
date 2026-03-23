@@ -1,0 +1,170 @@
+---
+layout: default
+title: Demos
+permalink: /Demos/Text_mining/
+---
+<a name="top"></a>
+<style>
+	.center{
+			display: block;
+			margin-left: 100px;
+			margin-right: auto;
+			margin-top: auto;
+			margin-bottom: auto;
+			height: 60%;
+			width: 70%;
+		  }
+	@import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
+	.jg{font-family: 'Jeju Gothic', sans-serif;}
+	@import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
+	.nm{font-family: 'Jeju Gothic', sans-serif;}
+	.publisher-link {color: darkcyan; text-decoration: none;}
+	.publisher-link:hover, .publisher-link:focus {text-decoration: underline;}
+	.w-btn {
+		position: relative;
+		border: none;
+		display: inline-block;
+		padding: 15px 30px;
+		border-radius: 15px;
+		font-family: "paybooc-Light", sans-serif;
+		box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+		text-decoration: none;
+		font-weight: 600;
+		transition: 0.5s;
+	}
+	
+	.w-btn-outline {
+		position: relative;
+		padding: 15px 30px;
+		border-radius: 15px;
+		font-family: "paybooc-Light", sans-serif;
+		box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+		text-decoration: none;
+		font-weight: 600;
+		transition: 0.35s;
+	}
+	
+	.w-btn-green-outline {
+		border: 3px solid #77af9c;
+		color: black;
+	}
+	
+	.w-btn-green-outline:hover {
+		background-color: #77af9c;
+		color: #d7fff1;
+	}
+	
+	.w-btn:hover {
+		letter-spacing: 2px;
+		transform: scale(1.2);
+		cursor: pointer;
+	}
+	
+	.w-btn-outline:hover {
+		letter-spacing: 2px;
+		transform: scale(1.2);
+		cursor: pointer;
+	}
+	
+	.w-btn-outline:active {
+		transform: scale(1.5);
+	}
+</style>
+
+<a name="top"></a>
+<h4>Demos</h4>
+<div class="linklink nm" style = "background-color:#ffffff;border-radius:0 13px">
+	<ul class="posts-list">
+        <li class="post-link">
+			<a class="post-title" href="https://nlplab-skku.github.io/Demos/Natural_Language_Processing/">NLP (dialogue system, question/answering system, etc.)</a>
+		</li>
+		<li class="post-link">
+			<a class="post-title" href="https://nlplab-skku.github.io/Demos/Information_Retrieval/">IR (Dense retrieval, genrative IR, etc.)</a>
+		</li>
+		<li>Text mining (text classification, sentiment classification, etc.)</li>
+		<li class="post-link">
+			<a class="post-title" href="https://nlplab-skku.github.io/Demos/Gen_Ai/">Generative AI(controllable text generation, etc.)</a>
+		</li>
+	</ul>
+</div>
+
+<div class="post jg">
+	<h1 class="pageTitle">Text mining</h1>
+	<p class="meta">데모 동영상</p>
+	<!-- <div class="linklink" style = "text-align:center;">
+		<a href="#1"></a> | <a href="#2"></a>
+	</div> -->
+	<!-- <br> -->
+	<blockquote style="text-align: center;">
+		<ul class="jg" style="list-style: none; padding: 0;">
+
+		<li style="text-align: center;">
+			<button onclick="toggleContent1()" class="w-btn-outline w-btn-green-outline" type="button" 
+				style="display: inline-block; vertical-align: middle; font-size: 19px; width: 90%;">
+				SPACE: 감정 분석용 임베딩 분류 프롬프트 모델</button>
+				<div id="toggleContent1" style="display: none; text-align: left;">
+					<ul class="jg">
+						<br>
+						<li>Title: <small>SPACE: Senti-Prompt As Classifying Embedding for sentiment analysis</small></li>
+						<li>System Overview Image: <small>TBD</small></li>
+						<li>Summary: <small>TBD</small></li>
+						<li>Github Link: <small>TBD</small></li>
+						<li>Paper Link: <small><a href="https://www.sciencedirect.com/science/article/pii/S0167865524000552">Publisher Link</a></small></li>
+						<li>Demo Video</li>
+						<div>
+							<video controls style="display: block; margin: 0 auto;">
+								<source src="/assets/video/demo_SPACE.mp4" type="video/mp4">
+								Your browser does not support the video tag.
+							</video>
+						</div>
+					</ul>
+				</div>
+		</li>
+		<br>
+		<li style="text-align: center;">
+			<button onclick="toggleContent2()" class="w-btn-outline w-btn-green-outline" type="button" 
+				style="display: inline-block; vertical-align: middle; font-size: 19px; width: 90%;">
+				트랜스포머 인코더를 활용한 음절 단위 경량화 형태소 분석기</button>
+				<div id="toggleContent2" style="display: none; text-align: left;">
+					<ul class="jg">
+						<br>
+						<li>Title: <small>Syllable-Level Lightweight Korean POS Tagger using Transformer Encoder</small></li>
+						<li>System Overview Image: <small>TBD</small></li>
+						<li>Summary: <small>TBD</small></li>
+						<li>Github Link: <small>TBD</small></li>
+						<li>Paper Link: <small><a href="https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART003134493">Publisher Link</a></small></li>
+						<li>Demo Video</li>
+						<div>
+							<video controls style="display: block; margin: 0 auto;">
+								<source src="/assets/video/demo_syllable_level_lightweight_korean_pos_tagger.mp4" type="video/mp4">
+								Your browser does not support the video tag.
+							</video>
+						</div>
+					</ul>
+				</div>
+		</li>
+		<br>
+	</ul>
+	<p><small><a href="#top">Back to Top</a></small></p><br>
+	</blockquote>
+</div>
+
+<script>
+	function toggleContent1() {
+		var content = document.getElementById("toggleContent1");
+		if (content.style.display === "none") {
+			content.style.display = "block";
+		} else {
+			content.style.display = "none";
+		}
+	}
+	function toggleContent2() {
+		var content = document.getElementById("toggleContent2");
+		if (content.style.display === "none") {
+			content.style.display = "block";
+		} else {
+			content.style.display = "none";
+		}
+	}
+	
+</script>

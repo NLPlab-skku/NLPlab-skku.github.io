@@ -1,0 +1,199 @@
+---
+layout: default
+title: notice
+---
+
+<div class="post jg">
+	<h1 class="pageTitle">Boards</h1>
+	<p class="meta">게시판</p>
+</div>
+
+<div class="search-form-container" style="display: flex; gap: 5px; justify-content: flex-end; margin-bottom: 30px;">
+  <select id="search-category" style="height: 40px; padding: 0 12px; border: 1px solid #ddd;">
+    <option value="전체">전체</option>
+    <option value="공지">공지</option>
+    <option value="세미나">세미나</option>
+  </select>
+  
+  <select id="search-target" style="height: 40px; padding: 0 10px; border: 1px solid #ddd;">
+    <option value="전체">전체</option>
+    <option value="제목">제목</option>
+    <option value="내용">내용</option>
+    <option value="작성자">작성자</option>
+  </select> 
+
+  <input type="text" id="search-input" placeholder="검색어를 입력하세요" style="height: 40px; padding: 0 12px; border: 1px solid #ddd; width: 250px;">
+  <button onclick="executeSearch()" style="height: 40px; padding: 0 25px; background: #004594; color: white; border: none; cursor: pointer; font-weight: bold;">검색</button>
+</div>
+
+<div class="skku-board">
+  <div class="board-header-line" style="border-top: 2px solid #333;"></div>
+  
+  <ul class="post-list" style="list-style: none; padding: 0; margin: 0;">
+  {% for post in paginator.posts %}
+  <li class="board-item" style="display: flex; align-items: center; padding: 20px 10px; border-bottom: 1px solid #eee; position: relative;">
+    
+    <div class="item-main" style="flex: 1;">
+      <div style="margin-bottom: 10px;">
+        <a href="{{ post.url | relative_url }}" style="text-decoration: none; color: #333; font-size: 1.1em; line-height: 1.5;">
+          <span style="color: #666; margin-right: 5px;">[{{ post.category | default: "공지" }}]</span>
+          <span style="font-weight: 500;">{{ post.title }}</span>
+        </a>
+      </div>
+      
+      <div class="item-meta" style="font-size: 0.9em; color: #888; display: flex; gap: 15px;">
+        {% assign offset = paginator.page | minus: 1 | times: paginator.per_page %}
+        {% assign post_no = paginator.total_posts | minus: offset | minus: forloop.index0 %}
+        <span>No.{{ post_no }}</span>
+        <span>{{ post.author | default: "연구실" }}</span>
+        <span style="color: #ddd;">|</span>
+        <span>{{ post.date | date: "%Y-%m-%d" }}</span>
+      </div>
+    </div>
+
+    <div class="item-side" style="display: flex; align-items: center; gap: 25px;">
+      {% capture now %}{{'now' | date: '%s'}}{% endcapture %}
+      {% capture post_date %}{{post.date | date: '%s'}}{% endcapture %}
+      {% assign diff = now | minus: post_date %}
+      {% if diff < 259200 %} 
+        <span style="color: #ff6600; font-weight: bold; font-size: 0.85em; letter-spacing: 0.5px;">NEW</span>
+      {% endif %}
+    </div>
+    </li>
+    {% else %}
+    <li style="text-align: center; padding: 80px 0; color: #999; border-bottom: 1px solid #eee;">등록된 게시물이 없습니다.</li>
+    {% endfor %}
+    <div class="board-header-line" style="border-top: 2px solid #333;"></div>
+  </ul>
+
+  {% if paginator.total_pages > 1 %}
+  <div class="pagination" style="text-align: center; margin-top: 40px;">
+    
+    {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path | replace: 'index.html', '' | relative_url }}" style="padding: 5px 10px; border: 1px solid #ddd; text-decoration: none; color: #666;">이전</a>
+    {% endif %}
+
+    <span style="margin: 0 15px; color: #333; font-weight: bold;">
+      {{ paginator.page }} / {{ paginator.total_pages }}
+    </span>
+
+    {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path | relative_url }}" style="padding: 5px 10px; border: 1px solid #ddd; text-decoration: none; color: #666;">다음</a>
+    {% endif %}
+  </div>
+  {% endif %}
+</div>
+
+<script>
+let allSearchResults = [];
+const resultsPerPage = 10; // 페이지당 게시물 수
+let currentSearchPage = 1;
+
+async function executeSearch() {
+  const category = document.getElementById('search-category').value;
+  const target = document.getElementById('search-target').value;
+  const keyword = document.getElementById('search-input').value.toLowerCase();
+  
+  try {
+    // 경로를 더 안전하게 절대 경로로 잡습니다.
+    const response = await fetch('{{ site.baseurl }}/search.json');
+    if (!response.ok) throw new Error('Network response was not ok');
+    const posts = await response.json();
+
+    allSearchResults = posts.filter(post => {
+      const matchCategory = (category === '전체' || post.category === category);
+      let matchKeyword = false;
+
+      if (target === '제목') matchKeyword = post.title.toLowerCase().includes(keyword);
+      else if (target === '내용') matchKeyword = (post.content || "").toLowerCase().includes(keyword);
+      else if (target === '작성자') matchKeyword = (post.author || "").toLowerCase().includes(keyword);
+      else {
+        matchKeyword = post.title.toLowerCase().includes(keyword) || 
+                       (post.content || "").toLowerCase().includes(keyword) || 
+                       (post.author || "").toLowerCase().includes(keyword);
+      }
+      return matchCategory && matchKeyword;
+    });
+
+    currentSearchPage = 1;
+    displayResults(currentSearchPage);
+  } catch (error) {
+    console.error("Error fetching or filtering posts:", error);
+  }
+}
+
+function displayResults(page) {
+  const boardList = document.querySelector('.post-list');
+  const paginationContainer = document.querySelector('.pagination');
+  
+  // 검색 결과가 없을 때 처리
+  if (allSearchResults.length === 0) {
+    boardList.innerHTML = '<li style="text-align: center; padding: 80px 0; color: #999;">검색 결과가 없습니다.</li>';
+    paginationContainer.style.display = 'none';
+    return;
+  }
+
+  // 데이터 슬라이싱 (Paging 로직)
+  const startIndex = (page - 1) * resultsPerPage;
+  const endIndex = startIndex + resultsPerPage;
+  const paginatedResults = allSearchResults.slice(startIndex, endIndex);
+
+  // UI 렌더링
+  boardList.innerHTML = paginatedResults.map((post, index) => {
+    // 번호 계산: 전체 결과 수 - (페이지 오프셋) - 현재 인덱스
+    const postNo = allSearchResults.length - startIndex - index;
+    
+    return `
+      <li class="board-item" style="display: flex; align-items: center; padding: 20px 10px; border-bottom: 1px solid #eee;">
+        <div class="item-main" style="flex: 1;">
+          <div style="margin-bottom: 10px;">
+            <a href="${post.url}" style="text-decoration: none; color: #333; font-size: 1.1em;">
+              <span style="color: #666; margin-right: 5px;">[${post.category}]</span>
+              <span style="font-weight: 500;">${post.title}</span>
+            </a>
+          </div>
+          <div class="item-meta" style="font-size: 0.9em; color: #888; display: flex; gap: 15px;">
+            <span>No.${postNo}</span>
+            <span>${post.author}</span>
+            <span>${post.date}</span>
+          </div>
+        </div>
+      </li>
+    `;
+  }).join('');
+
+  // 검색 전용 페이지네이션 업데이트
+  renderSearchPagination(page);
+}
+
+function renderSearchPagination(currentPage) {
+  const paginationContainer = document.querySelector('.pagination');
+  paginationContainer.style.display = 'block';
+  paginationContainer.style.textAlign = 'center';
+  paginationContainer.style.marginTop = '40px';
+
+  const totalPages = Math.ceil(allSearchResults.length / resultsPerPage);
+  
+  let html = '';
+  
+  // '이전' 버튼
+  if (currentPage > 1) {
+    html += `<button onclick="changeSearchPage(${currentPage - 1})" style="padding: 5px 15px; border: 1px solid #ddd; background: white; cursor: pointer;">이전</button>`;
+  }
+
+  html += `<span style="margin: 0 15px; font-weight: bold;">${currentPage} / ${totalPages}</span>`;
+
+  // '다음' 버튼
+  if (currentPage < totalPages) {
+    html += `<button onclick="changeSearchPage(${currentPage + 1})" style="padding: 5px 15px; border: 1px solid #ddd; background: white; cursor: pointer;">다음</button>`;
+  }
+
+  paginationContainer.innerHTML = html;
+}
+
+function changeSearchPage(page) {
+  currentSearchPage = page;
+  displayResults(page);
+  window.scrollTo(0, 0); // 페이지 이동 시 상단으로 스크롤
+}
+</script>
