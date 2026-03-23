@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "PPO"
+title:  "Proximal Policy Optimization Algorithms"
 date:   2026-03-17
 description: 
 author: "김두영"
