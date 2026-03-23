@@ -2,9 +2,9 @@
 layout: post
 title:  "Approximate Nearest Neighbor Negative Contrastive Learning for Dense Text Retrieval"
 date:   2026-03-23
-description: 서버 테스트.
+description: 
 author: "한준호"
-category: 세미나
+category: 논문 리뷰 - IR
 ---
 
 # Approximate Nearest Neighbor Negative Contrastive Learning for Dense Text Retrieval

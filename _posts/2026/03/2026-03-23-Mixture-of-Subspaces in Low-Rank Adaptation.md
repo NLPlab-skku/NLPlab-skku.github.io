@@ -2,9 +2,9 @@
 layout: post
 title:  "Mixture-of-Subspaces in Low-Rank Adaptation"
 date:   2026-03-23
-description: 서버 테스트.
+description: 
 author: "이예원"
-category: 세미나
+category: 논문 리뷰 - PEFT
 ---
 
 # Mixture-of-Subspaces in Low-Rank Adaptation

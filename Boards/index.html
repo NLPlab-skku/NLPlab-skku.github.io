@@ -12,7 +12,11 @@ title: notice
   <select id="search-category" style="height: 40px; padding: 0 12px; border: 1px solid #ddd;">
     <option value="전체">전체</option>
     <option value="공지">공지</option>
-    <option value="세미나">세미나</option>
+    <option value="논문 리뷰 - IR">IR</option>
+    <option value="논문 리뷰 - PEFT">PEFT</option>
+    <option value="논문 리뷰 - RAG">RAG</option>
+    <option value="논문 리뷰 - RL">RL</option>
+    <option value="논문 리뷰 - XAI">XAI</option>
   </select>
   
   <select id="search-target" style="height: 40px; padding: 0 10px; border: 1px solid #ddd;">
@@ -106,6 +110,10 @@ async function executeSearch() {
 
       if (target === '제목') matchKeyword = post.title.toLowerCase().includes(keyword);
       else if (target === '내용') matchKeyword = (post.content || "").toLowerCase().includes(keyword);
+      else if (target === '작성자') matchKeyword = (post.author || "").toLowerCase().includes(keyword);
+      else if (target === '작성자') matchKeyword = (post.author || "").toLowerCase().includes(keyword);
+      else if (target === '작성자') matchKeyword = (post.author || "").toLowerCase().includes(keyword);
+      else if (target === '작성자') matchKeyword = (post.author || "").toLowerCase().includes(keyword);
       else if (target === '작성자') matchKeyword = (post.author || "").toLowerCase().includes(keyword);
       else {
         matchKeyword = post.title.toLowerCase().includes(keyword) || 

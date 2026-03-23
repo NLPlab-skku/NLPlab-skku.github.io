@@ -2,9 +2,9 @@
 layout: post
 title:  "ReMindRAG: Low-Cost LLM-Guided Knowledge Graph Traversal for Efficient RAG"
 date:   2026-03-23
-description: 서버 테스트.
+description: 
 author: "이준서"
-category: 세미나
+category: 논문 리뷰 - RAG
 ---
 
 # ReMindRAG: Low-Cost LLM-Guided Knowledge Graph Traversal for Efficient RAG

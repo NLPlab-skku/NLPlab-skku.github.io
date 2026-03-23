@@ -2,9 +2,9 @@
 layout: post
 title:  "Dense Passage Retrieval for Open-Domain Question Answering"
 date:   2026-03-23
-description: 서버 테스트.
+description: 
 author: "한준호"
-category: 세미나
+category: 논문 리뷰 - IR
 ---
 
 # Dense Passage Retrieval for Open-Domain Question Answering
