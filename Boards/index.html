@@ -12,6 +12,7 @@ title: notice
   <select id="search-category" style="height: 40px; padding: 0 12px; border: 1px solid #ddd;">
     <option value="전체">전체</option>
     <option value="공지">공지</option>
+    <option value="논문 리뷰">논문 리뷰</option>
     <option value="논문 리뷰 - IR">IR</option>
     <option value="논문 리뷰 - PEFT">PEFT</option>
     <option value="논문 리뷰 - RAG">RAG</option>
@@ -106,7 +107,11 @@ async function executeSearch() {
     const posts = await response.json();
 
     allSearchResults = posts.filter(post => {
-      const matchCategory = (category === '전체' || post.category === category);
+      const matchCategory = (
+          category === '전체' || 
+          post.category === category || 
+          (category === '논문 리뷰' && post.category.startsWith('논문 리뷰'))
+      );
       let matchKeyword = false;
 
       if (target === '제목') matchKeyword = post.title.toLowerCase().includes(keyword);
