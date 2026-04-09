@@ -50,16 +50,20 @@ layout: default
 </style>
 
 <script>
-  MathJax = {
+  window.MathJax = {
     tex: {
       inlineMath: [['$', '$'], ['\\(', '\\)']],
       displayMath: [['$$', '$$'], ['\\[', '\\]']],
-      processEscapes: true
+      processEscapes: true,
+      processEnvironments: true,
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
     }
   };
 </script>
-
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
 
 <div class="post">
   <div class="post-header-container" style="border-top: 2px solid #333; border-bottom: 2px solid #333; padding: 20px 0; margin-bottom: 30px; background-color: #fcfcfc;">

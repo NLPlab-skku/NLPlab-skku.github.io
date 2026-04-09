@@ -106,9 +106,7 @@ Negative 샘플링 방법을 고려함.
 
 1) Random: 코퍼스에서 무작위 추출
 
-2) BM25 (Hard Negative): 질문의 토큰은 많이 포함하고 있지만, 정답은 포함하지
-
-    않는 Passage
+2) BM25 (Hard Negative): 질문의 토큰은 많이 포함하고 있지만, 정답은 포함하지 않는 Passage
 
 3) Gold: 다른 질문과 짝지어진 Positive Passage들
 
@@ -116,7 +114,7 @@ Negative 샘플링 방법을 고려함.
 
 Mini-batch 내에 $B$개의 질문이 있다고 가정하고, Query 임베딩 행렬 $Q$와 Passage
 
-임베딩 행렬 $P$ 크기가 모두 ($B \times d$)일 때, 유사도 행렬 $\bold{S=QP^T}$는 ($B \times B$)
+임베딩 행렬 $P$ 크기가 모두 ($B \times d$)일 때, 유사도 행렬 $\mathbf{S=QP^T}$는 ($B \times B$)
 
 행렬이 됨. 이 경우, 대각선 요소는은 Positive 쌍이 되고, 비대각선 요소는 Negative
 
