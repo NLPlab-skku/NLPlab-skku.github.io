@@ -71,6 +71,8 @@ title: Boards
     <li style="text-align: center; padding: 80px 0; color: #999; border-bottom: 1px solid #eee;">등록된 게시물이 없습니다.</li>
     {% endfor %}
   </ul>
+  
+  <div class="board-header-line" style="border-top: 2px solid #333;"></div>
 
   {% if paginator.total_pages > 1 %}
   <div class="pagination" style="text-align: center; margin-top: 40px;">
@@ -88,7 +90,7 @@ title: Boards
     {% endif %}
   </div>
   {% endif %}
-  <div class="board-header-line" style="border-top: 2px solid #333;"></div>
+  
 </div>
 
 <script>
