@@ -45,6 +45,8 @@ permalink: /AboutUs/Photos/
 
   <h4 class = "center">#2026</h4>
   <div class="slider">
+	<div><img src = "/assets/img/2026/04_birth.png" title = "26년 4월: 4월 생일파티"/></div>
+	<div><img src = "/assets/img/2026/03_eatout.jpg" title = "26년 3월: 연구실 회식"/></div>
 	<div><img src = "/assets/img/2026/02_graduation.jpg" title = "26년 2월: 학위수여식"/></div>
 	<div><img src = "/assets/img/2026/01_eatout.jpg" title = "26년 1월: 신년 회식"/></div>
   </div>
