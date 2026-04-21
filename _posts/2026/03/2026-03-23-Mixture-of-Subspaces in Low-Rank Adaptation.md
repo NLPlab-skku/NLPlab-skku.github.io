@@ -23,31 +23,30 @@ $$
 
 LoRA는 fine-tuning 시 업데이트되는 파라미터 즉, $\Delta W$가 내재적으로는 low rank일 것이라는 가정으로부터 출발한다. 따라서 전체 파라미터를 업데이트하는 것이 아닌 low rank인 $AB$를 업데이트함으로써 비슷한 효과, 그러나 효율적인 학습을 노리는 것이다.
 
-<aside>
 
-** LoRA는 $AB$로 $d_1\times r +r\times d_2$ 의 파라미터를 가지지만, 실제로는 $d_1 \times d_2$의 파라미터를 효과를 낸다. LoRA는 저랭크 행렬 $A$, $B$를 사용하여 파라미터 수를 크게 줄인다. **
+**LoRA는 $AB$로 $d_1\times r +r\times d_2$ 의 파라미터를 가지지만, 실제로는 $d_1 \times d_2$의 파라미터를 효과를 낸다. LoRA는 저랭크 행렬 $A$, $B$를 사용하여 파라미터 수를 크게 줄인다.**
 
-</aside>
+<br>
 
 따라서 LoRA는 기존의 파라미터 $W_0$는 건드리지 않고 새로운 $AB$를 업데이트한 후 나중에 $W_0$로 융합하는 방법을 사용한다. 
 
 ### Two-subspaces-mixing LoRA
 
-기존의 LoRA 방식에서 $xAB=x\begin{bmatrix}A_1 & A_2\end{bmatrix}\begin{bmatrix}B_1\\B_2\end{bmatrix}=x(A_1B_1+A_2B_2)$로 생각할 수 있다. ( $A_1, A_2 \in\mathbb{R}^{d_1\times\frac{r}{2}}, B_1, B_2 \in\mathbb{R}^{\frac{r}{2}\times d_2}$)
+기존의 LoRA 방식에서 $$xAB = x \begin{bmatrix} A_1 & A_2 \end{bmatrix} \begin{bmatrix} B_1 \\ B_2 \end{bmatrix} = x(A_1B_1 + A_2B_2)$$로 생각할 수 있다. ( $A_1, A_2 \in\mathbb{R}^{d_1\times\frac{r}{2}}, B_1, B_2 \in\mathbb{R}^{\frac{r}{2}\times d_2}$)
 
 <p align="center"><img src="{{ '/assets/board/2026/03/Mixture-of-Subspaces/image.png' | prepend: site.baseurl }}"  max-width="100%" height="auto"></p>
 
 Figure 1.
 
-이 논문에서는 A와 B를 결합하는 방식을 약간 변형해 봄으로써 이 matrix A, B를 보다 복잡하고 잘 섞는 방법을 제안한다. 위 Figure 1의 b가 이 논문에서 처음 접근한 방식이다. $xAB=x\begin{bmatrix}A_1 & A_2\end{bmatrix}\begin{bmatrix}B_1\\B_2\end{bmatrix}=x(A_1B_1+A_2B_2)$ 이 방식을 $x(A_1+A_2)(B_1+B_2)=x(A_1B_1+A_2B_2+A_1B_2+A_2B_1)$으로 약간 변형해주면 기존의 term은 물론 $A_1B_2+A_2B_1$이라는 새로운 term을 포함하는 것을 알 수 있다. 이를 해당 논문에서는 학습 영역 A, B를 더 복잡하게 mixing해서 새로운 정보 ($A_1B_2+A_2B_1$에 해당하는)를 얻을 수 있다고 설명한다.
+이 논문에서는 A와 B를 결합하는 방식을 약간 변형해 봄으로써 이 matrix A, B를 보다 복잡하고 잘 섞는 방법을 제안한다. 위 Figure 1의 b가 이 논문에서 처음 접근한 방식이다. $$xAB=x\begin{bmatrix}A_1 & A_2\end{bmatrix}\begin{bmatrix} B_1 \\ B_2 \end{bmatrix}=x(A_1B_1+A_2B_2)$$ 이 방식을 $x(A_1+A_2)(B_1+B_2)=x(A_1B_1+A_2B_2+A_1B_2+A_2B_1)$으로 약간 변형해주면 기존의 term은 물론 $A_1B_2+A_2B_1$이라는 새로운 term을 포함하는 것을 알 수 있다. 이를 해당 논문에서는 학습 영역 A, B를 더 복잡하게 mixing해서 새로운 정보 ($A_1B_2+A_2B_1$에 해당하는)를 얻을 수 있다고 설명한다.
 
-위 방법을 더욱 일반화해보자. 단순히 $\begin{bmatrix}A_1 & A_2\end{bmatrix}\begin{bmatrix}B_1\\B_2\end{bmatrix}$를 $(A_1+A_2)(B_1+B_2)$로 바꾸어 2개의 term을 얻을 수 있었으니 $A$와 $B$를 더 잘게, column별로 쪼개보면 더욱 새로운 term을 얻을 수 있지 않을까?라는 접근이다. 그렇게 변형한 방법이 **Two-subspaces-mixing LoRA** 방법이다. 
+위 방법을 더욱 일반화해보자. 단순히 $$\begin{bmatrix}A_1 & A_2\end{bmatrix}\begin{bmatrix} B_1 \\ B_2 \end{bmatrix}$$를 $$(A_1+A_2)(B_1+B_2)$$로 바꾸어 2개의 term을 얻을 수 있었으니 $A$와 $B$를 더 잘게, column별로 쪼개보면 더욱 새로운 term을 얻을 수 있지 않을까?라는 접근이다. 그렇게 변형한 방법이 **Two-subspaces-mixing LoRA** 방법이다. 
 
 column으로 쪼갠다고 그냥 $(A_1+A_2+...+A_r)(B_1+B_2+...+B_r)$ 이렇게 곱하는 건 아니고 두 개씩 세트를 짝을 지어 다음 처럼 mixing한다.
 
 <p align="center"><img src="{{ '/assets/board/2026/03/Mixture-of-Subspaces/image 1.png' | prepend: site.baseurl }}"  max-width="100%" height="auto"></p>
 
-위 방법의 $\begin{bmatrix}I_{\frac{r}{2}\times\frac{r}{2}} & I_{\frac{r}{2}\times\frac{r}{2}}\\I_{\frac{r}{2}\times\frac{r}{2}} & I_{\frac{r}{2}\times\frac{r}{2}}\end{bmatrix}$을 butterfly factor라고 하는데, 푸리에 변환에서 효율적인 선형 변환을 위한 행렬으로 속도 면에서 효율성이 있다고 하는거 같다.
+위 방법의 $$\begin{bmatrix} I_{\frac{r}{2}\times\frac{r}{2}} & I_{\frac{r}{2}\times\frac{r}{2}} \\ I_{\frac{r}{2}\times\frac{r}{2}} & I_{\frac{r}{2}\times\frac{r}{2}} \end{bmatrix}$$을 butterfly factor라고 하는데, 푸리에 변환에서 효율적인 선형 변환을 위한 행렬으로 속도 면에서 효율성이 있다고 하는거 같다.
 
 아무튼 이렇게 2개로 짝지어서 mixing 했을 때 성능 향상이 있었다고 한다.
 

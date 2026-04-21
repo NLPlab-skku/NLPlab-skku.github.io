@@ -9,8 +9,11 @@ category: 논문 리뷰 - XAI
 # Learning Multi-Level Features with Matryoshka Sparse Autoencoders
 
 Author: https://arxiv.org/search/cs?searchtype=author&query=Bussmann,+B, https://arxiv.org/search/cs?searchtype=author&query=Nabeshima,+N, https://arxiv.org/search/cs?searchtype=author&query=Karvonen,+A, https://arxiv.org/search/cs?searchtype=author&query=Nanda,+N
+
 Category: Steering
+
 Status: Done
+
 URL: https://arxiv.org/abs/2503.17547
 
 # < Abstract >
