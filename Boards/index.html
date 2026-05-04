@@ -120,10 +120,6 @@ async function executeSearch() {
       if (target === '제목') matchKeyword = post.title.toLowerCase().includes(keyword);
       else if (target === '내용') matchKeyword = (post.content || "").toLowerCase().includes(keyword);
       else if (target === '작성자') matchKeyword = (post.author || "").toLowerCase().includes(keyword);
-      else if (target === '작성자') matchKeyword = (post.author || "").toLowerCase().includes(keyword);
-      else if (target === '작성자') matchKeyword = (post.author || "").toLowerCase().includes(keyword);
-      else if (target === '작성자') matchKeyword = (post.author || "").toLowerCase().includes(keyword);
-      else if (target === '작성자') matchKeyword = (post.author || "").toLowerCase().includes(keyword);
       else {
         matchKeyword = post.title.toLowerCase().includes(keyword) || 
                        (post.content || "").toLowerCase().includes(keyword) || 

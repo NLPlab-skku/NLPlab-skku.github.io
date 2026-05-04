@@ -1,6 +1,6 @@
 title: NLPLAB
 description: SKK Univ. NLP LAB.
-url: "https://nlplab-skku.github.io/"
+url: "https://nlplab-skku.github.io"
 baseurl: ""
 
 markdown: kramdown
@@ -9,6 +9,7 @@ highlighter: rouge
 # [수정] 다시 기본 jekyll-paginate로 변경
 plugins:
   - jekyll-paginate
+  - jekyll-sitemap
 
 # [수정] v2 방식이 아닌 v1 방식으로 설정
 paginate: 10
