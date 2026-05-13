@@ -57,6 +57,13 @@ permalink: /Research/Projects/
 	</li>
 	<br>
 	<li>
+		<small>July 2025 ~ July 2025. </small><br>
+		Co-Investigator (Co-PI) involved in "복잡한 인과 관계 이해를 위한 옴니 데이터 기반 귀추적 추론 프레임워크."<br>
+		<small>Supported by 정보통신기획평가원 (IITP, 사람중심 인공지능 핵심원천기술개발), 과학기술정보통신부 (Ministry of Science and ICT).</small><br>
+		<small>(NLP lab. SKK University)</small>
+	</li>
+	<br>
+	<li>
 		<small>April 2024 ~ December 2026. </small><br>
 		Principal-Investigator (PI) involved in "사회적, 윤리적 학습을 위한 데이터 특성 및 생성 AI 모델의 윤리성 향상 연구."<br>
 		<small>Supported by 정보통신기획평가원 (IITP), 과학기술정보통신부 (Ministry of Science and ICT).</small><br>
@@ -452,6 +459,27 @@ permalink: /Research/Projects/
 <blockquote>
 <p class="jg"><a name="3">#Transfer of Technical Know-how</a></p>
 <ul class="post jg">
+	<li>
+		<small>	October 2024. </small><br>
+		"언어 분석기별 정답 레이블 분포를 이용한 자연어 이해 방법"<br>
+		<small>(주)제이씨지.</small><br>
+		<small>(NLP lab. Sungkyunkwan University)</small>
+	</li>
+	<br>
+	<li>
+		<small>	October 2024. </small><br>
+		"학습 데이터 확장을 통한 딥러닝 기반 인과관계 추출을 위한 장치"<br>
+		<small>(주)아이전스.</small><br>
+		<small>(NLP lab. Sungkyunkwan University)</small>
+	</li>
+	<br>
+	<li>
+		<small>	January 2020 ~ December 2024. </small><br>
+		"보완대체의사소통(AAC)용 문장생성기술"<br>
+		<small>(주)리드스피커코리아.</small><br>
+		<small>(NLP lab. Sungkyunkwan University)</small>
+	</li>
+	<br>
 	<li>
 		<small>March 2023. </small><br>
 		"문장 임베딩 및 유사 질문 검색을 위한 장치 및 방법"<br>
