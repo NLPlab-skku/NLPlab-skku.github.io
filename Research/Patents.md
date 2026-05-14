@@ -37,6 +37,13 @@ permalink: /Research/Patents/
 	<ul class="post jg">
 		<li>
 			Patent Registration.<br>
+			Learning Method of Document Retrieval Model and Apparatus Supporting the Same. (문서 검색 모델의 학습 방법 및 이를 지원하는 장치)<br>
+			<small>출원일: 2021.09.06 (출원번호 제 10-2021-0118685 호)</small><br>
+			<small>등록일: 2025.07.23 (제 10-2839094호)</small>
+		</li>
+		<br>
+		<li>
+			Patent Registration.<br>
 			Data Learning Method using Sentiment Analysis System (감성 분석 시스템을 이용한 데이터 학습 방법)<br>
 			<small>출원일: 2021.08.26 (출원번호 제 10-2021-0113440 호)</small><br>
 			<small>등록일: 2024.10.10 (제 10-2717604호)</small>
@@ -167,6 +174,30 @@ permalink: /Research/Patents/
 <blockquote>
 <p class="jg"><a name="2">#Patent Application</a></p>
 	<ul class="post jg">
+		<li>
+			Patent Application.<br>
+			Apparatus and Method for Adjustment of Attribute of Learning Model. (학습 모델의 속성 조절 장치 및 방법)<br>
+			<small>출원일: 2025.11.28 (출원번호 제 10-2025-0185378 호)</small><br>
+		</li>
+		<br>
+		<li>
+			Patent Application.<br>
+			Apparatus and Method for Retrieval of Information Based on Artificial Intelligence. (인공 지능 기반의 정보 검색 장치 및 방법)<br>
+			<small>출원일: 2025.11.28 (출원번호 제 10-2025-0184564 호)</small><br>
+		</li>
+		<br>
+		<li>
+			Patent Application.<br>
+			Apparatus and Method for Detoxification of Output by Language Model. (언어 모델 출력의 유해성 제거 장치 및 방법)<br>
+			<small>출원일: 2025.11.10 (출원번호 제 10-2025-0168393 호)</small><br>
+		</li>
+		<br>
+		<li>
+			Patent Application.<br>
+			Method and Apparatus for Training Language Model for Korean Language Processing based on Syllable-Level Tokenization. (음절 단위의 토큰화를 기초로 한국어 처리를 위한 언어 모델을 학습시키는 방법 및 장치)<br>
+			<small>출원일: 2025.02.25 (출원번호 제 10-2025-0024550 호)</small><br>
+		</li>
+		<br>
 		<li>
 			Patent Application.<br>
 			Device and Method for Multi-party Conversation. (다자간 대화 장치 및 방법)<br>
@@ -329,6 +360,55 @@ permalink: /Research/Patents/
 <blockquote>
 <p class="jg"><a name="3">#Program Copyright Registration</a></p>
 	<ul class="post jg">
+		<li>
+			Program Copyright Registration<br>
+			대화 토픽 분류 및 페르소나 생성 시스템.<br>
+			<small>창작일: 2025.10.01</small><br>
+			<small>공표일: 2025.10.20 (C-2025-042746)</small>
+		</li>
+		<br>
+		<li>
+			Program Copyright Registration<br>
+			단어 기반 attention score(어텐션 스코어)를 활용한 이종 모델 지식 증류 시스템.<br>
+			<small>창작일: 2025.10.10</small><br>
+			<small>공표일: 2025.10.17 (C-2025-042359)</small>
+		</li>
+		<br>
+		<li>
+			Program Copyright Registration<br>
+			PromptRank(프롬프트랭크) 기반의 핵심 문장 추출 및 효율적 정보 전달 시스템.<br>
+			<small>창작일: 2025.09.01</small><br>
+			<small>공표일: 2025.10.15 (C-2025-041648)</small>
+		</li>
+		<br>
+		<li>
+			Program Copyright Registration<br>
+			스토리 장르 기반 생성 제어 (Controllable Text Generation) 인스트럭션 튜닝 (Instruction Tuning) 데이터셋 구축 프레임워크.<br>
+			<small>창작일: 2024.10.14</small><br>
+			<small>공표일: 2024.11.14 (C-2024-043816)</small>
+		</li>
+		<br>
+		<li>
+			Program Copyright Registration<br>
+			스무고개 기반 생성AI 지능 평가 벤치마크 시스템.<br>
+			<small>창작일: 2024.07.01</small><br>
+			<small>공표일: 2024.11.14 (C-2024-043817)</small>
+		</li>
+		<br>
+		<li>
+			Program Copyright Registration<br>
+			음절 단위와 서브워드 단위 토크나이저 결합기.<br>
+			<small>창작일: 2024.10.17</small><br>
+			<small>공표일: 2024.10.28 (C-2024-039735)</small>
+		</li>
+		<br>
+		<li>
+			Program Copyright Registration<br>
+			Attention Head(어텐션 헤드) 기반 유해 텍스트 억제기.<br>
+			<small>창작일: 2024.08.16</small><br>
+			<small>공표일: 2024.10.28 (C-2024-039772)</small>
+		</li>
+		<br>
 		<li>
 			Program Copyright Registration<br>
 			BERT(버트) 기반 WordNet(워드넷) 활용을 위한 라이브러리.<br>
