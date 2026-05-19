@@ -23,7 +23,7 @@ navigation:
   - title: Research
     url: /Research/Fields/
   - title: Publications
-    url: /Publications/JournalPapers/
+    url: /Publications/AllPapers/
   - title: Members
     url: /Members/
   - title: Demos
@@ -48,3 +48,15 @@ exclude:
   - node_modules
   - vendor
   - .jekyll-cache
+  - merge_papers.py
+
+# sitemap에서 assets(PDF, 이미지 등 정적파일) 제외
+defaults:
+  - scope:
+      path: "assets"
+    values:
+      sitemap: false
+  - scope:
+      path: "AboutUs/AIsociety_11.pdf"
+    values:
+      sitemap: false
