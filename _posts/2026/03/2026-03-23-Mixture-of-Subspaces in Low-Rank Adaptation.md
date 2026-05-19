@@ -4,7 +4,7 @@ title:  "Mixture-of-Subspaces in Low-Rank Adaptation"
 date:   2026-03-23
 description: 
 author: "이예원"
-category: 논문 리뷰 - PEFT
+category: 논문-리뷰-PEFT
 ---
 
 # Mixture-of-Subspaces in Low-Rank Adaptation

@@ -4,7 +4,7 @@ title:  "DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Lang
 date:   2026-03-26
 description: 
 author: "김두영"
-category: 논문 리뷰 - RL
+category: 논문-리뷰-RL
 ---
 # DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models (GRPO)
 

@@ -4,7 +4,7 @@ title:  "DARL: Encouraging Diverse Answers for General Reasoning without Verifie
 date:   2026-04-01
 description: 
 author: "김두영"
-category: 논문 리뷰 - RL
+category: 논문-리뷰-RL
 ---
 # DARL: Encouraging Diverse Answers for General Reasoning without Verifiers
 

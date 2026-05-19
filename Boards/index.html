@@ -13,13 +13,13 @@ title: Boards
   <select id="search-category" style="height: 40px; padding: 0 12px; border: 1px solid #ddd;">
     <option value="전체">전체</option>
     <option value="공지">공지</option>
-    <option value="논문 리뷰">논문 리뷰</option>
-    <option value="논문 리뷰 - IR">IR</option>
-    <option value="논문 리뷰 - PEFT">PEFT</option>
-    <option value="논문 리뷰 - RAG">RAG</option>
-    <option value="논문 리뷰 - RL">RL</option>
-    <option value="논문 리뷰 - XAI">XAI</option>
-    <option value="논문 리뷰 - LM">LM</option>
+    <option value="논문-리뷰">논문 리뷰</option>
+    <option value="논문-리뷰-IR">IR</option>
+    <option value="논문-리뷰-PEFT">PEFT</option>
+    <option value="논문-리뷰-RAG">RAG</option>
+    <option value="논문-리뷰-RL">RL</option>
+    <option value="논문-리뷰-XAI">XAI</option>
+    <option value="논문-리뷰-LM">LM</option>
   </select>
   
   <select id="search-target" style="height: 40px; padding: 0 10px; border: 1px solid #ddd;">
@@ -43,7 +43,7 @@ title: Boards
     <div class="item-main" style="flex: 1;">
       <div style="margin-bottom: 10px;">
         <a href="{{ post.url | relative_url }}" style="text-decoration: none; color: #333; font-size: 1.1em; line-height: 1.5;">
-          <span style="color: #666; margin-right: 5px;">[{{ post.category | default: "공지" }}]</span>
+          <span style="color: #666; margin-right: 5px;">[{{ post.category | replace: '논문-리뷰-', '논문 리뷰 - ' | default: "공지" }}]</span>
           <span style="font-weight: 500;">{{ post.title }}</span>
         </a>
       </div>
@@ -111,9 +111,9 @@ async function executeSearch() {
 
     allSearchResults = posts.filter(post => {
       const matchCategory = (
-          category === '전체' || 
-          post.category === category || 
-          (category === '논문 리뷰' && post.category.startsWith('논문 리뷰'))
+          category === '전체' ||
+          post.category === category ||
+          (category === '논문-리뷰' && post.category.startsWith('논문-리뷰'))
       );
       let matchKeyword = false;
 
@@ -161,7 +161,7 @@ function displayResults(page) {
         <div class="item-main" style="flex: 1;">
           <div style="margin-bottom: 10px;">
             <a href="${post.url}" style="text-decoration: none; color: #333; font-size: 1.1em;">
-              <span style="color: #666; margin-right: 5px;">[${post.category}]</span>
+              <span style="color: #666; margin-right: 5px;">[${post.category.replace('논문-리뷰-', '논문 리뷰 - ')}]</span>
               <span style="font-weight: 500;">${post.title}</span>
             </a>
           </div>

@@ -4,7 +4,7 @@ title:  "Learning Multi-Level Features with Matryoshka Sparse Autoencoders"
 date:   2026-03-23
 description: 
 author: "이준희"
-category: 논문 리뷰 - XAI
+category: 논문-리뷰-XAI
 ---
 # Learning Multi-Level Features with Matryoshka Sparse Autoencoders
 

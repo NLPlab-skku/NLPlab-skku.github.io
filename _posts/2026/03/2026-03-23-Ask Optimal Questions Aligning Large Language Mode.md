@@ -4,7 +4,7 @@ title:  "Ask Optimal Questions: Aligning Large Language Models with Retriever’
 date:   2026-03-23
 description: 
 author: "이예원"
-category: 논문 리뷰 - IR
+category: 논문-리뷰-IR
 ---
 
 # Ask Optimal Questions: Aligning Large Language Models with Retriever’s Preference in Conversational Search
