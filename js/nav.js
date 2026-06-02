@@ -1,58 +1,43 @@
-/**
- * Shared navbar — dropdowns + Contact Us button top-right.
- * Each page sets window.NAV_ROOT before loading this script:
- *   - index.html (root):  window.NAV_ROOT = '';
- *   - pages/*.html:       window.NAV_ROOT = '../';
- */
 (function () {
-  const ROOT = (typeof window.NAV_ROOT !== 'undefined') ? window.NAV_ROOT : '';
-  const P = ROOT + 'pages/';
-
   const NAV = [
     {
       label: 'About Us',
       children: [
-        { label: 'Introduction', href: P + 'introduction.html' },
-        { label: 'Photos',       href: P + 'photos.html' },
-        { label: 'Contact Us',   href: P + 'contact.html' },
+        { label: 'Introduction', href: '/AboutUs/Introduction/' },
+        { label: 'Photos',       href: '/AboutUs/Photos/' },
+        { label: 'Contact Us',   href: '/AboutUs/ContactUs/' },
       ]
     },
     {
       label: 'Research',
       children: [
-        { label: 'Fields',   href: P + 'fields.html' },
-        { label: 'Projects', href: P + 'projects.html' },
-        { label: 'Patents',  href: P + 'patents.html' },
+        { label: 'Fields',   href: '/Research/Fields/' },
+        { label: 'Projects', href: '/Research/Projects/' },
+        { label: 'Patents',  href: '/Research/Patents/' },
       ]
     },
-    { label: 'Publications', href: P + 'publications.html' },
-    { label: 'Members',      href: P + 'members.html' },
-    // TODO: Demos 준비 완료 후 아래 주석 해제
+    { label: 'Publications', href: '/Publications/' },
+    { label: 'Members',      href: '/Members.html' },
     {
       label: 'Demos',
       children: [
-        { label: 'NLP',           href: P + 'demos-nlp.html' },
-        { label: 'IR',            href: P + 'demos-ir.html' },
-        { label: 'Text Mining',   href: P + 'demos-textmining.html' },
-        { label: 'Generative AI', href: P + 'demos-generativeai.html' },
+        { label: 'NLP',           href: '/Demos/Natural_Language_Processing.html' },
+        { label: 'IR',            href: '/Demos/Information_Retrieval.html' },
+        { label: 'Text Mining',   href: '/Demos/Text_mining.html' },
+        { label: 'Generative AI', href: '/Demos/Gen_Ai.html' },
       ]
     },
-    { label: 'Boards', href: P + 'boards.html' },
+    { label: 'Boards', href: '/Boards/' },
   ];
 
-  const currentFile = location.pathname.split('/').pop() || 'index.html';
-
-  const ACTIVE_MAP = {
-    'introduction.html': 'About Us', 'photos.html': 'About Us', 'contact.html': 'About Us',
-    'fields.html': 'Research', 'projects.html': 'Research', 'patents.html': 'Research',
-    'publications.html': 'Publications',
-    'members.html': 'Members',
-    'demos-nlp.html': 'Demos', 'demos-ir.html': 'Demos',
-    'demos-textmining.html': 'Demos', 'demos-generativeai.html': 'Demos',
-    'boards.html': 'Boards',
-  };
-
-  const activeLabel = ACTIVE_MAP[currentFile] || '';
+  const path = location.pathname;
+  let activeLabel = '';
+  if (path.includes('/AboutUs/')) activeLabel = 'About Us';
+  else if (path.includes('/Research/')) activeLabel = 'Research';
+  else if (path.includes('/Publications')) activeLabel = 'Publications';
+  else if (path.includes('/Members')) activeLabel = 'Members';
+  else if (path.includes('/Demos/')) activeLabel = 'Demos';
+  else if (path.includes('/Boards')) activeLabel = 'Boards';
 
   function buildItem(item) {
     const hasChildren = item.children && item.children.length;
@@ -98,7 +83,7 @@
         <button class="nav-hamburger" id="nav-hamburger" aria-label="메뉴 열기">
           <span></span><span></span><span></span>
         </button>
-        <a class="nav-brand" href="${ROOT}index.html"><span class="brand-n">N</span><span class="brand-l">L</span><span class="brand-p">P</span>LAB</a>
+        <a class="nav-brand" href="/"><span class="brand-n">N</span><span class="brand-l">L</span><span class="brand-p">P</span>LAB</a>
         <ul class="nav-menu">
           ${NAV.map(buildItem).join('')}
         </ul>
@@ -115,14 +100,14 @@
     <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
     <div class="mobile-menu" id="mobile-menu">
       <div class="mobile-menu-header">
-        <a class="mobile-menu-brand" href="${ROOT}index.html"><span class="brand-n">N</span><span class="brand-l">L</span><span class="brand-p">P</span>LAB</a>
+        <a class="mobile-menu-brand" href="/"><span class="brand-n">N</span><span class="brand-l">L</span><span class="brand-p">P</span>LAB</a>
         <button class="mobile-menu-close" id="mobile-menu-close" aria-label="메뉴 닫기">✕</button>
       </div>
       <div class="mobile-menu-body">
         ${NAV.map(buildMobileItem).join('')}
       </div>
       <div class="mobile-menu-footer">
-        <a class="mobile-contact-btn" href="${P}contact.html">Contact Us</a>
+        <a class="mobile-contact-btn" href="/AboutUs/ContactUs/">Contact Us</a>
       </div>
     </div>`;
 

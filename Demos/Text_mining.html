@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="../assets/img/favicon.ico" />
-  <title>IR Demos — NLPLAB</title>
+  <link rel="icon" href="/assets/img/favicon.ico" />
+  <title>Text Mining Demos — NLPLAB</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="/css/style.css" />
   <style>
     .page-hero { background: var(--bg); padding: 48px 24px 32px; text-align: center; }
     .page-hero h1 { font-size: 36px; font-weight: 700; }
@@ -30,19 +30,18 @@
   </style>
 </head>
 <body>
-<script>window.NAV_ROOT = '../';</script>
-<script src="../js/nav.js"></script>
+<script src="/js/nav.js"></script>
 
 <div class="page-hero">
-  <h1><span>I</span>R Demos</h1>
-  <p style="color:var(--text-muted);margin-top:8px;font-size:14px;">Information Retrieval 데모 동영상</p>
+  <h1><span>T</span>ext Mining Demos</h1>
+  <p style="color:var(--text-muted);margin-top:8px;font-size:14px;">Text Mining 데모 동영상</p>
 </div>
 
 <div class="section" style="margin-top:24px;margin-bottom:0;padding-bottom:0">
   <div class="sub-nav">
     <a href="demos-nlp.html">NLP</a>
-    <a href="demos-ir.html" class="active">IR</a>
-    <a href="demos-textmining.html">Text Mining</a>
+    <a href="demos-ir.html">IR</a>
+    <a href="demos-textmining.html" class="active">Text Mining</a>
     <a href="demos-generativeai.html">Generative AI</a>
   </div>
 </div>
@@ -51,18 +50,18 @@
 
   <div class="demo-item">
     <button class="demo-toggle" onclick="toggleDemo(this)">
-      <span class="demo-toggle-title">해석 가능하고 효율적인 정보 검색을 위한 희소 오토인코더 잠재 표현</span>
+      <span class="demo-toggle-title">SPACE: 감정 분석용 임베딩 분류 프롬프트 모델</span>
       <span class="demo-arrow">▼</span>
     </button>
     <div class="demo-content">
       <div class="demo-meta">
-        <p><b>Title:</b> Decoding Dense Embeddings: Sparse Autoencoders for Interpreting and Discretizing Dense Retrieval</p>
-        <p><b>Github:</b> <a href="https://github.com/Tro-fish/Decoding-Dense-Embeddings" target="_blank">https://github.com/Tro-fish/Decoding-Dense-Embeddings</a></p>
-        <p><b>Paper:</b> <a href="https://arxiv.org/abs/2506.00041" target="_blank">https://arxiv.org/abs/2506.00041</a></p>
+        <p><b>Title:</b> SPACE: Senti-Prompt As Classifying Embedding for sentiment analysis</p>
+        <p><b>Github:</b> TBD</p>
+        <p><b>Paper:</b> <a href="https://www.sciencedirect.com/science/article/pii/S0167865524000552" target="_blank">Publisher Link</a></p>
       </div>
       <div class="demo-video-label">Demo Video</div>
       <video class="demo-video" controls>
-        <source src="../assets/video/demo_decoding_dense_embeddings.mp4" type="video/mp4">
+        <source src="/assets/video/demo_SPACE.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
     </div>
@@ -70,56 +69,18 @@
 
   <div class="demo-item">
     <button class="demo-toggle" onclick="toggleDemo(this)">
-      <span class="demo-toggle-title">저자원 환경에서 도메인 과적합 문제를 방지하기 위한 문서분류 기법</span>
+      <span class="demo-toggle-title">트랜스포머 인코더를 활용한 음절 단위 경량화 형태소 분석기</span>
       <span class="demo-arrow">▼</span>
     </button>
     <div class="demo-content">
       <div class="demo-meta">
-        <p><b>Title:</b> Low-resource Text Classification Method that Mitigates Overfitting on Domain-specific Features</p>
+        <p><b>Title:</b> Syllable-Level Lightweight Korean POS Tagger using Transformer Encoder</p>
         <p><b>Github:</b> TBD</p>
-        <p><b>Paper:</b> TBD</p>
+        <p><b>Paper:</b> <a href="https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART003134493" target="_blank">Publisher Link</a></p>
       </div>
       <div class="demo-video-label">Demo Video</div>
       <video class="demo-video" controls>
-        <source src="../assets/video/demo_low-resource_text_classification.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-  </div>
-
-  <div class="demo-item">
-    <button class="demo-toggle" onclick="toggleDemo(this)">
-      <span class="demo-toggle-title">사전학습을 이용한 정보검색 시스템</span>
-      <span class="demo-arrow">▼</span>
-    </button>
-    <div class="demo-content">
-      <div class="demo-meta">
-        <p><b>Title:</b> Information Retrieval with REAP (Retrieval-adaptive Pretraining)</p>
-        <p><b>Github:</b> TBD</p>
-        <p><b>Paper:</b> TBD</p>
-      </div>
-      <div class="demo-video-label">Demo Video</div>
-      <video class="demo-video" controls>
-        <source src="../assets/video/demo_information_retriever.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-  </div>
-
-  <div class="demo-item">
-    <button class="demo-toggle" onclick="toggleDemo(this)">
-      <span class="demo-toggle-title">설명가능성을 위한 토큰 임베딩 기반 동영상 검색</span>
-      <span class="demo-arrow">▼</span>
-    </button>
-    <div class="demo-content">
-      <div class="demo-meta">
-        <p><b>Title:</b> Explainable Video Search System using Token Space-based Representation</p>
-        <p><b>Github:</b> TBD</p>
-        <p><b>Paper:</b> <a href="https://www.dbpia.co.kr/pdf/pdfView.do?nodeId=NODE12007528" target="_blank">Publisher Link</a></p>
-      </div>
-      <div class="demo-video-label">Demo Video</div>
-      <video class="demo-video" controls>
-        <source src="../assets/video/demo_explainable_question_answering_system.mp4" type="video/mp4">
+        <source src="/assets/video/demo_syllable_level_lightweight_korean_pos_tagger.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
     </div>
