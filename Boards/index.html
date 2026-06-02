@@ -190,9 +190,8 @@ function renderBoard(tab) {
   let html = '';
 
   pinned.forEach(p => {
-    const idx = posts.indexOf(p);
     const newBadge = isNew(p.date) ? '<span class="badge-new">NEW</span>' : '';
-    html += `<tr class="notice-row" onclick="goPost('${tab}',${idx})">
+    html += `<tr class="notice-row" onclick="goPost('${tab}','${getSlug(p)}')">
       <td class="num">📌</td>
       <td class="post-title-cell">${p.title} ${newBadge}</td>
       ${isSeminar ? `<td class="cat"><span class="cat-badge cat-${p.category}">${p.category}</span></td>` : ''}
@@ -202,10 +201,9 @@ function renderBoard(tab) {
   });
 
   regular.slice(start, start + PAGE_SIZE).forEach((p, i) => {
-    const idx = posts.indexOf(p);
     const num = regular.length - (start + i);
     const newBadge = isNew(p.date) ? '<span class="badge-new">NEW</span>' : '';
-    html += `<tr onclick="goPost('${tab}',${idx})">
+    html += `<tr onclick="goPost('${tab}','${getSlug(p)}')">
       <td class="num">${num}</td>
       <td class="post-title-cell">${p.title} ${newBadge}</td>
       ${isSeminar ? `<td class="cat"><span class="cat-badge cat-${p.category}">${p.category}</span></td>` : ''}
@@ -242,8 +240,17 @@ function switchTab(tab) {
   history.replaceState(null, '', '?tab=' + tab);
 }
 
-function goPost(tab, id) {
-  location.href = '/Boards/post.html?tab=' + tab + '&id=' + id;
+function getSlug(post) {
+  return post.mdPath.split('/').pop()
+    .replace(/\.md$/i, '')
+    .trim()
+    .replace(/\s+/g, '-')
+    .replace(/-{2,}/g, '-')
+    .replace(/-$/, '');
+}
+
+function goPost(tab, slug) {
+  location.href = '/Boards/post.html?tab=' + tab + '&slug=' + encodeURIComponent(slug);
 }
 
 function doSearch() {
@@ -258,9 +265,8 @@ function doSearch() {
   let html = '';
 
   pinned.forEach(p => {
-    const idx = posts.indexOf(p);
     const newBadge = isNew(p.date) ? '<span class="badge-new">NEW</span>' : '';
-    html += `<tr class="notice-row" onclick="goPost('${currentTab}',${idx})">
+    html += `<tr class="notice-row" onclick="goPost('${currentTab}','${getSlug(p)}')">
       <td class="num">📌</td>
       <td class="post-title-cell">${p.title} ${newBadge}</td>
       ${isSeminar ? `<td class="cat"><span class="cat-badge cat-${p.category}">${p.category}</span></td>` : ''}
@@ -272,9 +278,8 @@ function doSearch() {
   regular.forEach((p, i) => {
     const val = (type === '작성자' ? p.author : p.title).toLowerCase();
     if (!val.includes(keyword)) return;
-    const idx = posts.indexOf(p);
     const newBadge = isNew(p.date) ? '<span class="badge-new">NEW</span>' : '';
-    html += `<tr onclick="goPost('${currentTab}',${idx})">
+    html += `<tr onclick="goPost('${currentTab}','${getSlug(p)}')">
       <td class="num">${regular.length - i}</td>
       <td class="post-title-cell">${p.title} ${newBadge}</td>
       ${isSeminar ? `<td class="cat"><span class="cat-badge cat-${p.category}">${p.category}</span></td>` : ''}

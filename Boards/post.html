@@ -299,11 +299,21 @@
 
 <script>
 (function () {
+  function getSlug(post) {
+    return post.mdPath.split('/').pop()
+      .replace(/\.md$/i, '')
+      .trim()
+      .replace(/\s+/g, '-')
+      .replace(/-{2,}/g, '-')
+      .replace(/-$/, '');
+  }
+
   const params = new URLSearchParams(location.search);
   const tab = params.get('tab') || 'notice';
-  const id  = parseInt(params.get('id') || '0', 10);
+  const slug = params.get('slug') || '';
   const posts = window.POSTS[tab] || [];
-  const post  = posts[id];
+  const currentIdx = posts.findIndex(p => getSlug(p) === slug);
+  const post = posts[currentIdx];
 
   if (!post) {
     document.getElementById('post-title').textContent = '게시글을 찾을 수 없습니다.';
@@ -383,19 +393,19 @@
   }
 
   // ── 이전글 / 다음글 ──
-  const prev = id > 0 ? posts[id - 1] : null;          // 위 = 더 최신
-  const next = id < posts.length - 1 ? posts[id + 1] : null; // 아래 = 더 오래된
+  const prev = currentIdx > 0 ? posts[currentIdx - 1] : null;
+  const next = currentIdx < posts.length - 1 ? posts[currentIdx + 1] : null;
 
   const navHtml =
     `<ul class="nav-list">` +
     (prev
-      ? `<li><a class="nav-item" href="/Boards/post.html?tab=${tab}&id=${id-1}">
+      ? `<li><a class="nav-item" href="/Boards/post.html?tab=${tab}&slug=${encodeURIComponent(getSlug(prev))}">
           <span class="nav-label">▲ 이전글</span>
           <span class="nav-title">${prev.title}</span>
          </a></li>`
       : `<li><div class="nav-empty"><span class="nav-label">▲ 이전글</span><span>이전 게시글이 없습니다.</span></div></li>`) +
     (next
-      ? `<li><a class="nav-item" href="/Boards/post.html?tab=${tab}&id=${id+1}">
+      ? `<li><a class="nav-item" href="/Boards/post.html?tab=${tab}&slug=${encodeURIComponent(getSlug(next))}">
           <span class="nav-label">▼ 다음글</span>
           <span class="nav-title">${next.title}</span>
          </a></li>`
