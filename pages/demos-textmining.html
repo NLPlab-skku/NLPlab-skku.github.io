@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="../assets/img/favicon.ico" />
+  <title>Text Mining Demos — NLPLAB</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .page-hero { background: var(--bg); padding: 48px 24px 32px; text-align: center; }
+    .page-hero h1 { font-size: 36px; font-weight: 700; }
+    .page-hero h1 span { color: var(--green); }
+    .demo-item { background: var(--white); border-radius: 10px; margin-bottom: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); overflow: hidden; }
+    .demo-toggle { width: 100%; display: flex; align-items: center; justify-content: space-between; padding: 20px 24px; background: none; border: none; cursor: pointer; text-align: left; gap: 16px; font-family: inherit; transition: background 0.15s; }
+    .demo-toggle:hover { background: var(--bg); }
+    .demo-toggle-title { font-size: 15px; font-weight: 600; line-height: 1.5; color: var(--text); }
+    .demo-arrow { font-size: 12px; color: var(--text-muted); flex-shrink: 0; transition: transform 0.2s; }
+    .demo-toggle.open .demo-arrow { transform: rotate(180deg); }
+    .demo-content { display: none; padding: 0 24px 24px; border-top: 1px solid var(--border); }
+    .demo-content.open { display: block; }
+    .demo-meta { margin-top: 16px; margin-bottom: 16px; }
+    .demo-meta p { font-size: 13px; color: var(--text-muted); margin-bottom: 6px; line-height: 1.6; }
+    .demo-meta a { color: var(--green); text-decoration: none; }
+    .demo-meta a:hover { text-decoration: underline; }
+    .demo-meta b { color: var(--text); }
+    .demo-video { width: 100%; border-radius: 8px; margin-top: 8px; max-height: 480px; }
+    .demo-video-label { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 8px; }
+  </style>
+</head>
+<body>
+<script>window.NAV_ROOT = '../';</script>
+<script src="../js/nav.js"></script>
+
+<div class="page-hero">
+  <h1><span>T</span>ext Mining Demos</h1>
+  <p style="color:var(--text-muted);margin-top:8px;font-size:14px;">Text Mining 데모 동영상</p>
+</div>
+
+<div class="section" style="margin-top:24px;margin-bottom:0;padding-bottom:0">
+  <div class="sub-nav">
+    <a href="demos-nlp.html">NLP</a>
+    <a href="demos-ir.html">IR</a>
+    <a href="demos-textmining.html" class="active">Text Mining</a>
+    <a href="demos-generativeai.html">Generative AI</a>
+  </div>
+</div>
+
+<div class="section" style="margin-bottom:60px">
+
+  <div class="demo-item">
+    <button class="demo-toggle" onclick="toggleDemo(this)">
+      <span class="demo-toggle-title">SPACE: 감정 분석용 임베딩 분류 프롬프트 모델</span>
+      <span class="demo-arrow">▼</span>
+    </button>
+    <div class="demo-content">
+      <div class="demo-meta">
+        <p><b>Title:</b> SPACE: Senti-Prompt As Classifying Embedding for sentiment analysis</p>
+        <p><b>Github:</b> TBD</p>
+        <p><b>Paper:</b> <a href="https://www.sciencedirect.com/science/article/pii/S0167865524000552" target="_blank">Publisher Link</a></p>
+      </div>
+      <div class="demo-video-label">Demo Video</div>
+      <video class="demo-video" controls>
+        <source src="../assets/video/demo_SPACE.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
+  <div class="demo-item">
+    <button class="demo-toggle" onclick="toggleDemo(this)">
+      <span class="demo-toggle-title">트랜스포머 인코더를 활용한 음절 단위 경량화 형태소 분석기</span>
+      <span class="demo-arrow">▼</span>
+    </button>
+    <div class="demo-content">
+      <div class="demo-meta">
+        <p><b>Title:</b> Syllable-Level Lightweight Korean POS Tagger using Transformer Encoder</p>
+        <p><b>Github:</b> TBD</p>
+        <p><b>Paper:</b> <a href="https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART003134493" target="_blank">Publisher Link</a></p>
+      </div>
+      <div class="demo-video-label">Demo Video</div>
+      <video class="demo-video" controls>
+        <source src="../assets/video/demo_syllable_level_lightweight_korean_pos_tagger.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">NLP<span>LAB</span></div>
+      <p class="footer-desc">Natural Language Processing Laboratory<br />성균관대학교 소프트웨어융합대학</p>
+    </div>
+  </div>
+  <p class="footer-copy">© 2026 NLPLAB, Sungkyunkwan University. All rights reserved.</p>
+</footer>
+
+<script>
+function toggleDemo(btn) {
+  const content = btn.nextElementSibling;
+  const isOpen = content.classList.contains('open');
+  content.classList.toggle('open', !isOpen);
+  btn.classList.toggle('open', !isOpen);
+}
+</script>
+</body>
+</html>

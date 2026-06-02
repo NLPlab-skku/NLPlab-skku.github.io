@@ -1,0 +1,1838 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="../assets/img/favicon.ico" />
+  <title>Publications — NLPLAB</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .page-hero { background: var(--bg); padding: 48px 24px 32px; text-align: center; }
+    .page-hero h1 { font-size: 36px; font-weight: 700; }
+    .page-hero h1 span { color: var(--green); }
+    .year-group { margin-bottom: 44px; }
+    .year-label { font-size: 28px; font-weight: 700; color: var(--green); margin-bottom: 16px; border-bottom: 2px solid var(--border); padding-bottom: 10px; }
+    .pub-entry {
+      background: var(--white); border-radius: 8px; padding: 22px 24px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05); margin-bottom: 14px;
+      display: flex; gap: 16px; align-items: flex-start; transition: box-shadow 0.2s;
+    }
+    .pub-entry:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.09); }
+    .pub-venue {
+      flex-shrink: 0; background: var(--green); color: var(--white);
+      font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 4px;
+      letter-spacing: 0.04em; margin-top: 2px; text-align: center; min-width: 70px;
+    }
+    .pub-venue.journal { background: #2060a0; }
+    .pub-venue.domestic { background: #666; }
+    .pub-title { font-size: 15px; font-weight: 600; line-height: 1.45; margin-bottom: 4px; }
+    .pub-authors { font-size: 13px; color: var(--text-muted); margin-bottom: 5px; }
+    .pub-meta { font-size: 12px; color: #c03030; font-weight: 500; margin-bottom: 7px; }
+    .pub-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+    .pub-link { font-size: 12px; font-weight: 500; color: var(--text-muted); border: 1px solid var(--border); padding: 3px 10px; border-radius: 4px; transition: all 0.15s; }
+    .pub-link:hover { color: var(--green); border-color: var(--green); }
+    .filter-bar { display: flex; gap: 8px; margin-bottom: 28px; flex-wrap: wrap; }
+    .filter-btn { padding: 6px 16px; border-radius: 20px; border: 1.5px solid var(--border); background: var(--white); font-size: 13px; font-weight: 500; cursor: pointer; transition: all 0.15s; color: var(--text-muted); }
+    .filter-btn.active, .filter-btn:hover { border-color: var(--green); color: var(--green); background: #e8f4ea; }
+    .pub-entry.hidden { display: none; }
+  </style>
+</head>
+<body>
+<script>window.NAV_ROOT = '../';</script>
+<script src="../js/nav.js"></script>
+
+<div class="page-hero">
+  <h1><span>P</span>ublications</h1>
+  <p style="color:var(--text-muted);margin-top:8px;font-size:14px;">NLPLab의 연구 성과를 확인하세요</p>
+</div>
+
+<div class="section" style="margin-bottom:60px">
+  <div class="filter-bar">
+    <button class="filter-btn active" data-filter="all">전체</button>
+    <button class="filter-btn" data-filter="conf">국제학술대회</button>
+    <button class="filter-btn" data-filter="journal">국제저널</button>
+    <button class="filter-btn" data-filter="domestic">국내</button>
+    <!--<button class="filter-btn" data-filter="domestic">Machine Learning for NLP</button>
+    <button class="filter-btn" data-filter="domestic">Knowledge Graph for NLP</button>
+    <button class="filter-btn" data-filter="domestic">Retrieval Augmented Generation</button>
+    <button class="filter-btn" data-filter="domestic">Dialogue System</button>
+    <button class="filter-btn" data-filter="domestic">LLM Interpretability & Analysis</button>
+    <button class="filter-btn" data-filter="domestic">LLM Efficiency</button>
+    <button class="filter-btn" data-filter="domestic">Ethics</button>-->
+  </div>
+
+  <!-- ── 2026 ── -->
+  <div class="year-group" data-year="2026">
+    <div class="year-label">2026</div>
+
+    <div class="pub-entry" data-cat="conf">
+      <span class="pub-venue">ACL<br/>2026</span>
+      <div>
+        <div class="pub-title">ConvX: A Lightweight Converter to Bridge Indexed Dense Representations and Large Language Models for Retrieval-Augmented Generation</div>
+        <div class="pub-authors">Bonggeun Choi, Keunha Kim, Junho Han and Youngjoong Ko</div>
+        <div class="pub-meta">ACL 2026 (findings), San Diego, California, USA · BK Plus Computer Science IF=4</div>
+        <div class="pub-actions">
+          <a class="pub-link" href="https://nlp.skku.edu/publications.html#IC">Link</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="journal">
+      <span class="pub-venue journal">CSL<br/>Elsevier</span>
+      <div>
+        <div class="pub-title">Dynamic Persona Generation through Commonsense Inference in Dialogues</div>
+        <div class="pub-authors">HongHee Lee and Youngjoong Ko</div>
+        <div class="pub-meta">Computer Speech and Language, Vol. 96, pp. 101896, February 2026 · SCIE, IF=3.4</div>
+        <div class="pub-actions">
+          <a class="pub-link" href="https://www.sciencedirect.com/science/article/pii/S0885230825001214?dgcid=author">Publisher</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="domestic">
+      <span class="pub-venue domestic">KIISE<br/>2026</span>
+      <div>
+        <div class="pub-title">Korean Paper Based Retrieval Augmented Generation Dataset (한국어 논문 기반 검색 증강 생성 데이터셋)</div>
+        <div class="pub-authors">Junho Han, Minjun Choi, Keunha Kim and Youngjoong Ko</div>
+        <div class="pub-meta">Journal of KIISE, Vol. 53, No. 3, pp. 205-216, March 2026</div>
+        <div class="pub-actions">
+          <a class="pub-link" href="https://jok.kiise.or.kr/digital-library/106052">KIISE</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 2025 ── -->
+  <div class="year-group" data-year="2025">
+    <div class="year-label">2025</div>
+
+    <div class="pub-entry" data-cat="conf">
+      <span class="pub-venue">EMNLP<br/>2025</span>
+      <div>
+        <div class="pub-title">ECO Decoding: Entropy-Based Control for Controllability and Fluency in Controllable Dialogue Generation</div>
+        <div class="pub-authors">Seungmin Shin, Dooyoung Kim and Youngjoong Ko</div>
+        <div class="pub-meta">EMNLP 2025, Suzhou, China, November 2025 · BK Plus Computer Science IF=3</div>
+        <div class="pub-actions">
+          <a class="pub-link" href="https://aclanthology.org/2025.emnlp-main.1437/">Link</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="conf">
+      <span class="pub-venue">EMNLP<br/>2025</span>
+      <div>
+        <div class="pub-title">Decoding Dense Embeddings: Sparse Autoencoders for Interpreting and Discretizing Dense Retrieval</div>
+        <div class="pub-authors">Seongwan Park, Taelim Kim and Youngjoong Ko</div>
+        <div class="pub-meta">EMNLP 2025, Suzhou, China, November 2025 · BK Plus Computer Science IF=3</div>
+        <div class="pub-actions">
+          <a class="pub-link" href="https://aclanthology.org/2025.emnlp-main.1345/">Link</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="conf">
+      <span class="pub-venue">ACL<br/>2025</span>
+      <div>
+        <div class="pub-title">DAPI: Domain Adaptive Toxicity Probe Vector Intervention, for Fine-Grained Detoxification</div>
+        <div class="pub-authors">Hyeonsu Cho, Dooyoung Kim and Youngjoong Ko</div>
+        <div class="pub-meta">ACL 2025 (findings), Vienna, Austria, July 2025 · BK Plus Computer Science IF=4</div>
+        <div class="pub-actions">
+          <a class="pub-link" href="https://aclanthology.org/2025.findings-acl.779/">Link</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="journal">
+      <span class="pub-venue journal">ESWA<br/>Elsevier</span>
+      <div>
+        <div class="pub-title">Robust Fine-tuning for Low-resource NLP: Combining Adversarial and Metric-based Learning to Mitigate Overfitting</div>
+        <div class="pub-authors">Kyuri Choi and Youngjoong Ko</div>
+        <div class="pub-meta">Expert Systems With Applications, Vol. 288, pp. 127737, September 2025 · SCIE, IF=7.5 (Top 10%)</div>
+        <div class="pub-actions">
+          <a class="pub-link" href="https://www.sciencedirect.com/science/article/abs/pii/S0957417425013594">Publisher</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="journal">
+      <span class="pub-venue journal">PRL<br/>Elsevier</span>
+      <div>
+        <div class="pub-title">Soft Engagement with Pseudo Initiatives for Multi-Party Dialogue Generation</div>
+        <div class="pub-authors">Youngjae Chang and Youngjoong Ko</div>
+        <div class="pub-meta">Pattern Recognition Letters, Vol. 191, pp. 103-109, May 2025 · SCIE, IF=3.9</div>
+        <div class="pub-actions">
+          <a class="pub-link" href="https://www.sciencedirect.com/user/error/ATP-2?pii=S0167865525000856">Publisher</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="domestic">
+      <span class="pub-venue domestic">KIISE<br/>2025</span>
+      <div>
+        <div class="pub-title">Persona Extraction System via Quadruple Analysis (사중항 분석을 통한 페르소나 추출 시스템)</div>
+        <div class="pub-authors">Sangwon Yoon and Youngjoong Ko</div>
+        <div class="pub-meta">Journal of KIISE, Vol. 52, No. 10, pp. 869-878, October 2025</div>
+        <div class="pub-actions">
+          <a class="pub-link" href="https://jok.kiise.or.kr/digital-library/103349">KIISE</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="domestic">
+      <span class="pub-venue domestic">KIISE<br/>2025</span>
+      <div>
+        <div class="pub-title">Sylender: A Syllable-Enhanced Transformer Encoder Model Incorporating Korean Morphosyntactic Structure</div>
+        <div class="pub-authors">Yumin Heo, Jiwon Heo, Minjun Choi and Youngjoong Ko</div>
+        <div class="pub-meta">Journal of KIISE, Vol. 52, No. 10, pp. 860-868, October 2025</div>
+        <div class="pub-actions">
+          <a class="pub-link" href="https://jok.kiise.or.kr/digital-library/103348">KIISE</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="domestic">
+      <span class="pub-venue domestic">KIISE<br/>2025</span>
+      <div>
+        <div class="pub-title">SyllaBERT: A Syllable-Based Efficient Robust Transformer Model for Real-World Noise and Typographical Errors</div>
+        <div class="pub-authors">Sungwan Park, Yumin Heo and Youngjoong Ko</div>
+        <div class="pub-meta">Journal of KIISE, Vol. 52, No. 3, pp. 250-259, March 2025</div>
+        <div class="pub-actions">
+          <a class="pub-link" href="https://www.dbpia.co.kr/pdf/pdfView.do?nodeId=NODE12109170">DBpia</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 2024 ── -->
+  <div class="year-group" data-year="2024">
+    <div class="year-label">2024</div>
+
+    <div class="pub-entry" data-cat="conf">
+      <span class="pub-venue">EMNLP<br/>2024</span>
+      <div>
+        <div class="pub-title">Hyper-QKSG: Framework for Automating Query Generation and Knowledge-Snippet Extraction from Tables and Lists</div>
+        <div class="pub-authors">Dooyoung Kim, Yoonjin Jang, Dongwook Shin, Chanhoon Park and Youngjoong Ko</div>
+        <div class="pub-meta">EMNLP 2024 (Industry Track), Miami, Florida, USA · BK Plus Computer Science IF=3</div>
+        <div class="pub-actions">
+          <a class="pub-link" href="https://aclanthology.org/2024.emnlp-industry.100/">Link</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="conf">
+      <span class="pub-venue">EMNLP<br/>2024</span>
+      <div>
+        <div class="pub-title">RAC: Retrieval-augmented Conversation Dataset for Open-domain Question Answering in Conversational Settings</div>
+        <div class="pub-authors">Bonggeun Choi, Jeongjae Park, Yoonsung Kim, Jae-Hyun Park and Youngjoong Ko</div>
+        <div class="pub-meta">EMNLP 2024 (Industry Track), Miami, Florida, USA · BK Plus Computer Science IF=3</div>
+        <div class="pub-actions">
+          <a class="pub-link" href="https://aclanthology.org/2024.emnlp-industry.108/">Link</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="journal">
+      <span class="pub-venue journal">TASLP<br/>IEEE</span>
+      <div>
+        <div class="pub-title">Two-step Masked Language Model for Domain-adapting Multi-modal Task-oriented Dialogue Systems</div>
+        <div class="pub-authors">Youngjae Chang and Youngjoong Ko</div>
+        <div class="pub-meta">IEEE/ACM Transactions on Audio, Speech and Language Processing, Vol. 32, pp. 2938-2943, June 2024 · SCIE, IF=4.1 (Top 10%)</div>
+        <div class="pub-actions">
+          <a class="pub-link" href="https://ieeexplore.ieee.org/document/10209234">Publisher</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="journal">
+      <span class="pub-venue journal">ESWA<br/>Elsevier</span>
+      <div>
+        <div class="pub-title">Query-Focused Summarization with the Context-Graph Information Fusion Transformer</div>
+        <div class="pub-authors">Choongwon Park and Youngjoong Ko</div>
+        <div class="pub-meta">Expert Systems With Applications, Vol. 241, pp. 122699, May 2024 · SCIE, IF=8.5 (Top 10%)</div>
+        <div class="pub-actions">
+          <a class="pub-link" href="https://authors.elsevier.com/a/1i9kk3PiGTPixD">Publisher</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="journal">
+      <span class="pub-venue journal">PRL<br/>Elsevier</span>
+      <div>
+        <div class="pub-title">SPACE: Senti-Prompt As Classifying Embedding for sentiment analysis</div>
+        <div class="pub-authors">Jinyoung Kim and Youngjoong Ko</div>
+        <div class="pub-meta">Pattern Recognition Letters, Vol. 180, pp. 62-67, April 2024 · SCIE, IF=5.1</div>
+        <div class="pub-actions">
+          <a class="pub-link" href="https://www.sciencedirect.com/science/article/pii/S0167865524000552">Publisher</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="domestic">
+      <span class="pub-venue domestic">KIISE<br/>2024</span>
+      <div>
+        <div class="pub-title">Korean Dependency Parsing Using Sequence Labeling (순차적 레이블링을 통한 한국어 의존 구문분석)</div>
+        <div class="pub-authors">Keunha Kim and Youngjoong Ko</div>
+        <div class="pub-meta">Journal of KIISE, Vol. 51, No. 12, pp. 1053-1060, December 2024</div>
+        <div class="pub-actions">
+          <a class="pub-link" href="https://www.dbpia.co.kr/pdf/pdfView.do?nodeId=NODE12007526">DBpia</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="domestic">
+      <span class="pub-venue domestic">KIISE<br/>2024</span>
+      <div>
+        <div class="pub-title">Explainable Video Search System using Token Space-based Representation (토큰 공간 기반 표상을 활용한 설명가능 동영상 검색 시스템)</div>
+        <div class="pub-authors">Jiyeol Park, Dooyoung Kim and Youngjoong Ko</div>
+        <div class="pub-meta">Journal of KIISE, Vol. 51, No. 12, pp. 1068-1077, December 2024</div>
+        <div class="pub-actions">
+          <a class="pub-link" href="https://www.dbpia.co.kr/pdf/pdfView.do?nodeId=NODE12007528">DBpia</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="domestic">
+      <span class="pub-venue domestic">KIISE<br/>2024</span>
+      <div>
+        <div class="pub-title">Topic-Aware Cross-Attention for Dialogue Summarization (주제 인식 교차 주의를 활용한 대화 요약)</div>
+        <div class="pub-authors">Suyoung Min and Youngjoong Ko</div>
+        <div class="pub-meta">Journal of KIISE, Vol. 51, No. 11, pp. 1011-1019, November 2024</div>
+        <div class="pub-actions">
+          <a class="pub-link" href="https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003136965">KCI</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="domestic">
+      <span class="pub-venue domestic">KIISE<br/>2024</span>
+      <div>
+        <div class="pub-title">Explainable Supporting Facts Generation via Query-Focused Multi-Document Summarization for Open Domain Question Answering Model</div>
+        <div class="pub-authors">Haeun Lee and Youngjoong Ko</div>
+        <div class="pub-meta">Journal of KIISE, Vol. 51, No. 11, pp. 1020-1027, November 2024</div>
+        <div class="pub-actions">
+          <a class="pub-link" href="https://www.dbpia.co.kr/pdf/pdfView.do?nodeId=NODE11988983">DBpia</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="domestic">
+      <span class="pub-venue domestic">TKIPS<br/>2024</span>
+      <div>
+        <div class="pub-title">Syllable-Level Lightweight Korean POS Tagger using Transformer Encoder (트랜스포머 인코더를 활용한 음절 단위 경량화 형태소 분석기)</div>
+        <div class="pub-authors">Suyoung Min and Youngjoong Ko</div>
+        <div class="pub-meta">TKIPS, Vol. 13, No. 10, pp. 553-558, October 2024</div>
+        <div class="pub-actions">
+          <a class="pub-link" href="https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART003134493">KCI</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="domestic">
+      <span class="pub-venue domestic">KIISE<br/>2024</span>
+      <div>
+        <div class="pub-title">Generating Relation Descriptions with Large Language Model for Link Prediction (지식 그래프의 링크 예측을 위한 거대 언어 모델 기반 관계 설명문 생성 방법)</div>
+        <div class="pub-authors">Hyunmook Cha and Youngjoong Ko</div>
+        <div class="pub-meta">Journal of KIISE, Vol. 51, No. 10, pp. 908-917, October 2024</div>
+        <div class="pub-actions">
+          <a class="pub-link" href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11464994">DBpia</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="domestic">
+      <span class="pub-venue domestic">KIISE<br/>2024</span>
+      <div>
+        <div class="pub-title">Expected Addressee and Target Utterance Prediction for Construction of Multi-Party Dialogue Systems (다자간 대화 시스템을 위한 예상 수신자 및 타겟발화 예측 태스크)</div>
+        <div class="pub-authors">Yoonjin Jang, Keunha Kim and Youngjoong Ko</div>
+        <div class="pub-meta">Journal of KIISE, Vol. 51, No. 10, pp. 918-927, October 2024</div>
+        <div class="pub-actions">
+          <a class="pub-link" href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11464994">DBpia</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="domestic">
+      <span class="pub-venue domestic">KIISE<br/>2024</span>
+      <div>
+        <div class="pub-title">Task-Oriented Dialogue System Using a Fusion Module between Knowledge Graphs (이종 그래프 간의 융합 모듈을 활용한 목적 지향 대화 응답 시스템)</div>
+        <div class="pub-authors">Jinyoung Kim, Hyunmook Cha and Youngjoong Ko</div>
+        <div class="pub-meta">Journal of KIISE, Vol. 51, No. 10, pp. 882-891, October 2024</div>
+        <div class="pub-actions">
+          <a class="pub-link" href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11464994">DBpia</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 2023 ── -->
+  <div class="year-group" data-year="2023">
+    <div class="year-label">2023</div>
+
+    <div class="pub-entry" data-cat="conf">
+      <span class="pub-venue">EMNLP<br/>2023</span>
+      <div>
+        <div class="pub-title">Topic-Informed Dialogue Summarization using Topic Distribution and Prompt-based Modeling</div>
+        <div class="pub-authors">Jaeah You and Youngjoong Ko</div>
+        <div class="pub-meta">EMNLP 2023 (findings), Singapore, December 2023 · BK Plus Computer Science IF=3</div>
+        <div class="pub-actions">
+          <a class="pub-link" href="https://aclanthology.org/2023.findings-emnlp.376/">Link</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="conf">
+      <span class="pub-venue">SIGdial<br/>2023</span>
+      <div>
+        <div class="pub-title">Contrastively Pretrained Vision-Language Transformers and Domain Adaptation Methods for Multimodal TOD Systems</div>
+        <div class="pub-authors">Youngjae Chang, Dooyoung Kim, Jinyoung Kim, Hyunmook Cha, Keunha Kim, Sooyoung Min, Youngjoong Ko, Kye-Hwan Lee and Joonwoo Park</div>
+        <div class="pub-meta">DSTC11 Workshop @ SIGdial 2023, Prague</div>
+        <div class="pub-actions">
+          <a class="pub-link" href="https://aclanthology.org/2023.dstc-1.4/">Link</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="conf">
+      <span class="pub-venue">KDD<br/>2023</span>
+      <div>
+        <div class="pub-title">Statistical and Generative Models with Subtitle Extraction for Next Product Title Generation</div>
+        <div class="pub-authors">Honghee Lee, Youngjae Chang, Kyuri Choi, Jongwuk Lee and Youngjoong Ko</div>
+        <div class="pub-meta">KDD Cup 2023 Workshop @ KDD 2023, Long Beach, August 2023</div>
+        <div class="pub-actions">
+          <a class="pub-link" href="https://openreview.net/forum?id=K4h7LbK6SK">Link</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="conf">
+      <span class="pub-venue">WSDM<br/>2023</span>
+      <div>
+        <div class="pub-title">Never Too Late to Learn: Regularizing Gender Bias in Coreference Resolution</div>
+        <div class="pub-authors">Sunyoung Park, Kyuri Choi, Haeun Yu and Youngjoong Ko</div>
+        <div class="pub-meta">WSDM 2023, pp. 15-23, February 2023 · BK Plus Computer Science IF=3</div>
+        <div class="pub-actions">
+          <a class="pub-link" href="https://dl.acm.org/doi/abs/10.1145/3539597.3570473">Link</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="journal">
+      <span class="pub-venue journal">ESWA<br/>Elsevier</span>
+      <div>
+        <div class="pub-title">Efficient Framework for Low-Resource Abstractive Summarization by Meta-Transfer Learning and Pointer-Generator Networks</div>
+        <div class="pub-authors">Taehun Huh and Youngjoong Ko</div>
+        <div class="pub-meta">Expert Systems With Applications, Vol. 234, pp. 121029, December 2023 · SCIE, IF=8.5 (Top 10%)</div>
+        <div class="pub-actions">
+          <a class="pub-link" href="https://www.sciencedirect.com/science/article/pii/S0957417423015312">Publisher</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="journal">
+      <span class="pub-venue journal">PRL<br/>Elsevier</span>
+      <div>
+        <div class="pub-title">DiCeR: Dialogue-Centric Representation for Knowledge-Grounded Dialogue through Contrastive Learning</div>
+        <div class="pub-authors">Junhee Cho and Youngjoong Ko</div>
+        <div class="pub-meta">Pattern Recognition Letters, Vol. 172, pp. 151-157, August 2023 · SCIE, IF=5.1</div>
+        <div class="pub-actions">
+          <a class="pub-link" href="https://www.sciencedirect.com/science/article/pii/S0167865523001691">Publisher</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="journal">
+      <span class="pub-venue journal">PRL<br/>Elsevier</span>
+      <div>
+        <div class="pub-title">Meta-Learning with Topic-agnostic Representations for Zero-Shot Stance Detection</div>
+        <div class="pub-authors">Kyuri Choi and Youngjoong Ko</div>
+        <div class="pub-meta">Pattern Recognition Letters, Vol. 171, pp. 15-20, July 2023 · SCIE, IF=5.1</div>
+        <div class="pub-actions">
+          <a class="pub-link" href="https://www.sciencedirect.com/science/article/pii/S0167865523001332">Publisher</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="journal">
+      <span class="pub-venue journal">PRL<br/>Elsevier</span>
+      <div>
+        <div class="pub-title">Enriching the Dialogue State Tracking Model with a Syntactic Discourse Graph</div>
+        <div class="pub-authors">Haeun Yu and Youngjoong Ko</div>
+        <div class="pub-meta">Pattern Recognition Letters, Vol. 169, pp. 81-86, May 2023 · SCIE, IF=5.1</div>
+        <div class="pub-actions">
+          <a class="pub-link" href="https://www.sciencedirect.com/science/article/pii/S0167865523000958">Publisher</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="journal">
+      <span class="pub-venue journal">ESWA<br/>Elsevier</span>
+      <div>
+        <div class="pub-title">Graph-based Query Reformulation System for Descriptive Queries of Jargon Words using Definitions</div>
+        <div class="pub-authors">Bosung Kim, Hyewon Choi, Haeun Yu and Youngjoong Ko</div>
+        <div class="pub-meta">Expert Systems With Applications, Vol. 214, 119149, March 2023 · SCIE, IF=8.665</div>
+        <div class="pub-actions">
+          <a class="pub-link" href="https://www.sciencedirect.com/science/article/abs/pii/S0957417422021674">Publisher</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="journal">
+      <span class="pub-venue journal">CSL<br/>Elsevier</span>
+      <div>
+        <div class="pub-title">Knowledge-grounded Dialogue Modeling with Dialogue-State Tracking, Domain Tracking, and Entity Extraction</div>
+        <div class="pub-authors">Taesuk Hong, Junhee Cho, Haeun Yu, Youngjoong Ko and Jungyun Seo</div>
+        <div class="pub-meta">Computer Speech and Language, Vol. 78, pp. 101460, March 2023 · SCIE, IF=3.252</div>
+        <div class="pub-actions">
+          <a class="pub-link" href="https://www.sciencedirect.com/science/article/pii/S0885230822000833">Publisher</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="journal">
+      <span class="pub-venue journal">KBS<br/>Elsevier</span>
+      <div>
+        <div class="pub-title">Knowledge Graph Extension with a Pre-trained Language Model via Unified Learning Method</div>
+        <div class="pub-authors">Bonggeun Choi and Youngjoong Ko</div>
+        <div class="pub-meta">Knowledge-Based Systems, Vol. 262, pp. 110245, February 2023 · SCIE, IF=8.139</div>
+        <div class="pub-actions">
+          <a class="pub-link" href="https://www.sciencedirect.com/science/article/pii/S0950705122013417?dgcid=author">Publisher</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="domestic">
+      <span class="pub-venue domestic">KIISE<br/>2023</span>
+      <div>
+        <div class="pub-title">Multi-task Learning Based Re-ranker for External Knowledge Retrieval in Document-grounded Dialogue systems</div>
+        <div class="pub-authors">Honghee Lee and Youngjoong Ko</div>
+        <div class="pub-meta">Journal of KIISE, Vol. 50, No. 7, pp. 606-613, July 2023</div>
+        <div class="pub-actions">
+          <a class="pub-link" href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11464994">DBpia</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="domestic">
+      <span class="pub-venue domestic">KIISE<br/>2023</span>
+      <div>
+        <div class="pub-title">Video Retrieval System using One-to-one Relation between Clip-Sentence Sequence (클립-문장열의 일대일대응 관계를 이용한 동영상 검색 시스템)</div>
+        <div class="pub-authors">Dooyoung Kim and Youngjoong Ko</div>
+        <div class="pub-meta">Journal of KIISE, Vol. 50, No. 6, pp. 476-483, June 2023</div>
+        <div class="pub-actions">
+          <a class="pub-link" href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11435972">DBpia</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 2022 ── -->
+  <div class="year-group" data-year="2022">
+    <div class="year-label">2022</div>
+
+    <div class="pub-entry" data-cat="conf">
+      <span class="pub-venue">SIGIR<br/>2022</span>
+      <div>
+        <div class="pub-title">QSG Transformer: Transformer with Query-Attentive Semantic Graph for Query-Focused Summarization</div>
+        <div class="pub-authors">Choongwon Park and Youngjoong Ko</div>
+        <div class="pub-meta">SIGIR 2022, pp. 2589-2594, Madrid, Spain, July 2022 · BK Plus Computer Science IF=4</div>
+        <div class="pub-actions">
+          <a class="pub-link" href="https://dl.acm.org/doi/10.1145/3477495.3531901">Link</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="conf">
+      <span class="pub-venue">SIGIR<br/>2022</span>
+      <div>
+        <div class="pub-title">Lightweight Meta-Learning for Low-Resource Abstractive Summarization</div>
+        <div class="pub-authors">Taehun Huh and Youngjoong Ko</div>
+        <div class="pub-meta">SIGIR 2022, pp. 2629-2633, Madrid, Spain, July 2022 · BK Plus Computer Science IF=4</div>
+        <div class="pub-actions">
+          <a class="pub-link" href="https://dl.acm.org/doi/abs/10.1145/3477495.3531908">Link</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="conf">
+      <span class="pub-venue">AAAI<br/>2022</span>
+      <div>
+        <div class="pub-title">Domain Adaptive Task-Oriented Dialog System for Deep Understanding of Multimodal Conversation</div>
+        <div class="pub-authors">Dongcheol Son, Youngjae Chang, Youngjoong Ko and Jaehwan Lee</div>
+        <div class="pub-meta">DSTC10 Workshop @ AAAI 2022, Virtual Conference, March 2022</div>
+        <div class="pub-actions">
+          <a class="pub-link" href="https://dstc10.dstc.community/">Link</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="conf">
+      <span class="pub-venue">AAAI<br/>2022</span>
+      <div>
+        <div class="pub-title">Adapting Pre-trained Language Model for Dialogue State Tracking on Spoken Conversations</div>
+        <div class="pub-authors">Haeun Yu, Taesuk Hong, Youngjoong Ko and Kwangyong Lee</div>
+        <div class="pub-meta">DSTC10 Workshop @ AAAI 2022, Virtual Conference, March 2022</div>
+        <div class="pub-actions">
+          <a class="pub-link" href="https://dstc10.dstc.community/">Link</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="conf">
+      <span class="pub-venue">AAAI<br/>2022</span>
+      <div>
+        <div class="pub-title">Various Uses of Pre-trained Language Model for a Knowledge-grounded Task Oriented Dialogue System</div>
+        <div class="pub-authors">Junhee Cho, Taesuk Hong, Choongwon Park, Jaeah You, Youngjoong Ko and Kwanyoung Son</div>
+        <div class="pub-meta">DSTC10 Workshop @ AAAI 2022, Virtual Conference, March 2022</div>
+        <div class="pub-actions">
+          <a class="pub-link" href="https://dstc10.dstc.community/">Link</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="journal">
+      <span class="pub-venue journal">ESWA<br/>Elsevier</span>
+      <div>
+        <div class="pub-title">BERT-based Response Selection in Dialogue Systems using Utterance Attention Mechanisms</div>
+        <div class="pub-authors">Yeongjoong Park, Youngjoong Ko and Jungyun Seo</div>
+        <div class="pub-meta">Expert Systems With Applications, Vol. 209, 118277, December 2022 · SCIE, IF=8.665</div>
+        <div class="pub-actions">
+          <a class="pub-link" href="https://www.sciencedirect.com/science/article/pii/S0957417422014166">Publisher</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="journal">
+      <span class="pub-venue journal">IEEE<br/>Access</span>
+      <div>
+        <div class="pub-title">Multi-task Fine-tuning for Passage Re-ranking Using BM25 and Pseudo Relevance Feedback</div>
+        <div class="pub-authors">Meongjun Kim and Youngjoong Ko</div>
+        <div class="pub-meta">IEEE ACCESS, Vol. 10, pp. 54254-54262, May 2022 · SCIE, IF=3.367</div>
+        <div class="pub-actions">
+          <a class="pub-link" href="https://ieeexplore.ieee.org/document/9779725?source=authoralert">Publisher (Open Access)</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="journal">
+      <span class="pub-venue journal">PRL<br/>Elsevier</span>
+      <div>
+        <div class="pub-title">Effective Fake News Video Detection Using Domain Knowledge and Multimodal Data Fusion on YouTube</div>
+        <div class="pub-authors">Hyewon Choi and Youngjoong Ko</div>
+        <div class="pub-meta">Pattern Recognition Letters, Vol. 154, pp. 44-52, February 2022 · SCIE, IF=4.757</div>
+        <div class="pub-actions">
+          <a class="pub-link" href="https://www.sciencedirect.com/science/article/pii/S0167865522000071?dgcid=author">Publisher</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="journal">
+      <span class="pub-venue journal">ESWA<br/>Elsevier</span>
+      <div>
+        <div class="pub-title">Novel Regularization Method for the Class Imbalance Problem</div>
+        <div class="pub-authors">Bosung Kim, Youngjoong Ko and Jungyun Seo</div>
+        <div class="pub-meta">Expert Systems With Applications, Vol. 188, pp. 115974, February 2022 · SCIE, IF=6.954</div>
+        <div class="pub-actions">
+          <a class="pub-link" href="https://www.sciencedirect.com/science/article/abs/pii/S0957417421013245?via%3Dihub">Publisher</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="domestic">
+      <span class="pub-venue domestic">KSC<br/>2022</span>
+      <div>
+        <div class="pub-title">Speech-Act Classification Using a Pretrained Language Model and Graph Attention Network</div>
+        <div class="pub-authors">Jinyoung Kim, Bonggeun Choi and Youngjoong Ko</div>
+        <div class="pub-meta">Korea Software Congress 2022 (KSC 2022), pp. 383-385, December 2022</div>
+        <div class="pub-actions">
+          <a class="pub-link" href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11224112">DBpia</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="domestic">
+      <span class="pub-venue domestic">KSC<br/>2022</span>
+      <div>
+        <div class="pub-title">Korean Semantic Role Labeling by Constructing Eojeol Embedding based on BERT <span style="color:#2060a0;font-size:12px;">(Best Paper Award)</span></div>
+        <div class="pub-authors">Hyunmook Cha, Bonggeun Choi and Youngjoong Ko</div>
+        <div class="pub-meta">Korea Software Congress 2022 (KSC 2022), pp. 1430-1432, December 2022</div>
+        <div class="pub-actions">
+          <a class="pub-link" href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11224461">DBpia</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="domestic">
+      <span class="pub-venue domestic">KSC<br/>2022</span>
+      <div>
+        <div class="pub-title">Dependency Parsing with BERT based on Wordpiece</div>
+        <div class="pub-authors">Keunha Kim, Bonggeun Choi and Youngjoong Ko</div>
+        <div class="pub-meta">Korea Software Congress 2022 (KSC 2022), pp. 1436-1438, December 2022</div>
+        <div class="pub-actions">
+          <a class="pub-link" href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11224463">DBpia</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="domestic">
+      <span class="pub-venue domestic">KSC<br/>2022</span>
+      <div>
+        <div class="pub-title">Prompt-based Named Entity Recognition using Named Entity Clue Dictionary <span style="color:#2060a0;font-size:12px;">(Best Paper Award)</span></div>
+        <div class="pub-authors">Haeun Lee, Bonggeun Choi and Youngjoong Ko</div>
+        <div class="pub-meta">Korea Software Congress 2022 (KSC 2022), pp. 1427-1429, December 2022</div>
+        <div class="pub-actions">
+          <a class="pub-link" href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11224460">DBpia</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="domestic">
+      <span class="pub-venue domestic">KIISE<br/>2022</span>
+      <div>
+        <div class="pub-title">Structuralized External Knowledge and Multi-task Learning for Knowledge Selection (외부 지식의 정형화와 멀티 태스크 학습을 통한 지식 선택 모델)</div>
+        <div class="pub-authors">Junhee Cho and Youngjoong Ko</div>
+        <div class="pub-meta">Journal of KIISE, Vol. 49, No. 10, pp. 884-890, October 2022</div>
+        <div class="pub-actions">
+          <a class="pub-link" href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11149419">DBpia</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="domestic">
+      <span class="pub-venue domestic">KIISE<br/>2022</span>
+      <div>
+        <div class="pub-title">Entity Graph Based Dialogue State Tracking Model with Data Collection and Augmentation for Spoken Conversation</div>
+        <div class="pub-authors">Haeun Yu and Youngjoong Ko</div>
+        <div class="pub-meta">Journal of KIISE, Vol. 49, No. 10, pp. 891-897, October 2022</div>
+        <div class="pub-actions">
+          <a class="pub-link" href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11149420">DBpia</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 2021 ── -->
+  <div class="year-group" data-year="2021">
+    <div class="year-label">2021</div>
+
+    <div class="pub-entry" data-cat="conf">
+      <span class="pub-venue">NAACL<br/>2021</span>
+      <div>
+        <div class="pub-title">Fine-grained Post-training for Improving Retrieval-based Dialogue Systems</div>
+        <div class="pub-authors">Janghoon Han, Taesuk Hong, Byoungjae Kim, Youngjoong Ko and Jungyun Seo</div>
+        <div class="pub-meta">NAACL 2021, pp. 1549–1558, Virtual Conference, June 2021 · BK Plus Computer Science IF=2</div>
+        <div class="pub-actions"><a class="pub-link" href="https://aclanthology.org/2021.naacl-main.122/">Link</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="conf">
+      <span class="pub-venue">EACL<br/>2021</span>
+      <div>
+        <div class="pub-title">Graph-based Fake News Detection using a Summarization Technique</div>
+        <div class="pub-authors">Gihwan Kim and Youngjoong Ko</div>
+        <div class="pub-meta">EACL 2021, pp. 3276–3280, Virtual Conference, April 2021 · BK Plus Computer Science IF=2</div>
+        <div class="pub-actions"><a class="pub-link" href="https://aclanthology.org/2021.eacl-main.287/">Link</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="conf">
+      <span class="pub-venue">AAAI<br/>2021</span>
+      <div>
+        <div class="pub-title">Commonsense Knowledge Augmentation for Low-Resource Languages via Adversarial Learning</div>
+        <div class="pub-authors">Bosung Kim, Juae Kim, Youngjoong Ko and Jungyun Seo</div>
+        <div class="pub-meta">AAAI 2021, Vol. 35, No. 7, pp. 6393-6401, Virtual Conference · BK Plus Computer Science IF=4</div>
+        <div class="pub-actions"><a class="pub-link" href="https://ojs.aaai.org/index.php/AAAI/article/view/16793">Link</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="conf">
+      <span class="pub-venue">CIKM<br/>2021</span>
+      <div>
+        <div class="pub-title">Query Reformulation for Descriptive Queries of Jargon Words Using a Knowledge Graph based on a Dictionary</div>
+        <div class="pub-authors">Bosung Kim, Hyewon Choi, Haeun Yu and Youngjoong Ko</div>
+        <div class="pub-meta">CIKM 2021, pp. 854–862, Virtual Conference, November 2021 · BK Plus Computer Science IF=3</div>
+        <div class="pub-actions"><a class="pub-link" href="https://dl.acm.org/doi/10.1145/3459637.3482382">Link</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="conf">
+      <span class="pub-venue">CIKM<br/>2021</span>
+      <div>
+        <div class="pub-title">Self-supervised Fine-tuning for Efficient Passage Re-ranking</div>
+        <div class="pub-authors">Meoungjun Kim and Youngjoong Ko</div>
+        <div class="pub-meta">CIKM 2021, pp. 3142–3146, Virtual Conference, November 2021 · BK Plus Computer Science IF=3</div>
+        <div class="pub-actions"><a class="pub-link" href="https://dl.acm.org/doi/abs/10.1145/3459637.3482179">Link</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="conf">
+      <span class="pub-venue">CIKM<br/>2021</span>
+      <div>
+        <div class="pub-title">Self-Supervised Learning based on Sentiment Analysis with Word Weight Calculation</div>
+        <div class="pub-authors">Dongcheol Son and Youngjoong Ko</div>
+        <div class="pub-meta">CIKM 2021, pp. 3428–3432, Virtual Conference, November 2021 · BK Plus Computer Science IF=3</div>
+        <div class="pub-actions"><a class="pub-link" href="https://dl.acm.org/doi/abs/10.1145/3459637.3482180">Link</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="conf">
+      <span class="pub-venue">CIKM<br/>2021</span>
+      <div>
+        <div class="pub-title">Using Topic Modeling and Adversarial Neural Networks for Fake News Video Detection</div>
+        <div class="pub-authors">Hyewon Choi and Youngjoong Ko</div>
+        <div class="pub-meta">CIKM 2021, pp. 2950–2954, Virtual Conference, November 2021 · BK Plus Computer Science IF=3</div>
+        <div class="pub-actions"><a class="pub-link" href="https://dl.acm.org/doi/abs/10.1145/3459637.3482212">Link</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="conf">
+      <span class="pub-venue">AAAI<br/>2021</span>
+      <div>
+        <div class="pub-title">Improving Multimodal API Prediction via Adding Dialog State and Various Multimodal Gates</div>
+        <div class="pub-authors">Byoungjae Kim, Inkwon Lee, Yeonseok Jeong, Youngjoong Ko, Myoung-Wan Koo and Jungyun Seo</div>
+        <div class="pub-meta">DSTC9 Workshop @ AAAI 2021, Virtual Conference</div>
+        <div class="pub-actions"><a class="pub-link" href="https://dstc9.dstc.community/aaai-21-workshop">Link</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="conf">
+      <span class="pub-venue">AAAI<br/>2021</span>
+      <div>
+        <div class="pub-title">TOM: End-to-End Task-Oriented Multi-Modal Dialogue System with GPT-2</div>
+        <div class="pub-authors">Younghoon Jeong, Sejin Lee, Youngjoong Ko and Jungyun Seo</div>
+        <div class="pub-meta">DSTC9 Workshop @ AAAI 2021, Virtual Conference</div>
+        <div class="pub-actions"><a class="pub-link" href="https://dstc9.dstc.community/aaai-21-workshop">Link</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="journal">
+      <span class="pub-venue journal">IPM<br/>Elsevier</span>
+      <div>
+        <div class="pub-title">Word Sense Disambiguation based on Context Selection using Knowledge-based Word Similarity</div>
+        <div class="pub-authors">Sunjae Kwon, Dongsuk O and Youngjoong Ko</div>
+        <div class="pub-meta">Information Processing and Management, Vol. 58, No. 4, pp. 102551, July 2021 · SCIE, IF=6.222</div>
+        <div class="pub-actions"><a class="pub-link" href="https://www.sciencedirect.com/science/article/pii/S0306457321000558?dgcid=author">Publisher</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="journal">
+      <span class="pub-venue journal">JIS<br/>SAGE</span>
+      <div>
+        <div class="pub-title">Parallel Sentence Extraction to Improve Cross-Language Information Retrieval from Wikipedia</div>
+        <div class="pub-authors">Juryong Cheon and Youngjoong Ko</div>
+        <div class="pub-meta">Journal of Information Science, Vol. 47, No. 2, pp. 281-293, April 2021 · SCIE, IF=3.282</div>
+        <div class="pub-actions"><a class="pub-link" href="https://journals.sagepub.com/doi/10.1177/0165551521992754">Publisher</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="journal">
+      <span class="pub-venue journal">PRL<br/>Elsevier</span>
+      <div>
+        <div class="pub-title">Effective Fake News Detection using Graph and Summarization Techniques</div>
+        <div class="pub-authors">Gihwan Kim and Youngjoong Ko</div>
+        <div class="pub-meta">Pattern Recognition Letters, Vol. 151, pp. 135-139, November 2021 · SCIE, IF=3.756</div>
+        <div class="pub-actions"><a class="pub-link" href="https://www.sciencedirect.com/science/article/pii/S0167865521002695?dgcid=author">Publisher</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="journal">
+      <span class="pub-venue journal">IEEE<br/>Access</span>
+      <div>
+        <div class="pub-title">Using Adversarial Learning and Biterm Topic Model for an Effective Fake News Video Detection System on Heterogeneous Topics and Short Texts</div>
+        <div class="pub-authors">Hyewon Choi and Youngjoong Ko</div>
+        <div class="pub-meta">IEEE ACCESS, Vol. 9, pp. 164846-164853, October 2021 · SCIE, IF=3.367</div>
+        <div class="pub-actions"><a class="pub-link" href="https://ieeexplore.ieee.org/document/9585513">Publisher (Open Access)</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="journal">
+      <span class="pub-venue journal">IEEE<br/>Access</span>
+      <div>
+        <div class="pub-title">MEM-KGC: Masked Entity Modeling for Knowledge Graph Completion with Pre-trained Language Model</div>
+        <div class="pub-authors">Bonggeun Choi, Daesik Jang and Youngjoong Ko</div>
+        <div class="pub-meta">IEEE ACCESS, Vol. 9, pp. 132025-132032, September 2021 · SCIE, IF=3.367</div>
+        <div class="pub-actions"><a class="pub-link" href="https://ieeexplore.ieee.org/document/9540703">Publisher (Open Access)</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="domestic">
+      <span class="pub-venue domestic">KIISE<br/>2021</span>
+      <div>
+        <div class="pub-title">External Knowledge Incorporated BERT for Retrieval-based Dialogue Systems (외부 지식이 반영된 BERT를 활용한 검색 기반 대화 시스템)</div>
+        <div class="pub-authors">Janghoon Han, Youngjoong Ko and Jungyun Seo</div>
+        <div class="pub-meta">Journal of KIISE Transactions on Computing Practices, Vol. 27, No. 12, pp. 549-554, December 2021</div>
+        <div class="pub-actions"><a class="pub-link" href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE10673767">DBpia</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="domestic">
+      <span class="pub-venue domestic">KIISE<br/>2021</span>
+      <div>
+        <div class="pub-title">Knowledge Graph Completion using Hyper-class Informative and Pre-trained Language Model (상위 클래스 정보와 사전 학습된 언어 모델을 이용한 지식 그래프 완성 모델)</div>
+        <div class="pub-authors">Daesik Jang and Youngjoong Ko</div>
+        <div class="pub-meta">Journal of KIISE, Vol. 48, No. 11, pp. 1128-1134, November 2021</div>
+        <div class="pub-actions"><a class="pub-link" href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE10662639">DBpia</a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 2020 ── -->
+  <div class="year-group" data-year="2020">
+    <div class="year-label">2020</div>
+
+    <div class="pub-entry" data-cat="conf">
+      <span class="pub-venue">COLING<br/>2020</span>
+      <div>
+        <div class="pub-title">Multi-Task Learning for Knowledge Graph Completion with Pre-trained Language Models</div>
+        <div class="pub-authors">Bosung Kim, Taesuk Hong, Youngjoong Ko and Jungyun Seo</div>
+        <div class="pub-meta">COLING 2020, pp. 1737–1743, Virtual Conference, December 2020 · BK Plus Computer Science IF=2</div>
+        <div class="pub-actions"><a class="pub-link" href="https://aclanthology.org/2020.coling-main.153/">Link</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="journal">
+      <span class="pub-venue journal">IEEE<br/>Access</span>
+      <div>
+        <div class="pub-title">Named-Entity Recognition Using Automatic Construction of Training Data from Social Media Messaging Apps</div>
+        <div class="pub-authors">Seungwook Lee and Youngjoong Ko</div>
+        <div class="pub-meta">IEEE ACCESS, Vol. 8, pp. 222724-222732, December 2020 · SCIE, IF=3.367</div>
+        <div class="pub-actions"><a class="pub-link" href="https://ieeexplore.ieee.org/document/9286444">Publisher (Open Access)</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="journal">
+      <span class="pub-venue journal">IEEE<br/>Access</span>
+      <div>
+        <div class="pub-title">Construction of Machine-Labeled Data for Improving Named Entity Recognition by Transfer Learning</div>
+        <div class="pub-authors">Juae Kim, Youngjoong Ko and Jungyun Seo</div>
+        <div class="pub-meta">IEEE ACCESS, Vol. 8, pp. 59684-59693, March 2020 · SCIE, IF=3.367</div>
+        <div class="pub-actions"><a class="pub-link" href="https://ieeexplore.ieee.org/document/9039649">Publisher (Open Access)</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="journal">
+      <span class="pub-venue journal">CSL<br/>Elsevier</span>
+      <div>
+        <div class="pub-title">Simple Methods to Overcome the Limitations of General Word Representations in Natural Language Processing Tasks</div>
+        <div class="pub-authors">Hongyeon Yu, Jaehyun An, Jeongmin Yoon, Hyemin Kim and Youngjoong Ko</div>
+        <div class="pub-meta">Computer Speech and Language, Vol. 59, pp. 91-113, January 2020 · SCIE, IF=1.899</div>
+        <div class="pub-actions"><a class="pub-link" href="https://www.sciencedirect.com/science/article/pii/S0885230818303140">Publisher</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="domestic">
+      <span class="pub-venue domestic">KIISE<br/>2020</span>
+      <div>
+        <div class="pub-title">Query-based Abstractive Summarization Using Sentence Ranking Score and Graph Technique (문장 랭킹 스코어와 그래프 기법을 사용한 질의 기반 생성 요약 모델)</div>
+        <div class="pub-authors">Gihwan Kim and Youngjoong Ko</div>
+        <div class="pub-meta">Journal of KIISE, Vol. 47, No. 12, pp. 1172-1180, December 2020</div>
+        <div class="pub-actions"><a class="pub-link" href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE10501408">DBpia</a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 2019 ── -->
+  <div class="year-group" data-year="2019">
+    <div class="year-label">2019</div>
+
+    <div class="pub-entry" data-cat="journal">
+      <span class="pub-venue journal">Entropy<br/>MDPI</span>
+      <div>
+        <div class="pub-title">Improving Neural Machine Translation by Filtering Synthetic Parallel Data</div>
+        <div class="pub-authors">Guanghao Xu, Youngjoong Ko and Jungyun Seo</div>
+        <div class="pub-meta">Entropy, Vol. 21, No. 12, pp. 1213, December 2019 · SCIE</div>
+        <div class="pub-actions"><a class="pub-link" href="https://www.mdpi.com/1099-4300/21/12/1213">Publisher (Open Access)</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="journal">
+      <span class="pub-venue journal">JASIST<br/>Wiley</span>
+      <div>
+        <div class="pub-title">Improving Question Retrieval in Community Question Answering Service using Dependency Relations and Question Classification</div>
+        <div class="pub-authors">Kyoungman Bae and Youngjoong Ko</div>
+        <div class="pub-meta">JASIST, Vol. 70, No. 11, pp. 1194-1209, November 2019 · SCIE, IF=2.410</div>
+        <div class="pub-actions"><a class="pub-link" href="https://asistdl.onlinelibrary.wiley.com/doi/full/10.1002/asi.24196">Publisher</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="journal">
+      <span class="pub-venue journal">CSL<br/>Elsevier</span>
+      <div>
+        <div class="pub-title">Unsupervised-learning Based Keyphrase Extraction from a Single Document by the Effective Combination of the Graph-based Model and the Modified C-value Method</div>
+        <div class="pub-authors">Hongseon Yeom, Youngjoong Ko and Jungyun Seo</div>
+        <div class="pub-meta">Computer Speech and Language, Vol. 58, pp. 304-318, November 2019 · SCIE</div>
+        <div class="pub-actions"><a class="pub-link" href="https://www.sciencedirect.com/science/article/pii/S088523081830408X">Publisher</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="journal">
+      <span class="pub-venue journal">JIIS<br/>Springer</span>
+      <div>
+        <div class="pub-title">Efficient question classification and retrieval using the category information and word embedding on cQA services</div>
+        <div class="pub-authors">Kyoungman Bae and Youngjoong Ko</div>
+        <div class="pub-meta">Journal of Intelligent Information Systems, Vol. 53, No. 1, pp. 27-49, August 2019 · SCIE, IF=2.116</div>
+        <div class="pub-actions"><a class="pub-link" href="https://link.springer.com/article/10.1007/s10844-019-00556-x">Publisher</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="journal">
+      <span class="pub-venue journal">IEEE<br/>Access</span>
+      <div>
+        <div class="pub-title">A Bootstrapping Approach with CRF and Deep Learning Models for Improving the Biomedical Named Entity Recognition in Multi-domains</div>
+        <div class="pub-authors">Juae Kim, Youngjoong Ko and Jungyun Seo</div>
+        <div class="pub-meta">IEEE Access, Vol. 7, pp. 70308-70318, June 2019 · SCIE, IF=3.745</div>
+        <div class="pub-actions"><a class="pub-link" href="https://ieeexplore.ieee.org/document/8703375">Publisher (Open Access)</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="journal">
+      <span class="pub-venue journal">PRL<br/>Elsevier</span>
+      <div>
+        <div class="pub-title">How to utilize syllable distribution patterns as the input of LSTM for Korean morphological analysis</div>
+        <div class="pub-authors">Hyemin Kim, Seon Yang and Youngjoong Ko</div>
+        <div class="pub-meta">Pattern Recognition Letters, Vol. 120, pp. 39-45, April 2019 · SCIE, IF=3.255</div>
+        <div class="pub-actions"><a class="pub-link" href="https://www.sciencedirect.com/science/article/abs/pii/S0167865518309383">Publisher</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="journal">
+      <span class="pub-venue journal">PRL<br/>Elsevier</span>
+      <div>
+        <div class="pub-title">Effective vector representation for the Korean named-entity recognition</div>
+        <div class="pub-authors">Sunjae Kwon, Youngjoong Ko and Jungyun Seo</div>
+        <div class="pub-meta">Pattern Recognition Letters, Vol. 117, pp. 52-57, January 2019 · SCIE, IF=3.255</div>
+        <div class="pub-actions"><a class="pub-link" href="https://www.sciencedirect.com/science/article/pii/S0167865518309061">Publisher</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="domestic">
+      <span class="pub-venue domestic">KIISE<br/>2019</span>
+      <div>
+        <div class="pub-title">Semi-automatic Expansion for a Chatting Corpus Based on a K-means Clustering Method And Similarity Measure (K-means 클러스터링 방법과 유사도 측정 기반의 채팅 말뭉치 반자동 확장 방법)</div>
+        <div class="pub-authors">Jaehyun An and Youngjoong Ko</div>
+        <div class="pub-meta">Journal of KIISE, Vol. 46, No. 5, pp. 440-447, May 2019</div>
+        <div class="pub-actions"><a class="pub-link" href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE08140453">DBpia</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="domestic">
+      <span class="pub-venue domestic">KIISE<br/>2019</span>
+      <div>
+        <div class="pub-title">Incremental Clustering and Multi-Document Summarization for Issue Analysis based on Real-time News (실시간 뉴스 기반의 이슈 분석을 위한 점증적 군집화 및 다중 문서 요약)</div>
+        <div class="pub-authors">Hongyun Yoo, Seunwoo Lee and Youngjoong Ko</div>
+        <div class="pub-meta">Journal of KIISE, Vol. 46, No. 4, pp. 355-362, April 2019</div>
+        <div class="pub-actions"><a class="pub-link" href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE08000289">DBpia</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="domestic">
+      <span class="pub-venue domestic">HCLT<br/>2019</span>
+      <div>
+        <div class="pub-title">Adaptive Context-sensitive Spelling Error Correction System Based on Self-attention for SNS Chatting Data</div>
+        <div class="pub-authors">Hyewon Choi, Daesik Jang, DongCheol Son, Seungwook Lee and Youngjoong Ko</div>
+        <div class="pub-meta">HCLT 2019, pp. 362-367, October 2019</div>
+        <div class="pub-actions"><a class="pub-link" href="http://koreascience.or.kr/article/CFKO201930060775845.page">KoreaScience</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="domestic">
+      <span class="pub-venue domestic">KCC<br/>2019</span>
+      <div>
+        <div class="pub-title">Semantic Role Labeling using the Korean ELMo Embedding (한국어 ELMo 임베딩을 이용한 의미역 결정)</div>
+        <div class="pub-authors">Chanmin Park, Yeongjoon Park, Youngjoong Ko and Jungyun Seo</div>
+        <div class="pub-meta">Korea Computer Congress 2019 (KCC 2019), pp. 608-610, June 2019</div>
+        <div class="pub-actions"><a class="pub-link" href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE08763269">DBpia</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="domestic">
+      <span class="pub-venue domestic">KCC<br/>2019</span>
+      <div>
+        <div class="pub-title">Improving Low-resource Machine Translation by utilizing Multilingual, Out-domain Resources (저-자원 언어의 번역 향상을 위한 다중-언어 기계번역)</div>
+        <div class="pub-authors">Guanghao Xu, Youngjoong Ko and Jungyun Seo</div>
+        <div class="pub-meta">Korea Computer Congress 2019 (KCC 2019), pp. 649-651, June 2019</div>
+        <div class="pub-actions"><a class="pub-link" href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE08763283">DBpia</a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 2018 ── -->
+  <div class="year-group" data-year="2018">
+    <div class="year-label">2018</div>
+
+    <div class="pub-entry" data-cat="conf">
+      <span class="pub-venue">COLING<br/>2018</span>
+      <div>
+        <div class="pub-title">Word Sense Disambiguation Based on Word Similarity Calculation Using Word Vector Representation from a Knowledge-based Graph</div>
+        <div class="pub-authors">Dongsuk O, Sunjae Kwon, Kyungsun Kim and Youngjoong Ko</div>
+        <div class="pub-meta">COLING 2018, pp. 2704-2714, Santa Fe, USA, August 2018 · BK Plus Computer Science IF=2</div>
+        <div class="pub-actions"><a class="pub-link" href="https://aclanthology.org/C18-1229/">Link</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="journal">
+      <span class="pub-venue journal">IJAIT<br/>WorldSci</span>
+      <div>
+        <div class="pub-title">Speech-Act Classification Using Convolutional Neural Networks and Word Embedding</div>
+        <div class="pub-authors">Kyoungman Bae and Youngjoong Ko</div>
+        <div class="pub-meta">International Journal on AI Tools, Vol. 27, No. 6, 1850026, September 2018 · SCIE</div>
+        <div class="pub-actions"><a class="pub-link" href="https://www.worldscientific.com/doi/abs/10.1142/S0218213018500264">Publisher</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="journal">
+      <span class="pub-venue journal">IJAIT<br/>WorldSci</span>
+      <div>
+        <div class="pub-title">Statistical Text Summarization Using a Category-based Language Model on a Bootstrapping Framework</div>
+        <div class="pub-authors">Hyoungil Jeong, Youngjoong Ko and Jungyun Seo</div>
+        <div class="pub-meta">International Journal on AI Tools, Vol. 27, No. 3, 1850014, May 2018 · SCIE</div>
+        <div class="pub-actions"><a class="pub-link" href="https://www.worldscientific.com/doi/abs/10.1142/S0218213018500148">Publisher</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="journal">
+      <span class="pub-venue journal">IJAIT<br/>WorldSci</span>
+      <div>
+        <div class="pub-title">Spoken Language Understanding with a Novel Simultaneous Recognition Technique for the Intelligent Personal Assistant Software</div>
+        <div class="pub-authors">Changsu Lee and Youngjoong Ko</div>
+        <div class="pub-meta">International Journal on AI Tools, Vol. 27, No. 3, 1850009, May 2018 · SCIE</div>
+        <div class="pub-actions"><a class="pub-link" href="https://www.worldscientific.com/doi/pdf/10.1142/S0218213018500094">Publisher</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="domestic">
+      <span class="pub-venue domestic">KIISE<br/>2018</span>
+      <div>
+        <div class="pub-title">Speech-act Analysis System Based on Dialogue Level RNN-CNN Effective on the Exposure Bias problem (노출 편향 문제에 효과적인 대화 단위 RNN-CNN 기반의 화행 분석 시스템)</div>
+        <div class="pub-authors">Jungmin Yoon and Youngjoong Ko</div>
+        <div class="pub-meta">Journal of KIISE, Vol. 45, No. 9, pp. 911-917, September 2018</div>
+        <div class="pub-actions"><a class="pub-link" href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE07531028">DBpia</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="domestic">
+      <span class="pub-venue domestic">KIISE<br/>2018</span>
+      <div>
+        <div class="pub-title">Korean Dependency Parser Using Dependency Relation Tag Distribution (의존 관계명 태그 분포를 이용한 한국어 의존 구문 분석)</div>
+        <div class="pub-authors">Jaehyun An and Youngjoong Ko</div>
+        <div class="pub-meta">Journal of KIISE Transactions on Computing Practices, Vol. 24, No. 9, pp. 487-492, September 2018</div>
+        <div class="pub-actions"><a class="pub-link" href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE07531018">DBpia</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="domestic">
+      <span class="pub-venue domestic">KIISE<br/>2018</span>
+      <div>
+        <div class="pub-title">A Named Entity Recognition Training Method Using Bagging Based Bootstrapping (배깅 기반의 부트스트래핑을 이용한 개체명 인식 학습 기법)</div>
+        <div class="pub-authors">Yoojin Jeong, Juae Kim, Youngjoong Ko and Jungyun Seo</div>
+        <div class="pub-meta">Journal of KIISE, Vol. 45, No. 8, pp. 825-830, August 2018</div>
+        <div class="pub-actions"><a class="pub-link" href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE07514226">DBpia</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="domestic">
+      <span class="pub-venue domestic">KSC<br/>2018</span>
+      <div>
+        <div class="pub-title">Hierarchical SVM Classifier using Bootstrapping for Domain Expansion in Analysis of Speech Act</div>
+        <div class="pub-authors">Yeoungjoon Park, Minyeong Seo, Juae Kim, Youngjoong Ko and Jungyun Seo</div>
+        <div class="pub-meta">Korea Software Congress 2018 (KSC 2018), pp. 602-604, December 2018</div>
+        <div class="pub-actions"><a class="pub-link" href="https://www.cseric.or.kr/literature/ser_view.php?SnxGubun=INME&mode=total&searchCate=&more=Y&research=Y&re_q1=&gu=INME000F7&cmd=qryview&SnxIndxNum=208393">KoreaScience</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="domestic">
+      <span class="pub-venue domestic">HCLT<br/>2018</span>
+      <div>
+        <div class="pub-title">News Clustering and Multi-Document Summarization for Real-time Issue Analysis <span style="color:#2060a0;font-size:12px;">(Best Paper Award)</span></div>
+        <div class="pub-authors">Hongyeon Yu, Seungwoo Lee and Youngjoong Ko</div>
+        <div class="pub-meta">HCLT 2018, pp. 132-140, October 2018</div>
+        <div class="pub-actions"><a class="pub-link" href="https://koreascience.kr/article/CFKO201832073078600.page">KoreaScience</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="domestic">
+      <span class="pub-venue domestic">HCLT<br/>2018</span>
+      <div>
+        <div class="pub-title">Semi-automatic Expansion for a Chatting Corpus Based on Similarity Measure Using Utterance Embedding by CNN <span style="color:#2060a0;font-size:12px;">(Best Paper Award)</span></div>
+        <div class="pub-authors">Jaehyun An and Youngjoong Ko</div>
+        <div class="pub-meta">HCLT 2018, pp. 95-100, October 2018</div>
+        <div class="pub-actions"><a class="pub-link" href="https://www.koreascience.kr/article/CFKO201832073078574.view">KoreaScience</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="domestic">
+      <span class="pub-venue domestic">HCLT<br/>2018</span>
+      <div>
+        <div class="pub-title">Performance Improvement of Mathematical Formula Retrieval Using Two Different Kinds of Embedding (두 종류의 임베딩을 이용한 수식 검색 성능 개선)</div>
+        <div class="pub-authors">Seon Yang, Hyemin Kim and Youngjoong Ko</div>
+        <div class="pub-meta">HCLT 2018, pp. 616-622, October 2018</div>
+        <div class="pub-actions"><a class="pub-link" href="https://www.koreascience.or.kr/article/CFKO201832073079016.view?orgId=anpor&hide=breadcrumb,journalinfo">KoreaScience</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="domestic">
+      <span class="pub-venue domestic">HCLT<br/>2018</span>
+      <div>
+        <div class="pub-title">Effective Korean POS Tagging for Typing Errors Using the Concatenation of Jamo and Syllable Embedding (자모 및 음절 임베딩 결합을 이용한 오타에 효과적인 한국어 형태소 분석)</div>
+        <div class="pub-authors">Hyemin Kim, Seon Yang and Youngjoong Ko</div>
+        <div class="pub-meta">HCLT 2018, pp. 574-579, October 2018</div>
+        <div class="pub-actions"><a class="pub-link" href="https://www.koreascience.or.kr/article/CFKO201832073078971.vi1ff8ew">KoreaScience</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="domestic">
+      <span class="pub-venue domestic">HCLT<br/>2018</span>
+      <div>
+        <div class="pub-title">Expanding Korean/English Parallel Corpora Using Back-translation for Neural Machine Translation (역-번역을 이용한 한영 병렬 코퍼스 확장)</div>
+        <div class="pub-authors">Guanghao Xu, Youngjoong Ko and Jungyun Seo</div>
+        <div class="pub-meta">HCLT 2018, pp. 470-473, October 2018</div>
+        <div class="pub-actions"><a class="pub-link" href="https://www.koreascience.or.kr/article/CFKO201832073078874.page">KoreaScience</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="domestic">
+      <span class="pub-venue domestic">HCLT<br/>2018</span>
+      <div>
+        <div class="pub-title">CNN Based Speech-act Classification Using Sentence Types and Modalities (문장 유형과 양태 정보를 이용한 합성곱 신경망 기반의 대화체 발화 화행 분석)</div>
+        <div class="pub-authors">Yongsin Park and Youngjoong Ko</div>
+        <div class="pub-meta">HCLT 2018, pp. 642-648, October 2018</div>
+        <div class="pub-actions"><a class="pub-link" href="https://www.koreascience.or.kr/article/CFKO201832073079048.pub?&lang=en&orgId=sighlt">KoreaScience</a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 2017 ── -->
+  <div class="year-group" data-year="2017">
+    <div class="year-label">2017</div>
+
+    <div class="pub-entry" data-cat="conf">
+      <span class="pub-venue">CIKM<br/>2017</span>
+      <div>
+        <div class="pub-title">A Robust Named-Entity Recognition System Using Syllable Bigram Embedding with Eojeol Prefix Information</div>
+        <div class="pub-authors">Soonjae Kwon, Youngjoong Ko and Jungyun Seo</div>
+        <div class="pub-meta">CIKM 2017, pp. 2139-2142, Singapore, November 2017 · BK Plus Computer Science IF=3</div>
+        <div class="pub-actions"><a class="pub-link" href="https://dl.acm.org/doi/10.1145/3132847.3133105">Link</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="conf">
+      <span class="pub-venue">IJCNLP<br/>2017</span>
+      <div>
+        <div class="pub-title">A Method to Generate a Machine-labeled Data for Biomedical Named Entity Recognition with Various Sub-Domains</div>
+        <div class="pub-authors">Juae Kim, Soonjae Kwon, Youngjoong Ko and Jungyun Seo</div>
+        <div class="pub-meta">IJCNLP 2017 Workshop, pp. 47-51, Taiwan, November 2017</div>
+        <div class="pub-actions"><a class="pub-link" href="https://aclanthology.org/W17-5807/">Link</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="journal">
+      <span class="pub-venue journal">IPM<br/>Elsevier</span>
+      <div>
+        <div class="pub-title">How to Use Negative Class Information for Naive Bayes Classification</div>
+        <div class="pub-authors">Youngjoong Ko</div>
+        <div class="pub-meta">Information Processing and Management, Vol. 53, No. 6, pp. 1255-1268, November 2017 · SSCI, SCIE, IF=4.787</div>
+        <div class="pub-actions"><a class="pub-link" href="https://www.sciencedirect.com/science/article/abs/pii/S0306457317305034">Publisher</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="journal">
+      <span class="pub-venue journal">IEICE<br/>Trans.</span>
+      <div>
+        <div class="pub-title">Speech-Act Classification Using a Convolutional Neural Network Based on POS tag and Dependency-Relation Bigram Embedding</div>
+        <div class="pub-authors">Donghyun Yoo, Youngjoong Ko and Jungyun Seo</div>
+        <div class="pub-meta">IEICE Transactions on Information and System, Vol. E100-D, No. 12, pp. 3081-3084, December 2017 · SCIE</div>
+        <div class="pub-actions"><a class="pub-link" href="http://search.ieice.org/bin/summary.php?id=e100-d_12_3081&category=D&year=2017&lang=E&abst=">Publisher</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="journal">
+      <span class="pub-venue journal">IEICE<br/>Trans.</span>
+      <div>
+        <div class="pub-title">Improving Question Retrieval in cQA Services Using a Dependency Parser</div>
+        <div class="pub-authors">Kyoungman Bae and Youngjoong Ko</div>
+        <div class="pub-meta">IEICE Transactions on Information and System, Vol. E100-D, No. 2, pp. 807-810, April 2017 · SCIE</div>
+        <div class="pub-actions"><a class="pub-link" href="http://search.ieice.org/bin/summary.php?id=e99-d_4_1019&category=D&lang=E&year=2016&abst=">Publisher</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="journal">
+      <span class="pub-venue journal">IEICE<br/>Trans.</span>
+      <div>
+        <div class="pub-title">Automatically Extracting Parallel Sentences from Wikipedia Using Sequential Matching of Language Resources</div>
+        <div class="pub-authors">Juryong Cheon and Youngjoong Ko</div>
+        <div class="pub-meta">IEICE Transactions on Information and System, Vol. E100-D, No. 2, pp. 405-408, February 2017 · SCIE</div>
+        <div class="pub-actions"><a class="pub-link" href="http://search.ieice.org/bin/summary.php?id=e100-d_2_405&category=-&lang=E&year=2017&abst=">Publisher</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="domestic">
+      <span class="pub-venue domestic">KIISE<br/>2017</span>
+      <div>
+        <div class="pub-title">A Method of Solving Entity Linking Ambiguity and NIL Entity Recognition for efficient Entity Linking based on Wikipedia</div>
+        <div class="pub-authors">Hokyung Lee, Jaehyun An, Jungmin Yoon, Kyoungman Bae and Youngjoong Ko</div>
+        <div class="pub-meta">Journal of KIISE, Vol. 44, No. 8, pp. 813-821, August 2017</div>
+        <div class="pub-actions"><a class="pub-link" href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE07226479">DBpia</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="domestic">
+      <span class="pub-venue domestic">KIISE<br/>2017</span>
+      <div>
+        <div class="pub-title">The Expansion of Word Representation for Named Entity Recognition Based on Bidirectional LSTM CRFs (Bidirectional LSTM CRF 기반의 개체명 인식을 위한 단어 표상의 확장)</div>
+        <div class="pub-authors">Hongyun Yoo and Youngjoong Ko</div>
+        <div class="pub-meta">Journal of KIISE, Vol. 44, No. 3, pp. 306-313, March 2017</div>
+        <div class="pub-actions"><a class="pub-link" href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE07121169">DBpia</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="domestic">
+      <span class="pub-venue domestic">KSC<br/>2017</span>
+      <div>
+        <div class="pub-title">The Korean Speech-Act Analysis System Based on RNN-CNN for Speech-Act Analysis of Dialogue Level <span style="color:#2060a0;font-size:12px;">(Best Paper Award)</span></div>
+        <div class="pub-authors">Jungmin Yoon and Youngjoong Ko</div>
+        <div class="pub-meta">Korea Software Congress 2017 (KSC 2017), pp. 643-645, December 2017</div>
+        <div class="pub-actions"><a class="pub-link" href="https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE07531028">DBpia</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="domestic">
+      <span class="pub-venue domestic">KSC<br/>2017</span>
+      <div>
+        <div class="pub-title">Bagging Based Bootstrapping Method to Improve Named Entity Recognition <span style="color:#2060a0;font-size:12px;">(Best Paper Award)</span></div>
+        <div class="pub-authors">Yoojin Jeong, Juae Kim, Youngjoong Ko and Jungyun Seo</div>
+        <div class="pub-meta">Korea Software Congress 2017 (KSC 2017), pp. 631-633, December 2017</div>
+        <div class="pub-actions"><a class="pub-link" href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE07322246">DBpia</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="domestic">
+      <span class="pub-venue domestic">KSC<br/>2017</span>
+      <div>
+        <div class="pub-title">The Korean Dependency Parser for Pointer Networks based on Multi-task learning and Relation Label Distribution of Syllables <span style="color:#2060a0;font-size:12px;">(Best Presentation Paper Award)</span></div>
+        <div class="pub-authors">Jaehyun An and Youngjoong Ko</div>
+        <div class="pub-meta">Korea Software Congress 2017 (KSC 2017), pp. 613-615, December 2017</div>
+        <div class="pub-actions"><a class="pub-link" href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE07322240">DBpia</a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 2016 ── -->
+  <div class="year-group" data-year="2016">
+    <div class="year-label">2016</div>
+
+    <div class="pub-entry" data-cat="journal">
+      <span class="pub-venue journal">ESWA<br/>Elsevier</span>
+      <div>
+        <div class="pub-title">How to Improve Text Summarization and Classification by Mutual Cooperation on an Integrated Framework</div>
+        <div class="pub-authors">Hyoungil Jeong, Youngjoong Ko and Jungyun Seo</div>
+        <div class="pub-meta">Expert Systems with Applications, Vol. 60, pp. 222-233, October 2016 · SCIE, IF=5.452</div>
+        <div class="pub-actions"><a class="pub-link" href="http://www.sciencedirect.com/science/article/pii/S0957417416302196">Publisher</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="journal">
+      <span class="pub-venue journal">IEICE<br/>Trans.</span>
+      <div>
+        <div class="pub-title">How to Combine Translation Probabilities and Question Expansion for Question Classification in cQA Services</div>
+        <div class="pub-authors">Kyoungman Bae and Youngjoong Ko</div>
+        <div class="pub-meta">IEICE Transactions on Information and System, Vol. E99-D, No. 4, pp. 1019-1022, April 2016 · SCIE</div>
+        <div class="pub-actions"><a class="pub-link" href="https://www.jstage.jst.go.jp/article/transinf/E99.D/4/E99.D_2015DAL0005/_article">Publisher</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="domestic">
+      <span class="pub-venue domestic">HCLT<br/>2016</span>
+      <div>
+        <div class="pub-title">Named Entity Recognition Using Bidirectional LSTM CRFs Based on the POS Tag Embedding and the Named Entity Distribution of Syllables <span style="color:#2060a0;font-size:12px;">(Best Paper Award)</span></div>
+        <div class="pub-authors">Hongyeon Yu and Youngjoong Ko</div>
+        <div class="pub-meta">HCLT 2016, pp. 105-110, October 2016</div>
+        <div class="pub-actions"><a class="pub-link" href="https://www.koreascience.or.kr/article/CFKO201631951960343.v1ff8iew">KoreaScience</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="domestic">
+      <span class="pub-venue domestic">KIISE<br/>2016</span>
+      <div>
+        <div class="pub-title">Feature Expansion based on LDA Word Distribution for Performance Improvement of Informal Document Classification</div>
+        <div class="pub-authors">Hokyung Lee, Seon Yang and Youngjoong Ko</div>
+        <div class="pub-meta">Journal of KIISE, Vol. 43, No. 9, pp. 1008-1014, September 2016</div>
+        <div class="pub-actions"><a class="pub-link" href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE06762736">DBpia</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="domestic">
+      <span class="pub-venue domestic">KIISE<br/>2016</span>
+      <div>
+        <div class="pub-title">Effective Korean Speech-act Classification Using a Classification Priority Application and a Post-correction Rule (분류 우선순위 적용과 후보정 규칙을 이용한 효과적인 한국어 화행 분류)</div>
+        <div class="pub-authors">Namhoon Song, Kyoungman Bae and Youngjoong Ko</div>
+        <div class="pub-meta">Journal of KIISE, Vol. 43, No. 1, pp. 80-86, January 2016</div>
+        <div class="pub-actions"><a class="pub-link" href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE06585739">DBpia</a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 2015 ── -->
+  <div class="year-group" data-year="2015">
+    <div class="year-label">2015</div>
+
+    <div class="pub-entry" data-cat="conf">
+      <span class="pub-venue">ACL<br/>2015</span>
+      <div>
+        <div class="pub-title">A Simultaneous Recognition Framework for the Spoken Language Understanding Module of Intelligent Personal Assistant Software on Smart Phones</div>
+        <div class="pub-authors">Changsu Lee, Youngjoong Ko and Jungyun Seo</div>
+        <div class="pub-meta">ACL 2015, pp. 818-822, Beijing, China, July 2015 · BK Plus Computer Science IF=4</div>
+        <div class="pub-actions"><a class="pub-link" href="https://aclanthology.org/P15-2134/">Link</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="journal">
+      <span class="pub-venue journal">JASIST<br/>Wiley</span>
+      <div>
+        <div class="pub-title">A New Term Weighting Scheme for Text Classification Using the Odds of Positive and Negative Class Probabilities</div>
+        <div class="pub-authors">Youngjoong Ko</div>
+        <div class="pub-meta">JASIST, Vol. 66, No. 12, pp. 2553-2565, December 2015 · SSCI, SCIE, IF=2.410</div>
+        <div class="pub-actions"><a class="pub-link" href="http://onlinelibrary.wiley.com/doi/10.1002/asi.23338/abstract">Publisher</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="journal">
+      <span class="pub-venue journal">PRL<br/>Elsevier</span>
+      <div>
+        <div class="pub-title">New Feature Weighting Approaches for Speech-act Classification</div>
+        <div class="pub-authors">Youngjoong Ko</div>
+        <div class="pub-meta">Pattern Recognition Letters, Vol. 51, pp. 107-111, January 2015 · SCIE, IF=3.255</div>
+        <div class="pub-actions"><a class="pub-link" href="http://www.sciencedirect.com/science/article/pii/S0167865514002803">Publisher</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="journal">
+      <span class="pub-venue journal">JASIST<br/>Wiley</span>
+      <div>
+        <div class="pub-title">Combining Lexical and Statistical Translation Evidence for Cross-Language Information Retrieval</div>
+        <div class="pub-authors">Sungho Kim, Youngjoong Ko and Douglas W. Oard</div>
+        <div class="pub-meta">JASIST, Vol. 66, No. 1, pp. 23-39, January 2015 · SSCI, SCIE, IF=2.410</div>
+        <div class="pub-actions"><a class="pub-link" href="http://onlinelibrary.wiley.com/doi/10.1002/asi.23153/abstract">Publisher</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="domestic">
+      <span class="pub-venue domestic">HCLT<br/>2015</span>
+      <div>
+        <div class="pub-title">Improving Query Translation by Extracting Parallel Sentences from Wikipedia for Cross-Language Information Retrieval <span style="color:#2060a0;font-size:12px;">(Best Paper Award)</span></div>
+        <div class="pub-authors">Juryong Cheon and Youngjoong Ko</div>
+        <div class="pub-meta">HCLT 2015, pp. 35-40, October 2015</div>
+        <div class="pub-actions"><a class="pub-link" href="https://www.koreascience.or.kr/article/CFKO201534168509077.page">KoreaScience</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="domestic">
+      <span class="pub-venue domestic">KCC<br/>2015</span>
+      <div>
+        <div class="pub-title">Efficient Korean Speech-Act Classification using a Classification Priority Application and a Post Correction Rule <span style="color:#2060a0;font-size:12px;">(Best Paper Award)</span></div>
+        <div class="pub-authors">Namhoon Song, Kyoungman Bae and Youngjoong Ko</div>
+        <div class="pub-meta">Korea Computer Congress 2015 (KCC 2015), pp. 675-677, June 2015</div>
+        <div class="pub-actions"><a class="pub-link" href="https://www.koreascience.or.kr/article/JAKO201605555187421.page">KoreaScience</a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 2014 ── -->
+  <div class="year-group" data-year="2014">
+    <div class="year-label">2014</div>
+
+    <div class="pub-entry" data-cat="conf">
+      <span class="pub-venue">CIKM<br/>2014</span>
+      <div>
+        <div class="pub-title">An Effective Question Expanding Method for Question Classification in cQA services</div>
+        <div class="pub-authors">Kyoungman Bae and Youngjoong Ko</div>
+        <div class="pub-meta">CIKM 2014 Workshop, pp. 51-55, Shanghai, China, November 2014</div>
+        <div class="pub-actions"><a class="pub-link" href="https://dl.acm.org/doi/10.1145/2663714.2668050">Link</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="journal">
+      <span class="pub-venue journal">NLE<br/>Cambridge</span>
+      <div>
+        <div class="pub-title">Classifying Korean Comparative Sentences for Comparison Analysis</div>
+        <div class="pub-authors">Seon Yang and Youngjoong Ko</div>
+        <div class="pub-meta">Natural Language Engineering, Vol. 20, No. 4, pp. 557-581, October 2014 · SSCI, SCIE, IF=1.465</div>
+        <div class="pub-actions"><a class="pub-link" href="http://journals.cambridge.org/action/displayAbstract?fromPage=online&aid=9321778&fileId=S1351324913000211">Publisher</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="journal">
+      <span class="pub-venue journal">AECE<br/>2014</span>
+      <div>
+        <div class="pub-title">Mathematical Formula Search using Natural Language Queries</div>
+        <div class="pub-authors">Seon Yang and Youngjoong Ko</div>
+        <div class="pub-meta">Advances in Electrical and Computer Engineering, Vol. 14, No. 4, pp. 99-104, December 2014 · SCIE</div>
+        <div class="pub-actions"><a class="pub-link" href="http://www.aece.ro/abstractplus.php?year=2014&number=4&article=15">Publisher</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="domestic">
+      <span class="pub-venue domestic">HCLT<br/>2014</span>
+      <div>
+        <div class="pub-title">Extracting Korean-English Parallel Sentences Based on the Measure of Sentences Similarity Using the Sequential Matching of Heterogeneous Language Resources <span style="color:#2060a0;font-size:12px;">(Best Paper Award)</span></div>
+        <div class="pub-authors">Juryong Cheon and Youngjoong Ko</div>
+        <div class="pub-meta">HCLT 2014, pp. 127-132, October 2014</div>
+        <div class="pub-actions"><a class="pub-link" href="https://www.koreascience.or.kr/article/CFKO201408355727284.page1ff8">KoreaScience</a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 2013 ── -->
+  <div class="year-group" data-year="2013">
+    <div class="year-label">2013</div>
+
+    <div class="pub-entry" data-cat="journal">
+      <span class="pub-venue journal">PRL<br/>Elsevier</span>
+      <div>
+        <div class="pub-title">Hierarchical Speech-act Classification for Discourse Analysis</div>
+        <div class="pub-authors">Sangwoo Kang, Youngjoong Ko and Jungyun Seo</div>
+        <div class="pub-meta">Pattern Recognition Letters, Vol. 34, No. 10, pp. 1119-1124, July 2013 · SCIE, IF=3.255</div>
+        <div class="pub-actions"><a class="pub-link" href="http://www.sciencedirect.com/science/article/pii/S0167865513000950">Publisher</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="journal">
+      <span class="pub-venue journal">AIC<br/>IOS Press</span>
+      <div>
+        <div class="pub-title">A Dialogue Management System Using a Corpus-based Framework and the Dynamic Dialogue Transition Model</div>
+        <div class="pub-authors">Sangwoo Kang, Youngjoong Ko and Jungyun Seo</div>
+        <div class="pub-meta">AI Communications, Vol. 26, No. 2, pp. 145-159, April 2013 · SCIE, IF=1.000</div>
+        <div class="pub-actions"><a class="pub-link" href="https://content.iospress.com/articles/ai-communications/aic552">Publisher</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="domestic">
+      <span class="pub-venue domestic">HCLT<br/>2013</span>
+      <div>
+        <div class="pub-title">A Simultaneous Recognition Technology of Named Entities and Objects for a Dialogue Based Private Secretary Software <span style="color:#2060a0;font-size:12px;">(Best Paper Award)</span></div>
+        <div class="pub-authors">Changsu Lee and Youngjoong Ko</div>
+        <div class="pub-meta">HCLT 2013, pp. 18-23, October 2013</div>
+        <div class="pub-actions"><a class="pub-link" href="https://koreascience.kr/article/CFKO201308355727355.page">KoreaScience</a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 2012 ── -->
+  <div class="year-group" data-year="2012">
+    <div class="year-label">2012</div>
+
+    <div class="pub-entry" data-cat="conf">
+      <span class="pub-venue">SIGIR<br/>2012</span>
+      <div>
+        <div class="pub-title">A Study of Term Weighting Schemes Using Class Information for Text Classification</div>
+        <div class="pub-authors">Youngjoong Ko</div>
+        <div class="pub-meta">SIGIR 2012, pp. 1029-1030, Portland, Oregon, USA, August 2012 · BK Plus Computer Science IF=4</div>
+        <div class="pub-actions"><a class="pub-link" href="https://dl.acm.org/doi/10.1145/2348283.2348453">Link</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="conf">
+      <span class="pub-venue">CIKM<br/>2012</span>
+      <div>
+        <div class="pub-title">An Effective Category Classification Method Based on a Language Model for Question Category Recommendation on a cQA service</div>
+        <div class="pub-authors">Kyoungman Bae and Youngjoong Ko</div>
+        <div class="pub-meta">CIKM 2012, pp. 2255-2258, Maui, Hawaii, USA · BK Plus Computer Science IF=3</div>
+        <div class="pub-actions"><a class="pub-link" href="https://dl.acm.org/doi/10.1145/2396761.2398614">Link</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="conf">
+      <span class="pub-venue">CIKM<br/>2012</span>
+      <div>
+        <div class="pub-title">Mathematical Equation Retrieval Using Plain Words as a Query</div>
+        <div class="pub-authors">Shinil Kim, Seon Yang and Youngjoong Ko</div>
+        <div class="pub-meta">CIKM 2012, pp. 2407-2410, Maui, Hawaii, USA · BK Plus Computer Science IF=3</div>
+        <div class="pub-actions"><a class="pub-link" href="https://dl.acm.org/doi/10.1145/2396761.2398653">Link</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="journal">
+      <span class="pub-venue journal">IJICIC<br/>2012</span>
+      <div>
+        <div class="pub-title">An Effective Application of Contextual Information using Adjacency Pairs and a Discourse Stack for Speech-Act Classification</div>
+        <div class="pub-authors">Kyungsun Kim, Youngjoong Ko and Jungyun Seo</div>
+        <div class="pub-meta">IJICIC, Vol. 8, No. 11, pp. 7713-7728, November 2012 · SCIE</div>
+        <div class="pub-actions"><a class="pub-link" href="http://www.ijicic.org/ijicic-11-08092.pdf">Publisher</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="domestic">
+      <span class="pub-venue domestic">KCC<br/>2012</span>
+      <div>
+        <div class="pub-title">Mathematical Equation Retrieval by Converting Plaintext Queries into MathML Terms <span style="color:#2060a0;font-size:12px;">(Best Paper Award)</span></div>
+        <div class="pub-authors">Junyoung Lee, Seon Yang and Youngjoong Ko</div>
+        <div class="pub-meta">Korea Computer Congress 2012 (KCC 2012), pp. 312-314, June 2012</div>
+        <div class="pub-actions"><a class="pub-link" href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE01904035">DBpia</a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 2011 ── -->
+  <div class="year-group" data-year="2011">
+    <div class="year-label">2011</div>
+
+    <div class="pub-entry" data-cat="conf">
+      <span class="pub-venue">ACL<br/>2011</span>
+      <div>
+        <div class="pub-title">Extracting Comparative Entities and Predicates from Texts Using Comparative Type Classification</div>
+        <div class="pub-authors">Seon Yang and Youngjoong Ko</div>
+        <div class="pub-meta">ACL-HLT 2011, pp. 1636-1644, Portland, Oregon, USA, June 2011 · BK Plus Computer Science IF=4</div>
+        <div class="pub-actions"><a class="pub-link" href="https://aclanthology.org/P11-1164/">Link</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="journal">
+      <span class="pub-venue journal">PRL<br/>Elsevier</span>
+      <div>
+        <div class="pub-title">Finding Relevant Features for Korean Comparative Sentence Extraction</div>
+        <div class="pub-authors">Seon Yang and Youngjoong Ko</div>
+        <div class="pub-meta">Pattern Recognition Letters, Vol. 32, No. 2, pp. 293-296, January 2011 · SCIE, IF=3.255</div>
+        <div class="pub-actions"><a class="pub-link" href="http://www.sciencedirect.com/science/article/pii/S0167865510003016">Publisher</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="domestic">
+      <span class="pub-venue domestic">KCC<br/>2011</span>
+      <div>
+        <div class="pub-title">Extracting Comparative Elements from Comparative Sentence <span style="color:#2060a0;font-size:12px;">(Best Paper Award)</span></div>
+        <div class="pub-authors">Seon Yang and Youngjoong Ko</div>
+        <div class="pub-meta">Korea Computer Congress 2011 (KCC 2011), pp. 225-228, June 2011</div>
+        <div class="pub-actions"><a class="pub-link" href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE01687894">DBpia</a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 2009 ── -->
+  <div class="year-group" data-year="2009">
+    <div class="year-label">2009</div>
+
+    <div class="pub-entry" data-cat="journal">
+      <span class="pub-venue journal">IPM<br/>Elsevier</span>
+      <div>
+        <div class="pub-title">Text Classification from Unlabeled Documents with Bootstrapping and Feature Projection Techniques</div>
+        <div class="pub-authors">Youngjoong Ko and Jungyun Seo</div>
+        <div class="pub-meta">Information Processing and Management, Vol. 45, No. 1, pp. 70-83, January 2009 · SSCI, SCIE, IF=4.787</div>
+        <div class="pub-actions"><a class="pub-link" href="http://www.sciencedirect.com/science/article/pii/S0306457308000812">Publisher</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="domestic">
+      <span class="pub-venue domestic">HCLT<br/>2009</span>
+      <div>
+        <div class="pub-title">Classifying Korean Comparative Sentences Using Transformation-based Learning <span style="color:#2060a0;font-size:12px;">(Best Paper Award)</span></div>
+        <div class="pub-authors">Seon Yang and Youngjoong Ko</div>
+        <div class="pub-meta">HCLT 2009, pp. 37-34, October 2009</div>
+        <div class="pub-actions"><a class="pub-link" href="https://www.koreascience.or.kr/article/CFKO200908355727670.view?orgId=anpor&hide=breadcrumb,journalinfo">KoreaScience</a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 2008 ── -->
+  <div class="year-group" data-year="2008">
+    <div class="year-label">2008</div>
+
+    <div class="pub-entry" data-cat="journal">
+      <span class="pub-venue journal">PRL<br/>Elsevier</span>
+      <div>
+        <div class="pub-title">An Effective Sentence-Extraction Technique Using Contextual Information and Statistical Approaches for Text Summarization</div>
+        <div class="pub-authors">Youngjoong Ko and Jungyun Seo</div>
+        <div class="pub-meta">Pattern Recognition Letters, Vol. 29, No. 9, pp. 1366-1371, July 2008 · SCIE, IF=3.255</div>
+        <div class="pub-actions"><a class="pub-link" href="http://www.sciencedirect.com/science/article/pii/S0167865508000676">Publisher</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="journal">
+      <span class="pub-venue journal">IPL<br/>Elsevier</span>
+      <div>
+        <div class="pub-title">Pseudo-Relevance Feedback and Statistical Query Expansion for Web Snippet Generation</div>
+        <div class="pub-authors">Youngjoong Ko, Hongkuk An and Jungyun Seo</div>
+        <div class="pub-meta">Information Processing Letters, Vol. 109, No. 1, pp. 18-22, December 2008 · SCIE</div>
+        <div class="pub-actions"><a class="pub-link" href="http://www.sciencedirect.com/science/article/pii/S0020019008002299">Publisher</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="domestic">
+      <span class="pub-venue domestic">HCLT<br/>2008</span>
+      <div>
+        <div class="pub-title">Automatic Named Entities Extraction Using the Graph-based Measurement Technique of the Mutual Importance <span style="color:#2060a0;font-size:12px;">(Best Paper Award)</span></div>
+        <div class="pub-authors">Sangjoon Bae and Youngjoong Ko</div>
+        <div class="pub-meta">HCLT 2008, pp. 17-20, October 2008</div>
+        <div class="pub-actions"><a class="pub-link" href="https://www.koreascience.or.kr/article/CFKO200808355727761.v1ff8iew">KoreaScience</a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 2007 ── -->
+  <div class="year-group" data-year="2007">
+    <div class="year-label">2007</div>
+
+    <div class="pub-entry" data-cat="conf">
+      <span class="pub-venue">SIGIR<br/>2007</span>
+      <div>
+        <div class="pub-title">An Effective Snippet Generation Method Using the Pseudo Relevance Feedback Technique</div>
+        <div class="pub-authors">Youngjoong Ko, Hongkuk An and Jungyun Seo</div>
+        <div class="pub-meta">SIGIR 2007, pp. 711-712, Amsterdam, The Netherlands, July 2007 · BK Plus Computer Science IF=4</div>
+        <div class="pub-actions"><a class="pub-link" href="https://dl.acm.org/doi/abs/10.1145/1277741.1277871">Link</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="journal">
+      <span class="pub-venue journal">IST<br/>Elsevier</span>
+      <div>
+        <div class="pub-title">Using Classification Techniques for Informal Requirements in the Requirements Analysis-supporting System</div>
+        <div class="pub-authors">Youngjoong Ko, Sooyong Park, Jungyun Seo and Soonhwang Choi</div>
+        <div class="pub-meta">Information and Software Technology, Vol. 49, No. 11-12, pp. 1128-1140, November 2007 · SCIE, IF=2.726</div>
+        <div class="pub-actions"><a class="pub-link" href="http://www.sciencedirect.com/science/article/pii/S0950584906001947#">Publisher</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="journal">
+      <span class="pub-venue journal">IPM<br/>Elsevier</span>
+      <div>
+        <div class="pub-title">Using the Revised EM Algorithm to Remove Noisy Data for Improving the One-against-the-rest Method in Binary Text Classification</div>
+        <div class="pub-authors">Hyoungdong Han, Youngjoong Ko and Jungyun Seo</div>
+        <div class="pub-meta">Information Processing and Management, Vol. 43, No. 5, pp. 1281-1293, September 2007 · SSCI, SCIE, IF=4.787</div>
+        <div class="pub-actions"><a class="pub-link" href="http://www.sciencedirect.com/science/article/pii/S0306457306001968">Publisher</a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 2004 ── -->
+  <div class="year-group" data-year="2004">
+    <div class="year-label">2004</div>
+
+    <div class="pub-entry" data-cat="conf">
+      <span class="pub-venue">ACL<br/>2004</span>
+      <div>
+        <div class="pub-title">Learning with Unlabeled Data for Text Categorization Using a Bootstrapping and a Feature Projection Technique</div>
+        <div class="pub-authors">Youngjoong Ko and Jungyun Seo</div>
+        <div class="pub-meta">ACL 2004, pp. 255-262, Barcelona, Spain, July 2004 · BK Plus Computer Science IF=4</div>
+        <div class="pub-actions"><a class="pub-link" href="https://aclanthology.org/P04-1033/">Link</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="journal">
+      <span class="pub-venue journal">IPM<br/>Elsevier</span>
+      <div>
+        <div class="pub-title">Using the Feature Projection Technique Based on a Normalized Voting Method for Text Classification</div>
+        <div class="pub-authors">Youngjoong Ko and Jungyun Seo</div>
+        <div class="pub-meta">Information Processing and Management, Vol. 40, No. 2, pp. 191-208, March 2004 · SSCI, SCIE, IF=4.787</div>
+        <div class="pub-actions"><a class="pub-link" href="http://www.sciencedirect.com/science/article/pii/S0306457303000293">Publisher</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="journal">
+      <span class="pub-venue journal">IPM<br/>Elsevier</span>
+      <div>
+        <div class="pub-title">Improving Text Categorization Using the Importance of Sentences</div>
+        <div class="pub-authors">Youngjoong Ko, Jinwoo Park and Jungyun Seo</div>
+        <div class="pub-meta">Information Processing and Management, Vol. 40, No. 1, pp. 65-79, January 2004 · SSCI, SCIE, IF=4.787</div>
+        <div class="pub-actions"><a class="pub-link" href="http://www.sciencedirect.com/science/article/pii/S0306457302000560">Publisher</a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 2002 ── -->
+  <div class="year-group" data-year="2002">
+    <div class="year-label">2002</div>
+
+    <div class="pub-entry" data-cat="conf">
+      <span class="pub-venue">COLING<br/>2002</span>
+      <div>
+        <div class="pub-title">Text Categorization Using Feature Projections</div>
+        <div class="pub-authors">Youngjoong Ko and Jungyun Seo</div>
+        <div class="pub-meta">COLING 2002, pp. 467-473, Taipei, Taiwan, August 2002 · BK Plus Computer Science IF=2</div>
+        <div class="pub-actions"><a class="pub-link" href="https://aclanthology.org/C02-1074/">Link</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="conf">
+      <span class="pub-venue">COLING<br/>2002</span>
+      <div>
+        <div class="pub-title">Automatic Text Categorization using the Importance of Sentences</div>
+        <div class="pub-authors">Youngjoong Ko, Jinwoo Park and Jungyun Seo</div>
+        <div class="pub-meta">COLING 2002, pp. 474-480, Taipei, Taiwan, August 2002 · BK Plus Computer Science IF=2</div>
+        <div class="pub-actions"><a class="pub-link" href="https://aclanthology.org/C02-1103/">Link</a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 2000 ── -->
+  <div class="year-group" data-year="2000">
+    <div class="year-label">2000</div>
+
+    <div class="pub-entry" data-cat="conf">
+      <span class="pub-venue">COLING<br/>2000</span>
+      <div>
+        <div class="pub-title">Automatic Text Categorization by Unsupervised Learning</div>
+        <div class="pub-authors">Youngjoong Ko and Jungyun Seo</div>
+        <div class="pub-meta">COLING 2000, pp. 453-459, Saarbrucken, Germany, July 2000 · BK Plus Computer Science IF=2</div>
+        <div class="pub-actions"><a class="pub-link" href="https://aclanthology.org/C00-1066/">Link</a></div>
+      </div>
+    </div>
+
+    <div class="pub-entry" data-cat="journal">
+      <span class="pub-venue journal">IST<br/>Elsevier</span>
+      <div>
+        <div class="pub-title">Implementation of an Efficient Requirements Analysis Supporting System Using Similarity Measure Techniques</div>
+        <div class="pub-authors">Sooyong Park, Harksoo Kim, Youngjoong Ko and Jungyun Seo</div>
+        <div class="pub-meta">Information and Software Technology, Vol. 42, No. 6, pp. 429-438, April 2000 · SCIE, IF=2.726</div>
+        <div class="pub-actions"><a class="pub-link" href="http://www.sciencedirect.com/science/article/pii/S0950584999001020">Publisher</a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 1999 ── -->
+  <div class="year-group" data-year="1999">
+    <div class="year-label">1999</div>
+
+    <div class="pub-entry" data-cat="conf">
+      <span class="pub-venue">IEEE SMC<br/>1999</span>
+      <div>
+        <div class="pub-title">Informal Requirements Analysis Supporting System for Human Engineer</div>
+        <div class="pub-authors">Harksoo Kim, Youngjoong Ko, Sooyong Park and Jungyun Seo</div>
+        <div class="pub-meta">IEEE SMC 1999, Vol. 3, pp. 1013-1018, Tokyo, Japan, October 1999 · SCOPUS</div>
+        <div class="pub-actions"><a class="pub-link" href="https://ieeexplore.ieee.org/document/823367">Link</a></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">NLP<span>LAB</span></div>
+      <p class="footer-desc">Natural Language Processing Laboratory<br />성균관대학교 소프트웨어융합대학</p>
+    </div>
+  </div>
+  <p class="footer-copy">© 2026 NLPLAB, Sungkyunkwan University. All rights reserved.</p>
+</footer>
+
+<script>
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    document.querySelectorAll('.pub-entry').forEach(entry => {
+      if (filter === 'all' || entry.dataset.cat === filter) {
+        entry.classList.remove('hidden');
+      } else {
+        entry.classList.add('hidden');
+      }
+    });
+    document.querySelectorAll('.year-group').forEach(group => {
+      const visible = group.querySelectorAll('.pub-entry:not(.hidden)').length > 0;
+      group.style.display = visible ? '' : 'none';
+    });
+  });
+});
+</script>
+</body>
+</html>

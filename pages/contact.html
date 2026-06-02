@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="../assets/img/favicon.ico" />
+  <title>Contact Us — NLPLAB</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .page-hero { background: var(--bg); padding: 48px 24px 32px; text-align: center; }
+    .page-hero h1 { font-size: 36px; font-weight: 700; }
+    .page-hero h1 span { color: var(--green); }
+    .contact-img-wrap { display: block; text-align: center; }
+    .contact-img {
+      width: 100%; display: block; margin: 0 auto;
+      border-radius: 10px; cursor: pointer;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+      transition: opacity 0.15s, box-shadow 0.15s;
+    }
+    .contact-img:hover { opacity: 0.93; box-shadow: 0 6px 24px rgba(0,0,0,0.15); }
+    .address-section {
+      margin-top: 24px; padding: 28px 32px;
+      background: var(--white); border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+    .address-label {
+      font-size: 12px; font-weight: 600; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--text-muted);
+      margin-bottom: 14px;
+    }
+    .address-ko {
+      font-size: 15px; line-height: 1.85; color: var(--text);
+      margin-bottom: 12px;
+    }
+    .address-en {
+      font-size: 13px; line-height: 1.85; color: var(--text-muted);
+    }
+    .map-section { margin-top: 28px; }
+    .map-section-header {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 12px;
+    }
+    .map-section-title { font-size: 16px; font-weight: 700; color: var(--text); }
+    .map-kakao-link {
+      display: inline-flex; align-items: center; gap: 5px;
+      padding: 7px 14px; background: #FEE500; color: #3A1D1D;
+      border-radius: 6px; font-size: 13px; font-weight: 700;
+      text-decoration: none; transition: opacity 0.15s;
+    }
+    .map-kakao-link:hover { opacity: 0.85; }
+    .map-address-bar {
+      margin-top: 10px; padding: 12px 16px;
+      background: var(--white); border-radius: 8px;
+      border: 1px solid var(--border);
+      font-size: 13px; color: var(--text-muted);
+      display: flex; align-items: center; gap: 8px;
+    }
+    .map-address-bar strong { color: var(--text); }
+    @media (max-width: 768px) {
+      .address-section { padding: 20px 18px; }
+      #kakao-map { height: 260px; }
+    }
+  </style>
+</head>
+<body>
+<script>window.NAV_ROOT = '../';</script>
+<script src="../js/nav.js"></script>
+
+<div class="page-hero">
+  <h1><span>C</span>ontact Us</h1>
+  <p style="color:var(--text-muted);margin-top:8px;font-size:14px;">궁금한 점이 있으시면 언제든지 연락해 주세요</p>
+</div>
+
+<div class="section" style="margin-top:24px;margin-bottom:0;padding-bottom:0">
+  <div class="sub-nav">
+    <a href="introduction.html">Introduction</a>
+    <a href="photos.html">Photos</a>
+    <a href="contact.html" class="active">Contact Us</a>
+  </div>
+</div>
+
+<div class="section" style="margin-bottom:60px">
+
+  <!-- 연구실 문의 이미지 — href를 실제 구글폼 URL로 교체하세요 -->
+  <a class="contact-img-wrap" href="https://docs.google.com/forms/d/e/1FAIpQLScuPJTLfKKVgjACoPYXgIy4V9uczZxrvE9Yd5sem34n0tVW6g/viewform" target="_blank" rel="noopener">
+    <img class="contact-img" src="../assets/img/notice/contact.png" alt="연구실 문의 및 대학원생 모집 공고" />
+  </a>
+
+  <!-- 주소 -->
+  <div class="address-section">
+    <div class="address-label">찾아오시는 길</div>
+    <p class="address-ko">
+      (16419) 경기도 수원시 장안구 서부로 2066,<br>
+      성균관대학교 (자연과학캠퍼스) N센터 86401호
+    </p>
+    <p class="address-en">
+      N Center 86401, Sungkyunkwan University (Natural Science Campus),<br>
+      (16419) 2066 Seobu-ro, Jang-gu, Suwon-si, Gyeonggi-do, South Korea
+    </p>
+  </div>
+  <div class="map-section">
+    <div class="map-section-header">
+      <span class="map-section-title">📍 오시는 길</span>
+      <a class="map-kakao-link"
+         href="https://map.kakao.com/link/to/성균관대학교 자연과학캠퍼스 N센터,37.29971,127.03528"
+         target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+        </svg>
+        카카오맵에서 보기
+      </a>
+    </div>
+    <div id="daumRoughmapContainer1582297094705" class="root_daum_roughmap root_daum_roughmap_landing" style="width:100%;border-radius:10px;overflow:hidden;border:1px solid var(--border)"></div>
+    <div class="map-address-bar">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;color:var(--green)">
+        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+      </svg>
+      <span><strong>성균관대학교 자연과학캠퍼스 N센터 4층 86401호</strong> &nbsp;|&nbsp; 경기도 수원시 장안구 서부로 2066</span>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">NLP<span>LAB</span></div>
+      <p class="footer-desc">Natural Language Processing Laboratory<br />성균관대학교 소프트웨어융합대학</p>
+    </div>
+  </div>
+  <p class="footer-copy">© 2026 NLPLAB, Sungkyunkwan University. All rights reserved.</p>
+</footer>
+
+<script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+<script charset="UTF-8">
+  new daum.roughmap.Lander({
+    "timestamp": "1582297094705",
+    "key": "x76z",
+    "mapHeight": "450"
+  }).render();
+</script>
+</body>
+</html>

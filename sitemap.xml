@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- 메인 -->
+  <url>
+    <loc>https://nlplab.skku.edu/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- 연구실 소개 -->
+  <url>
+    <loc>https://nlplab.skku.edu/pages/introduction.html</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 구성원 -->
+  <url>
+    <loc>https://nlplab.skku.edu/pages/members.html</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 연구 분야 -->
+  <url>
+    <loc>https://nlplab.skku.edu/pages/fields.html</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 논문 -->
+  <url>
+    <loc>https://nlplab.skku.edu/pages/publications.html</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 프로젝트 -->
+  <url>
+    <loc>https://nlplab.skku.edu/pages/projects.html</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 특허 -->
+  <url>
+    <loc>https://nlplab.skku.edu/pages/patents.html</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 데모 - NLP -->
+  <url>
+    <loc>https://nlplab.skku.edu/pages/demos-nlp.html</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 데모 - IR -->
+  <url>
+    <loc>https://nlplab.skku.edu/pages/demos-ir.html</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 데모 - Text Mining -->
+  <url>
+    <loc>https://nlplab.skku.edu/pages/demos-textmining.html</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 데모 - Generative AI -->
+  <url>
+    <loc>https://nlplab.skku.edu/pages/demos-generativeai.html</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 게시판 -->
+  <url>
+    <loc>https://nlplab.skku.edu/pages/boards.html</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 사진 -->
+  <url>
+    <loc>https://nlplab.skku.edu/pages/photos.html</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- 연락처 -->
+  <url>
+    <loc>https://nlplab.skku.edu/pages/contact.html</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+</urlset>

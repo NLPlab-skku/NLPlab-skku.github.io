@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="../assets/img/favicon.ico" />
+  <title>Members — NLPLAB</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .page-hero { background: var(--bg); padding: 48px 24px 32px; text-align: center; }
+    .page-hero h1 { font-size: 36px; font-weight: 700; }
+    .page-hero h1 span { color: var(--green); }
+    .member-group { margin-bottom: 48px; }
+    .group-label { font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 18px; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+    .member-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 18px; }
+    .member-card { background: var(--white); border-radius: 10px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.05); text-align: center; transition: transform 0.2s; }
+    .member-card:hover { transform: translateY(-3px); }
+    .member-avatar-lg { height: 220px; background: linear-gradient(135deg, #d4e8d8, #b8d4be); display: flex; align-items: center; justify-content: center; font-size: 56px; overflow: hidden; }
+    .member-avatar-lg img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .member-info { padding: 16px; }
+    .member-name { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+    .member-role { font-size: 12px; color: var(--green); font-weight: 600; margin-bottom: 6px; }
+    .member-research { font-size: 12px; color: var(--text-muted); line-height: 1.5; margin-bottom: 6px; }
+    .member-email { font-size: 11px; color: var(--text-muted); margin-bottom: 10px; }
+    .member-email a { color: inherit; text-decoration: none; }
+    .member-email a:hover { color: var(--green); }
+    .member-links { display: flex; justify-content: center; gap: 8px; }
+    .member-link { font-size: 11px; color: var(--text-muted); border: 1px solid var(--border); padding: 3px 8px; border-radius: 4px; transition: all 0.15s; }
+    .member-link:hover { color: var(--green); border-color: var(--green); }
+    .pi-card { display: flex; gap: 28px; background: var(--white); border-radius: 10px; padding: 32px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); margin-bottom: 40px; align-items: center; }
+    .pi-avatar { width: 130px; height: 130px; flex-shrink: 0; border-radius: 50%; background: linear-gradient(135deg, #c4dfc9, #8fbf98); display: flex; align-items: center; justify-content: center; font-size: 52px; overflow: hidden; }
+    .pi-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .pi-avatar-lg { width: 400px; height: 440px; flex-shrink: 0; border-radius: 12px; background: linear-gradient(135deg, #c4dfc9, #8fbf98); overflow: hidden; }
+    .pi-avatar-lg img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .pi-name { font-size: 24px; font-weight: 700; margin-bottom: 4px; }
+    .pi-title { font-size: 14px; color: var(--green); font-weight: 600; margin-bottom: 10px; }
+    .pi-desc { font-size: 14px; color: var(--text-muted); line-height: 1.75; max-width: 540px; }
+    .pi-links { display: flex; gap: 8px; margin-top: 14px; }
+    .pi-link { font-size: 13px; font-weight: 500; color: var(--text-muted); border: 1px solid var(--border); padding: 5px 12px; border-radius: 4px; transition: all 0.15s; }
+    .pi-link:hover { color: var(--green); border-color: var(--green); }
+    @media (max-width: 600px) {
+      .pi-card { flex-direction: column; text-align: center; padding: 20px 16px; }
+      .pi-avatar-lg { width: 100%; height: 260px; }
+      .pi-desc { font-size: 13px; max-width: 100%; }
+      .pi-links { justify-content: center; flex-wrap: wrap; }
+    }
+  </style>
+</head>
+<body>
+<script>window.NAV_ROOT = '../';</script>
+<script src="../js/nav.js"></script>
+
+<div class="page-hero">
+  <h1><span>M</span>embers</h1>
+  <p style="color:var(--text-muted);margin-top:8px;font-size:14px;">NLPLab을 이끌어가는 연구원들을 소개합니다</p>
+</div>
+
+<div class="section" style="margin-bottom:60px">
+
+  <!-- PI -->
+  <div class="pi-card">
+    <div class="pi-avatar-lg"><img src="../assets/img/members/current/JPGandPNGs/prof_1.jpg" alt="고영중"></div>
+    <div>
+      <div class="pi-name">고영중</div>
+      <div class="pi-title">Professor (Principal Investigator)</div>
+      <div class="pi-desc">I'm a professor in Dept. of Computer Science and Engineering, Graduate School of AI, and Dept. of Applied Data Science at the Sungkyunkwan University. 
+        I work at the intersection of natural language processing (NLP) and information retrieval (IR) based on Language Models, 
+        and I am interested in NLP (dialogue system, question/answering system, etc.), IR (GraphRAG, etc.), Generative AI (controllable text generation, etc.), 
+        Machine learning for AI (reinforcement learning, etc), and Text Mining (text classification/summarization, sentiment classification, etc.) for Agentic and Physical AI.<br>
+      </div>
+      <div class="member-email"><a href="mailto:yjko@skku.edu" style="font-size: 16px;">yjko@skku.edu</a></div>
+      <div class="pi-links">
+        <a class="pi-link" href="https://scholar.google.com/citations?hl=ko&user=VQeFpwsAAAAJ">Google Scholar</a>
+        <a class="pi-link" href="https://www.linkedin.com/in/youngjoong-ko-46a30758/">linkedIn</a>
+        <a class="pi-link" href="https://nlp.skku.edu/">Homepage</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- PhD -->
+  <div class="member-group">
+    <div class="group-label">PhD Students</div>
+    <div class="member-grid">
+      <div class="member-card">
+        <div class="member-avatar-lg"><img src="../assets/img/members/current/JPGandPNGs/kim_doo_young.jpg" alt="김두영"></div>
+        <div class="member-info">
+          <div class="member-name">김두영</div>
+          <div class="member-role">박사과정</div>
+          <div class="member-research">Controllable Text Generation</div>
+          <div class="member-email"><a href="mailto:kdysunleo98@gmail.com">kdysunleo98@gmail.com</a></div>
+          <div class="member-links"><a class="member-link" href="https://scholar.google.com/citations?user=e2WnKaUAAAAJ&hl=ko">Scholar</a><a class="member-link" href="https://www.linkedin.com/in/dooyoung-kim-76216b3b0/">linkedIn</a><a class="member-link" href="https://github.com/kdysunleo">Homepage</a></div>
+        </div>
+      </div>
+      <div class="member-card">
+        <div class="member-avatar-lg"><img src="../assets/img/members/current/JPGandPNGs/kim_keun_ha.png" alt="김근하"></div>
+        <div class="member-info">
+          <div class="member-name">김근하</div>
+          <div class="member-role">박사과정</div>
+          <div class="member-research">Information Retrieval</div>
+          <div class="member-email"><a href="mailto:keunhakim98@gmail.com">keunhakim98@gmail.com</a></div>
+          <div class="member-links"><a class="member-link" href="#">Scholar</a><a class="member-link" href="https://www.linkedin.com/in/%EA%B7%BC%ED%95%98-%EA%B9%80-480453258/">linkedIn</a><a class="member-link" href="https://github.com/KIMKEUNHA">Homepage</a></div>
+        </div>
+      </div>
+      <div class="member-card">
+        <div class="member-avatar-lg"><img src="../assets/img/members/current/JPGandPNGs/jang_yoon_jin.jpg" alt="장윤진"></div>
+        <div class="member-info">
+          <div class="member-name">장윤진</div>
+          <div class="member-role">박사과정</div>
+          <div class="member-research">Dialogue System</div>
+          <div class="member-email"><a href="mailto:yoonjinjang98@gmail.com">yoonjinjang98@gmail.com</a></div>
+          <div class="member-links"><a class="member-link" href="#">Scholar</a><a class="member-link" href="https://www.linkedin.com/in/yoonjin-jang-765b933ab/">linkedIn</a><a class="member-link" href="https://github.com/yali98">Homepage</a></div>
+        </div>
+      </div>
+      <div class="member-card">
+        <div class="member-avatar-lg"><img src="../assets/img/members/current/JPGandPNGs/heo_yu_min.png" alt="허유민"></div>
+        <div class="member-info">
+          <div class="member-name">허유민</div>
+          <div class="member-role">박사과정</div>
+          <div class="member-research">Information Retrieval</div>
+          <div class="member-email"><a href="mailto:ymheo1123@gmail.com">ymheo1123@gmail.com</a></div>
+          <div class="member-links"><a class="member-link" href="#">Scholar</a><a class="member-link" href="https://www.linkedin.com/in/yumin-heo-a2a245297/">linkedIn</a><a class="member-link" href="https://github.com/yuminHeo">Homepage</a></div>
+        </div>
+      </div>
+      <div class="member-card">
+        <div class="member-avatar-lg"><img src="../assets/img/members/current/JPGandPNGs/choi_min_jun.jpg" alt="최민준"></div>
+        <div class="member-info">
+          <div class="member-name">최민준</div>
+          <div class="member-role">석박사통합과정</div>
+          <div class="member-research">Information Retrieval</div>
+          <div class="member-email"><a href="mailto:alswns078@gmail.com">alswns078@gmail.com</a></div>
+          <div class="member-links"><a class="member-link" href="#">Scholar</a><a class="member-link" href="https://www.linkedin.com/in/minjun-choi-269b9a3ab/">linkedIn</a><a class="member-link" href="https://github.com/alswns078">Homepage</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 석사 -->
+  <div class="member-group">
+    <div class="group-label">Master Students</div>
+    <div class="member-grid">
+      <div class="member-card">
+        <div class="member-avatar-lg"><img src="../assets/img/members/current/JPGandPNGs/lee_jun_hui.jpg" alt="이준희"></div>
+        <div class="member-info">
+          <div class="member-name">이준희</div>
+          <div class="member-role">석박사통합과정</div>
+          <div class="member-research">Dialogue System</div>
+          <div class="member-email"><a href="mailto:ljh010110@g.skku.edu">ljh010110@g.skku.edu</a></div>
+          <div class="member-links"><a class="member-link" href="#">Scholar</a><a class="member-link" href="https://www.linkedin.com/in/%EC%A4%80%ED%9D%AC-%EC%9D%B4-51b0263a4/">linkedIn</a><a class="member-link" href="https://github.com/ljh010110-skku-edu">Homepage</a></div>
+        </div>
+      </div>
+      <div class="member-card">
+        <div class="member-avatar-lg"><img src="../assets/img/members/current/JPGandPNGs/han_jun_ho.png" alt="한준호"></div>
+        <div class="member-info">
+          <div class="member-name">한준호</div>
+          <div class="member-role">석박사통합과정</div>
+          <div class="member-research">Information Retrieval</div>
+          <div class="member-email"><a href="mailto:hjunho2357@gmail.com">hjunho2357@gmail.com</a></div>
+          <div class="member-links"><a class="member-link" href="#">Scholar</a><a class="member-link" href="https://www.linkedin.com/in/junho-han/">linkedIn</a><a class="member-link" href="https://github.com/opkwisdom/">Homepage</a></div>
+        </div>
+      </div>
+      <div class="member-card">
+        <div class="member-avatar-lg"><img src="../assets/img/members/current/JPGandPNGs/kim_taek_lim.jpg" alt="김택림"></div>
+        <div class="member-info">
+          <div class="member-name">김택림</div>
+          <div class="member-role">석박사통합과정</div>
+          <div class="member-research">Controllable Text Generation</div>
+          <div class="member-email"><a href="mailto:kimtaeklim2002@gmail.com">kimtaeklim2002@gmail.com</a></div>
+          <div class="member-links"><a class="member-link" href="#">Scholar</a><a class="member-link" href="www.linkedin.com/in/taeklim-kim-6bb28b317">linkedIn</a><a class="member-link" href="https://github.com/r01ex">Homepage</a></div>
+        </div>
+      </div>
+      <div class="member-card">
+        <div class="member-avatar-lg"><img src="../assets/img/members/current/JPGandPNGs/lee_ye_won.png" alt="이예원"></div>
+        <div class="member-info">
+          <div class="member-name">이예원</div>
+          <div class="member-role">석박사통합과정</div>
+          <div class="member-research">Controllable Text Generation</div>
+          <div class="member-email"><a href="mailto:yewon0742@gmail.com">yewon0742@gmail.com</a></div>
+          <div class="member-links"><a class="member-link" href="#">Scholar</a><a class="member-link" href="https://www.linkedin.com/in/%EC%98%88%EC%9B%90-%EC%9D%B4-9ab1763b0/">linkedIn</a><a class="member-link" href="https://github.com/aeongaewon">Homepage</a></div>
+        </div>
+      </div>
+      <div class="member-card">
+        <div class="member-avatar-lg"><img src="../assets/img/members/current/JPGandPNGs/lee_jun_seo.png" alt="이준서"></div>
+        <div class="member-info">
+          <div class="member-name">이준서</div>
+          <div class="member-role">석박사통합과정</div>
+          <div class="member-research">Information Retrieval</div>
+          <div class="member-email"><a href="mailto:jsms48252@gmail.com">jsms48252@gmail.com</a></div>
+          <div class="member-links"><a class="member-link" href="#">Scholar</a><a class="member-link" href="https://www.linkedin.com/in/junseolee031211/">linkedIn</a><a class="member-link" href="https://github.com/jsms4825">Homepage</a></div>
+        </div>
+      </div>
+      <div class="member-card">
+        <div class="member-avatar-lg"><img src="../assets/img/members/current/JPGandPNGs/kim_jung_woo.jpg" alt="김정우"></div>
+        <div class="member-info">
+          <div class="member-name">김정우</div>
+          <div class="member-role">석박사통합과정</div>
+          <div class="member-research">Controllable Text Generation</div>
+          <div class="member-email"><a href="mailto:jeongwu510@gmail.com">jeongwu510@gmail.com</a></div>
+          <div class="member-links"><a class="member-link" href="#">Scholar</a><a class="member-link" href="https://www.linkedin.com/in/%EC%A0%95%EC%9A%B0-%EA%B9%80-15a291335?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">linkedIn</a><a class="member-link" href="https://github.com/hiwjddn">Homepage</a></div>
+        </div>
+      </div>
+      <div class="member-card">
+        <div class="member-avatar-lg"><img src="../assets/img/members/current/JPGandPNGs/kim_jun_woo.jpg" alt="김준우"></div>
+        <div class="member-info">
+          <div class="member-name">김준우</div>
+          <div class="member-role">석박사통합과정</div>
+          <div class="member-research">Dialogue System</div>
+          <div class="member-email"><a href="mailto:andykim030618@gmail.com">andykim030618@gmail.com</a></div>
+          <div class="member-links"><a class="member-link" href="https://scholar.google.com/citations?user=5OCYUeoAAAAJ&hl=ko&authuser=1">Scholar</a><a class="member-link" href="https://www.linkedin.com/in/%EC%A4%80%EC%9A%B0-%EA%B9%80-7a2b993ab/">linkedIn</a><a class="member-link" href="https://github.com/Wnsdnl">Homepage</a></div>
+        </div>
+      </div>
+      <div class="member-card">
+        <div class="member-avatar-lg"><img src="../assets/img/members/current/JPGandPNGs/kang_su_bin.jpg" alt="강수빈"></div>
+        <div class="member-info">
+          <div class="member-name">강수빈</div>
+          <div class="member-role">석박사통합과정</div>
+          <div class="member-research">Information Retrieval</div>
+          <div class="member-email"><a href="mailto:eqsubin@gmail.com">eqsubin@gmail.com</a></div>
+          <div class="member-links"><a class="member-link" href="#">Scholar</a><a class="member-link" href="https://www.linkedin.com/in/%EC%88%98%EB%B9%88-%EA%B0%95-324236319?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">linkedIn</a><a class="member-link" href="https://github.com/kangsoobin">Homepage</a></div>
+        </div>
+      </div>
+      <div class="member-card">
+        <div class="member-avatar-lg"><img src="../assets/img/members/current/JPGandPNGs/heo_ji_won.jpg" alt="허지원"></div>
+        <div class="member-info">
+          <div class="member-name">허지원</div>
+          <div class="member-role">석사과정</div>
+          <div class="member-research">Dialogue System</div>
+          <div class="member-email"><a href="mailto:herjw12@g.skku.edu">herjw12@g.skku.edu</a></div>
+          <div class="member-links"><a class="member-link" href="#">Scholar</a><a class="member-link" href="https://www.linkedin.com/in/uomiz">linkedIn</a><a class="member-link" href="https://github.com/uomiz">Homepage</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 학부생 -->
+  <div class="member-group">
+    <div class="group-label">Undergraduate Students</div>
+    <div class="member-grid">
+      <div class="member-card">
+        <div class="member-avatar-lg"><img src="../assets/img/members/current/JPGandPNGs/park_jin_seok.jpg" alt="박진석"></div>
+        <div class="member-info">
+          <div class="member-name">박진석</div>
+          <div class="member-role">학부과정</div>
+          <div class="member-research">Natural Language Processing</div>
+          <div class="member-email"><a href="mailto:jinseokpark160713@gmail.com">jinseokpark160713@gmail.com</a></div>
+          <div class="member-links"><a class="member-link" href="#">Scholar</a><a class="member-link" href="https://www.linkedin.com/in/jinseok-park-93417a3b0/">linkedIn</a><a class="member-link" href="https://github.com/hecarimday">Homepage</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 졸업생 >
+  <div class="member-group">
+    <div class="group-label">Alumni</div>
+    <div class="member-grid">
+      <div class="member-card">
+        <div class="member-avatar-lg"><img src="../assets/img/members/current/JPGandPNGs/base_photos.webp" alt="양선"></div>
+        <div class="member-info">
+          <div class="member-name">양선</div>
+          <div class="member-role">박사</div>
+          <div class="member-research">동아대학교 컴퓨터공학과 부교수</div>
+          <div class="member-email"><a href="mailto:seony.yang@gmail.com">seony.yang@gmail.com</a></div>
+        </div>
+      </div>
+    </div>
+  </div-->
+</div>
+
+
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">NLP<span>LAB</span></div>
+      <p class="footer-desc">Natural Language Processing Laboratory<br />성균관대학교 소프트웨어융합대학</p>
+    </div>
+  </div>
+  <p class="footer-copy">© 2026 NLPLAB, Sungkyunkwan University. All rights reserved.</p>
+</footer>
+</body>
+</html>

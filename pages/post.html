@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="../assets/img/favicon.ico" />
+  <title>Post — NLPLAB</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+
+  <!-- MathJax -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true,
+        processEnvironments: true
+      },
+      options: { skipHtmlTags: ['script','noscript','style','textarea','pre'] }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+
+  <!-- marked.js v4 (allows raw HTML by default) -->
+  <script src="https://cdn.jsdelivr.net/npm/marked@4/marked.min.js"></script>
+
+  <style>
+    /* ── Post wrapper ── */
+    .post-wrap {
+      max-width: 860px;
+      margin: 40px auto 80px;
+      padding: 32px 24px 40px;
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+
+    /* ── Post header ── */
+    .post-header {
+      border-top: 2px solid #333;
+      border-bottom: 2px solid #333;
+      padding: 20px 0;
+      margin-bottom: 0;
+      background: #fcfcfc;
+    }
+    .post-header-title {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 1.5;
+      color: #000;
+      word-break: keep-all;
+      margin-bottom: 14px;
+    }
+    .post-header-meta {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 8px;
+      font-size: 13px;
+      color: #666;
+    }
+    .post-header-meta-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 6px;
+    }
+    .post-header-meta .cat-badge {
+      display: inline-block;
+      padding: 2px 10px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 700;
+    }
+    .cat-RL   { background:#fde8e8; color:#c03020; }
+    .cat-IR   { background:#dce8ff; color:#3a6fd8; }
+    .cat-RAG  { background:#e8f4ea; color:#2d7a3a; }
+    .cat-LM   { background:#f3e8ff; color:#7a3a9a; }
+    .cat-XAI  { background:#fff3e0; color:#c07820; }
+    .cat-PEFT { background:#e8f8ff; color:#1a7a9a; }
+    .cat-공지  { background:#e8f4ea; color:#2d7a3a; }
+
+    /* ── Attachments ── */
+    .attach-section {
+      margin: 0;
+      border-bottom: 1px solid #666;
+    }
+    .attach-label {
+      padding: 12px 0 4px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .attach-item {
+      padding: 10px 0;
+      border-top: 1px solid #eee;
+    }
+    .attach-item:first-of-type { border-top: none; }
+    .attach-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: #333;
+      font-size: 14px;
+      transition: color 0.15s;
+    }
+    .attach-link:hover { color: var(--green); }
+    .attach-link:hover .attach-dl { opacity: 1; }
+    .attach-dl {
+      font-size: 11px;
+      color: var(--green);
+      font-weight: 700;
+      opacity: 0.5;
+    }
+
+    /* ── Post content ── */
+    .post-content {
+      padding: 32px 0;
+      line-height: 1.9;
+      font-size: 15px;
+      color: #333;
+      border-bottom: 1px solid #ddd;
+    }
+    .post-content h1 { font-size: 22px; font-weight: 700; margin: 32px 0 12px; color: #111; }
+    .post-content h2 { font-size: 18px; font-weight: 700; margin: 28px 0 10px; color: #111; border-bottom: 1px solid #eee; padding-bottom: 6px; }
+    .post-content h3 { font-size: 16px; font-weight: 700; margin: 22px 0 8px; color: #111; }
+    .post-content h4 { font-size: 14px; font-weight: 700; margin: 18px 0 6px; color: #333; }
+    .post-content p { margin-bottom: 14px; }
+    .post-content ul, .post-content ol { padding-left: 24px; margin-bottom: 14px; }
+    .post-content li { margin-bottom: 4px; }
+    .post-content blockquote {
+      border-left: 4px solid var(--green);
+      padding: 12px 20px;
+      margin: 16px 0;
+      background: #f7fbf8;
+      color: #555;
+      border-radius: 0 6px 6px 0;
+    }
+    .post-content code {
+      background: #f0f0ec;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 13px;
+    }
+    .post-content pre {
+      background: #f0f0ec;
+      padding: 16px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin-bottom: 16px;
+    }
+    .post-content pre code { background: none; padding: 0; }
+    .post-content img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 6px;
+      display: block;
+      margin: 16px auto;
+    }
+    .post-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 16px;
+      font-size: 14px;
+    }
+    .post-content th, .post-content td {
+      padding: 8px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    .post-content th { background: #f7f7f4; font-weight: 600; }
+    .post-content a { color: var(--green); text-decoration: none; }
+    .post-content a:hover { text-decoration: underline; }
+    .post-content hr { border: none; border-top: 1px solid #ddd; margin: 24px 0; }
+    /* MathJax overflow */
+    .MJX-TEX, mjx-container { overflow-x: auto; max-width: 100%; }
+
+    /* ── Loading / Error ── */
+    .post-loading {
+      padding: 60px 0;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+
+    /* ── Navigation ── */
+    .post-nav { margin-top: 0; }
+    .nav-list {
+      list-style: none;
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-item {
+      display: flex;
+      align-items: center;
+      padding: 14px 0;
+      border-bottom: 1px solid #eee;
+      text-decoration: none;
+      color: #333;
+      transition: background 0.15s;
+      gap: 16px;
+    }
+    .nav-item:last-child { border-bottom: none; }
+    .nav-item:hover { color: var(--green); }
+    .nav-label {
+      width: 80px;
+      flex-shrink: 0;
+      font-size: 13px;
+      color: #888;
+    }
+    .nav-title {
+      flex: 1;
+      font-size: 14px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .nav-empty {
+      display: flex;
+      align-items: center;
+      padding: 14px 0;
+      gap: 16px;
+      border-bottom: 1px solid #eee;
+      color: #bbb;
+      font-size: 14px;
+    }
+    .nav-empty:last-child { border-bottom: none; }
+
+    .post-footer-btns {
+      display: flex;
+      justify-content: flex-start;
+      margin-top: 20px;
+    }
+    .btn-list {
+      padding: 8px 20px;
+      border: 1px solid #ccc;
+      background: #fff;
+      color: #333;
+      font-size: 14px;
+      font-family: inherit;
+      cursor: pointer;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: 0.15s;
+      display: inline-block;
+    }
+    .btn-list:hover { background: #f5f5f5; border-color: #999; }
+  </style>
+</head>
+<body>
+<script>window.NAV_ROOT = '../';</script>
+<script src="../js/nav.js"></script>
+<script src="../js/posts.js"></script>
+
+<div class="post-wrap">
+
+  <!-- 헤더 -->
+  <div class="post-header" id="post-header">
+    <h1 class="post-header-title" id="post-title">불러오는 중...</h1>
+    <div class="post-header-meta" id="post-meta"></div>
+  </div>
+
+  <!-- 첨부파일 -->
+  <div class="attach-section" id="attach-section" style="display:none">
+    <div class="attach-label">📎 첨부파일</div>
+    <div id="attach-items"></div>
+  </div>
+
+  <!-- 본문 -->
+  <div class="post-content" id="post-content">
+    <div class="post-loading">⏳ 게시글을 불러오는 중입니다...</div>
+  </div>
+
+  <!-- 이전글 / 다음글 -->
+  <div class="post-nav" id="post-nav"></div>
+
+  <!-- 목록 버튼 -->
+  <div class="post-footer-btns" id="post-footer-btns"></div>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">NLP<span>LAB</span></div>
+      <p class="footer-desc">Natural Language Processing Laboratory<br />성균관대학교 소프트웨어융합대학</p>
+    </div>
+  </div>
+  <p class="footer-copy">© 2026 NLPLAB, Sungkyunkwan University. All rights reserved.</p>
+</footer>
+
+<script>
+(function () {
+  const params = new URLSearchParams(location.search);
+  const tab = params.get('tab') || 'notice';
+  const id  = parseInt(params.get('id') || '0', 10);
+  const posts = window.POSTS[tab] || [];
+  const post  = posts[id];
+
+  if (!post) {
+    document.getElementById('post-title').textContent = '게시글을 찾을 수 없습니다.';
+    document.getElementById('post-content').innerHTML = '<p style="color:var(--text-muted)">올바른 경로로 접근해 주세요.</p>';
+    return;
+  }
+
+  // ── 제목 & 메타 ──
+  document.title = post.title + ' — NLPLAB';
+  document.getElementById('post-title').textContent = post.title;
+
+  const catClass = 'cat-' + post.category.replace(/^논문-리뷰-/, '');
+  document.getElementById('post-meta').innerHTML =
+    `<span>작성자: <strong>${post.author}</strong></span>` +
+    `<div class="post-header-meta-right">` +
+      `<span><span class="cat-badge ${catClass}">${post.category}</span></span>` +
+      `<span>작성일: ${post.date}</span>` +
+    `</div>`;
+
+  // ── 첨부파일 ──
+  if (post.attachments && post.attachments.length > 0) {
+    const sec = document.getElementById('attach-section');
+    const items = document.getElementById('attach-items');
+    sec.style.display = 'block';
+    items.innerHTML = post.attachments.map(a => {
+      const ext = a.path.split('.').pop().toLowerCase();
+      const icon = ext === 'pdf' ? 'pdf-2'
+                 : (ext === 'ppt' || ext === 'pptx') ? 'microsoft-powerpoint-2019'
+                 : (ext === 'doc' || ext === 'docx') ? 'microsoft-word-2019'
+                 : 'file';
+      return `<div class="attach-item">
+        <a class="attach-link" href="${a.path}" download="${a.name}" target="_blank">
+          <img src="https://img.icons8.com/color/48/${icon}.png" style="width:18px;height:18px;flex-shrink:0">
+          <span>${a.name}</span>
+          <span class="attach-dl">다운로드</span>
+        </a>
+      </div>`;
+    }).join('');
+  }
+
+  // ── 본문 렌더링 ──
+  function renderContent(html) {
+    document.getElementById('post-content').innerHTML = html;
+    if (window.MathJax) {
+      MathJax.typesetPromise([document.getElementById('post-content')]).catch(console.error);
+    }
+  }
+
+  function stripFrontmatter(text) {
+    return text.replace(/^---[\s\S]*?---\n?/, '').trim();
+  }
+
+  function fixImagePaths(text) {
+    // {{ '/assets/...' | prepend: site.baseurl }} → ../assets/...
+    return text.replace(/\{\{[^}]*'(\/assets\/[^']+)'[^}]*\}\}/g, (_, p) => '..' + p);
+  }
+
+  if (post.inlineHtml) {
+    renderContent(post.inlineHtml);
+  } else if (post.mdPath) {
+    fetch(post.mdPath)
+      .then(r => {
+        if (!r.ok) throw new Error('fetch failed');
+        return r.text();
+      })
+      .then(raw => {
+        let md = stripFrontmatter(raw);
+        md = fixImagePaths(md);
+        const html = marked.parse(md);
+        renderContent(html);
+      })
+      .catch(() => {
+        document.getElementById('post-content').innerHTML =
+          '<p style="color:var(--text-muted);text-align:center;padding:40px 0">' +
+          '게시글을 불러올 수 없습니다. 서버에서 접근해 주세요.</p>';
+      });
+  }
+
+  // ── 이전글 / 다음글 ──
+  const prev = id > 0 ? posts[id - 1] : null;          // 위 = 더 최신
+  const next = id < posts.length - 1 ? posts[id + 1] : null; // 아래 = 더 오래된
+
+  const navHtml =
+    `<ul class="nav-list">` +
+    (prev
+      ? `<li><a class="nav-item" href="post.html?tab=${tab}&id=${id-1}">
+          <span class="nav-label">▲ 이전글</span>
+          <span class="nav-title">${prev.title}</span>
+         </a></li>`
+      : `<li><div class="nav-empty"><span class="nav-label">▲ 이전글</span><span>이전 게시글이 없습니다.</span></div></li>`) +
+    (next
+      ? `<li><a class="nav-item" href="post.html?tab=${tab}&id=${id+1}">
+          <span class="nav-label">▼ 다음글</span>
+          <span class="nav-title">${next.title}</span>
+         </a></li>`
+      : `<li><div class="nav-empty"><span class="nav-label">▼ 다음글</span><span>다음 게시글이 없습니다.</span></div></li>`) +
+    `</ul>`;
+  document.getElementById('post-nav').innerHTML = navHtml;
+
+  // ── 목록 버튼 ──
+  document.getElementById('post-footer-btns').innerHTML =
+    `<a class="btn-list" href="boards.html?tab=${tab}">≡ 목록</a>`;
+})();
+</script>
+</body>
+</html>

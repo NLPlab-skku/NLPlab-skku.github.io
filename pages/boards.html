@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="../assets/img/favicon.ico" />
+  <title>Boards — NLPLAB</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .page-hero { background: var(--bg); padding: 48px 24px 32px; text-align: center; }
+    .page-hero h1 { font-size: 36px; font-weight: 700; }
+    .page-hero h1 span { color: var(--green); }
+
+    .board-tabs { display: flex; border-bottom: 2px solid var(--border); }
+    .board-tab {
+      padding: 13px 28px; font-size: 14px; font-weight: 600; cursor: pointer;
+      color: var(--text-muted); border-bottom: 3px solid transparent; margin-bottom: -2px;
+      transition: all 0.15s;
+    }
+    .board-tab.active { color: var(--green); border-bottom-color: var(--green); background: #f7fbf8; }
+    .board-tab:hover { color: var(--green); background: #f7fbf8; }
+
+    .board-wrap { background: var(--white); border-radius: 0 0 10px 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); overflow: hidden; }
+    @media (max-width: 600px) {
+      .board-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+      thead th { padding: 10px 10px; font-size: 11px; }
+      tbody td { padding: 10px 10px; font-size: 13px; }
+      th.author, th.date, td.author, td.date { display: none; }
+      table { table-layout: auto; }
+      .post-title-cell { width: 100%; }
+    }
+
+    table { width: 100%; border-collapse: collapse; }
+    thead th {
+      background: #f7f7f4; font-size: 12px; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.05em; color: var(--text-muted); padding: 12px 20px;
+      text-align: left; border-bottom: 1px solid var(--border); white-space: nowrap;
+    }
+    tbody td { padding: 14px 20px; border-bottom: 1px solid #f0f0ec; font-size: 14px; vertical-align: middle; }
+    tbody tr:last-child td { border-bottom: none; }
+    tbody tr { cursor: pointer; transition: background 0.12s; }
+    tbody tr:hover td { background: #f0f8f2; }
+    .post-title-cell { font-weight: 500; color: var(--text); }
+    .badge-new {
+      display: inline-block; background: #e8f4ea; color: var(--green);
+      font-size: 10px; font-weight: 700; padding: 2px 6px; border-radius: 4px;
+      margin-left: 6px; vertical-align: middle;
+    }
+    .notice-row td { background: #f7fbf8; font-weight: 500; }
+    td.num { color: var(--text-muted); font-size: 13px; width: 54px; }
+    td.author { font-size: 13px; color: var(--text-muted); width: 90px; }
+    td.date { font-size: 12px; color: var(--text-muted); width: 90px; }
+    td.cat { width: 80px; }
+
+    .cat-badge {
+      display: inline-block; padding: 2px 9px; border-radius: 20px;
+      font-size: 11px; font-weight: 700; letter-spacing: 0.03em;
+    }
+    .cat-RL   { background:#fde8e8; color:#c03020; }
+    .cat-IR   { background:#dce8ff; color:#3a6fd8; }
+    .cat-RAG  { background:#e8f4ea; color:#2d7a3a; }
+    .cat-LM   { background:#f3e8ff; color:#7a3a9a; }
+    .cat-XAI  { background:#fff3e0; color:#c07820; }
+    .cat-PEFT { background:#e8f8ff; color:#1a7a9a; }
+
+    .board-pagination {
+      display: flex; justify-content: center; align-items: center;
+      gap: 6px; padding: 16px 0;
+    }
+    .board-pagination button {
+      min-width: 32px; height: 32px; padding: 0 10px;
+      border: 1px solid var(--border); background: #fff;
+      color: var(--text); font-size: 13px; font-family: inherit;
+      border-radius: 4px; cursor: pointer; transition: 0.15s;
+    }
+    .board-pagination button:hover { background: #f0f8f2; border-color: var(--green); color: var(--green); }
+    .board-pagination button.active { background: var(--green); color: #fff; border-color: var(--green); font-weight: 700; }
+
+    .board-search {
+      display: flex; gap: 8px; padding: 14px 20px;
+      border-top: 1px solid var(--border);
+    }
+    .board-search select {
+      padding: 7px 12px; border: 1px solid var(--border); border-radius: 6px;
+      font-size: 13px; background: var(--bg); font-family: inherit;
+    }
+    .board-search input {
+      flex: 1; padding: 7px 12px; border: 1px solid var(--border);
+      border-radius: 6px; font-size: 13px; font-family: inherit;
+    }
+    .board-search input:focus { outline: none; border-color: var(--green); }
+    .board-search button {
+      padding: 7px 16px; background: var(--green); color: #fff; border: none;
+      border-radius: 6px; font-size: 13px; font-weight: 600; cursor: pointer; font-family: inherit;
+    }
+  </style>
+</head>
+<body>
+<script>window.NAV_ROOT = '../';</script>
+<script src="../js/nav.js"></script>
+<script src="../js/posts.js"></script>
+
+<div class="page-hero">
+  <h1><span>B</span>oards</h1>
+  <p style="color:var(--text-muted);margin-top:8px;font-size:14px;">공지사항 및 세미나 일정을 확인하세요</p>
+</div>
+
+<div class="section" style="margin-bottom:60px">
+
+  <div style="background:var(--white);border-radius:10px 10px 0 0;box-shadow:0 2px 8px rgba(0,0,0,0.05)">
+    <div class="board-tabs">
+      <div class="board-tab" id="tab-notice" onclick="switchTab('notice')">📢 공지사항</div>
+      <div class="board-tab" id="tab-seminar" onclick="switchTab('seminar')">🎓 세미나</div>
+    </div>
+  </div>
+
+  <div class="board-wrap">
+
+    <!-- 공지사항 -->
+    <div id="board-notice" style="display:none">
+      <table>
+        <thead>
+          <tr>
+            <th class="num">번호</th>
+            <th>제목</th>
+            <th class="author">작성자</th>
+            <th class="date">날짜</th>
+          </tr>
+        </thead>
+        <tbody id="tbody-notice"></tbody>
+      </table>
+      <div id="pagination-notice"></div>
+    </div>
+
+    <!-- 세미나 (논문 리뷰) -->
+    <div id="board-seminar" style="display:none">
+      <table>
+        <thead>
+          <tr>
+            <th class="num">번호</th>
+            <th>제목</th>
+            <th class="cat">분류</th>
+            <th class="author">작성자</th>
+            <th class="date">날짜</th>
+          </tr>
+        </thead>
+        <tbody id="tbody-seminar"></tbody>
+      </table>
+      <div id="pagination-seminar"></div>
+    </div>
+
+    <div class="board-search">
+      <select id="search-type"><option>제목</option><option>작성자</option></select>
+      <input type="text" id="search-input" placeholder="검색어를 입력하세요" onkeydown="if(event.key==='Enter')doSearch()" />
+      <button onclick="doSearch()">검색</button>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">NLP<span>LAB</span></div>
+      <p class="footer-desc">Natural Language Processing Laboratory<br />성균관대학교 소프트웨어융합대학</p>
+    </div>
+  </div>
+  <p class="footer-copy">© 2026 NLPLAB, Sungkyunkwan University. All rights reserved.</p>
+</footer>
+
+<script>
+const PAGE_SIZE = 15;
+let currentTab = 'notice';
+const pageState = { notice: 1, seminar: 1 };
+
+function isNew(dateStr) {
+  const [y, m, d] = dateStr.split('.');
+  return (new Date() - new Date(+y, +m - 1, +d)) / 86400000 <= 7;
+}
+
+function renderBoard(tab) {
+  const posts   = window.POSTS[tab] || [];
+  const pinned  = posts.filter(p => p.pinned);
+  const regular = posts.filter(p => !p.pinned);
+  const page    = pageState[tab];
+  const total   = Math.max(1, Math.ceil(regular.length / PAGE_SIZE));
+  const start   = (page - 1) * PAGE_SIZE;
+  const isSeminar = tab === 'seminar';
+  let html = '';
+
+  pinned.forEach(p => {
+    const idx = posts.indexOf(p);
+    const newBadge = isNew(p.date) ? '<span class="badge-new">NEW</span>' : '';
+    html += `<tr class="notice-row" onclick="goPost('${tab}',${idx})">
+      <td class="num">📌</td>
+      <td class="post-title-cell">${p.title} ${newBadge}</td>
+      ${isSeminar ? `<td class="cat"><span class="cat-badge cat-${p.category}">${p.category}</span></td>` : ''}
+      <td class="author">${p.author}</td>
+      <td class="date">${p.date}</td>
+    </tr>`;
+  });
+
+  regular.slice(start, start + PAGE_SIZE).forEach((p, i) => {
+    const idx = posts.indexOf(p);
+    const num = regular.length - (start + i);
+    const newBadge = isNew(p.date) ? '<span class="badge-new">NEW</span>' : '';
+    html += `<tr onclick="goPost('${tab}',${idx})">
+      <td class="num">${num}</td>
+      <td class="post-title-cell">${p.title} ${newBadge}</td>
+      ${isSeminar ? `<td class="cat"><span class="cat-badge cat-${p.category}">${p.category}</span></td>` : ''}
+      <td class="author">${p.author}</td>
+      <td class="date">${p.date}</td>
+    </tr>`;
+  });
+
+  document.getElementById('tbody-' + tab).innerHTML = html;
+
+  const el = document.getElementById('pagination-' + tab);
+  if (total <= 1) { el.innerHTML = ''; return; }
+  let pager = '<div class="board-pagination">';
+  if (page > 1) pager += `<button onclick="goPage('${tab}',${page-1})">이전</button>`;
+  for (let i = 1; i <= total; i++) {
+    pager += `<button class="${i===page?'active':''}" onclick="goPage('${tab}',${i})">${i}</button>`;
+  }
+  if (page < total) pager += `<button onclick="goPage('${tab}',${page+1})">다음</button>`;
+  pager += '</div>';
+  el.innerHTML = pager;
+}
+
+function goPage(tab, page) {
+  pageState[tab] = page;
+  renderBoard(tab);
+}
+
+function switchTab(tab) {
+  currentTab = tab;
+  document.getElementById('tab-notice').classList.toggle('active', tab === 'notice');
+  document.getElementById('tab-seminar').classList.toggle('active', tab === 'seminar');
+  document.getElementById('board-notice').style.display  = tab === 'notice'  ? 'block' : 'none';
+  document.getElementById('board-seminar').style.display = tab === 'seminar' ? 'block' : 'none';
+  history.replaceState(null, '', '?tab=' + tab);
+}
+
+function goPost(tab, id) {
+  location.href = 'post.html?tab=' + tab + '&id=' + id;
+}
+
+function doSearch() {
+  const type    = document.getElementById('search-type').value;
+  const keyword = document.getElementById('search-input').value.trim().toLowerCase();
+  if (!keyword) { renderBoard(currentTab); return; }
+
+  const posts   = window.POSTS[currentTab] || [];
+  const pinned  = posts.filter(p => p.pinned);
+  const regular = posts.filter(p => !p.pinned);
+  const isSeminar = currentTab === 'seminar';
+  let html = '';
+
+  pinned.forEach(p => {
+    const idx = posts.indexOf(p);
+    const newBadge = isNew(p.date) ? '<span class="badge-new">NEW</span>' : '';
+    html += `<tr class="notice-row" onclick="goPost('${currentTab}',${idx})">
+      <td class="num">📌</td>
+      <td class="post-title-cell">${p.title} ${newBadge}</td>
+      ${isSeminar ? `<td class="cat"><span class="cat-badge cat-${p.category}">${p.category}</span></td>` : ''}
+      <td class="author">${p.author}</td>
+      <td class="date">${p.date}</td>
+    </tr>`;
+  });
+
+  regular.forEach((p, i) => {
+    const val = (type === '작성자' ? p.author : p.title).toLowerCase();
+    if (!val.includes(keyword)) return;
+    const idx = posts.indexOf(p);
+    const newBadge = isNew(p.date) ? '<span class="badge-new">NEW</span>' : '';
+    html += `<tr onclick="goPost('${currentTab}',${idx})">
+      <td class="num">${regular.length - i}</td>
+      <td class="post-title-cell">${p.title} ${newBadge}</td>
+      ${isSeminar ? `<td class="cat"><span class="cat-badge cat-${p.category}">${p.category}</span></td>` : ''}
+      <td class="author">${p.author}</td>
+      <td class="date">${p.date}</td>
+    </tr>`;
+  });
+
+  document.getElementById('tbody-' + currentTab).innerHTML = html;
+  document.getElementById('pagination-' + currentTab).innerHTML = '';
+}
+
+(function () {
+  renderBoard('notice');
+  renderBoard('seminar');
+  const tab = new URLSearchParams(location.search).get('tab') || 'notice';
+  switchTab(tab);
+})();
+</script>
+</body>
+</html>

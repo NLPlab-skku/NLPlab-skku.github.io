@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="../assets/img/favicon.ico" />
+  <title>Research Fields — NLPLAB</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .page-hero { background: var(--bg); padding: 48px 24px 32px; text-align: center; }
+    .page-hero h1 { font-size: 36px; font-weight: 700; }
+    .page-hero h1 span { color: var(--green); }
+    .field-card {
+      background: var(--white); border-radius: 10px; padding: 36px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05); margin-bottom: 24px;
+      display: flex; gap: 32px; align-items: flex-start;
+    }
+    .field-icon {
+      width: 190px; height: 200px; flex-shrink: 0; border-radius: 12px;
+      overflow: hidden; object-fit: cover; display: block;
+    }
+    .field-card h2 { font-size: 21px; font-weight: 700; margin-bottom: 10px; }
+    .field-card p { font-size: 14px; color: var(--text-muted); line-height: 1.8; margin-bottom: 14px; }
+    .tag-list { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag { font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: 20px; }
+    .tag-ml   { background: #B8FFBA; color: #004702; }
+    .tag-kg   { background: #E0C1F5; color: #431065; }
+    .tag-rag  { background: #F7E7B5; color: #403207; }
+    .tag-dial { background: #CEF5EE; color: #146153; }
+    .tag-int  { background: #D6E4FF; color: #1E3A8A; }
+    .tag-eff  { background: #CCD6E1; color: #3B4E65; }
+    .tag-eth  { background: #F5CECE; color: #871C1C; }
+    .pub-link {
+      margin-top: 14px; display: inline-flex; align-items: center; gap: 6px;
+      font-size: 13px; font-weight: 600; color: var(--green);
+    }
+    @media (max-width: 640px) {
+      .field-card { flex-direction: column; }
+      .field-icon { width: 100%; height: 180px; }
+    }
+  </style>
+</head>
+<body>
+<script>window.NAV_ROOT = '../';</script>
+<script src="../js/nav.js"></script>
+
+<div class="page-hero">
+  <h1><span>F</span>ields</h1>
+  <p style="color:var(--text-muted);margin-top:8px;font-size:14px;">NLPLab의 핵심 연구 분야를 소개합니다</p>
+</div>
+
+<div class="section" style="margin-top:24px;margin-bottom:0;padding-bottom:0">
+  <div class="sub-nav">
+    <a href="fields.html" class="active">Fields</a>
+    <a href="projects.html">Projects</a>
+    <a href="patents.html">Patents</a>
+  </div>
+</div>
+
+<div class="section" style="margin-bottom:60px">
+
+  <div class="field-card">
+    <img class="field-icon" src="../assets/img/research/new/Machine Learning1.png" alt="Machine Learning for NLP" />
+    <div>
+      <h2>Machine Learning for NLP</h2>
+      <p>자연어 처리 모델의 성능 향상을 위해 기계학습 및 딥러닝 기반 학습 알고리즘을 설계·최적화하는 연구 분야입니다. 
+        <strong>Reinforcement Learning</strong>과 <strong>Knowledge Distillation</strong>를 중심으로 언어 모델의 추론 능력, 응답 품질, 지식 활용 능력 및 일반화 성능을 고도화하는 방법을 탐구합니다.
+      </p>
+      <div class="tag-list">
+        <span class="tag tag-ml">Reinforcement Learning</span><span class="tag tag-ml">Knowledge Distillation</span>
+      </div>
+      <!--<a class="pub-link" href="demos-ir.html">데모 보기 →</a>-->
+    </div>
+  </div>
+
+  <div class="field-card">
+    <img class="field-icon" src="../assets/img/research/new/Graph1.png" alt="Knowledge Graph for NLP" />
+    <div>
+      <h2>Knowledge Graph for NLP</h2>
+      <p>텍스트에 내재된 개체, 관계, 사건, 속성 등의 지식을 구조화하고, 이를 자연어 처리 모델의 추론 및 정보 활용 과정에 통합하는 연구 분야입니다.
+        <strong>KG Construction, KG Retrieval, Text-to-GQL, KG QA</strong> 등을 통해 언어 모델의 사실성, 설명 가능성, 신뢰성을 향상시키는 데 초점을 둡니다.
+      </p>
+      <div class="tag-list">
+        <span class="tag tag-kg">KG Construction</span><span class="tag tag-kg">KG Retrieval</span>
+        <span class="tag tag-kg">Text-to-GQL</span><span class="tag tag-kg">KG QA</span>
+      </div>
+      <!--<a class="pub-link" href="demos-ir.html">데모 보기 →</a>-->
+    </div>
+  </div>
+
+  <div class="field-card">
+    <img class="field-icon" src="../assets/img/research/new/RAG1.png" alt="Retrieval Augmented Generation" />
+    <div>
+      <h2>Retrieval Augmented Generation</h2>
+      <p>외부 문서나 데이터베이스에서 질의와 관련된 정보를 검색하고, 이를 기반으로 근거 있는 응답을 생성하는 기술입니다.
+        이 분야에서는 검색과 생성의 결합 구조를 최적화하여 최신 정보와 도메인 특화 지식을 효과적으로 활용하며, <strong>RAG</strong> 및 <strong>Multi-Document Compression</strong>을 중심으로 정확성과 신뢰성을 높이는 방법을 연구합니다. 
+      </p>
+      <div class="tag-list">
+        <span class="tag tag-rag">RAG</span><span class="tag tag-rag">Multi-Document Compression</span>
+      </div>
+      <!--<a class="pub-link" href="demos-ir.html">데모 보기 →</a>-->
+    </div>
+  </div>
+
+  <div class="field-card">
+    <img class="field-icon" src="../assets/img/research/new/dialogue1.png" alt="Dialogue System" />
+    <div>
+      <h2>Dialogue System</h2>
+      <p>사용자의 발화를 이해하고 대화 맥락을 추적하여 상황에 적합한 응답을 생성하는 인간–컴퓨터 상호작용 기반 자연어 처리 기술입니다.
+        최근에는 <strong>Personalized Dialogue, Long-Term Dialogue, Multi-Party Dialogue</strong> 와 같은 복합적 대화 환경을 반영하여 보다 자연스럽고 지속적인 상호작용이 가능한 대화 모델을 개발하는 방향으로 연구가 확장되고 있습니다.
+      </p>
+      <div class="tag-list">
+        <span class="tag tag-dial">Personalized Dialogue</span><span class="tag tag-dial">Long-Term Dialogue</span>
+        <span class="tag tag-dial">Multi-Party Dialogue</span>
+      </div>
+      <!--<a class="pub-link" href="demos-ir.html">데모 보기 →</a>-->
+    </div>
+  </div>
+  <div class="field-card">
+    <img class="field-icon" src="../assets/img/research/new/Interpretability1.png" alt="LLM Interpretability & Analysis" />
+    <div>
+      <h2>LLM Interpretability &amp; Analysis</h2>
+      <p>대규모 언어 모델의 출력 생성 과정, 예측 신뢰도, 오류 양상을 분석하여 모델의 의사결정 구조와 한계를 이해하는 연구 분야입니다.
+        <strong>LLM Calibration</strong>과 <strong>Uncertainty Qualification</strong>를 통해 모델의 확신도와 실제 정답 가능성 간의 정합성을 높이고, 높은 신뢰성이 요구되는 환경에서 안전하게 활용할 수 있는 기반을 마련합니다.
+      </p>
+      <div class="tag-list">
+        <span class="tag tag-int">LLM Calibration</span><span class="tag tag-int">Uncertainty Qualification</span>
+      </div>
+      <!--<a class="pub-link" href="demos-ir.html">데모 보기 →</a>-->
+    </div>
+  </div>
+  <div class="field-card">
+    <img class="field-icon" src="../assets/img/research/new/LLM_Efficiency1.png" alt="LLM Efficiency" />
+    <div>
+      <h2>LLM Efficiency</h2>
+      <p>대규모 언어 모델의 성능을 유지하면서 학습 및 추론 과정에서 요구되는 연산 자원, 메모리 사용량, 지연 시간을 줄이는 연구 분야입니다.
+        <strong>PEFT, Efficient Inference, KV Eviction</strong> 등의 기법을 통해 제한된 자원 환경에서도 LLM을 안정적이고 비용 효율적으로 활용할 수 있는 방법을 탐구합니다.
+      </p>
+      <div class="tag-list">
+        <span class="tag tag-eff">PEFT</span><span class="tag tag-eff">Efficient Inference</span>
+        <span class="tag tag-eff">KV Eviction</span>
+      </div>
+      <!--<a class="pub-link" href="demos-ir.html">데모 보기 →</a>-->
+    </div>
+  </div>
+
+  <div class="field-card">
+    <img class="field-icon" src="../assets/img/research/new/ethics1.png" alt="Ethics" />
+    <div>
+      <h2>Ethics</h2>
+      <p>자연어 처리 모델과 대규모 언어 모델이 사회적으로 안전하고 공정하며 책임 있게 활용될 수 있도록 하는 연구 분야입니다.
+        <strong>Model Alignment</strong>와 <strong>Bias & Unfairness Mitigation</strong>를 중심으로 인간의 가치, 안전 기준, 사회적 맥락을 반영한 신뢰 가능한 인공지능 시스템 구축을 목표로 합니다.
+      </p>
+      <div class="tag-list">
+        <span class="tag tag-eth">Model Alignment</span><span class="tag tag-eth">Bias & Unfairness Mitigation</span>
+       </div>
+      <!--<a class="pub-link" href="demos-ir.html">데모 보기 →</a>-->
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">NLP<span>LAB</span></div>
+      <p class="footer-desc">Natural Language Processing Laboratory<br />성균관대학교 소프트웨어융합대학</p>
+    </div>
+  </div>
+  <p class="footer-copy">© 2026 NLPLAB, Sungkyunkwan University. All rights reserved.</p>
+</footer>
+</body>
+</html>

@@ -1,98 +1,260 @@
----
-layout: default
-title: NLPLAB
---- 
-<style>
-	.center{
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	}
-@import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
- 
-.jg{font-family: 'Jeju Gothic', sans-serif;}
-</style>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="google-site-verification" content="a308b2l9_JGB9ja_w0OwSlibSqmiP1W8IQamJdLCG9I" />
+  <title>NLPLAP — Natural Language Processing Laboratory</title>
+  <link rel="icon" href="assets/img/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
 
-<h1 class="pageTitle">Notice</h1>
-<div class="slider">
-  <div><img class = "center" src="assets/img/2026/02_graduation.jpg" style="width:100%; height:auto; object-fit:contain;" title = "26년 2월: 봉근 박사과정, 상원 유민 석사과정 졸업"/></div>
-  <div><img class = "center" src="assets/img/2025/11_emnlp.jpg" style="width:100%; height:auto; object-fit:contain;" title = "25년 11월: EMNLP 학회 발표"/></div>
-  <div><img class = "center" src="assets/img/2025/08_grad.jpg" style="width:100%; height:auto; object-fit:contain;" title = "25년 8월: 현수, 성완 석사과정 졸업"/></div>
-  <div><img class = "center" src="assets/img/2025/08_aiassociation.jpg" style="width:100%; height:auto; object-fit:contain;" title = "25년 8월: 평창 한국인공지능학회 참석"/></div>
-  <div><img class = "center" src="assets/img/2025/07_acl_chs.jpg" style="width:100%; height:auto; object-fit:contain;" title = "25년 7월: ACL 학회 발표"/></div>
-  <div><img class = "center" src="assets/img/2025/07_professor_award.jpg" style="width:100%; height:auto; object-fit:contain;" title = "25년 7월: 고영중 교수님 한국정보과학회 학술상 수상"/></div>
-  <div><img class = "center" src="assets/img/2025/02_graduation_2.png" style="width:100%; height:auto; object-fit:contain;" title = "25년 2월: 지열, 현묵, 하은, 수영, 승민, 윤진, 근하 석사과정 졸업"/></div>
-  <!-- <div><img class = "center" src="assets/img/2024/12_ksc.png" style="width:100%; height:auto; object-fit:contain;" title = "24년 12월:여수 KSC 학회 참석"/></div> -->
-  <!-- <div><img class = "center" src="assets/img/2024/08_graduation.jpg" style="width:100%; height:auto; object-fit:contain;" title = "24년 8월:진영 선배 졸업"/></div>
-	<div><img class = "center" src="assets/img/2024/02_graduation.jpg" style="width:100%; height:auto; object-fit:contain;" title = "24년 2월:영재, 홍희, 재아, 규리 선배 졸업"/></div> -->
+<!-- ── Notice Popup ── -->
+<div id="notice-overlay" class="notice-overlay">
+  <div class="notice-popup">
+    <div class="notice-header">
+      <span class="notice-badge">공지사항</span>
+      <button class="notice-close" id="notice-close" aria-label="닫기">&times;</button>
+    </div>
+    <div class="notice-body">
+      <h2 class="notice-title">NLPLAB 2026 하반기 인턴 모집 공고</h2>
+      <p class="notice-date">2026. 05. 27</p>
+      <p class="notice-text">
+        성균관대학교 자연어처리 연구실(SKKU NLP Lab, https://nlplab.skku.edu/)에서 현 3, 4학년의 인턴을 모집합니다.<br><br>
+
+        우리 자연어처리 연구실에서는 대화 모델, 검색 모델, 소형 언어모델(sLM) 등 다양한 분야의 자연어처리 연구를 진행하고 있습니다.<br>
+        인턴으로 근무 시, 연구에 필요한 데이터 정제의 업무를 주로 하며, 연구실에서 진행하는 세미나/스터디에 참여하여 자연어처리에 관한 지식을 쌓을 수 있습니다.<br>
+        자연어처리에 관심이 있고, 본 연구실에 관심 있는 학부생의 많은 지원 바랍니다.<br><br>
+
+        ■ 지원 기간 및 인원<br>
+         - 지원 기간: 2026년 06월 21일 (일) 23:59 까지<br>
+         - 모집 인원: 0명<br><br>
+
+        ■ 근무 장소 및 기간<br>
+         - N센터 86401호, 출근 요일 및 시간은 교수님과 협의 가능합니다.<br>
+         - 26학년도 여름방학 (2026년 7월 ~ 8월)<br><br>
+
+        ■ 월급<br>
+         - 월 30~50만원<br>
+         - 최소 30만원을 지급하며, 정제한 데이터 양 및 업무 속도에 따라 추가 지급 가능<br><br>
+
+        ■ 지원 자격<br>
+         - 학부 3, 4학년의 소프트웨어 전공생 (소프트웨어학과, 컴퓨터공학과 및 복수전공학생)<br>
+         - 석박통합과정 (27년 2월 이후 입학 예정자) 우대<br><br>
+
+        ■ 지원 및 문의<br>
+         - 간단한 자기소개서(CV), 성적표<br>
+         - 지원 이메일에 졸업예정년월 기입해주시기 바랍니다.<br>
+         - SKKU NLP 이메일: <strong>nlplab.skku@gmail.com</strong>
+      </p>
+    </div>
+    <div class="notice-footer">
+      <button class="notice-btn-today" id="notice-btn-today">오늘 하루 안보기</button>
+      <button class="notice-btn-close" id="notice-btn-close">닫기</button>
+    </div>
+  </div>
 </div>
 
-<br>
+<script>window.NAV_ROOT = '';</script>
+<script src="js/nav.js"></script>
 
-<div class="slider">
-  <div><img class = "center" src="assets/img/notice/News.png"/></div>
-  <div><img class = "center" src="assets/img/notice/hired_1.png"/></div>
-  <div><img class = "center" src="assets/img/notice/hired_2.png"/></div>
+<!-- ── Hero Title ── -->
+<section class="hero">
+  <div class="hero-inner">
+    <img class="hero-logo" src="assets/img/favicon.ico" alt="NLP Lab Logo" />
+    <h1 class="hero-title">
+      <span style="color:var(--green)">SKKU</span>
+      <span style="color:#e03030">N</span>atural <span style="color:#2060d0">L</span>anguage
+      <span style="color:#e07820">P</span>rocessing <span style="color:var(--green)">LAB</span>
+    </h1>
+  </div>
+</section>
+
+<!-- ── News Carousel ── -->
+<div class="carousel-section">
+  <div class="carousel-wrapper">
+    <div class="carousel-track">
+
+      <div class="carousel-slide">
+        <div class="carousel-content">
+          <span class="slide-tag">졸업</span>
+          <h2 class="slide-title">2026년 겨울 학위수여식</h2>
+          <p class="slide-desc">최봉근 박사, 윤상원 석사, 허유민 석사, 김택림 학사, 이예원 학사, 이준서 학사 졸업을 축하합니다!</p>
+        </div>
+        <div class="carousel-image-placeholder"><img src="assets/img/2026/02_graduation.jpg" alt="2026 졸업식"></div>
+      </div>
+
+      <div class="carousel-slide">
+        <div class="carousel-content">
+          <span class="slide-tag">논문</span>
+          <h2 class="slide-title">EMNLP 2025 학회 논문 게재 및 참가</h2>
+          <p class="slide-desc">자연어처리분야 top-tier 국제 학술대회인 EMNLP 2025에 총 2편의 논문을 게재했습니다.</p>
+        </div>
+        <div class="carousel-image-placeholder"><img src="assets/img/2025/11_emnlp.jpg" alt="EMNLP 2025"></div>
+      </div>
+
+      <div class="carousel-slide">
+        <div class="carousel-content">
+          <span class="slide-tag">졸업</span>
+          <h2 class="slide-title">2025년 여름 학위수여식</h2>
+          <p class="slide-desc">박상원 석사, 조현수 석사, 이준희 학사, 한준호 학사 졸업을 축하합니다!</p>
+        </div>
+        <div class="carousel-image-placeholder"><img src="assets/img/2025/08_grad.jpg" alt="2025 졸업"></div>
+      </div>
+
+      <div class="carousel-slide">
+        <div class="carousel-content">
+          <span class="slide-tag">학회</span>
+          <h2 class="slide-title">2025 한국인공지능학회 하계학술대회 참가</h2>
+          <p class="slide-desc">평창에서 열린 한국인공지능학회 하계학술대회에 참가하였습니다.</p>
+        </div>
+        <div class="carousel-image-placeholder"><img src="assets/img/2025/08_aiassociation.jpg" alt="AI Association 2025"></div>
+      </div>
+
+      <div class="carousel-slide">
+        <div class="carousel-content">
+          <span class="slide-tag">논문</span>
+          <h2 class="slide-title">ACL 2025 학회 논문 게재 및 참가</h2>
+          <p class="slide-desc">자연어처리분야 top-tier 국제 학술대회인 ACL 2025에 총 1편의 논문을 게재했습니다.</p>
+        </div>
+        <div class="carousel-image-placeholder"><img src="assets/img/2025/07_acl_chs.jpg" alt="ACL 2025"></div>
+      </div>
+
+    </div>
+
+    <button class="carousel-btn prev" aria-label="Previous">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg>
+    </button>
+    <button class="carousel-btn next" aria-label="Next">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 18 6-6-6-6"/></svg>
+    </button>
+  </div>
+  <div class="carousel-dots">
+    <button class="carousel-dot active"></button>
+    <button class="carousel-dot"></button>
+    <button class="carousel-dot"></button>
+    <button class="carousel-dot"></button>
+    <button class="carousel-dot"></button>
+  </div>
 </div>
 
-<br>
+<!-- ── Research ── -->
+<section class="section">
+  <div class="section-header">
+    <h2 class="section-title">RESEARCH FIELD</h2>
+    <a class="section-viewall" href="pages/fields.html">VIEW ALL &nbsp;→</a>
+  </div>
+  <div class="research-grid">
+    <div class="research-row">
+      <div class="research-card">
+        <img class="field-icon" src="assets/img/research/new/Machine Learning2.png" alt="Machine Learning for NLP" />
+        <h3>Machine Learning for NLP</h3>
+        <p>Reinforcement Learning, and Knowledge Distillation.</p>
+      </div>
+      <div class="research-card">
+        <img class="field-icon" src="assets/img/research/new/Graph2.png" alt="Knowledge Graph for NLP" />
+        <h3>Knowledge Graph for NLP</h3>
+        <p>KG Construction, KG Retrieval, Text-to-GQL, and KG QA.</p>
+      </div>
+      <div class="research-card">
+        <img class="field-icon" src="assets/img/research/new/RAG2.png" alt="Retrieval Augmented Generation" />
+        <h3>Retrieval Augmented Generation</h3>
+        <p>RAG and Multi-Document Compression.</p>
+      </div>
+      <div class="research-card">
+        <img class="field-icon" src="assets/img/research/new/dialogue2.png" alt="Dialogue System" />
+        <h3>Dialogue System</h3>
+        <p>Personalized Dialogue, Long-Term Dialogue and Multi-Party Dialogue.</p>
+      </div>
+    </div>
+    <div class="research-row research-row--bottom">
+      <div class="research-card">
+        <img class="field-icon" src="assets/img/research/new/Interpretability2.png" alt="LLM Interpretability & Analysis" />
+        <h3>LLM Interpretability & Analysis</h3>
+        <p>LLM Calibration and Uncertainty Qualification.</p>
+      </div>
+      <div class="research-card">
+        <img class="field-icon" src="assets/img/research/new/LLM_Efficiency2.png" alt="LLM Efficiency" />
+        <h3>LLM Efficiency</h3>
+        <p>PEFT, Efficient Inference and KV Eviction.</p>
+      </div>
+      <div class="research-card">
+        <img class="field-icon" src="assets/img/research/new/ethics2.png" alt="Ethics" />
+        <h3>Ethics</h3>
+        <p>Model Alignment and Bias & Unfairness Mitigation.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-<!-- <div class="home" id="home">
-  <h1 class="pageTitle">Site Map</h1>
-  <ul class="posts noList">
-    <li>
-      <h3><a class="post-link" href="https://nlplab-skku.github.io/AboutUs/Introduction/">About Us</a></h3>
-	    <p class='jg'>클릭하시면 우리 연구실에 대한 소개를 보실 수 있습니다.
-    </li>
-    <li>
-      <h3><a class="post-link" href="https://nlplab-skku.github.io/Research/Fields/">Research</a></h3>
-	    <p class='jg'>클릭하시면 우리 연구실에서 연구하는 활동을 보실 수 있습니다.</p>
-    </li> 
-    <li>
-      <h3><a class="post-link" href="https://nlplab-skku.github.io/Publications/JournalPapers/">Publications</a></h3>
-	    <p class='jg'>클릭하시면 우리 연구실의 논문을 확인하실 수 있습니다.</p>
-    </li>
-    <li>
-      <h3><a class="post-link" href="https://nlplab-skku.github.io/Members/">Members</a></h3>
-      <p class='jg'>클릭하시면 우리 연구실의 구성원을 확인하실 수 있습니다.</p>
-    </li>
-    <li>
-      <h3><a class="post-link" href="https://nlplab-skku.github.io/Demos/Natural_Language_Processing/">Demos</a></h3>
-      <p class='jg'>클릭하시면 우리 연구실의 데모를 확인하실 수 있습니다.</p>
-    </li>
-    <li>
-      <h3><a class="post-link" href="https://github.com/NLPlab-skku">GitHub</a></h3>
-      <p class='jg'>클릭하시면 우리 연구실의 GitHub를 확인하실 수 있습니다.</p>
-    </li>
-    <li>
-      <h3><a class="post-link" href="https://www.linkedin.com/company/skku-nlplab/posts/?feedView=all">LinkedIn</a></h3>
-      <p class='jg'>클릭하시면 우리 연구실의 LinkedIn을 확인하실 수 있습니다.</p>
-    </li>
-    <li>
-      <h3><a class="post-link" href="https://forms.gle/bdW4K2uYqvteRWfX7">Apply</a></h3>
-      <p class='jg'>클릭하시면 구글폼을 통해 우리 연구실 지원서를 작성하실 수 있습니다.</p>
-    </li>
-    <li>
-      <h3><a class="post-link" href="https://islab631.github.io/Boards/notice/">Boards</a></h3>
-	    <p>클릭하시면 연구실 게시판 페이지로 넘어갑니다.</p>
-    </li>
-    <li>
-      <h3><a class="post-link" href="https://islab631.github.io/Courses/openingcourses/">Courses</a></h3>
-	    <p>클릭하시면 교수님의 강의를 확인하실 수 있습니다.</p>
-    </li>
-    <li>
-      <h3><a class="post-link" href="https://nlplab-skku.github.io/Software/languageanalysissoftware/">Software</a></h3>
-	    <p>클릭하시면 저희 연구실 software 소개를 확인하실 수 있습니다.</p>
-    </li>
-    -->
-	  <!-- {% for post in paginator.Board %}
-      <li>
-        <span class="date">{{ post.date | date: '%B %d, %Y' }}</span>
-        <h3><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
-        <p>{% if post.description %}{{ post.description }}{% else %}{{ post.excerpt | strip_html }}{% endif %}</p>
-      </li>
-    {% endfor %}
-  </ul>
-</div> -->
+<!-- ── Recent Publications ── -->
+<section class="section">
+  <div class="section-header">
+    <h2 class="section-title">NEWS</h2>
+  </div>
+  <div class="pub-list">
+    <div class="pub-item">
+      <span class="pub-badge" data-badge="취업">취업</span>
+      <div class="pub-info">
+        <h4>최봉근, 윤상원 연구원의 취업을 축하합니다.</h4>
+        <p>최봉근 연구원이 2026년 4월부로 <strong>보잉한국기술연구센터(BKETC)</strong>에, 윤상원 연구원이 2026년 2월부로 <strong>삼성전자</strong>에 입사하였습니다. 졸업생들의 새로운 출발을 진심으로 축하합니다!</p>
+      </div>
+    </div>
+    <div class="pub-item">
+      <span class="pub-badge" data-badge="논문">논문</span>
+      <div class="pub-info">
+        <h4>ACL 2026 Findings 논문 게재</h4>
+        <p>최봉근, 김근하, 한준호 연구원의 논문이 국제 저명 학술대회인 <strong>ACL 2026 (Findings)</strong>에 게재되었습니다. (BK Plus IF=4)</p>
+      </div>
+    </div>
+    <div class="pub-item">
+      <span class="pub-badge" data-badge="논문">논문</span>
+      <div class="pub-info">
+        <h4>EMNLP 2025 논문 2편 게재</h4>
+        <p>신승민, 박성완, 김택림, 김두영 연구원의 논문 2편이 국제 저명 학술대회인 <strong>EMNLP 2025</strong>에 게재되었습니다. (BK Plus IF=3)</p>
+      </div>
+    </div>
+  </div>
+</section>
 
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">NLP<span>LAB</span></div>
+      <p class="footer-desc">Natural Language Processing Laboratory<br />성균관대학교 소프트웨어융합대학</p>
+    </div>
+  </div>
+  <p class="footer-copy">© 2026 NLPLAB, Sungkyunkwan University. All rights reserved.</p>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+  (function () {
+    var overlay = document.getElementById('notice-overlay');
+    var today = new Date().toISOString().slice(0, 10);
+
+    if (localStorage.getItem('noticeHideUntil') === today) {
+      overlay.classList.add('hidden');
+    }
+
+    function closeNotice() { overlay.classList.add('hidden'); }
+    function hideForToday() {
+      localStorage.setItem('noticeHideUntil', today);
+      overlay.classList.add('hidden');
+    }
+
+    document.getElementById('notice-close').addEventListener('click', closeNotice);
+    document.getElementById('notice-btn-close').addEventListener('click', closeNotice);
+    document.getElementById('notice-btn-today').addEventListener('click', hideForToday);
+    overlay.addEventListener('click', function (e) {
+      if (e.target === overlay) closeNotice();
+    });
+  })();
+</script>
 </body>
+</html>

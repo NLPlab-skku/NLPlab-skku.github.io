@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="../assets/img/favicon.ico" />
+  <title>Projects — NLPLAB</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .page-hero { background: var(--bg); padding: 48px 24px 32px; text-align: center; }
+    .page-hero h1 { font-size: 36px; font-weight: 700; }
+    .page-hero h1 span { color: var(--green); }
+
+    /* Current project cards */
+    .project-card {
+      background: var(--white); border-radius: 10px; padding: 20px 26px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05); margin-bottom: 12px;
+      display: flex; gap: 18px; align-items: flex-start; transition: box-shadow 0.2s;
+    }
+    .project-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.09); }
+    .project-icon {
+      width: 46px; height: 46px; flex-shrink: 0; border-radius: 10px;
+      background: #e8f4ea; display: flex; align-items: center; justify-content: center; font-size: 20px;
+    }
+    .project-card h3 { font-size: 15px; font-weight: 700; margin-bottom: 4px; line-height: 1.5; color: var(--text); }
+
+    /* Role badges */
+    .role-badge {
+      display: inline-block; font-size: 10px; font-weight: 700; padding: 2px 7px;
+      border-radius: 4px; margin-bottom: 5px; margin-right: 4px; letter-spacing: 0.3px;
+    }
+    .role-pi   { background: #e8f4ea; color: #2d6035; }
+    .role-copi { background: #e8edf4; color: #2050a0; }
+    .role-ra   { background: #f0f0f0; color: #888; }
+
+    /* Meta row */
+    .meta-row { display: flex; gap: 16px; margin-top: 6px; font-size: 12px; color: var(--text-muted); flex-wrap: wrap; }
+
+    /* Past project compact rows */
+    .project-row {
+      background: var(--white); border-radius: 8px;
+      padding: 12px 18px; margin-bottom: 7px;
+      border-left: 3px solid var(--green-light);
+      transition: box-shadow 0.15s;
+    }
+    .project-row:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.07); }
+    .project-row-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+    .project-row h3 { font-size: 13.5px; font-weight: 600; line-height: 1.5; color: var(--text); }
+    .project-row .meta-row { margin-top: 4px; }
+
+    /* Transfer rows */
+    .transfer-row {
+      background: var(--white); border-radius: 8px;
+      padding: 12px 18px; margin-bottom: 7px;
+      border-left: 3px solid #aaa;
+    }
+    .transfer-row h3 { font-size: 13.5px; font-weight: 600; line-height: 1.5; }
+    .transfer-row .meta-row { margin-top: 4px; }
+
+    /* Section group labels */
+    .project-group-title {
+      font-size: 13px; font-weight: 600; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--text-muted);
+      margin: 0 0 14px; padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+    .project-group-title + * { }
+
+  </style>
+</head>
+<body>
+<script>window.NAV_ROOT = '../';</script>
+<script src="../js/nav.js"></script>
+
+<div class="page-hero">
+  <h1><span>P</span>rojects</h1>
+  <p style="color:var(--text-muted);margin-top:8px;font-size:14px;">NLPLab이 수행해온 연구 프로젝트를 소개합니다</p>
+</div>
+
+<div class="section" style="margin-top:24px;margin-bottom:0;padding-bottom:0">
+  <div class="sub-nav">
+    <a href="fields.html">Fields</a>
+    <a href="projects.html" class="active">Projects</a>
+    <a href="patents.html">Patents</a>
+  </div>
+</div>
+
+<div class="section" style="margin-bottom:60px">
+
+  <div class="project-group-title">Current Projects</div>
+
+  <div class="project-card">
+    <div>
+      <span class="role-badge role-copi">Co-PI</span>
+      <h3>변화하는 환경과 가치에 지속부합하는 Open-ended Alignment 인공지능기술 개발 (Open-ended Alignment AI 연구센터, ITRC)</h3>
+      <div class="meta-row">
+        <span>📅 2024.07 ~ 2031.12</span>
+        <span>🏛️ 정보통신기획평가원 (IITP, ITRC), 과학기술정보통신부</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <div>
+      <span class="role-badge role-pi">PI</span>
+      <h3>이종 대화 그래프를 이용한 다자대화 시스템</h3>
+      <div class="meta-row">
+        <span>📅 2024.05 ~ 2027.04</span>
+        <span>🏛️ 한국연구재단 (NRF, 중견연구), 과학기술정보통신부</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <div>
+      <span class="role-badge role-copi">Co-PI</span>
+      <h3>산업융합형 멀티모달 생성 인공지능 인재양성</h3>
+      <div class="meta-row">
+        <span>📅 2024.04 ~ 2027.12</span>
+        <span>🏛️ 정보통신기획평가원 (IITP, 생성AI 선도인재양성), 과학기술정보통신부</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <div>
+      <span class="role-badge role-pi">PI</span>
+      <h3>사회적, 윤리적 학습을 위한 데이터 특성 및 생성 AI 모델의 윤리성 향상 연구</h3>
+      <div class="meta-row">
+        <span>📅 2024.04 ~ 2026.12</span>
+        <span>🏛️ 정보통신기획평가원 (IITP), 과학기술정보통신부</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <div>
+      <span class="role-badge role-pi">PI</span>
+      <h3>전문지식 대상 판단결과의 이유/근거를 설명가능한 전문가 의사결정 지원 인공지능 기술개발</h3>
+      <div class="meta-row">
+        <span>📅 2022.04 ~ 2026.12</span>
+        <span>🏛️ 정보통신기획평가원 (IITP), 과학기술정보통신부</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <div>
+      <span class="role-badge role-copi">Co-PI</span>
+      <h3>ICT 명품 인재 양성 사업</h3>
+      <div class="meta-row">
+        <span>📅 2020.07 ~ 2029.12</span>
+        <span>🏛️ 정보통신기획평가원 (IITP), 과학기술정보통신부</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <div>
+      <span class="role-badge role-copi">Co-PI</span>
+      <h3>인공지능 대학원 (Graduate School of Artificial Intelligence)</h3>
+      <div class="meta-row">
+        <span>📅 2020.04 ~ 2029.02</span>
+        <span>🏛️ 정보통신기획평가원 (IITP), 과학기술정보통신부</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-group-title" style="margin-top:36px">Past Projects</div>
+
+  <div class="project-row">
+    <div class="project-row-header">
+      <h3>복잡한 인과 관계 이해를 위한 옴니 데이터 기반 귀추적 추론 프레임워크</h3>
+      <span class="role-badge role-copi">Co-PI</span>
+    </div>
+    <div class="meta-row"><span>📅 2025.07 ~ 2025.07</span><span>🏛️ 정보통신기획평가원 (IITP, 사람중심 AI 핵심원천기술개발), 과학기술정보통신부</span></div>
+  </div>
+
+  <div class="project-row">
+    <div class="project-row-header">
+      <h3>소프트웨어 중심대학 사업</h3>
+      <span class="role-badge role-copi">Co-PI</span>
+    </div>
+    <div class="meta-row"><span>📅 2021.04 ~ 2024.12</span><span>🏛️ 정보통신기획평가원 (IITP), 과학기술정보통신부</span></div>
+  </div>
+
+  <div class="project-row">
+    <div class="project-row-header">
+      <h3>QA 생성을 활용한 지식스니펫 커버리지 확장 연구</h3>
+      <span class="role-badge role-pi">PI</span>
+    </div>
+    <div class="meta-row"><span>📅 2023.03 ~ 2024.03</span><span>🏛️ 네이버 (Naver Corp.)</span></div>
+  </div>
+
+  <div class="project-row">
+    <div class="project-row-header">
+      <h3>사용자 중심 질의 재작성을 위한 사용자 피드백 유도형 질문 생성 연구</h3>
+      <span class="role-badge role-pi">PI</span>
+    </div>
+    <div class="meta-row"><span>📅 2023.07 ~ 2023.12</span><span>🏛️ NCSOFT</span></div>
+  </div>
+
+  <div class="project-row">
+    <div class="project-row-header">
+      <h3>이종 지식그래프를 이용한 융합 학습 기반의 대화시스템 개발</h3>
+      <span class="role-badge role-pi">PI</span>
+    </div>
+    <div class="meta-row"><span>📅 2020.09 ~ 2024.02</span><span>🏛️ 한국연구재단 (NRF, 중견과제), 과학기술정보통신부</span></div>
+  </div>
+
+  <div class="project-row">
+    <div class="project-row-header">
+      <h3>뉴럴-심볼릭 모델의 지식 학습 및 추론 기술 개발</h3>
+      <span class="role-badge role-pi">PI</span>
+    </div>
+    <div class="meta-row"><span>📅 2020.04 ~ 2023.12</span><span>🏛️ 정보통신기획평가원 (IITP), 과학기술정보통신부</span></div>
+  </div>
+
+  <div class="project-row">
+    <div class="project-row-header">
+      <h3>휴먼 지식증강 서비스를 위한 지능진화형 WiseQA 플랫폼 기술 개발</h3>
+      <span class="role-badge role-pi">PI</span>
+    </div>
+    <div class="meta-row"><span>📅 2021.03 ~ 2023.01</span><span>🏛️ 정보통신기획평가원 (IITP), 과학기술정보통신부</span></div>
+  </div>
+
+  <div class="project-row">
+    <div class="project-row-header">
+      <h3>멀티모달 DST (DSTC11) 기술 확보</h3>
+      <span class="role-badge role-pi">PI</span>
+    </div>
+    <div class="meta-row"><span>📅 2022.10 ~ 2022.12</span><span>🏛️ LG Electronics</span></div>
+  </div>
+
+  <div class="project-row">
+    <div class="project-row-header">
+      <h3>Dialogue Systems with Large-scaled Pretrained Models</h3>
+      <span class="role-badge role-pi">PI</span>
+    </div>
+    <div class="meta-row"><span>📅 2021.07 ~ 2021.12</span><span>🏛️ LG Electronics</span></div>
+  </div>
+
+  <div class="project-row">
+    <div class="project-row-header">
+      <h3>사전기반의 한자어 그래프 구축 및 구축된 그래프를 이용한 Query Reformulation 연구</h3>
+      <span class="role-badge role-pi">PI</span>
+    </div>
+    <div class="meta-row"><span>📅 2020.07 ~ 2021.06</span><span>🏛️ 네이버 (Naver Corp.)</span></div>
+  </div>
+
+  <div class="project-row">
+    <div class="project-row-header">
+      <h3>인공지능(AI) 학습용 데이터 구축 — 자연어/자유대화 분야</h3>
+      <span class="role-badge role-copi">Co-PI</span>
+    </div>
+    <div class="meta-row"><span>📅 2020.09 ~ 2021.03</span><span>🏛️ 한국정보화진흥원 (NIA), 과학기술정보통신부</span></div>
+  </div>
+
+  <div class="project-row">
+    <div class="project-row-header">
+      <h3>딥러닝 Triple 임베딩을 이용한 TripleQA 기술 개발</h3>
+      <span class="role-badge role-pi">PI</span>
+    </div>
+    <div class="meta-row"><span>📅 2020.05 ~ 2020.11</span><span>🏛️ 한국전자통신연구원 (ETRI)</span></div>
+  </div>
+
+  <div class="project-row">
+    <div class="project-row-header">
+      <h3>기계학습용 텍스트 데이터 레이블 자동생성 및 검증도구 개발</h3>
+      <span class="role-badge role-pi">PI</span>
+    </div>
+    <div class="meta-row"><span>📅 2017.04 ~ 2019.12</span><span>🏛️ 정보통신기획평가원 (IITP), 과학기술정보통신부</span></div>
+  </div>
+
+  <div class="project-row">
+    <div class="project-row-header">
+      <h3>TripleQA를 위한 딥러닝 기반 Property Linking 기술 개발 연구</h3>
+      <span class="role-badge role-pi">PI</span>
+    </div>
+    <div class="meta-row"><span>📅 2019.05 ~ 2019.11</span><span>🏛️ 한국전자통신연구원 (ETRI)</span></div>
+  </div>
+
+  <div class="project-row">
+    <div class="project-row-header">
+      <h3>지능형(AI) 대화 분석 연구</h3>
+      <span class="role-badge role-pi">PI</span>
+    </div>
+    <div class="meta-row"><span>📅 2019.05 ~ 2019.11</span><span>🏛️ National Digital Forensic Center (NDFC)</span></div>
+  </div>
+
+  <div class="project-row">
+    <div class="project-row-header">
+      <h3>서비스 로봇을 위한 정보검색 질의응답(IR-QA) 시스템 개발</h3>
+      <span class="role-badge role-copi">Co-PI</span>
+    </div>
+    <div class="meta-row"><span>📅 2018.11 ~ 2019.08</span><span>🏛️ 현대자동차 (Hyundai Motors)</span></div>
+  </div>
+
+  <div class="project-row">
+    <div class="project-row-header">
+      <h3>실내용 음성대화 로봇을 위한 원거리 음성인식 기술 및 멀티 태스크 대화처리 기술 개발</h3>
+      <span class="role-badge role-copi">Co-PI</span>
+    </div>
+    <div class="meta-row"><span>📅 2016.05 ~ 2018.12</span><span>🏛️ 로봇산업융합핵심기술개발사업, 산업통상자원부</span></div>
+  </div>
+
+  <div class="project-row">
+    <div class="project-row-header">
+      <h3>전문분야 문답 담화 분석을 위한 구어체 질문의 슬롯 필링 기술 개발</h3>
+      <span class="role-badge role-pi">PI</span>
+    </div>
+    <div class="meta-row"><span>📅 2018.05 ~ 2018.11</span><span>🏛️ 한국전자통신연구원 (ETRI)</span></div>
+  </div>
+
+  <div class="project-row">
+    <div class="project-row-header">
+      <h3>이슈 중심의 다중 뉴스 문서 군집화 및 요약 기술 연구 개발</h3>
+      <span class="role-badge role-pi">PI</span>
+    </div>
+    <div class="meta-row"><span>📅 2018.05 ~ 2018.10</span><span>🏛️ 한국과학기술정보연구원 (KISTI)</span></div>
+  </div>
+
+  <div class="project-row">
+    <div class="project-row-header">
+      <h3>딥러닝 기술을 이용한 커뮤니티 질문-응답 서비스 기반의 질문 분류, 검색 및 응답 추천 시스템 구축</h3>
+      <span class="role-badge role-pi">PI</span>
+    </div>
+    <div class="meta-row"><span>📅 2015.11 ~ 2018.10</span><span>🏛️ 한국연구재단 (NRF, 기본연구지원)</span></div>
+  </div>
+
+  <div class="project-row">
+    <div class="project-row-header">
+      <h3>유사도 측정 기법을 이용한 FAQ 시스템 개발</h3>
+      <span class="role-badge role-copi">Co-PI</span>
+    </div>
+    <div class="meta-row"><span>📅 2017.11 ~ 2018.08</span><span>🏛️ 현대자동차 (Hyundai Motors)</span></div>
+  </div>
+
+  <div class="project-row">
+    <div class="project-row-header">
+      <h3>전문분야 문답담화 분석을 위한 구어체 질문의 화행분류 연구</h3>
+      <span class="role-badge role-pi">PI</span>
+    </div>
+    <div class="meta-row"><span>📅 2017.06 ~ 2017.11</span><span>🏛️ ExoBrain Project, 한국전자통신연구원 (ETRI)</span></div>
+  </div>
+
+  <div class="project-row">
+    <div class="project-row-header">
+      <h3>WiseWordNet 확장을 위한 사전 Entity Linking 연구</h3>
+      <span class="role-badge role-pi">PI</span>
+    </div>
+    <div class="meta-row"><span>📅 2016.05 ~ 2017.01</span><span>🏛️ 한국전자통신연구원 (ETRI)</span></div>
+  </div>
+
+  <div class="project-row">
+    <div class="project-row-header">
+      <h3>의학정보 질의응답시스템 개발을 위한 의학용어 개체명 인식 기술 및 문장 임베딩 기술 개발</h3>
+      <span class="role-badge role-copi">Co-PI</span>
+    </div>
+    <div class="meta-row"><span>📅 2016.04 ~ 2016.12</span><span>🏛️ LG Electronics</span></div>
+  </div>
+
+  <div class="project-row">
+    <div class="project-row-header">
+      <h3>빅 데이터 분석을 위한 다중 언어 자원 구축 및 활용 시스템 개발</h3>
+      <span class="role-badge role-pi">PI</span>
+    </div>
+    <div class="meta-row"><span>📅 2013.06 ~ 2016.05</span><span>🏛️ 한국연구재단 (NRF, 기본연구지원)</span></div>
+  </div>
+
+  <div class="project-row">
+    <div class="project-row-header">
+      <h3>의학정보 복문 지식검색 기술 개발</h3>
+      <span class="role-badge role-copi">Co-PI</span>
+    </div>
+    <div class="meta-row"><span>📅 2015.07 ~ 2015.12</span><span>🏛️ LG Electronics</span></div>
+  </div>
+
+  <div class="project-row">
+    <div class="project-row-header">
+      <h3>다중영역 정보서비스를 위한 대화형 개인 비서 소프트웨어 원천 기술 개발</h3>
+      <span class="role-badge role-copi">Co-PI</span>
+    </div>
+    <div class="meta-row"><span>📅 2012.05 ~ 2015.03</span><span>🏛️ 원천기술개발사업, 지식경제부</span></div>
+  </div>
+
+  <div class="project-row">
+    <div class="project-row-header">
+      <h3>2014 국어 정보 처리 시스템 경진 대회</h3>
+      <span class="role-badge role-pi">PI</span>
+    </div>
+    <div class="meta-row"><span>📅 2014.04 ~ 2014.10</span><span>🏛️ 국립국어원</span></div>
+  </div>
+
+  <div class="project-row">
+    <div class="project-row-header">
+      <h3>SVM을 이용한 스팸 메세지 필터링</h3>
+      <span class="role-badge role-copi">Co-PI</span>
+    </div>
+    <div class="meta-row"><span>📅 2014.04 ~ 2014.08</span><span>🏛️ SP테크널러지(주) (SPTek Corp.)</span></div>
+  </div>
+
+  <div class="project-row">
+    <div class="project-row-header">
+      <h3>시각 및 언어 장애인을 위한 음성합성기 및 AAC 소프트웨어 개발</h3>
+      <span class="role-badge role-pi">PI</span>
+    </div>
+    <div class="meta-row"><span>📅 2010.06 ~ 2014.05</span><span>🏛️ (주)보이스웨어, QoLT 기술개발사업, 지식경제부</span></div>
+  </div>
+
+  <div class="project-row">
+    <div class="project-row-header">
+      <h3>음성/영상 통합 정보를 활용하는 지능형 말동무 로봇용 대화음성 인터페이스 기술 및 워크벤치 도구 개발</h3>
+      <span class="role-badge role-copi">Co-PI</span>
+    </div>
+    <div class="meta-row"><span>📅 2009.04 ~ 2013.03</span><span>🏛️ 지식경제 기술혁신사업, 지식경제부</span></div>
+  </div>
+
+  <div class="project-row">
+    <div class="project-row-header">
+      <h3>교차어 검색 기술을 이용한 주제양상별 다국어 의견마이닝 시스템</h3>
+      <span class="role-badge role-pi">PI</span>
+    </div>
+    <div class="meta-row"><span>📅 2011.06 ~ 2012.06</span><span>🏛️ 한국연구재단 (NRF, 대학교수해외방문연구지원)</span></div>
+  </div>
+
+  <div class="project-row">
+    <div class="project-row-header">
+      <h3>온톨로지와 효과적인 FAQ 검색 기술을 이용한 자연어 기반의 모바일 인터페이스 개발</h3>
+      <span class="role-badge role-pi">PI</span>
+    </div>
+    <div class="meta-row"><span>📅 2009.05 ~ 2012.04</span><span>🏛️ 한국연구재단 (NRF, 지역대학우수과학자)</span></div>
+  </div>
+
+  <div class="project-row">
+    <div class="project-row-header">
+      <h3>비교문장 추출과 비교관계 분석을 통한 비교마이닝 시스템에 대한 연구</h3>
+      <span class="role-badge role-pi">PI</span>
+    </div>
+    <div class="meta-row"><span>📅 2009.05 ~ 2011.04</span><span>🏛️ 한국연구재단 (NRF, 신진연구지원)</span></div>
+  </div>
+
+  <div class="project-row">
+    <div class="project-row-header">
+      <h3>위키피디아로부터의 개체명 추출을 통한 개체명 사전 자동 구축</h3>
+      <span class="role-badge role-pi">PI</span>
+    </div>
+    <div class="meta-row"><span>📅 2009.05 ~ 2010.01</span><span>🏛️ 한국전자통신연구원 (ETRI)</span></div>
+  </div>
+
+  <div class="project-row">
+    <div class="project-row-header">
+      <h3>영문 뉴스 포탈 형식 웹 문서의 단계별 요약 추출 기술</h3>
+      <span class="role-badge role-copi">Co-PI</span>
+    </div>
+    <div class="meta-row"><span>📅 2008.09 ~ 2009.11</span><span>🏛️ 삼성전자 연구소 (Samsung Electronics)</span></div>
+  </div>
+
+  <div class="project-row">
+    <div class="project-row-header">
+      <h3>영역 이식성이 높은 개체명 인식과 특성 추출 기술을 이용하는 의견마이닝 시스템의 개발</h3>
+      <span class="role-badge role-pi">PI</span>
+    </div>
+    <div class="meta-row"><span>📅 2008.07 ~ 2009.06</span><span>🏛️ 학술진흥재단 (KRF, 신진교수연구지원)</span></div>
+  </div>
+
+  <div class="project-row">
+    <div class="project-row-header">
+      <h3>지능형 인간로봇 상호작용 기술 개발</h3>
+      <span class="role-badge role-copi">Co-PI</span>
+    </div>
+    <div class="meta-row"><span>📅 2006.04 ~ 2009.03</span><span>🏛️ 인간지능 생활지원 지능로봇 기술개발사업, 산업자원부</span></div>
+  </div>
+
+  <div class="project-row">
+    <div class="project-row-header">
+      <h3>자연어처리기법과 기계학습기법을 기반으로 한 텍스트 문서의 감정분류시스템에 대한 연구</h3>
+      <span class="role-badge role-pi">PI</span>
+    </div>
+    <div class="meta-row"><span>📅 2006.07 ~ 2008.06</span><span>🏛️ 학술진흥재단 (KRF, 신진교수연구지원)</span></div>
+  </div>
+
+  <div class="project-row">
+    <div class="project-row-header">
+      <h3>정보검색 시스템과 텍스트 마이닝 교재 개발</h3>
+      <span class="role-badge role-pi">PI</span>
+    </div>
+    <div class="meta-row"><span>📅 2007.01 ~ 2007.12</span><span>🏛️ 정보통신진흥원 (IITA)</span></div>
+  </div>
+
+  <div class="project-row">
+    <div class="project-row-header">
+      <h3>신문기사 형식의 웹 문서로부터 핵심 키워드 추출과 중요 내용 요약 기술</h3>
+      <span class="role-badge role-copi">Co-PI</span>
+    </div>
+    <div class="meta-row"><span>📅 2007.06 ~ 2007.11</span><span>🏛️ 삼성전자 기술개발 연구소 (SAIT)</span></div>
+  </div>
+
+  <div class="project-row">
+    <div class="project-row-header">
+      <h3>과학기술분야 시맨틱 네트워크 구축 및 색인 기술 연구</h3>
+      <span class="role-badge role-copi">Co-PI</span>
+    </div>
+    <div class="meta-row"><span>📅 2007.01 ~ 2007.11</span><span>🏛️ 한국과학기술정보연구원 (KISTI)</span></div>
+  </div>
+
+  <div class="project-row">
+    <div class="project-row-header">
+      <h3>범용 과학기술 및 IT 분야 분류체계 개발과 시소러스 연동 방안 연구</h3>
+      <span class="role-badge role-pi">PI</span>
+    </div>
+    <div class="meta-row"><span>📅 2006.03 ~ 2006.10</span><span>🏛️ 한국과학기술정보연구원 (KISTI)</span></div>
+  </div>
+
+  <div class="project-row">
+    <div class="project-row-header">
+      <h3>실버메이트용 대화음성 인터페이스 기술 개발 (과기부 휴먼로봇 프론티어 사업단)</h3>
+      <span class="role-badge role-copi">Co-PI</span>
+    </div>
+    <div class="meta-row"><span>📅 2003.10 ~ 2006.03</span><span>🏛️ 인간지능 생활지원 지능로봇 기술개발사업, 산업자원부</span></div>
+  </div>
+
+  <div class="project-row">
+    <div class="project-row-header">
+      <h3>오류 학습 문서 제거를 통한 문서 범주화 기법의 성능향상</h3>
+      <span class="role-badge role-pi">PI</span>
+    </div>
+    <div class="meta-row"><span>📅 2004.09 ~ 2005.08</span><span>🏛️ 동아대학교</span></div>
+  </div>
+
+  <div class="project-row">
+    <div class="project-row-header">
+      <h3>뇌 정보처리에 기반하여 자율적 지식 획득이 가능한 기계 자아 성장 모델 개발</h3>
+      <span class="role-badge role-ra">RA</span>
+    </div>
+    <div class="meta-row"><span>📅 2004.04 ~ 2006.04</span><span>🏛️ 산업자원부</span></div>
+  </div>
+
+  <div class="project-row">
+    <div class="project-row-header">
+      <h3>시소러스 기반 대화형 정보검색 및 질의응답 시스템 개발에 관한 연구</h3>
+      <span class="role-badge role-ra">RA</span>
+    </div>
+    <div class="meta-row"><span>📅 2003.09 ~ 2005.08</span><span>🏛️ 한국과학재단 (KOSEF)</span></div>
+  </div>
+
+  <div class="project-row">
+    <div class="project-row-header">
+      <h3>한글 자동 수화 애니메이션 시스템을 위한 자연언어처리</h3>
+      <span class="role-badge role-ra">RA</span>
+    </div>
+    <div class="meta-row"><span>📅 2001.05 ~ 2003.04</span><span>🏛️ 정보통신부</span></div>
+  </div>
+
+  <div class="project-row">
+    <div class="project-row-header">
+      <h3>대화음성 인식 시스템 구현을 위한 기본 Platform 개발</h3>
+      <span class="role-badge role-ra">RA</span>
+    </div>
+    <div class="meta-row"><span>📅 2000.12 ~ 2003.11</span><span>🏛️ 산업자원부</span></div>
+  </div>
+
+  <div class="project-row">
+    <div class="project-row-header">
+      <h3>지능형 정보검색 에이전트 연구팀 (BK21 핵심연구사업)</h3>
+      <span class="role-badge role-ra">RA</span>
+    </div>
+    <div class="meta-row"><span>📅 1999.09 ~ 2002.08</span><span>🏛️ 학술진흥재단 (KRF)</span></div>
+  </div>
+
+  <div class="project-row">
+    <div class="project-row-header">
+      <h3>통계모델을 이용한 한국어처리</h3>
+      <span class="role-badge role-ra">RA</span>
+    </div>
+    <div class="meta-row"><span>📅 1998.08 ~ 2000.08</span><span>🏛️ 한국과학재단 (KOSEF)</span></div>
+  </div>
+
+  <div class="project-row">
+    <div class="project-row-header">
+      <h3>다중모드 사용자 대화 인터페이스 시스템 연구</h3>
+      <span class="role-badge role-ra">RA</span>
+    </div>
+    <div class="meta-row"><span>📅 1998.08 ~ 1999.06</span><span>🏛️ 정보통신연구진흥원 (IITA)</span></div>
+  </div>
+
+  <div class="transfer-row">
+    <h3>언어 분석기별 정답 레이블 분포를 이용한 자연어 이해 방법</h3>
+    <div class="meta-row"><span>📅 2024.10</span><span>🏢 (주)제이씨지</span></div>
+  </div>
+
+  <div class="transfer-row">
+    <h3>학습 데이터 확장을 통한 딥러닝 기반 인과관계 추출을 위한 장치</h3>
+    <div class="meta-row"><span>📅 2024.10</span><span>🏢 (주)아이전스</span></div>
+  </div>
+
+  <div class="transfer-row">
+    <h3>보완대체의사소통(AAC)용 문장생성기술</h3>
+    <div class="meta-row"><span>📅 2020.01 ~ 2024.12</span><span>🏢 (주)리드스피커코리아</span></div>
+  </div>
+
+  <div class="transfer-row">
+    <h3>문장 임베딩 및 유사 질문 검색을 위한 장치 및 방법</h3>
+    <div class="meta-row"><span>📅 2023.03</span><span>🏢 (주)웨이브릿지</span></div>
+  </div>
+
+  <div class="transfer-row">
+    <h3>그래프 랭킹 알고리즘과 변형된 C-value 수식을 이용한 과학 문서의 핵심어 추출기</h3>
+    <div class="meta-row"><span>📅 2022.02</span><span>🏢 (주)위인터렉트</span></div>
+  </div>
+
+  <div class="transfer-row">
+    <h3>AAC용 문장생성기술 (Sentence Generation Techniques for Augmentative and Alternative Communication)</h3>
+    <div class="meta-row"><span>📅 2014.09 ~ 2019.12</span><span>🏢 Voiceware Co., LTD.</span></div>
+  </div>
+
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">NLP<span>LAB</span></div>
+      <p class="footer-desc">Natural Language Processing Laboratory<br />성균관대학교 소프트웨어융합대학</p>
+    </div>
+  </div>
+  <p class="footer-copy">© 2026 NLPLAB, Sungkyunkwan University. All rights reserved.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="../assets/img/favicon.ico" />
+  <title>Generative AI Demos — NLPLAB</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .page-hero { background: var(--bg); padding: 48px 24px 32px; text-align: center; }
+    .page-hero h1 { font-size: 36px; font-weight: 700; }
+    .page-hero h1 span { color: var(--green); }
+    .demo-item { background: var(--white); border-radius: 10px; margin-bottom: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); overflow: hidden; }
+    .demo-toggle { width: 100%; display: flex; align-items: center; justify-content: space-between; padding: 20px 24px; background: none; border: none; cursor: pointer; text-align: left; gap: 16px; font-family: inherit; transition: background 0.15s; }
+    .demo-toggle:hover { background: var(--bg); }
+    .demo-toggle-title { font-size: 15px; font-weight: 600; line-height: 1.5; color: var(--text); }
+    .demo-arrow { font-size: 12px; color: var(--text-muted); flex-shrink: 0; transition: transform 0.2s; }
+    .demo-toggle.open .demo-arrow { transform: rotate(180deg); }
+    .demo-content { display: none; padding: 0 24px 24px; border-top: 1px solid var(--border); }
+    .demo-content.open { display: block; }
+    .demo-meta { margin-top: 16px; margin-bottom: 16px; }
+    .demo-meta p { font-size: 13px; color: var(--text-muted); margin-bottom: 6px; line-height: 1.6; }
+    .demo-meta a { color: var(--green); text-decoration: none; }
+    .demo-meta a:hover { text-decoration: underline; }
+    .demo-meta b { color: var(--text); }
+    .demo-video { width: 100%; border-radius: 8px; margin-top: 8px; max-height: 480px; }
+    .demo-video-label { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 8px; }
+  </style>
+</head>
+<body>
+<script>window.NAV_ROOT = '../';</script>
+<script src="../js/nav.js"></script>
+
+<div class="page-hero">
+  <h1><span>G</span>enerative AI Demos</h1>
+  <p style="color:var(--text-muted);margin-top:8px;font-size:14px;">Generative AI 데모 동영상</p>
+</div>
+
+<div class="section" style="margin-top:24px;margin-bottom:0;padding-bottom:0">
+  <div class="sub-nav">
+    <a href="demos-nlp.html">NLP</a>
+    <a href="demos-ir.html">IR</a>
+    <a href="demos-textmining.html">Text Mining</a>
+    <a href="demos-generativeai.html" class="active">Generative AI</a>
+  </div>
+</div>
+
+<div class="section" style="margin-bottom:60px">
+
+  <div class="demo-item">
+    <button class="demo-toggle" onclick="toggleDemo(this)">
+      <span class="demo-toggle-title">오픈 도메인 질의응답 시스템을 위한 질의 기반 다중 문서 요약과 설명 가능한 근거 문장 생성</span>
+      <span class="demo-arrow">▼</span>
+    </button>
+    <div class="demo-content">
+      <div class="demo-meta">
+        <p><b>Title:</b> Generating Question-Based Multi-Document Summaries and Explainable Evidence Sentences for Open-Domain Q&amp;A Systems</p>
+        <p><b>Github:</b> TBD</p>
+        <p><b>Paper:</b> TBD</p>
+      </div>
+      <div class="demo-video-label">Demo Video</div>
+      <video class="demo-video" controls>
+        <source src="../assets/video/demo_generation_multi_document_summaries_and_evidence.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
+  <div class="demo-item">
+    <button class="demo-toggle" onclick="toggleDemo(this)">
+      <span class="demo-toggle-title">지식 그래프의 링크 예측을 위한 거대 언어 모델 기반 관계 설명문 생성 방법</span>
+      <span class="demo-arrow">▼</span>
+    </button>
+    <div class="demo-content">
+      <div class="demo-meta">
+        <p><b>Title:</b> Generating Relation Descriptions with Large Language Model for Link Prediction</p>
+        <p><b>Github:</b> TBD</p>
+        <p><b>Paper:</b> <a href="https://www.dbpia.co.kr/pdf/pdfView.do?nodeId=NODE11943975" target="_blank">Publisher Link</a></p>
+      </div>
+      <div class="demo-video-label">Demo Video</div>
+      <video class="demo-video" controls>
+        <source src="../assets/video/demo_generation_relation_descriptions.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
+  <div class="demo-item">
+    <button class="demo-toggle" onclick="toggleDemo(this)">
+      <span class="demo-toggle-title">질의 집중 의미 그래프를 활용한 질의 기반 문서 요약</span>
+      <span class="demo-arrow">▼</span>
+    </button>
+    <div class="demo-content">
+      <div class="demo-meta">
+        <p><b>Title:</b> Text Summarization with the Query Attentive Graph-Attention Network</p>
+        <p><b>Github:</b> TBD</p>
+        <p><b>Paper:</b> TBD</p>
+      </div>
+      <div class="demo-video-label">Demo Video</div>
+      <video class="demo-video" controls>
+        <source src="../assets/video/demo_query_based_summarization.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
+  <div class="demo-item">
+    <button class="demo-toggle" onclick="toggleDemo(this)">
+      <span class="demo-toggle-title">주제 분포를 반영한 교차 주의 기반 대화 요약 시스템</span>
+      <span class="demo-arrow">▼</span>
+    </button>
+    <div class="demo-content">
+      <div class="demo-meta">
+        <p><b>Title:</b> Dialogue Summarization using Topic distribution-Aware Cross-Attention</p>
+        <p><b>Github:</b> TBD</p>
+        <p><b>Paper:</b> <a href="https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003136965" target="_blank">Publisher Link</a></p>
+      </div>
+      <div class="demo-video-label">Demo Video</div>
+      <video class="demo-video" controls>
+        <source src="../assets/video/demo_dialogue_summarization_using_topic_distribution.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">NLP<span>LAB</span></div>
+      <p class="footer-desc">Natural Language Processing Laboratory<br />성균관대학교 소프트웨어융합대학</p>
+    </div>
+  </div>
+  <p class="footer-copy">© 2026 NLPLAB, Sungkyunkwan University. All rights reserved.</p>
+</footer>
+
+<script>
+function toggleDemo(btn) {
+  const content = btn.nextElementSibling;
+  const isOpen = content.classList.contains('open');
+  content.classList.toggle('open', !isOpen);
+  btn.classList.toggle('open', !isOpen);
+}
+</script>
+</body>
+</html>

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://nlplab-skku.github.io/sitemap.xml
+Sitemap: https://nlplab.skku.edu/sitemap.xml

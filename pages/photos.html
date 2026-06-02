@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="../assets/img/favicon.ico" />
+  <title>Photos — NLPLAB</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .page-hero { background: var(--bg); padding: 48px 24px 32px; text-align: center; }
+    .page-hero h1 { font-size: 36px; font-weight: 700; }
+    .page-hero h1 span { color: var(--green); }
+
+    .photo-group { margin-bottom: 44px; }
+    .photo-group-title {
+      font-size: 18px; font-weight: 700; margin-bottom: 16px;
+      padding-left: 14px; border-left: 4px solid var(--green);
+    }
+    .photo-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; }
+    .photo-card {
+      border-radius: 8px; overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      cursor: pointer; transition: transform 0.2s, box-shadow 0.2s;
+      background: #111;
+    }
+    .photo-card:hover { transform: scale(1.02); box-shadow: 0 6px 20px rgba(0,0,0,0.14); }
+    .photo-thumb {
+      width: 100%; height: 180px; overflow: hidden;
+    }
+    .photo-thumb img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+      transition: transform 0.3s;
+    }
+    .photo-card:hover .photo-thumb img { transform: scale(1.06); }
+    .photo-caption { padding: 10px 14px; font-size: 13px; color: var(--text-muted); background: var(--white); }
+
+    /* Lightbox */
+    .lightbox {
+      display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.9);
+      z-index: 1000; align-items: center; justify-content: center;
+    }
+    .lightbox.open { display: flex; }
+    .lightbox-inner { max-width: 1300px; width: 96%; text-align: center; }
+    .lightbox-img {
+      width: 100%; max-height: 88vh; border-radius: 8px; overflow: hidden;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .lightbox-img img { max-width: 100%; max-height: 88vh; object-fit: contain; border-radius: 8px; }
+    .lightbox-caption { color: rgba(255,255,255,0.85); margin-top: 14px; font-size: 15px; }
+    .lightbox-close {
+      position: absolute; top: 20px; right: 28px; color: #fff;
+      font-size: 32px; cursor: pointer; background: none; border: none; line-height: 1;
+    }
+  </style>
+</head>
+<body>
+<script>window.NAV_ROOT = '../';</script>
+<script src="../js/nav.js"></script>
+
+<div class="page-hero">
+  <h1><span>P</span>hotos</h1>
+  <p style="color:var(--text-muted);margin-top:8px;font-size:14px;">NLPLab의 소중한 순간들을 담았습니다</p>
+</div>
+
+<div class="section" style="margin-top:24px;margin-bottom:0;padding-bottom:0">
+  <div class="sub-nav">
+    <a href="introduction.html">Introduction</a>
+    <a href="photos.html" class="active">Photos</a>
+    <a href="contact.html">Contact Us</a>
+  </div>
+</div>
+
+<div class="section" style="margin-bottom:60px">
+
+  <!-- 2026 -->
+  <div class="photo-group">
+    <div class="photo-group-title">2026</div>
+    <div class="photo-grid">
+      <div class="photo-card" data-src="../assets/img/2026/05_teacher'sday.jpg" data-cap="26년 5월: 스승의날">
+        <div class="photo-thumb"><img src="../assets/img/2026/05_teacher'sday.jpg" alt="스승의날"></div>
+        <div class="photo-caption">26년 5월: 스승의날</div>
+      </div>
+      <div class="photo-card" data-src="../assets/img/2026/05_birth.png" data-cap="26년 5월: 5월 생일파티">
+        <div class="photo-thumb"><img src="../assets/img/2026/05_birth.png" alt="5월 생일파티"></div>
+        <div class="photo-caption">26년 5월: 5월 생일파티</div>
+      </div>
+      <div class="photo-card" data-src="../assets/img/2026/04_birth.png" data-cap="26년 4월: 4월 생일파티">
+        <div class="photo-thumb"><img src="../assets/img/2026/04_birth.png" alt="4월 생일파티"></div>
+        <div class="photo-caption">26년 4월: 4월 생일파티</div>
+      </div>
+      <div class="photo-card" data-src="../assets/img/2026/03_eatout.jpg" data-cap="26년 3월: 연구실 회식">
+        <div class="photo-thumb"><img src="../assets/img/2026/03_eatout.jpg" alt="연구실 회식"></div>
+        <div class="photo-caption">26년 3월: 연구실 회식</div>
+      </div>
+      <div class="photo-card" data-src="../assets/img/2026/02_graduation.jpg" data-cap="26년 2월: 학위수여식">
+        <div class="photo-thumb"><img src="../assets/img/2026/02_graduation.jpg" alt="학위수여식"></div>
+        <div class="photo-caption">26년 2월: 학위수여식</div>
+      </div>
+      <div class="photo-card" data-src="../assets/img/2026/01_eatout.jpg" data-cap="26년 1월: 신년 회식">
+        <div class="photo-thumb"><img src="../assets/img/2026/01_eatout.jpg" alt="신년 회식"></div>
+        <div class="photo-caption">26년 1월: 신년 회식</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2025 -->
+  <div class="photo-group">
+    <div class="photo-group-title">2025</div>
+    <div class="photo-grid">
+      <div class="photo-card" data-src="../assets/img/2025/12_birthday.jpg" data-cap="25년 12월: 12월 생일파티">
+        <div class="photo-thumb"><img src="../assets/img/2025/12_birthday.jpg" alt="12월 생일파티"></div>
+        <div class="photo-caption">25년 12월: 12월 생일파티</div>
+      </div>
+      <div class="photo-card" data-src="../assets/img/2025/11_emnlp.jpg" data-cap="25년 11월: EMNLP 학회 발표">
+        <div class="photo-thumb"><img src="../assets/img/2025/11_emnlp.jpg" alt="EMNLP 학회 발표"></div>
+        <div class="photo-caption">25년 11월: EMNLP 학회 발표</div>
+      </div>
+      <div class="photo-card" data-src="../assets/img/2025/09_birth.jpg" data-cap="25년 9월: 9월 생일파티">
+        <div class="photo-thumb"><img src="../assets/img/2025/09_birth.jpg" alt="9월 생일파티"></div>
+        <div class="photo-caption">25년 9월: 9월 생일파티</div>
+      </div>
+      <div class="photo-card" data-src="../assets/img/2025/08_birth.jpg" data-cap="25년 8월: 8월 생일파티">
+        <div class="photo-thumb"><img src="../assets/img/2025/08_birth.jpg" alt="8월 생일파티"></div>
+        <div class="photo-caption">25년 8월: 8월 생일파티</div>
+      </div>
+      <div class="photo-card" data-src="../assets/img/2025/08_grad.jpg" data-cap="25년 8월: 학위수여식">
+        <div class="photo-thumb"><img src="../assets/img/2025/08_grad.jpg" alt="학위수여식"></div>
+        <div class="photo-caption">25년 8월: 학위수여식</div>
+      </div>
+      <div class="photo-card" data-src="../assets/img/2025/08_eatout.jpg" data-cap="25년 8월: 애슐리데이🍴">
+        <div class="photo-thumb"><img src="../assets/img/2025/08_eatout.jpg" alt="애슐리데이"></div>
+        <div class="photo-caption">25년 8월: 애슐리데이🍴</div>
+      </div>
+      <div class="photo-card" data-src="../assets/img/2025/08_aiassociation.jpg" data-cap="25년 8월: 평창 한국인공지능학회 참석">
+        <div class="photo-thumb"><img src="../assets/img/2025/08_aiassociation.jpg" alt="한국인공지능학회"></div>
+        <div class="photo-caption">25년 8월: 평창 한국인공지능학회 참석</div>
+      </div>
+      <div class="photo-card" data-src="../assets/img/2025/07_acl_chs.jpg" data-cap="25년 7월: ACL 학회 발표">
+        <div class="photo-thumb"><img src="../assets/img/2025/07_acl_chs.jpg" alt="ACL 학회 발표"></div>
+        <div class="photo-caption">25년 7월: ACL 학회 발표</div>
+      </div>
+      <div class="photo-card" data-src="../assets/img/2025/07_prof_birthday.jpg" data-cap="25년 7월: 교수님 생신 케이크 전달">
+        <div class="photo-thumb"><img src="../assets/img/2025/07_prof_birthday.jpg" alt="교수님 생신 케이크 전달"></div>
+        <div class="photo-caption">25년 7월: 교수님 생신 케이크 전달</div>
+      </div>
+      <div class="photo-card" data-src="../assets/img/2025/07_professor_award.jpg" data-cap="25년 7월: 고영중 교수님 한국정보과학회 학술상 수상">
+        <div class="photo-thumb"><img src="../assets/img/2025/07_professor_award.jpg" alt="학술상 수상"></div>
+        <div class="photo-caption">25년 7월: 고영중 교수님 한국정보과학회 학술상 수상</div>
+      </div>
+      <div class="photo-card" data-src="../assets/img/2025/07_award_celeb.jpg" data-cap="25년 7월: 학술상 수상 축하 케이크 전달">
+        <div class="photo-thumb"><img src="../assets/img/2025/07_award_celeb.jpg" alt="학술상 수상 축하"></div>
+        <div class="photo-caption">25년 7월: 학술상 수상 축하 케이크 전달</div>
+      </div>
+      <div class="photo-card" data-src="../assets/img/2025/07_ashley.jpg" data-cap="25년 7월: 애슐리데이🍴">
+        <div class="photo-thumb"><img src="../assets/img/2025/07_ashley.jpg" alt="애슐리데이"></div>
+        <div class="photo-caption">25년 7월: 애슐리데이🍴</div>
+      </div>
+      <div class="photo-card" data-src="../assets/img/2025/04_workout.jpg" data-cap="25년 4월: 봄 맞이 족구 ⚽️">
+        <div class="photo-thumb"><img src="../assets/img/2025/04_workout.jpg" alt="봄 맞이 족구"></div>
+        <div class="photo-caption">25년 4월: 봄 맞이 족구 ⚽️</div>
+      </div>
+      <div class="photo-card" data-src="../assets/img/2025/02_graduation.png" data-cap="25년 2월: 학위수여식">
+        <div class="photo-thumb"><img src="../assets/img/2025/02_graduation.png" alt="학위수여식"></div>
+        <div class="photo-caption">25년 2월: 학위수여식</div>
+      </div>
+      <div class="photo-card" data-src="../assets/img/2025/02_graduation_2.png" data-cap="25년 2월: 학위수여식2">
+        <div class="photo-thumb"><img src="../assets/img/2025/02_graduation_2.png" alt="학위수여식2"></div>
+        <div class="photo-caption">25년 2월: 학위수여식2</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2024 -->
+  <div class="photo-group">
+    <div class="photo-group-title">2024</div>
+    <div class="photo-grid">
+      <div class="photo-card" data-src="../assets/img/2024/12_ksc.png" data-cap="24년 12월: 한국정보과학회 KSC2024">
+        <div class="photo-thumb"><img src="../assets/img/2024/12_ksc.png" alt="KSC2024"></div>
+        <div class="photo-caption">24년 12월: 한국정보과학회 KSC2024</div>
+      </div>
+      <div class="photo-card" data-src="../assets/img/2024/10_emnlp_2.jpg" data-cap="24년 10월: EMNLP 학회 발표">
+        <div class="photo-thumb"><img src="../assets/img/2024/10_emnlp_2.jpg" alt="EMNLP 학회 발표"></div>
+        <div class="photo-caption">24년 10월: EMNLP 학회 발표</div>
+      </div>
+      <div class="photo-card" data-src="../assets/img/2024/08_ashley.png" data-cap="24년 8월: 애슐리데이🍴">
+        <div class="photo-thumb"><img src="../assets/img/2024/08_ashley.png" alt="애슐리데이"></div>
+        <div class="photo-caption">24년 8월: 애슐리데이🍴</div>
+      </div>
+      <div class="photo-card" data-src="../assets/img/2024/08_graduation.png" data-cap="24년 8월: 학위수여식">
+        <div class="photo-thumb"><img src="../assets/img/2024/08_graduation.png" alt="학위수여식"></div>
+        <div class="photo-caption">24년 8월: 학위수여식</div>
+      </div>
+      <div class="photo-card" data-src="../assets/img/2024/07_prof_birthday.jpg" data-cap="24년 7월: 교수님 생신 케이크 전달">
+        <div class="photo-thumb"><img src="../assets/img/2024/07_prof_birthday.jpg" alt="교수님 생신 케이크 전달"></div>
+        <div class="photo-caption">24년 7월: 교수님 생신 케이크 전달</div>
+      </div>
+      <div class="photo-card" data-src="../assets/img/2024/05_teacher'sday.jpg" data-cap="24년 5월: 스승의날">
+        <div class="photo-thumb"><img src="../assets/img/2024/05_teacher'sday.jpg" alt="스승의날"></div>
+        <div class="photo-caption">24년 5월: 스승의날</div>
+      </div>
+      <div class="photo-card" data-src="../assets/img/2024/05_teacher'sday_2.jpg" data-cap="24년 5월: 스승의날">
+        <div class="photo-thumb"><img src="../assets/img/2024/05_teacher'sday_2.jpg" alt="스승의날"></div>
+        <div class="photo-caption">24년 5월: 스승의날</div>
+      </div>
+      <div class="photo-card" data-src="../assets/img/2024/02_graduation.jpg" data-cap="24년 2월: 학위수여식">
+        <div class="photo-thumb"><img src="../assets/img/2024/02_graduation.jpg" alt="학위수여식"></div>
+        <div class="photo-caption">24년 2월: 학위수여식</div>
+      </div>
+      <div class="photo-card" data-src="../assets/img/2024/02_graduation_2.jpg" data-cap="24년 2월: 학위수여식2">
+        <div class="photo-thumb"><img src="../assets/img/2024/02_graduation_2.jpg" alt="학위수여식2"></div>
+        <div class="photo-caption">24년 2월: 학위수여식2</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2023 -->
+  <div class="photo-group">
+    <div class="photo-group-title">2023</div>
+    <div class="photo-grid">
+      <div class="photo-card" data-src="../assets/img/2023/11_birthday.jpg" data-cap="23년 11월: 11월 생일파티">
+        <div class="photo-thumb"><img src="../assets/img/2023/11_birthday.jpg" alt="11월 생일파티"></div>
+        <div class="photo-caption">23년 11월: 11월 생일파티</div>
+      </div>
+      <div class="photo-card" data-src="../assets/img/2023/10_eatout.jpg" data-cap="23년 10월: 연구실 회식">
+        <div class="photo-thumb"><img src="../assets/img/2023/10_eatout.jpg" alt="연구실 회식"></div>
+        <div class="photo-caption">23년 10월: 연구실 회식</div>
+      </div>
+      <div class="photo-card" data-src="../assets/img/2023/07_prof_birthday.jpg" data-cap="23년 7월: 교수님 생신 케이크 전달">
+        <div class="photo-thumb"><img src="../assets/img/2023/07_prof_birthday.jpg" alt="교수님 생신 케이크 전달"></div>
+        <div class="photo-caption">23년 7월: 교수님 생신 케이크 전달</div>
+      </div>
+      <div class="photo-card" data-src="../assets/img/2023/05_teacher'sday.jpg" data-cap="23년 5월: 스승의 날 기념 케이크 전달">
+        <div class="photo-thumb"><img src="../assets/img/2023/05_teacher'sday.jpg" alt="스승의 날"></div>
+        <div class="photo-caption">23년 5월: 스승의 날 기념 케이크 전달</div>
+      </div>
+      <div class="photo-card" data-src="../assets/img/2023/05_birthday.jpg" data-cap="23년 5월: 5월 생일파티">
+        <div class="photo-thumb"><img src="../assets/img/2023/05_birthday.jpg" alt="5월 생일파티"></div>
+        <div class="photo-caption">23년 5월: 5월 생일파티</div>
+      </div>
+      <div class="photo-card" data-src="../assets/img/2023/04_spring.jpg" data-cap="23년 4월: 성균관대학교의 봄🌸">
+        <div class="photo-thumb"><img src="../assets/img/2023/04_spring.jpg" alt="성균관대학교의 봄"></div>
+        <div class="photo-caption">23년 4월: 성균관대학교의 봄🌸</div>
+      </div>
+      <div class="photo-card" data-src="../assets/img/2023/03_eatout.jpg" data-cap="23년 3월: 연구실 회식">
+        <div class="photo-thumb"><img src="../assets/img/2023/03_eatout.jpg" alt="연구실 회식"></div>
+        <div class="photo-caption">23년 3월: 연구실 회식</div>
+      </div>
+      <div class="photo-card" data-src="../assets/img/2023/02_graduation.jpg" data-cap="23년 2월: 학위수여식">
+        <div class="photo-thumb"><img src="../assets/img/2023/02_graduation.jpg" alt="학위수여식"></div>
+        <div class="photo-caption">23년 2월: 학위수여식</div>
+      </div>
+      <div class="photo-card" data-src="../assets/img/2023/02_graduation_2.jpg" data-cap="23년 2월: 학위수여식">
+        <div class="photo-thumb"><img src="../assets/img/2023/02_graduation_2.jpg" alt="학위수여식"></div>
+        <div class="photo-caption">23년 2월: 학위수여식</div>
+      </div>
+      <div class="photo-card" data-src="../assets/img/2023/01_emnlp.png" data-cap="23년 1월: EMNLP 학회 발표">
+        <div class="photo-thumb"><img src="../assets/img/2023/01_emnlp.png" alt="EMNLP 학회 발표"></div>
+        <div class="photo-caption">23년 1월: EMNLP 학회 발표</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2022 -->
+  <div class="photo-group">
+    <div class="photo-group-title">2022</div>
+    <div class="photo-grid">
+      <div class="photo-card" data-src="../assets/img/2022/12_ksc2022.jpg" data-cap="22년 12월: 한국정보과학회 KSC2022">
+        <div class="photo-thumb"><img src="../assets/img/2022/12_ksc2022.jpg" alt="KSC2022"></div>
+        <div class="photo-caption">22년 12월: 한국정보과학회 KSC2022</div>
+      </div>
+      <div class="photo-card" data-src="../assets/img/2022/12_ksc2022_presentation.jpg" data-cap="22년 12월: 한국정보과학회 KSC2022 발표">
+        <div class="photo-thumb"><img src="../assets/img/2022/12_ksc2022_presentation.jpg" alt="KSC2022 발표"></div>
+        <div class="photo-caption">22년 12월: 한국정보과학회 KSC2022 발표</div>
+      </div>
+      <div class="photo-card" data-src="../assets/img/2022/12_jeju.jpg" data-cap="22년 12월: 제주도에서🍊">
+        <div class="photo-thumb"><img src="../assets/img/2022/12_jeju.jpg" alt="제주도에서"></div>
+        <div class="photo-caption">22년 12월: 제주도에서🍊</div>
+      </div>
+      <div class="photo-card" data-src="../assets/img/2022/11_birthday.jpg" data-cap="22년 11월: 11월 생일파티">
+        <div class="photo-thumb"><img src="../assets/img/2022/11_birthday.jpg" alt="11월 생일파티"></div>
+        <div class="photo-caption">22년 11월: 11월 생일파티</div>
+      </div>
+      <div class="photo-card" data-src="../assets/img/2022/09_members_ncenter.jpg" data-cap="22년 9월: 연구실 단체 사진">
+        <div class="photo-thumb"><img src="../assets/img/2022/09_members_ncenter.jpg" alt="연구실 단체 사진"></div>
+        <div class="photo-caption">22년 9월: 연구실 단체 사진</div>
+      </div>
+      <div class="photo-card" data-src="../assets/img/2022/08_gradschool%20presentation.jpg" data-cap="22년 8월: 인공지능대학원 발표">
+        <div class="photo-thumb"><img src="../assets/img/2022/08_gradschool%20presentation.jpg" alt="인공지능대학원 발표"></div>
+        <div class="photo-caption">22년 8월: 인공지능대학원 발표</div>
+      </div>
+      <div class="photo-card" data-src="../assets/img/2022/07_sigir.png" data-cap="22년 7월: SIGIR 학회 발표">
+        <div class="photo-thumb"><img src="../assets/img/2022/07_sigir.png" alt="SIGIR 학회 발표"></div>
+        <div class="photo-caption">22년 7월: SIGIR 학회 발표</div>
+      </div>
+      <div class="photo-card" data-src="../assets/img/2022/06_lgai.jpg" data-cap="22년 6월: LG AI Research 견학">
+        <div class="photo-thumb"><img src="../assets/img/2022/06_lgai.jpg" alt="LG AI Research 견학"></div>
+        <div class="photo-caption">22년 6월: LG AI Research 견학</div>
+      </div>
+      <div class="photo-card" data-src="../assets/img/2022/06_lgai_2.jpg" data-cap="22년 6월: LG AI Research 견학">
+        <div class="photo-thumb"><img src="../assets/img/2022/06_lgai_2.jpg" alt="LG AI Research 견학"></div>
+        <div class="photo-caption">22년 6월: LG AI Research 견학</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Prev -->
+  <div class="photo-group">
+    <div class="photo-group-title">Prev</div>
+    <div class="photo-grid">
+      <div class="photo-card" data-src="../assets/img/2021/05_teacher's%20day.jpg" data-cap="21년 5월: 스승의 날 기념 케이크 전달">
+        <div class="photo-thumb"><img src="../assets/img/2021/05_teacher's%20day.jpg" alt="스승의 날"></div>
+        <div class="photo-caption">21년 5월: 스승의 날 기념 케이크 전달</div>
+      </div>
+      <div class="photo-card" data-src="../assets/img/2020/12_NHN_seminar.jpg" data-cap="20년 12월: NHN Diquest 세미나">
+        <div class="photo-thumb"><img src="../assets/img/2020/12_NHN_seminar.jpg" alt="NHN Diquest 세미나"></div>
+        <div class="photo-caption">20년 12월: NHN Diquest 세미나</div>
+      </div>
+      <div class="photo-card" data-src="../assets/img/2020/07_prof_birthday.jpg" data-cap="20년 7월: 교수님 생신 기념 케이크 전달">
+        <div class="photo-thumb"><img src="../assets/img/2020/07_prof_birthday.jpg" alt="교수님 생신 케이크 전달"></div>
+        <div class="photo-caption">20년 7월: 교수님 생신 기념 케이크 전달</div>
+      </div>
+      <div class="photo-card" data-src="../assets/img/2020/07_summer_internship.jpg" data-cap="20년 7월: 연구실 여름 인턴십">
+        <div class="photo-thumb"><img src="../assets/img/2020/07_summer_internship.jpg" alt="연구실 여름 인턴십"></div>
+        <div class="photo-caption">20년 7월: 연구실 여름 인턴십</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+  <div class="lightbox-inner" onclick="event.stopPropagation()">
+    <div class="lightbox-img" id="lb-img"></div>
+    <div class="lightbox-caption" id="lb-cap"></div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">NLP<span>LAB</span></div>
+      <p class="footer-desc">Natural Language Processing Laboratory<br />성균관대학교 소프트웨어융합대학</p>
+    </div>
+  </div>
+  <p class="footer-copy">© 2026 NLPLAB, Sungkyunkwan University. All rights reserved.</p>
+</footer>
+
+<script>
+  document.querySelectorAll('.photo-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const src = card.dataset.src;
+      const cap = card.dataset.cap;
+      document.getElementById('lb-img').innerHTML = `<img src="${src}" alt="${cap}">`;
+      document.getElementById('lb-cap').textContent = cap;
+      document.getElementById('lightbox').classList.add('open');
+    });
+  });
+
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('open');
+  }
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeLightbox();
+  });
+</script>
+</body>
+</html>

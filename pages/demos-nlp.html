@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="../assets/img/favicon.ico" />
+  <title>NLP Demos — NLPLAB</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .page-hero { background: var(--bg); padding: 48px 24px 32px; text-align: center; }
+    .page-hero h1 { font-size: 36px; font-weight: 700; }
+    .page-hero h1 span { color: var(--green); }
+    .demo-item { background: var(--white); border-radius: 10px; margin-bottom: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); overflow: hidden; }
+    .demo-toggle { width: 100%; display: flex; align-items: center; justify-content: space-between; padding: 20px 24px; background: none; border: none; cursor: pointer; text-align: left; gap: 16px; font-family: inherit; transition: background 0.15s; }
+    .demo-toggle:hover { background: var(--bg); }
+    .demo-toggle-title { font-size: 15px; font-weight: 600; line-height: 1.5; color: var(--text); }
+    .demo-arrow { font-size: 12px; color: var(--text-muted); flex-shrink: 0; transition: transform 0.2s; }
+    .demo-toggle.open .demo-arrow { transform: rotate(180deg); }
+    .demo-content { display: none; padding: 0 24px 24px; border-top: 1px solid var(--border); }
+    .demo-content.open { display: block; }
+    .demo-meta { margin-top: 16px; margin-bottom: 16px; }
+    .demo-meta p { font-size: 13px; color: var(--text-muted); margin-bottom: 6px; line-height: 1.6; }
+    .demo-meta a { color: var(--green); text-decoration: none; }
+    .demo-meta a:hover { text-decoration: underline; }
+    .demo-meta b { color: var(--text); }
+    .demo-video { width: 100%; border-radius: 8px; margin-top: 8px; max-height: 480px; }
+    .demo-video-label { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 8px; }
+  </style>
+</head>
+<body>
+<script>window.NAV_ROOT = '../';</script>
+<script src="../js/nav.js"></script>
+
+<div class="page-hero">
+  <h1><span>N</span>LP Demos</h1>
+  <p style="color:var(--text-muted);margin-top:8px;font-size:14px;">Natural Language Processing 데모 동영상</p>
+</div>
+
+<div class="section" style="margin-top:24px;margin-bottom:0;padding-bottom:0">
+  <div class="sub-nav">
+    <a href="demos-nlp.html" class="active">NLP</a>
+    <a href="demos-ir.html">IR</a>
+    <a href="demos-textmining.html">Text Mining</a>
+    <a href="demos-generativeai.html">Generative AI</a>
+  </div>
+</div>
+
+<div class="section" style="margin-bottom:60px">
+
+  <div class="demo-item">
+    <button class="demo-toggle" onclick="toggleDemo(this)">
+      <span class="demo-toggle-title">외부 지식 기반 대화 시스템</span>
+      <span class="demo-arrow">▼</span>
+    </button>
+    <div class="demo-content">
+      <div class="demo-meta">
+        <p><b>Title:</b> External Knowledge based Dialogue System</p>
+        <p><b>Github:</b> TBD</p>
+        <p><b>Paper:</b> TBD</p>
+      </div>
+      <div class="demo-video-label">Demo Video</div>
+      <video class="demo-video" controls>
+        <source src="../assets/video/demo_external_knowledge_based_dialogue_system.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
+  <div class="demo-item">
+    <button class="demo-toggle" onclick="toggleDemo(this)">
+      <span class="demo-toggle-title">설명 가능한 질의 응답 시스템</span>
+      <span class="demo-arrow">▼</span>
+    </button>
+    <div class="demo-content">
+      <div class="demo-meta">
+        <p><b>Title:</b> Explainable Question Answering System</p>
+        <p><b>Github:</b> TBD</p>
+        <p><b>Paper:</b> TBD</p>
+      </div>
+      <div class="demo-video-label">Demo Video</div>
+      <video class="demo-video" controls>
+        <source src="../assets/video/demo_explainable_question_answering_system.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
+  <div class="demo-item">
+    <button class="demo-toggle" onclick="toggleDemo(this)">
+      <span class="demo-toggle-title">유사 발의를 활용한 초점 기반 다자대화 대화시스템</span>
+      <span class="demo-arrow">▼</span>
+    </button>
+    <div class="demo-content">
+      <div class="demo-meta">
+        <p><b>Title:</b> SoPI: Soft Engagement with Pseudo Initatives for Multi-Party Conversations</p>
+        <p><b>Github:</b> TBD</p>
+        <p><b>Paper:</b> TBD</p>
+      </div>
+      <div class="demo-video-label">Demo Video</div>
+      <video class="demo-video" controls>
+        <source src="../assets/video/demo_multi-party_conversations.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
+  <div class="demo-item">
+    <button class="demo-toggle" onclick="toggleDemo(this)">
+      <span class="demo-toggle-title">대화 내 상식 추론을 이용한 동적 페르소나 기반 대화 시스템</span>
+      <span class="demo-arrow">▼</span>
+    </button>
+    <div class="demo-content">
+      <div class="demo-meta">
+        <p><b>Title:</b> Dynamic Persona Generation through Commonsense Inference in Dialogues</p>
+        <p><b>Github:</b> TBD</p>
+        <p><b>Paper:</b> TBD</p>
+      </div>
+      <div class="demo-video-label">Demo Video</div>
+      <video class="demo-video" controls>
+        <source src="../assets/video/demo_dialogue_based_dynamic_persona.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
+  <div class="demo-item">
+    <button class="demo-toggle" onclick="toggleDemo(this)">
+      <span class="demo-toggle-title">지식 기반 응답 생성 모델을 이용한 대화 시스템</span>
+      <span class="demo-arrow">▼</span>
+    </button>
+    <div class="demo-content">
+      <div class="demo-meta">
+        <p><b>Title:</b> Knowledge-based Response Generation for Dialogue Systems</p>
+        <p><b>Github:</b> TBD</p>
+        <p><b>Paper:</b> TBD</p>
+      </div>
+      <div class="demo-video-label">Demo Video</div>
+      <video class="demo-video" controls>
+        <source src="../assets/video/demo_knowledge_based_response_selection.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
+  <div class="demo-item">
+    <button class="demo-toggle" onclick="toggleDemo(this)">
+      <span class="demo-toggle-title">통사적 담화 그래프를 이용한 대화 상태 추적 모델</span>
+      <span class="demo-arrow">▼</span>
+    </button>
+    <div class="demo-content">
+      <div class="demo-meta">
+        <p><b>Title:</b> Dialogue State Tracking Model with a Syntactic Discourse Graph</p>
+        <p><b>Github:</b> TBD</p>
+        <p><b>Paper:</b> TBD</p>
+      </div>
+      <div class="demo-video-label">Demo Video</div>
+      <video class="demo-video" controls>
+        <source src="../assets/video/demo_dialogue_state_tracking.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
+  <div class="demo-item">
+    <button class="demo-toggle" onclick="toggleDemo(this)">
+      <span class="demo-toggle-title">가상환경 쇼핑 보조를 위한 대화형 인공지능 에이전트</span>
+      <span class="demo-arrow">▼</span>
+    </button>
+    <div class="demo-content">
+      <div class="demo-meta">
+        <p><b>Title:</b> Multi-modal Dialogue System (DSTC11, SIMMC)</p>
+        <p><b>Github:</b> TBD</p>
+        <p><b>Paper:</b> TBD</p>
+      </div>
+      <div class="demo-video-label">Demo Video</div>
+      <video class="demo-video" controls>
+        <source src="../assets/video/demo_DSTC_SIMMC.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">NLP<span>LAB</span></div>
+      <p class="footer-desc">Natural Language Processing Laboratory<br />성균관대학교 소프트웨어융합대학</p>
+    </div>
+  </div>
+  <p class="footer-copy">© 2026 NLPLAB, Sungkyunkwan University. All rights reserved.</p>
+</footer>
+
+<script>
+function toggleDemo(btn) {
+  const content = btn.nextElementSibling;
+  const isOpen = content.classList.contains('open');
+  content.classList.toggle('open', !isOpen);
+  btn.classList.toggle('open', !isOpen);
+}
+</script>
+</body>
+</html>
