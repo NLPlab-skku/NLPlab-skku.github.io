@@ -389,13 +389,13 @@
   const navHtml =
     `<ul class="nav-list">` +
     (prev
-      ? `<li><a class="nav-item" href="post.html?tab=${tab}&id=${id-1}">
+      ? `<li><a class="nav-item" href="/Boards/post.html?tab=${tab}&id=${id-1}">
           <span class="nav-label">▲ 이전글</span>
           <span class="nav-title">${prev.title}</span>
          </a></li>`
       : `<li><div class="nav-empty"><span class="nav-label">▲ 이전글</span><span>이전 게시글이 없습니다.</span></div></li>`) +
     (next
-      ? `<li><a class="nav-item" href="post.html?tab=${tab}&id=${id+1}">
+      ? `<li><a class="nav-item" href="/Boards/post.html?tab=${tab}&id=${id+1}">
           <span class="nav-label">▼ 다음글</span>
           <span class="nav-title">${next.title}</span>
          </a></li>`
@@ -405,7 +405,7 @@
 
   // ── 목록 버튼 ──
   document.getElementById('post-footer-btns').innerHTML =
-    `<a class="btn-list" href="boards.html?tab=${tab}">≡ 목록</a>`;
+    `<a class="btn-list" href="/Boards/?tab=${tab}">≡ 목록</a>`;
 })();
 </script>
 </body>
