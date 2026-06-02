@@ -17,7 +17,7 @@
       ]
     },
     { label: 'Publications', href: '/Publications/' },
-    { label: 'Members',      href: '/Members.html' },
+    { label: 'Members',      href: '/Members/' },
     {
       label: 'Demos',
       children: [
