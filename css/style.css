@@ -620,8 +620,8 @@ img { max-width: 100%; display: block; }
   margin-top: 2px;
   box-sizing: border-box;
 }
-.pub-badge[data-badge="논문"]  { background: #386bff; }
-.pub-badge[data-badge="취업"]  { background: #9839d7; }
+.pub-badge[data-badge="논문"]  { background: #e03030; }
+.pub-badge[data-badge="취업"]  { background: #2060d0; }
 .pub-badge[data-badge="활동"]  { background: #146153; }
 .pub-badge[data-badge="수상"]  { background: #871C1C; }
 .pub-badge[data-badge="신입"]  { background: #004702; }
