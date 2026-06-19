@@ -21,12 +21,12 @@
     }
     .pub-entry:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.09); }
     .pub-venue {
-      flex-shrink: 0; background: var(--green); color: var(--white);
+      flex-shrink: 0; background:#e05050; color: var(--white);
       font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 4px;
       letter-spacing: 0.04em; margin-top: 2px; text-align: center; min-width: 70px;
     }
-    .pub-venue.journal { background: #2060a0; }
-    .pub-venue.domestic { background: #666; }
+    .pub-venue.journal { background: #5080e0; }
+    .pub-venue.domestic { background: #e08830; }
     .pub-title { font-size: 15px; font-weight: 600; line-height: 1.45; margin-bottom: 4px; }
     .pub-authors { font-size: 13px; color: var(--text-muted); margin-bottom: 5px; }
     .pub-meta { font-size: 12px; color: #c03030; font-weight: 500; margin-bottom: 7px; }
@@ -1814,6 +1814,23 @@
 </footer>
 
 <script>
+(function () {
+  const MONTHS = {
+    january: 1, february: 2, march: 3, april: 4, may: 5, june: 6,
+    july: 7, august: 8, september: 9, october: 10, november: 11, december: 12
+  };
+  function getMonth(entry) {
+    const text = entry.querySelector('.pub-meta').textContent;
+    const match = text.match(/January|February|March|April|May|June|July|August|September|October|November|December/i);
+    return match ? MONTHS[match[0].toLowerCase()] : 0;
+  }
+  document.querySelectorAll('.year-group').forEach(group => {
+    const entries = Array.from(group.querySelectorAll('.pub-entry'));
+    entries.sort((a, b) => getMonth(b) - getMonth(a));
+    entries.forEach(entry => group.appendChild(entry));
+  });
+})();
+
 document.querySelectorAll('.filter-btn').forEach(btn => {
   btn.addEventListener('click', () => {
     document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
