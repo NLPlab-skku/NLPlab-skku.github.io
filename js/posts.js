@@ -54,7 +54,7 @@ window.POSTS = {
       author: '한준호',
       date: '2026.06.24',
       category: 'GRAPH',
-      mdPath: '../_posts/2026/04/2026-06-24-Search-R1.md',
+      mdPath: '../_posts/2026/06/2026-06-24-Search-R1.md',
       attachments: []
     },
     {
