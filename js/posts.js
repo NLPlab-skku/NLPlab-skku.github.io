@@ -50,6 +50,14 @@ window.POSTS = {
   ],
   seminar: [
     {
+      title: 'Search-R1: Training LLMs to Reason and Leverage Search Engines with Reinforcement Learning',
+      author: '한준호',
+      date: '2026.06.24',
+      category: 'GRAPH',
+      mdPath: '../_posts/2026/04/2026-06-24-Search-R1.md',
+      attachments: []
+    },
+    {
       title: 'HiPRAG: Hierarchical Process Rewards for Efficient Agentic Retrieval Augmented Generation',
       author: '이준서',
       date: '2026.04.13',
