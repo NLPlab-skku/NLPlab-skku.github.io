@@ -50,10 +50,18 @@ window.POSTS = {
   ],
   seminar: [
     {
-      title: 'Search-R1: Training LLMs to Reason and Leverage Search Engines with Reinforcement Learning',
+      title: 'HippoRAG: Neurobiologically Inspired Long-Term Memory for Large Language Models',
       author: '한준호',
       date: '2026.06.24',
       category: 'GRAPH',
+      mdPath: '../_posts/2026/06/2026-06-24-HippoRAG.md',
+      attachments: []
+    },
+    {
+      title: 'Search-R1: Training LLMs to Reason and Leverage Search Engines with Reinforcement Learning',
+      author: '한준호',
+      date: '2026.06.24',
+      category: 'RAG',
       mdPath: '../_posts/2026/06/2026-06-24-Search-R1.md',
       attachments: []
     },
