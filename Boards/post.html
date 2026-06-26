@@ -179,8 +179,17 @@
     .post-content a { color: var(--green); text-decoration: none; }
     .post-content a:hover { text-decoration: underline; }
     .post-content hr { border: none; border-top: 1px solid #ddd; margin: 24px 0; }
-    /* MathJax overflow */
-    .MJX-TEX, mjx-container { overflow-x: auto; max-width: 100%; }
+    /* MathJax 스크롤바 처리.
+       1) 전역 `* { box-sizing: border-box }`(/css/style.css)가 MathJax 내부 박스
+          계산을 망가뜨려 가로 스크롤바를 유발하므로 content-box 로 되돌린다. */
+    mjx-container, mjx-container * { box-sizing: content-box; }
+    mjx-container { max-width: 100%; }
+    /* 2) 가로 스크롤은 넓어질 수 있는 display 수식($$...$$)에만 허용한다.
+          인라인 수식($...$)에까지 overflow 를 주면 \hat 같은 악센트가 1~2px 삐져나와
+          작은 수식에도 가로 스크롤바가 생기므로 인라인에는 적용하지 않는다.
+       3) overflow-x:auto 만 주면 브라우저가 overflow-y 도 auto 로 바꿔 세로 스크롤바가
+          생기므로 overflow-y:hidden 을 함께 지정한다. */
+    mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; }
 
     /* ── Loading / Error ── */
     .post-loading {
@@ -370,6 +379,40 @@
     return text.replace(/\{\{[^}]*'(\/assets\/[^']+)'[^}]*\}\}/g, (_, p) => '..' + p);
   }
 
+  // 마크다운 파서(marked)가 수식 안의 `_`, `\{`, `\\` 등을 건드려
+  // TeX를 깨뜨리므로, 파싱 전에 수식을 플레이스홀더로 빼두고
+  // 파싱 후 원본 그대로 복원한 뒤 MathJax에 넘긴다.
+  function renderMarkdown(md) {
+    const store = [];
+    const stash = (tex) => {
+      // 노션 export가 수식 안에서 `*`를 `\*`로 escape 하는데, 예전엔 marked가
+      // 이걸 `*`로 풀어줬다. 이제 수식을 marked에서 보호하므로 직접 풀어준다.
+      // (`\*`는 LaTeX 수학 모드에서 유효하지 않아 그대로 두면 깨짐. `\\`는 보존.)
+      tex = tex.replace(/(?<!\\)\\\*/g, '*');
+      // 영문/숫자로만 이루어진 토큰 → marked가 절대 변형하지 않음
+      const token = 'zZmathPlaceholder' + store.length + 'Zz';
+      store.push(tex);
+      return token;
+    };
+
+    // 순서 중요: display($$, \[ \])를 먼저, inline($, \( \))를 나중에.
+    const protectedMd = md
+      .replace(/\$\$([\s\S]+?)\$\$/g, (m) => stash(m))   // $$ ... $$
+      .replace(/\\\[([\s\S]+?)\\\]/g, (m) => stash(m))   // \[ ... \]
+      .replace(/\\\(([\s\S]+?)\\\)/g, (m) => stash(m))   // \( ... \)
+      .replace(/\$([^$\n]+?)\$/g, (m) => stash(m));      // $ ... $
+
+    let html = marked.parse(protectedMd);
+
+    // 플레이스홀더 → 원본 LaTeX 복원.
+    // 단, innerHTML 로 들어가므로 `<` `>` `&` 를 escape 한다. 안 그러면
+    // 예: `y_{<i}` 의 `<i` 가 HTML 태그로 파싱돼 닫는 `$$`까지 삼켜 수식이 깨짐.
+    // (브라우저가 다시 문자로 디코드하므로 MathJax는 원래 기호 `<` `>` `&` 를 읽음)
+    const escapeHtml = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    html = html.replace(/zZmathPlaceholder(\d+)Zz/g, (_, i) => escapeHtml(store[Number(i)]));
+    return html;
+  }
+
   if (post.inlineHtml) {
     renderContent(post.inlineHtml);
   } else if (post.mdPath) {
@@ -381,7 +424,7 @@
       .then(raw => {
         let md = stripFrontmatter(raw);
         md = fixImagePaths(md);
-        const html = marked.parse(md);
+        const html = renderMarkdown(md);
         renderContent(html);
       })
       .catch(() => {
