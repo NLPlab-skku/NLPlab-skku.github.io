@@ -5,7 +5,6 @@ window.POSTS = {
       author: '김두영',
       date: '2026.05.28',
       category: '공지',
-      pinned: true,
       mdPath: '../_posts/2026/05/2026-05-28-NLPLAB 2026 하반기 인턴 모집 공고.md',
       attachments: []
     },
