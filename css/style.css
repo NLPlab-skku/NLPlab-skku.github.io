@@ -957,6 +957,15 @@ footer {
   line-height: 1.8;
 }
 
+.notice-text a {
+  color: inherit;
+  transition: color 0.2s ease;
+}
+
+.notice-text a:hover {
+  color: var(--green);
+}
+
 .notice-footer {
   padding: 0 24px 20px;
   display: flex;
