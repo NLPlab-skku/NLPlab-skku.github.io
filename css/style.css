@@ -958,12 +958,14 @@ footer {
 }
 
 .notice-text a {
-  color: inherit;
-  transition: color 0.2s ease;
+  color: var(--green);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .notice-text a:hover {
-  color: var(--green);
+  color: var(--green-dark);
 }
 
 .notice-footer {
