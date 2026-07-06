@@ -21,7 +21,7 @@
     .member-avatar-lg img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .member-avatar-lg img.logo-img { object-fit: contain; background: #fff; padding: 20px; box-sizing: border-box; }
     .alumni-grid .member-avatar-lg { height: 140px; }
-    .alumni-carousel { position: relative; }
+    .alumni-carousel { position: relative; width: 1072px; max-width: 100%; }
     .alumni-viewport { overflow: hidden; width: 1072px; max-width: 100%; }
     .alumni-grid {
       grid-template-columns: none;
@@ -41,6 +41,8 @@
     .alumni-btn.prev { left: -16px; }
     .alumni-btn.next { right: -16px; }
     .alumni-btn.disabled { opacity: 0.3; pointer-events: none; }
+    .alumni-progress { position: relative; width: 1072px; max-width: 100%; height: 4px; background: var(--border); border-radius: 2px; margin: 16px auto 0; }
+    .alumni-progress-thumb { position: absolute; top: 0; left: 0; height: 100%; background: var(--green); border-radius: 2px; transition: left 0.3s cubic-bezier(0.4,0,0.2,1), width 0.3s ease; }
     .member-info { padding: 16px; }
     .member-name { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
     .member-role { font-size: 12px; color: var(--green); font-weight: 600; margin-bottom: 6px; }
@@ -522,10 +524,10 @@
       </div>
 
       <div class="member-card">
-        <div class="member-avatar-lg"><img src="/assets/img/졸업생%20회사%20로고/kt.png" alt="KT" class="logo-img"></div>
+        <div class="member-avatar-lg"><img src="/assets/img/졸업생%20회사%20로고/Copenhagen.webp" alt="Copenhagen" class="logo-img"></div>
         <div class="member-info">
           <div class="member-name">유하은 석사</div>
-          <div class="member-research">KT R&D Center</div>
+          <div class="member-research">PhD: University of Copenhagen</div>
           <!--<div class="member-email"><a href="mailto:seony.yang@gmail.com">seony.yang@gmail.com</a></div>-->
         </div>
       </div>
@@ -542,7 +544,7 @@
       <div class="member-card">
         <div class="member-avatar-lg"><img src="/assets/img/졸업생%20회사%20로고/kt.png" alt="KT" class="logo-img"></div>
         <div class="member-info">
-          <div class="member-name">허태운 석사</div>
+          <div class="member-name">허태훈 석사</div>
           <div class="member-research">KT R&D Center</div>
           <!--<div class="member-email"><a href="mailto:seony.yang@gmail.com">seony.yang@gmail.com</a></div>-->
         </div>
@@ -690,6 +692,7 @@
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 18 6-6-6-6"/></svg>
       </button>
     </div>
+    <div class="alumni-progress" id="alumniProgress"><div class="alumni-progress-thumb" id="alumniProgressThumb"></div></div>
   </div>
 
 </div>
@@ -709,6 +712,8 @@
   const grid = document.getElementById('alumniGrid');
   const prevBtn = document.querySelector('.alumni-btn.prev');
   const nextBtn = document.querySelector('.alumni-btn.next');
+  const progress = document.getElementById('alumniProgress');
+  const progressThumb = document.getElementById('alumniProgressThumb');
   if (!viewport || !grid) return;
 
   const CARD_W = 200;
@@ -724,6 +729,7 @@
     visibleCols = Math.max(1, Math.floor((viewport.clientWidth + GAP) / STEP));
     maxIndex = Math.max(0, totalColumns - visibleCols);
     index = Math.min(index, maxIndex);
+    progress.style.display = maxIndex === 0 ? 'none' : 'block';
     apply();
   }
 
@@ -731,6 +737,12 @@
     grid.style.transform = `translateX(-${index * STEP}px)`;
     prevBtn.classList.toggle('disabled', index === 0);
     nextBtn.classList.toggle('disabled', index === maxIndex);
+
+    const thumbPct = Math.min(100, (visibleCols / totalColumns) * 100);
+    const trackPct = 100 - thumbPct;
+    const leftPct = maxIndex === 0 ? 0 : (index / maxIndex) * trackPct;
+    progressThumb.style.width = thumbPct + '%';
+    progressThumb.style.left = leftPct + '%';
   }
 
   function goTo(target) {
