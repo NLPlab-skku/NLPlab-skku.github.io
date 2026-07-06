@@ -22,7 +22,7 @@
     .member-avatar-lg img.logo-img { object-fit: contain; background: #fff; padding: 20px; box-sizing: border-box; }
     .alumni-grid .member-avatar-lg { height: 140px; }
     .alumni-carousel { position: relative; }
-    .alumni-viewport { overflow: hidden; }
+    .alumni-viewport { overflow: hidden; width: 1072px; max-width: 100%; }
     .alumni-grid {
       grid-template-columns: none;
       grid-auto-flow: column;
@@ -279,11 +279,12 @@
     <div class="group-label">Alumni</div>
     <div class="alumni-carousel">
       <div class="alumni-viewport">
+        
     <div class="member-grid alumni-grid" id="alumniGrid">
       <div class="member-card">
         <div class="member-avatar-lg"><img src="/assets/img/졸업생%20회사%20로고/동아대학교.png" alt="동아대학교" class="logo-img"></div>
         <div class="member-info">
-          <div class="member-name">양선 빅사</div>
+          <div class="member-name">양선 박사</div>
           <div class="member-research">동아대학교 컴퓨터공학과 부교수</div>
           <!--<div class="member-email"><a href="mailto:seony.yang@gmail.com">seony.yang@gmail.com</a></div>-->
         </div>
@@ -461,7 +462,7 @@
       </div>
 
       <div class="member-card">
-        <div class="member-avatar-lg"><img src="/assets/img/members/current/JPGandPNGs/base_photos.webp" alt="양선"></div>
+        <div class="member-avatar-lg"><img src="/assets/img/members/current/JPGandPNGs/샌디에고.png" alt="UC San Diego"></div>
         <div class="member-info">
           <div class="member-name">김보성 석사</div>
           <div class="member-research">PhD: UC San Diego</div>
@@ -712,41 +713,44 @@
   const STEP = CARD_W + GAP;
   const totalColumns = Math.ceil(grid.children.length / 2);
 
-  let page = 0;
-  let perPage = 1;
-  let totalPages = 1;
+  let index = 0;
+  let visibleCols = 1;
+  let maxIndex = 0;
+  let dotsCount = 1;
 
   function render() {
-    perPage = Math.max(1, Math.floor((viewport.clientWidth + GAP) / STEP));
-    totalPages = Math.max(1, Math.ceil(totalColumns / perPage));
-    page = Math.min(page, totalPages - 1);
+    visibleCols = Math.max(1, Math.floor((viewport.clientWidth + GAP) / STEP));
+    maxIndex = Math.max(0, totalColumns - visibleCols);
+    dotsCount = Math.max(1, Math.ceil(totalColumns / visibleCols));
+    index = Math.min(index, maxIndex);
 
     dotsEl.innerHTML = '';
-    for (let i = 0; i < totalPages; i++) {
+    for (let i = 0; i < dotsCount; i++) {
       const dot = document.createElement('button');
-      dot.className = 'alumni-dot' + (i === page ? ' active' : '');
-      dot.addEventListener('click', () => goTo(i));
+      dot.className = 'alumni-dot';
+      dot.addEventListener('click', () => goTo(Math.min(i * visibleCols, maxIndex)));
       dotsEl.appendChild(dot);
     }
-    dotsEl.style.display = totalPages <= 1 ? 'none' : 'flex';
+    dotsEl.style.display = dotsCount <= 1 ? 'none' : 'flex';
 
     apply();
   }
 
   function apply() {
-    grid.style.transform = `translateX(-${page * perPage * STEP}px)`;
-    [...dotsEl.children].forEach((d, i) => d.classList.toggle('active', i === page));
-    prevBtn.classList.toggle('disabled', page === 0);
-    nextBtn.classList.toggle('disabled', page === totalPages - 1);
+    grid.style.transform = `translateX(-${index * STEP}px)`;
+    const activeDot = Math.min(Math.floor(index / visibleCols), dotsCount - 1);
+    [...dotsEl.children].forEach((d, i) => d.classList.toggle('active', i === activeDot));
+    prevBtn.classList.toggle('disabled', index === 0);
+    nextBtn.classList.toggle('disabled', index === maxIndex);
   }
 
-  function goTo(index) {
-    page = Math.max(0, Math.min(index, totalPages - 1));
+  function goTo(target) {
+    index = Math.max(0, Math.min(target, maxIndex));
     apply();
   }
 
-  prevBtn.addEventListener('click', () => goTo(page - 1));
-  nextBtn.addEventListener('click', () => goTo(page + 1));
+  prevBtn.addEventListener('click', () => goTo(index - 1));
+  nextBtn.addEventListener('click', () => goTo(index + 1));
 
   let resizeTimer;
   window.addEventListener('resize', () => {
