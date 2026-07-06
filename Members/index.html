@@ -21,8 +21,8 @@
     .member-avatar-lg img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .member-avatar-lg img.logo-img { object-fit: contain; background: #fff; padding: 20px; box-sizing: border-box; }
     .alumni-grid .member-avatar-lg { height: 140px; }
-    .alumni-carousel { position: relative; width: 1072px; max-width: 100%; }
-    .alumni-viewport { overflow: hidden; width: 1072px; max-width: 100%; }
+    .alumni-carousel { position: relative; }
+    .alumni-viewport { overflow: hidden; }
     .alumni-grid {
       grid-template-columns: none;
       grid-auto-flow: column;
@@ -41,7 +41,7 @@
     .alumni-btn.prev { left: -16px; }
     .alumni-btn.next { right: -16px; }
     .alumni-btn.disabled { opacity: 0.3; pointer-events: none; }
-    .alumni-progress { position: relative; width: 1072px; max-width: 100%; height: 4px; background: var(--border); border-radius: 2px; margin: 16px 0 0; }
+    .alumni-progress { position: relative; width: 100%; height: 4px; background: var(--border); border-radius: 2px; margin: 16px 0 0; }
     .alumni-progress-thumb { position: absolute; top: 0; left: 0; height: 100%; background: var(--green); border-radius: 2px; transition: left 0.3s cubic-bezier(0.4,0,0.2,1), width 0.3s ease; }
     .member-info { padding: 16px; }
     .member-name { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
@@ -716,17 +716,21 @@
   const progressThumb = document.getElementById('alumniProgressThumb');
   if (!viewport || !grid) return;
 
-  const CARD_W = 200;
+  const MIN_CARD_W = 200;
   const GAP = 18;
-  const STEP = CARD_W + GAP;
   const totalColumns = Math.ceil(grid.children.length / 2);
 
   let index = 0;
   let visibleCols = 1;
   let maxIndex = 0;
+  let step = MIN_CARD_W + GAP;
 
   function render() {
-    visibleCols = Math.max(1, Math.floor((viewport.clientWidth + GAP) / STEP));
+    const containerW = viewport.clientWidth;
+    visibleCols = Math.max(1, Math.min(totalColumns, Math.floor((containerW + GAP) / (MIN_CARD_W + GAP))));
+    const colWidth = (containerW - (visibleCols - 1) * GAP) / visibleCols;
+    grid.style.gridAutoColumns = colWidth + 'px';
+    step = colWidth + GAP;
     maxIndex = Math.max(0, totalColumns - visibleCols);
     index = Math.min(index, maxIndex);
     progress.style.display = maxIndex === 0 ? 'none' : 'block';
@@ -734,7 +738,7 @@
   }
 
   function apply() {
-    grid.style.transform = `translateX(-${index * STEP}px)`;
+    grid.style.transform = `translateX(-${index * step}px)`;
     prevBtn.classList.toggle('disabled', index === 0);
     nextBtn.classList.toggle('disabled', index === maxIndex);
 
