@@ -21,6 +21,29 @@
     .member-avatar-lg img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .member-avatar-lg img.logo-img { object-fit: contain; background: #fff; padding: 20px; box-sizing: border-box; }
     .alumni-grid .member-avatar-lg { height: 140px; }
+    .alumni-carousel { position: relative; }
+    .alumni-viewport { overflow: hidden; }
+    .alumni-grid {
+      grid-template-columns: none;
+      grid-auto-flow: column;
+      grid-template-rows: repeat(2, auto);
+      grid-auto-columns: 200px;
+      transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
+    }
+    .alumni-btn {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      background: var(--white); border: 1px solid var(--border); border-radius: 50%;
+      width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;
+      cursor: pointer; color: var(--text-muted); transition: color 0.15s, border-color 0.15s, opacity 0.15s;
+      z-index: 10; box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+    .alumni-btn:hover { color: var(--green); border-color: var(--green); }
+    .alumni-btn.prev { left: -16px; }
+    .alumni-btn.next { right: -16px; }
+    .alumni-btn.disabled { opacity: 0.3; pointer-events: none; }
+    .alumni-dots { display: flex; justify-content: center; gap: 6px; padding: 16px 0 0; }
+    .alumni-dot { width: 28px; height: 4px; border-radius: 2px; background: var(--border); cursor: pointer; transition: background 0.2s, width 0.2s; border: none; }
+    .alumni-dot.active { background: var(--green); width: 36px; }
     .member-info { padding: 16px; }
     .member-name { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
     .member-role { font-size: 12px; color: var(--green); font-weight: 600; margin-bottom: 6px; }
@@ -254,7 +277,9 @@
   
   <div class="member-group">
     <div class="group-label">Alumni</div>
-    <div class="member-grid alumni-grid">
+    <div class="alumni-carousel">
+      <div class="alumni-viewport">
+    <div class="member-grid alumni-grid" id="alumniGrid">
       <div class="member-card">
         <div class="member-avatar-lg"><img src="/assets/img/졸업생%20회사%20로고/동아대학교.png" alt="동아대학교" class="logo-img"></div>
         <div class="member-info">
@@ -651,6 +676,15 @@
       </div>
 
     </div>
+      </div>
+      <button class="alumni-btn prev" aria-label="Previous">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg>
+      </button>
+      <button class="alumni-btn next" aria-label="Next">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 18 6-6-6-6"/></svg>
+      </button>
+    </div>
+    <div class="alumni-dots" id="alumniDots"></div>
   </div>
 
 </div>
@@ -664,5 +698,64 @@
   </div>
   <p class="footer-copy">© 2026 NLPLAB, Sungkyunkwan University. All rights reserved.</p>
 </footer>
+<script>
+(function () {
+  const viewport = document.querySelector('.alumni-viewport');
+  const grid = document.getElementById('alumniGrid');
+  const dotsEl = document.getElementById('alumniDots');
+  const prevBtn = document.querySelector('.alumni-btn.prev');
+  const nextBtn = document.querySelector('.alumni-btn.next');
+  if (!viewport || !grid) return;
+
+  const CARD_W = 200;
+  const GAP = 18;
+  const STEP = CARD_W + GAP;
+  const totalColumns = Math.ceil(grid.children.length / 2);
+
+  let page = 0;
+  let perPage = 1;
+  let totalPages = 1;
+
+  function render() {
+    perPage = Math.max(1, Math.floor((viewport.clientWidth + GAP) / STEP));
+    totalPages = Math.max(1, Math.ceil(totalColumns / perPage));
+    page = Math.min(page, totalPages - 1);
+
+    dotsEl.innerHTML = '';
+    for (let i = 0; i < totalPages; i++) {
+      const dot = document.createElement('button');
+      dot.className = 'alumni-dot' + (i === page ? ' active' : '');
+      dot.addEventListener('click', () => goTo(i));
+      dotsEl.appendChild(dot);
+    }
+    dotsEl.style.display = totalPages <= 1 ? 'none' : 'flex';
+
+    apply();
+  }
+
+  function apply() {
+    grid.style.transform = `translateX(-${page * perPage * STEP}px)`;
+    [...dotsEl.children].forEach((d, i) => d.classList.toggle('active', i === page));
+    prevBtn.classList.toggle('disabled', page === 0);
+    nextBtn.classList.toggle('disabled', page === totalPages - 1);
+  }
+
+  function goTo(index) {
+    page = Math.max(0, Math.min(index, totalPages - 1));
+    apply();
+  }
+
+  prevBtn.addEventListener('click', () => goTo(page - 1));
+  nextBtn.addEventListener('click', () => goTo(page + 1));
+
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(render, 150);
+  });
+
+  render();
+})();
+</script>
 </body>
 </html>
