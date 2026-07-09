@@ -82,6 +82,7 @@
     .cat-XAI  { background:#fff3e0; color:#c07820; }
     .cat-PEFT { background:#e8f8ff; color:#1a7a9a; }
     .cat-공지  { background:#e8f4ea; color:#2d7a3a; }
+    .cat-영상  { background:#e0f2fe; color:#0369a1; }
 
     /* ── Attachments ── */
     .attach-section {
@@ -333,11 +334,13 @@
   document.title = post.title + ' — NLPLAB';
   document.getElementById('post-title').textContent = post.title;
 
-  const catClass = 'cat-' + post.category.replace(/^논문-리뷰-/, '');
+  const catBadge = post.category
+    ? `<span><span class="cat-badge cat-${post.category.replace(/^논문-리뷰-/, '')}">${post.category}</span></span>`
+    : '';
   document.getElementById('post-meta').innerHTML =
     `<span>작성자: <strong>${post.author}</strong></span>` +
     `<div class="post-header-meta-right">` +
-      `<span><span class="cat-badge ${catClass}">${post.category}</span></span>` +
+      catBadge +
       `<span>작성일: ${post.date}</span>` +
     `</div>`;
 

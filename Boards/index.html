@@ -113,6 +113,7 @@
     <div class="board-tabs">
       <div class="board-tab" id="tab-notice" onclick="switchTab('notice')">📢 공지사항</div>
       <div class="board-tab" id="tab-seminar" onclick="switchTab('seminar')">🎓 세미나</div>
+      <div class="board-tab" id="tab-video" onclick="switchTab('video')">🎥 영상 세미나</div>
     </div>
   </div>
 
@@ -151,6 +152,22 @@
       <div id="pagination-seminar"></div>
     </div>
 
+    <!-- 영상 세미나 -->
+    <div id="board-video" style="display:none">
+      <table>
+        <thead>
+          <tr>
+            <th class="num">번호</th>
+            <th>제목</th>
+            <th class="author">작성자</th>
+            <th class="date">날짜</th>
+          </tr>
+        </thead>
+        <tbody id="tbody-video"></tbody>
+      </table>
+      <div id="pagination-video"></div>
+    </div>
+
     <div class="board-search">
       <select id="search-type"><option>제목</option><option>작성자</option></select>
       <input type="text" id="search-input" placeholder="검색어를 입력하세요" onkeydown="if(event.key==='Enter')doSearch()" />
@@ -172,8 +189,11 @@
 
 <script>
 const PAGE_SIZE = 15;
+const TABS = ['notice', 'seminar', 'video'];
+const CATEGORY_TABS = ['seminar'];
 let currentTab = 'notice';
-const pageState = { notice: 1, seminar: 1 };
+const pageState = {};
+TABS.forEach(t => pageState[t] = 1);
 
 function isNew(dateStr) {
   const [y, m, d] = dateStr.split('.');
@@ -187,7 +207,7 @@ function renderBoard(tab) {
   const page    = pageState[tab];
   const total   = Math.max(1, Math.ceil(regular.length / PAGE_SIZE));
   const start   = (page - 1) * PAGE_SIZE;
-  const isSeminar = tab === 'seminar';
+  const hasCategory = CATEGORY_TABS.includes(tab);
   let html = '';
 
   pinned.forEach(p => {
@@ -195,7 +215,7 @@ function renderBoard(tab) {
     html += `<tr class="notice-row" onclick="goPost('${tab}','${getSlug(p)}')">
       <td class="num">📌</td>
       <td class="post-title-cell">${p.title} ${newBadge}</td>
-      ${isSeminar ? `<td class="cat"><span class="cat-badge cat-${p.category}">${p.category}</span></td>` : ''}
+      ${hasCategory ? `<td class="cat"><span class="cat-badge cat-${p.category}">${p.category}</span></td>` : ''}
       <td class="author">${p.author}</td>
       <td class="date">${p.date}</td>
     </tr>`;
@@ -207,7 +227,7 @@ function renderBoard(tab) {
     html += `<tr onclick="goPost('${tab}','${getSlug(p)}')">
       <td class="num">${num}</td>
       <td class="post-title-cell">${p.title} ${newBadge}</td>
-      ${isSeminar ? `<td class="cat"><span class="cat-badge cat-${p.category}">${p.category}</span></td>` : ''}
+      ${hasCategory ? `<td class="cat"><span class="cat-badge cat-${p.category}">${p.category}</span></td>` : ''}
       <td class="author">${p.author}</td>
       <td class="date">${p.date}</td>
     </tr>`;
@@ -234,10 +254,10 @@ function goPage(tab, page) {
 
 function switchTab(tab) {
   currentTab = tab;
-  document.getElementById('tab-notice').classList.toggle('active', tab === 'notice');
-  document.getElementById('tab-seminar').classList.toggle('active', tab === 'seminar');
-  document.getElementById('board-notice').style.display  = tab === 'notice'  ? 'block' : 'none';
-  document.getElementById('board-seminar').style.display = tab === 'seminar' ? 'block' : 'none';
+  TABS.forEach(t => {
+    document.getElementById('tab-' + t).classList.toggle('active', t === tab);
+    document.getElementById('board-' + t).style.display = t === tab ? 'block' : 'none';
+  });
   history.replaceState(null, '', '?tab=' + tab);
 }
 
@@ -262,7 +282,7 @@ function doSearch() {
   const posts   = window.POSTS[currentTab] || [];
   const pinned  = posts.filter(p => p.pinned);
   const regular = posts.filter(p => !p.pinned);
-  const isSeminar = currentTab === 'seminar';
+  const hasCategory = CATEGORY_TABS.includes(currentTab);
   let html = '';
 
   pinned.forEach(p => {
@@ -270,7 +290,7 @@ function doSearch() {
     html += `<tr class="notice-row" onclick="goPost('${currentTab}','${getSlug(p)}')">
       <td class="num">📌</td>
       <td class="post-title-cell">${p.title} ${newBadge}</td>
-      ${isSeminar ? `<td class="cat"><span class="cat-badge cat-${p.category}">${p.category}</span></td>` : ''}
+      ${hasCategory ? `<td class="cat"><span class="cat-badge cat-${p.category}">${p.category}</span></td>` : ''}
       <td class="author">${p.author}</td>
       <td class="date">${p.date}</td>
     </tr>`;
@@ -283,7 +303,7 @@ function doSearch() {
     html += `<tr onclick="goPost('${currentTab}','${getSlug(p)}')">
       <td class="num">${regular.length - i}</td>
       <td class="post-title-cell">${p.title} ${newBadge}</td>
-      ${isSeminar ? `<td class="cat"><span class="cat-badge cat-${p.category}">${p.category}</span></td>` : ''}
+      ${hasCategory ? `<td class="cat"><span class="cat-badge cat-${p.category}">${p.category}</span></td>` : ''}
       <td class="author">${p.author}</td>
       <td class="date">${p.date}</td>
     </tr>`;
@@ -294,8 +314,7 @@ function doSearch() {
 }
 
 (function () {
-  renderBoard('notice');
-  renderBoard('seminar');
+  TABS.forEach(t => renderBoard(t));
   const tab = new URLSearchParams(location.search).get('tab') || 'notice';
   switchTab(tab);
 })();
