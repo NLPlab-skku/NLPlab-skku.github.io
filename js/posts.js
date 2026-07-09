@@ -155,17 +155,12 @@ window.POSTS = {
   ],
   video: [
     {
-      title: '영상 업로드 테스트용 게시물입니다',
-      author: '박진석',
+      title: 'Neural Garbage Collection: Learning to Forget while Learning to Reason',
+      author: '김택림',
       date: '2026.07.09',
-      category: '공지',
-      mdPath: '../_posts/2026/07/2026-07-09-test.md',
-      attachments: [
-        {
-          name: 'xRAG: Extreme Context Compression for Retrieval-augmented Generation with One Token.pdf',
-          path: '../assets/board/2026/05/open lab seminar_2/(발표) xRAG Extreme Context Compression for Retrieval-augmented Generation with One Token.pdf'
-        }
-      ]
+      category: '',
+      mdPath: '../_posts/2026/07/2026-07-09-Neural_Garbage_Collection.md',
+      attachments: []
     }
   ]
 };
