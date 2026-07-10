@@ -227,6 +227,8 @@ img { max-width: 100%; display: block; }
   transition: color 0.15s;
 }
 .nav-icon-btn:hover { color: #fff; }
+.nav-icon-btn img { opacity: 0.7; transition: opacity 0.15s; }
+.nav-icon-btn:hover img { opacity: 1; }
 
 /* ── Hero / Title ── */
 .hero {
