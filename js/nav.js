@@ -97,10 +97,10 @@
             </svg>
           </a>
           <a class="nav-icon-btn" id="nav-linkedin-link" aria-label="LinkedIn" href="https://www.linkedin.com/company/skku-nlplab/posts/?feedView=all" target="_blank" rel="noopener">
-            <img src="/assets/img/졸업생%20회사%20로고/링크드인_흑백.png" alt="" width="25" height="25" />
+            <img src="/assets/img/외부%20사이트%20로고/linkedin_mono.png" alt="" width="25" height="25" />
           </a>
           <a class="nav-icon-btn" id="nav-youtube-link" aria-label="Youtube" href="https://www.youtube.com/@skku_nlplab_official" target="_blank" rel="noopener">
-            <img src="/assets/img/졸업생%20회사%20로고/유투브_흑백.png" alt="" width="25" height="25" />
+            <img src="/assets/img/외부%20사이트%20로고/youtube_mono.png" alt="" width="25" height="25" />
           </a>
         </div>
       </div>
