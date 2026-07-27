@@ -161,6 +161,54 @@ window.POSTS = {
       category: '',
       mdPath: '../_posts/2026/07/2026-07-09-Neural_Garbage_Collection.md',
       attachments: []
-    }
+    },
+    {
+      title: 'EventWeave: A Dynamic Framework for Capturing Core and Supporting Events in Dialogue Systems',
+      author: '장윤진',
+      date: '2026.07.16',
+      category: '',
+      mdPath: '../_posts/2026/07/2026-07-16-EventWeave.md',
+      attachments: []
+    },
+    {
+      title: 'Low-cost Full Fine-tuning: Learning What to Update for LLMs Systems',
+      author: '이예원',
+      date: '2026.07.16',
+      category: '',
+      mdPath: '../_posts/2026/07/2026-07-16-Low-cost Full Fine-tuning.md',
+      attachments: []
+    },
+    {
+      title: 'GraphRAG-R1:Graph RAG with Process-Constrained Reinforcement Learning',
+      author: '강수빈',
+      date: '2026.07.16',
+      category: '',
+      mdPath: '../_posts/2026/07/2026-07-16-GraphRAG-R1.md',
+      attachments: []
+    },
+    {
+      title: 'Breaking the Static Graph: Context-Aware Traversal for Robust Retrieval-Augmented Generation',
+      author: '허유민',
+      date: '2026.07.23',
+      category: '',
+      mdPath: '../_posts/2026/07/2026-07-23-Breaking the Static Graph.md',
+      attachments: []
+    },
+    {
+      title: 'Adaptive Retrieval for Reasoning',
+      author: '최민준',
+      date: '2026.07.23',
+      category: '',
+      mdPath: '../_posts/2026/07/2026-07-23-Adaptive Retrieval for Reasoning.md',
+      attachments: []
+    },
+    {
+      title: 'A Unified Framework for Context-Aware and Relation-Aware Graph Retrieval-Augmented Generation',
+      author: '이준서',
+      date: '2026.07.23',
+      category: '',
+      mdPath: '../_posts/2026/07/2026-07-23-A Unified Framework.md',
+      attachments: []
+    },
   ]
 };
