@@ -155,11 +155,27 @@ window.POSTS = {
   ],
   video: [
     {
-      title: 'Neural Garbage Collection: Learning to Forget while Learning to Reason',
-      author: '김택림',
-      date: '2026.07.09',
+      title: 'Breaking the Static Graph: Context-Aware Traversal for Robust Retrieval-Augmented Generation',
+      author: '허유민',
+      date: '2026.07.23',
       category: '',
-      mdPath: '../_posts/2026/07/2026-07-09-Neural_Garbage_Collection.md',
+      mdPath: '../_posts/2026/07/2026-07-23-Breaking the Static Graph.md',
+      attachments: []
+    },
+    {
+      title: 'Adaptive Retrieval for Reasoning',
+      author: '최민준',
+      date: '2026.07.23',
+      category: '',
+      mdPath: '../_posts/2026/07/2026-07-23-Adaptive Retrieval for Reasoning.md',
+      attachments: []
+    },
+    {
+      title: 'A Unified Framework for Context-Aware and Relation-Aware Graph Retrieval-Augmented Generation',
+      author: '이준서',
+      date: '2026.07.23',
+      category: '',
+      mdPath: '../_posts/2026/07/2026-07-23-A Unified Framework.md',
       attachments: []
     },
     {
@@ -187,28 +203,12 @@ window.POSTS = {
       attachments: []
     },
     {
-      title: 'Breaking the Static Graph: Context-Aware Traversal for Robust Retrieval-Augmented Generation',
-      author: '허유민',
-      date: '2026.07.23',
+      title: 'Neural Garbage Collection: Learning to Forget while Learning to Reason',
+      author: '김택림',
+      date: '2026.07.09',
       category: '',
-      mdPath: '../_posts/2026/07/2026-07-23-Breaking the Static Graph.md',
+      mdPath: '../_posts/2026/07/2026-07-09-Neural_Garbage_Collection.md',
       attachments: []
-    },
-    {
-      title: 'Adaptive Retrieval for Reasoning',
-      author: '최민준',
-      date: '2026.07.23',
-      category: '',
-      mdPath: '../_posts/2026/07/2026-07-23-Adaptive Retrieval for Reasoning.md',
-      attachments: []
-    },
-    {
-      title: 'A Unified Framework for Context-Aware and Relation-Aware Graph Retrieval-Augmented Generation',
-      author: '이준서',
-      date: '2026.07.23',
-      category: '',
-      mdPath: '../_posts/2026/07/2026-07-23-A Unified Framework.md',
-      attachments: []
-    },
+    }
   ]
 };
