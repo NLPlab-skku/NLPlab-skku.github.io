@@ -41,8 +41,9 @@
     .alumni-btn.prev { left: -16px; }
     .alumni-btn.next { right: -16px; }
     .alumni-btn.disabled { opacity: 0.3; pointer-events: none; }
-    .alumni-progress { position: relative; width: 100%; height: 4px; background: var(--border); border-radius: 2px; margin: 16px 0 0; }
-    .alumni-progress-thumb { position: absolute; top: 0; left: 0; height: 100%; background: var(--green); border-radius: 2px; transition: left 0.3s cubic-bezier(0.4,0,0.2,1), width 0.3s ease; }
+    .alumni-progress { position: relative; width: 100%; height: 4px; background: var(--border); border-radius: 2px; margin: 16px 0 0; cursor: pointer; }
+    .alumni-progress-thumb { position: absolute; top: 0; left: 0; height: 100%; background: var(--green); border-radius: 2px; transition: left 0.3s cubic-bezier(0.4,0,0.2,1), width 0.3s ease; cursor: grab; touch-action: none; }
+    .alumni-progress-thumb.dragging { transition: none; cursor: grabbing; }
     .member-info { padding: 16px; }
     .member-name { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
     .member-role { font-size: 12px; color: var(--green); font-weight: 600; margin-bottom: 6px; }
@@ -93,6 +94,7 @@
         and I am interested in NLP (dialogue system, question/answering system, etc.), IR (GraphRAG, etc.), Generative AI (controllable text generation, etc.), 
         Machine learning for AI (reinforcement learning, etc), and Text Mining (text classification/summarization, sentiment classification, etc.) for Agentic and Physical AI.<br>
       </div>
+      <br>
       <div class="member-email"><a href="mailto:yjko@skku.edu" style="font-size: 16px;">yjko@skku.edu</a></div>
       <div class="pi-links">
         <a class="pi-link" href="https://scholar.google.com/citations?hl=ko&user=VQeFpwsAAAAJ">Google Scholar</a>
@@ -727,6 +729,8 @@
   let visibleCols = 1;
   let maxIndex = 0;
   let step = MIN_CARD_W + GAP;
+  let thumbPct = 100;
+  let trackPct = 0;
 
   function render() {
     const containerW = viewport.clientWidth;
@@ -745,8 +749,8 @@
     prevBtn.classList.toggle('disabled', index === 0);
     nextBtn.classList.toggle('disabled', index === maxIndex);
 
-    const thumbPct = Math.min(100, (visibleCols / totalColumns) * 100);
-    const trackPct = 100 - thumbPct;
+    thumbPct = Math.min(100, (visibleCols / totalColumns) * 100);
+    trackPct = 100 - thumbPct;
     const leftPct = maxIndex === 0 ? 0 : (index / maxIndex) * trackPct;
     progressThumb.style.width = thumbPct + '%';
     progressThumb.style.left = leftPct + '%';
@@ -759,6 +763,50 @@
 
   prevBtn.addEventListener('click', () => goTo(index - 1));
   nextBtn.addEventListener('click', () => goTo(index + 1));
+
+  let isDragging = false;
+  let dragOffsetPx = 0;
+
+  function indexFromLeftPx(leftPx, rectWidth) {
+    const trackPx = rectWidth * (trackPct / 100);
+    if (trackPx <= 0) return 0;
+    const pct = Math.max(0, Math.min(1, leftPx / trackPx));
+    return Math.round(pct * maxIndex);
+  }
+
+  function startDrag(e) {
+    if (maxIndex === 0) return;
+    isDragging = true;
+    progressThumb.classList.add('dragging');
+    const thumbRect = progressThumb.getBoundingClientRect();
+    dragOffsetPx = e.clientX - thumbRect.left;
+    progressThumb.setPointerCapture(e.pointerId);
+    e.preventDefault();
+  }
+
+  progressThumb.addEventListener('pointerdown', startDrag);
+
+  progressThumb.addEventListener('pointermove', (e) => {
+    if (!isDragging) return;
+    const rect = progress.getBoundingClientRect();
+    const leftPx = e.clientX - rect.left - dragOffsetPx;
+    goTo(indexFromLeftPx(leftPx, rect.width));
+  });
+
+  function endDrag() {
+    isDragging = false;
+    progressThumb.classList.remove('dragging');
+  }
+  progressThumb.addEventListener('pointerup', endDrag);
+  progressThumb.addEventListener('pointercancel', endDrag);
+
+  progress.addEventListener('click', (e) => {
+    if (e.target === progressThumb || maxIndex === 0) return;
+    const rect = progress.getBoundingClientRect();
+    const thumbHalfPx = rect.width * (thumbPct / 100) / 2;
+    const leftPx = e.clientX - rect.left - thumbHalfPx;
+    goTo(indexFromLeftPx(leftPx, rect.width));
+  });
 
   let resizeTimer;
   window.addEventListener('resize', () => {
