@@ -177,12 +177,12 @@ $$
 <p align="center"><img src="{{ '/assets/board/2026/08/REASONING_ON_GRAPHS/image 3.png' | prepend: site.baseurl }}"  max-width="100%" height="auto"></p>
 
 
-<p align="center"><img src="{{ '/assets/board/2026/08/REASONING_ON_GRAPHS/image 4.png' | prepend: site.baseurl }}"  max-width="80%" height="auto"></p>
+<p align="center"><img src="{{ '/assets/board/2026/08/REASONING_ON_GRAPHS/image 4.png' | prepend: site.baseurl }}" style="max-width:80%; height:auto;"></p>
 
 
 - reasoning module을 제거했을 때 Recall이 높아지지만, 검색된 path에 노이즈가 있기 때문에 precision은 감소하는 경향을 보임
 
-<p align="center"><img src="{{ '/assets/board/2026/08/REASONING_ON_GRAPHS/image 5.png' | prepend: site.baseurl }}"  max-width="70%" height="auto"></p>
+<p align="center"><img src="{{ '/assets/board/2026/08/REASONING_ON_GRAPHS/image 5.png' | prepend: site.baseurl }}" style="max-width:70%; height:auto;"></p>
 
 
 - RoG를 적용했을 때 일관적인 성능 향상을 보임
