@@ -152,7 +152,7 @@ $$
 reasoning module은 주어진 question, 검색된 reasoning path를 가지고 정답을 생성하는 것이 목표이다. reasoning path 집합 $\mathcal{W}_z$을 알고 있으니, reason loss를 아래와 같이 구체화할 수 있다.
 
 $$
-\argmax_\theta\log P_\theta(a|q,\mathcal{Z}^*_K,\mathcal{G})=\log\sum_{z\in\mathcal{Z}^*_K}\sum_{w_z\in\mathcal{W}_z}\prod^{|a|}_{i=1}P_\theta(t_i|t_{<i},q,w_z)
+argmax_\theta\log P_\theta(a|q,\mathcal{Z}^*_K,\mathcal{G})=\log\sum_{z\in\mathcal{Z}^*_K}\sum_{w_z\in\mathcal{W}_z}\prod^{|a|}_{i=1}P_\theta(t_i|t_{<i},q,w_z)
 $$
 
 # 📊 Experiments
