@@ -49,6 +49,14 @@ window.POSTS = {
   ],
   seminar: [
     {
+      title: 'Reasoning on Graphs: Faithful and Interpretable Large Language Model Reasoning',
+      author: '이준서',
+      date: '2026.08.20',
+      category: 'RAG',
+      mdPath: '../_posts/2026/08/2026-08-20-Reasoning on Graphs.md',
+      attachments: []
+    },
+    {
       title: 'HippoRAG: Neurobiologically Inspired Long-Term Memory for Large Language Models',
       author: '한준호',
       date: '2026.06.24',
