@@ -15,7 +15,7 @@ Date: August 13, 2026 2:31 PM
 
  지식 그래프 기반 QA (KGQA) 연구는 크게 두 갈래로 나누어 볼 수 있다. 첫 번째는 LLM의 추론 능력을 이용해 질의로부터 KG에 실행 가능한 path를 생성함으로써 정답을 찾는 것이고, 두 번째는 KG에서 triplet을 직접 검색하여 검색된 triplet을 지식 context로 사용하는 것이다. 그러나 전자의 경우는 LLM이 실행 불가능한 path를 생성하는 경우가 있고, 후자의 경우는 KG를 아예 지식 베이스로만 취급하여 추론의 구조적 정보의 중요성을 간과하고 있다고 지적한다.
 
-![KGQA 작업에서 LLM이 정답을 예측하는데 실패한 예시](image.png)
+<p align="center"><img src="{{ '/assets/board/2026/08/REASONING_ON_GRAPHS/image.png' | prepend: site.baseurl }}"  max-width="100%" height="auto"></p>
 
 KGQA 작업에서 LLM이 정답을 예측하는데 실패한 예시
 
@@ -53,7 +53,7 @@ $$
 
 # ⚙️ Methodology
 
-![Overall Framework](image%201.png)
+<p align="center"><img src="{{ '/assets/board/2026/08/REASONING_ON_GRAPHS/image_1.png' | prepend: site.baseurl }}"  max-width="100%" height="auto"></p>
 
 Overall Framework
 
@@ -124,7 +124,8 @@ $$
 
 프롬프트를 통해 planning modlue이 relation path를 생성하도록 한다. 
 
-![image.png](image%202.png)
+<p align="center"><img src="{{ '/assets/board/2026/08/REASONING_ON_GRAPHS/image_2.png' | prepend: site.baseurl }}"  max-width="100%" height="auto"></p>
+
 
 valid relation path는 $z=\text{<PATH>}\space r_1\space\text{<SEP>}\space r_2\space\text{<SEP>}\dots\text{<SEP>}\space r_l\space\text{</PATH>}$ 와 같은 형식으로 생성되며, $\text{<PATH>},\text{<SEP>},\text{</PATH>}$은 특수 토큰을 나타낸다.
 
@@ -173,17 +174,21 @@ $$
 
 ## Results
 
-![image.png](image%203.png)
+<p align="center"><img src="{{ '/assets/board/2026/08/REASONING_ON_GRAPHS/image_3.png' | prepend: site.baseurl }}"  max-width="100%" height="auto"></p>
 
-![image.png](image%204.png)
+
+<p align="center"><img src="{{ '/assets/board/2026/08/REASONING_ON_GRAPHS/image_4.png' | prepend: site.baseurl }}"  max-width="100%" height="auto"></p>
+
 
 - reasoning module을 제거했을 때 Recall이 높아지지만, 검색된 path에 노이즈가 있기 때문에 precision은 감소하는 경향을 보임
 
-![image.png](image%205.png)
+<p align="center"><img src="{{ '/assets/board/2026/08/REASONING_ON_GRAPHS/image_5.png' | prepend: site.baseurl }}"  max-width="100%" height="auto"></p>
+
 
 - RoG를 적용했을 때 일관적인 성능 향상을 보임
 
-![image.png](image%206.png)
+<p align="center"><img src="{{ '/assets/board/2026/08/REASONING_ON_GRAPHS/image_6.png' | prepend: site.baseurl }}"  max-width="100%" height="auto"></p>
+
 
 - 후보 relation path 수 K를 늘릴수록, 이에 따라 cover되는 정답 수가 증가함 (recall)
 - K가 너무 크면 reasoning path에 더 많은 노이즈와 검색 시간이 발생하기 때문에, 메인 실험에 K=3으로 세팅했다고 함
