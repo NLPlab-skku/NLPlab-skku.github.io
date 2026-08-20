@@ -132,7 +132,7 @@ valid relation path는 $z=\text{<PATH>}\space r_1\space\text{<SEP>}\space r_2\sp
 이에 따라 plan loss를 더 구체화해보면, 아래와 같이 표현할 수 있을 것이다.
 
 $$
-\argmax_\theta\frac{1}{|\mathcal{Z}^*|}\sum_{z\in\mathcal{Z}^*}\log P_\theta(z|q)=\frac{1}{|\mathcal{Z}^*|}\sum_{z\in\mathcal{Z}^*}\log\prod^{|z|}_{i=1} P_\theta(r_i|r_{<i},q)
+argmax_\theta\frac{1}{|\mathcal{Z}^*|}\sum_{z\in\mathcal{Z}^*}\log P_\theta(z|q)=\frac{1}{|\mathcal{Z}^*|}\sum_{z\in\mathcal{Z}^*}\log\prod^{|z|}_{i=1} P_\theta(r_i|r_{<i},q)
 $$
 
 ## Retrieval-Reasoning Module
@@ -177,12 +177,12 @@ $$
 <p align="center"><img src="{{ '/assets/board/2026/08/REASONING_ON_GRAPHS/image 3.png' | prepend: site.baseurl }}"  max-width="100%" height="auto"></p>
 
 
-<p align="center"><img src="{{ '/assets/board/2026/08/REASONING_ON_GRAPHS/image 4.png' | prepend: site.baseurl }}"  max-width="100%" height="auto"></p>
+<p align="center"><img src="{{ '/assets/board/2026/08/REASONING_ON_GRAPHS/image 4.png' | prepend: site.baseurl }}"  max-width="80%" height="auto"></p>
 
 
 - reasoning module을 제거했을 때 Recall이 높아지지만, 검색된 path에 노이즈가 있기 때문에 precision은 감소하는 경향을 보임
 
-<p align="center"><img src="{{ '/assets/board/2026/08/REASONING_ON_GRAPHS/image 5.png' | prepend: site.baseurl }}"  max-width="100%" height="auto"></p>
+<p align="center"><img src="{{ '/assets/board/2026/08/REASONING_ON_GRAPHS/image 5.png' | prepend: site.baseurl }}"  max-width="70%" height="auto"></p>
 
 
 - RoG를 적용했을 때 일관적인 성능 향상을 보임
