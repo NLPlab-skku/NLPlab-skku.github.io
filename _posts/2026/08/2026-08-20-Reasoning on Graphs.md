@@ -53,7 +53,7 @@ $$
 
 # ⚙️ Methodology
 
-<p align="center"><img src="{{ '/assets/board/2026/08/REASONING_ON_GRAPHS/image_1.png' | prepend: site.baseurl }}"  max-width="100%" height="auto"></p>
+<p align="center"><img src="{{ '/assets/board/2026/08/REASONING_ON_GRAPHS/image 1.png' | prepend: site.baseurl }}"  max-width="100%" height="auto"></p>
 
 Overall Framework
 
@@ -124,7 +124,7 @@ $$
 
 프롬프트를 통해 planning modlue이 relation path를 생성하도록 한다. 
 
-<p align="center"><img src="{{ '/assets/board/2026/08/REASONING_ON_GRAPHS/image_2.png' | prepend: site.baseurl }}"  max-width="100%" height="auto"></p>
+<p align="center"><img src="{{ '/assets/board/2026/08/REASONING_ON_GRAPHS/image 2.png' | prepend: site.baseurl }}"  max-width="100%" height="auto"></p>
 
 
 valid relation path는 $z=\text{<PATH>}\space r_1\space\text{<SEP>}\space r_2\space\text{<SEP>}\dots\text{<SEP>}\space r_l\space\text{</PATH>}$ 와 같은 형식으로 생성되며, $\text{<PATH>},\text{<SEP>},\text{</PATH>}$은 특수 토큰을 나타낸다.
@@ -174,20 +174,20 @@ $$
 
 ## Results
 
-<p align="center"><img src="{{ '/assets/board/2026/08/REASONING_ON_GRAPHS/image_3.png' | prepend: site.baseurl }}"  max-width="100%" height="auto"></p>
+<p align="center"><img src="{{ '/assets/board/2026/08/REASONING_ON_GRAPHS/image 3.png' | prepend: site.baseurl }}"  max-width="100%" height="auto"></p>
 
 
-<p align="center"><img src="{{ '/assets/board/2026/08/REASONING_ON_GRAPHS/image_4.png' | prepend: site.baseurl }}"  max-width="100%" height="auto"></p>
+<p align="center"><img src="{{ '/assets/board/2026/08/REASONING_ON_GRAPHS/image 4.png' | prepend: site.baseurl }}"  max-width="100%" height="auto"></p>
 
 
 - reasoning module을 제거했을 때 Recall이 높아지지만, 검색된 path에 노이즈가 있기 때문에 precision은 감소하는 경향을 보임
 
-<p align="center"><img src="{{ '/assets/board/2026/08/REASONING_ON_GRAPHS/image_5.png' | prepend: site.baseurl }}"  max-width="100%" height="auto"></p>
+<p align="center"><img src="{{ '/assets/board/2026/08/REASONING_ON_GRAPHS/image 5.png' | prepend: site.baseurl }}"  max-width="100%" height="auto"></p>
 
 
 - RoG를 적용했을 때 일관적인 성능 향상을 보임
 
-<p align="center"><img src="{{ '/assets/board/2026/08/REASONING_ON_GRAPHS/image_6.png' | prepend: site.baseurl }}"  max-width="100%" height="auto"></p>
+<p align="center"><img src="{{ '/assets/board/2026/08/REASONING_ON_GRAPHS/image 6.png' | prepend: site.baseurl }}"  max-width="100%" height="auto"></p>
 
 
 - 후보 relation path 수 K를 늘릴수록, 이에 따라 cover되는 정답 수가 증가함 (recall)
