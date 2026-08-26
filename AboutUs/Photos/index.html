@@ -53,6 +53,16 @@
       position: absolute; top: 20px; right: 28px; color: #fff;
       font-size: 32px; cursor: pointer; background: none; border: none; line-height: 1;
     }
+    .lightbox-nav {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      width: 48px; height: 48px; border-radius: 50%;
+      background: rgba(255,255,255,0.12); color: #fff; border: none;
+      font-size: 26px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+      transition: background 0.2s;
+    }
+    .lightbox-nav:hover { background: rgba(255,255,255,0.28); }
+    .lightbox-prev { left: 24px; }
+    .lightbox-next { right: 24px; }
   </style>
 </head>
 <body>
@@ -348,6 +358,8 @@
 <!-- Lightbox -->
 <div class="lightbox" id="lightbox" onclick="closeLightbox()">
   <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+  <button class="lightbox-nav lightbox-prev" onclick="event.stopPropagation(); showPrevPhoto()">‹</button>
+  <button class="lightbox-nav lightbox-next" onclick="event.stopPropagation(); showNextPhoto()">›</button>
   <div class="lightbox-inner" onclick="event.stopPropagation()">
     <div class="lightbox-img" id="lb-img"></div>
     <div class="lightbox-caption" id="lb-cap"></div>
@@ -365,22 +377,35 @@
 </footer>
 
 <script>
-  document.querySelectorAll('.photo-card').forEach(card => {
-    card.addEventListener('click', () => {
-      const src = card.dataset.src;
-      const cap = card.dataset.cap;
-      document.getElementById('lb-img').innerHTML = `<img src="${src}" alt="${cap}">`;
-      document.getElementById('lb-cap').textContent = cap;
-      document.getElementById('lightbox').classList.add('open');
-    });
+  const photoCards = Array.from(document.querySelectorAll('.photo-card'));
+  let currentPhotoIndex = -1;
+
+  function openLightboxAt(index) {
+    currentPhotoIndex = (index + photoCards.length) % photoCards.length;
+    const card = photoCards[currentPhotoIndex];
+    const src = card.dataset.src;
+    const cap = card.dataset.cap;
+    document.getElementById('lb-img').innerHTML = `<img src="${src}" alt="${cap}">`;
+    document.getElementById('lb-cap').textContent = cap;
+    document.getElementById('lightbox').classList.add('open');
+  }
+
+  photoCards.forEach((card, index) => {
+    card.addEventListener('click', () => openLightboxAt(index));
   });
+
+  function showPrevPhoto() { openLightboxAt(currentPhotoIndex - 1); }
+  function showNextPhoto() { openLightboxAt(currentPhotoIndex + 1); }
 
   function closeLightbox() {
     document.getElementById('lightbox').classList.remove('open');
   }
 
   document.addEventListener('keydown', e => {
+    if (!document.getElementById('lightbox').classList.contains('open')) return;
     if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') showPrevPhoto();
+    if (e.key === 'ArrowRight') showNextPhoto();
   });
 </script>
 </body>
