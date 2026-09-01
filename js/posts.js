@@ -163,6 +163,70 @@ window.POSTS = {
   ],
   video: [
     {
+      title: 'Query-Aware Flow Diffusion for Graph-Based RAG with Retrieval Guarantees',
+      author: '이준서',
+      date: '2026.08.20',
+      category: '',
+      mdPath: '../_posts/2026/08/2026-08-20-Query-Aware Flow Diffusion.md',
+      attachments: []
+    },
+    {
+      title: 'Beyond Markovian Forgetfulness: Episodic Memory for Reasoning-Intensive Retrieval',
+      author: '최민준',
+      date: '2026.08.20',
+      category: '',
+      mdPath: '../_posts/2026/08/2026-08-20-Beyond Markovian Forgetfulness.md',
+      attachments: []
+    },
+    {
+      title: 'You Don’t Need Pre-built Graphs for RAG: Retrieval Augmented Generation with Adaptive Reasoning Structures',
+      author: '허유민',
+      date: '2026.08.20',
+      category: '',
+      mdPath: '../_posts/2026/08/2026-08-20-You Don’t Need Pre-built Graphs for RAG.md',
+      attachments: []
+    },
+    {
+      title: 'DFlash: Block Diffusion for Flash Speculative Decoding',
+      author: '김정우',
+      date: '2026.08.13',
+      category: '',
+      mdPath: '../_posts/2026/08/2026-08-13-DFlash.md',
+      attachments: []
+    },
+    {
+      title: 'Think Deep, Not Just Long: Measuring LLM Reasoning Effort via Deep-Thinking Tokens',
+      author: '김택림',
+      date: '2026.08.13',
+      category: '',
+      mdPath: '../_posts/2026/08/2026-08-13-Think Deep.md',
+      attachments: []
+    },
+    {
+      title: 'The Flexibility Trap: Rethinking the Value of Arbitrary Order in Diffusion Language Models',
+      author: '장윤진',
+      date: '2026.08.13',
+      category: '',
+      mdPath: '../_posts/2026/08/2026-08-13-The Flexibility Trap.md',
+      attachments: []
+    },
+    {
+      title: 'FROM SINGLE TO MULTI-GRANULARITY: TOWARD LONG-TERM MEMORY ASSOCIATION AND SELECTION OF CONVERSATIONAL AGENTS',
+      author: '박진석',
+      date: '2026.08.06',
+      category: '',
+      mdPath: '../_posts/2026/08/2026-08-06-FROM SINGLE TO MULTI-GRANULARITY.md',
+      attachments: []
+    },
+    {
+      title: 'Temporal Evidence Chain for Temporal Knowledge Graph Question Answering with LLMs',
+      author: '김근하',
+      date: '2026.08.06',
+      category: '',
+      mdPath: '../_posts/2026/08/2026-08-06-Temporal Evidence Chain.md',
+      attachments: []
+    },
+    {
       title: 'Breaking the Static Graph: Context-Aware Traversal for Robust Retrieval-Augmented Generation',
       author: '허유민',
       date: '2026.07.23',
