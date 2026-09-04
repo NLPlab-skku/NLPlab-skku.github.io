@@ -1,3 +1,12 @@
+---
+layout: post
+title:  "Reasoning on Graphs: Faithful and Interpretable Large Language Model Reasoning"
+date:   2026-08-20
+description: 
+author: "이준서"
+
+---
+
 # Reasoning on Graphs: Faithful and Interpretable Large Language Model Reasoning
 
 Conference: ICLR 2024
