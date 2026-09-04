@@ -16,7 +16,11 @@
         inlineMath: [['$', '$'], ['\\(', '\\)']],
         displayMath: [['$$', '$$'], ['\\[', '\\]']],
         processEscapes: true,
-        processEnvironments: true
+        processEnvironments: true,
+        macros: {
+          argmax: '\\operatorname{arg\\,max}',
+          argmin: '\\operatorname{arg\\,min}'
+        }
       },
       options: { skipHtmlTags: ['script','noscript','style','textarea','pre'] }
     };
