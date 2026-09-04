@@ -49,6 +49,14 @@ window.POSTS = {
   ],
   seminar: [
     {
+      title: 'LinearRAG: Linear Graph Retrieval Augmented Generation on Large-Scale Corpora',
+      author: '이준서',
+      date: '2026.09.04',
+      category: 'RAG',
+      mdPath: '../_posts/2026/09/2026-09-04-LinearRAG.md',
+      attachments: []
+    },
+    {
       title: 'Reasoning on Graphs: Faithful and Interpretable Large Language Model Reasoning',
       author: '이준서',
       date: '2026.08.20',
