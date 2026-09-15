@@ -1,6 +1,15 @@
 window.POSTS = {
   notice: [
     {
+      title: '제 3회 성균관대학교 자연어처리연구실 오픈 랩 세미나: Diffusion Langauge Model',
+      author: '김두영',
+      date: '2026.09.15',
+      category: '공지',
+      mdPath: '../_posts/2026/09/2026-09-15-제 3회 오픈 랩 세미나.md',
+      attachments: [
+      ]
+    },
+    {
       title: 'NLPLAB 2026 하반기 인턴 모집 공고',
       author: '김두영',
       date: '2026.05.28',
