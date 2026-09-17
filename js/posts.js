@@ -180,6 +180,30 @@ window.POSTS = {
   ],
   video: [
     {
+      title: 'Relink: Constructing Query-Driven Evidence Graph On-the-Fly for GraphRAG',
+      author: '이준서',
+      date: '2026.09.16',
+      category: '',
+      mdPath: '../_posts/2026/08/2026-09-16-Relink.md',
+      attachments: []
+    },
+    {
+      title: 'LADIR: LATENT DIFFUSION ENHANCES LLMS FOR TEXT REASONING',
+      author: '이예원',
+      date: '2026.09.16',
+      category: '',
+      mdPath: '../_posts/2026/08/2026-09-16-LADIR.md',
+      attachments: []
+    },
+    {
+      title: 'ZEROGR: A GENERALIZABLE AND SCALABLE FRAMEWORK FOR ZERO-SHOT GENERATIVE RETRIEVAL',
+      author: '김근하',
+      date: '2026.09.16',
+      category: '',
+      mdPath: '../_posts/2026/08/2026-09-16-ZEROGR.md',
+      attachments: []
+    },
+    {
       title: 'Query-Aware Flow Diffusion for Graph-Based RAG with Retrieval Guarantees',
       author: '이준서',
       date: '2026.08.20',
