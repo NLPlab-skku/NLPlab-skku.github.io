@@ -9,7 +9,7 @@ window.POSTS = {
       attachments: [
         {
           name: 'Diffusion Langauge Models.pdf',
-          path: '../assets/board/2026/05/open lab seminar_2/(발표) Diffusion Langauge Models.pdf'
+          path: '../assets/board/2026/09/open lab seminar_3/(발표) Diffusion Langauge Models.pdf'
         }
       ]
     },
