@@ -7,6 +7,10 @@ window.POSTS = {
       category: '공지',
       mdPath: '../_posts/2026/09/2026-09-15-제 3회 오픈 랩 세미나.md',
       attachments: [
+        {
+          name: 'Diffusion Langauge Models.pdf',
+          path: '../assets/board/2026/05/open lab seminar_2/(발표) Diffusion Langauge Models.pdf'
+        }
       ]
     },
     {
