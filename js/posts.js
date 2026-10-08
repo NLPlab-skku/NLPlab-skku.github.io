@@ -184,6 +184,30 @@ window.POSTS = {
   ],
   video: [
     {
+      title: 'Group-Aware Adaptive Retrieval for Evidence Navigation',
+      author: '강수빈',
+      date: '2026.10.07',
+      category: '',
+      mdPath: '../_posts/2026/10/2026-10-07-GAREN.md',
+      attachments: []
+    },
+    {
+      title: 'Retro*: Optimizing LLMs for Reasoning-Intensive Document Retrieval',
+      author: '한준호',
+      date: '2026.10.07',
+      category: '',
+      mdPath: '../_posts/2026/10/2026-10-07-Retro*.md',
+      attachments: []
+    },
+    {
+      title: 'OpenFC: Learning Verification Policies towards Open-Search Fact Checking',
+      author: '허유민',
+      date: '2026.10.07',
+      category: '',
+      mdPath: '../_posts/2026/10/2026-10-07-OpenFC.md',
+      attachments: []
+    },
+    {
       title: 'Relink: Constructing Query-Driven Evidence Graph On-the-Fly for GraphRAG',
       author: '이준서',
       date: '2026.09.16',
